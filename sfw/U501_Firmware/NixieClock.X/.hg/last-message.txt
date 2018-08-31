@@ -1,0 +1,1 @@
+Completely disabled IOC on PLUG signal since this sometimes woke up the PIC from sleep, also added while loop so that the display will only start multiplexing if VVV_PGOOD is high

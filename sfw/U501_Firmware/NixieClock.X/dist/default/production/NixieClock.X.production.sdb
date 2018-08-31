@@ -1,0 +1,1173 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1519 ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"254 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\round.c
+[v _round round `(d  1 e 3 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\trunc.c
+[v _trunc trunc `(d  1 e 3 0 ]
+"24 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\checkIDs.c
+[v _checkIDs checkIDs `(v  1 e 1 0 ]
+"26 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _startup startup `(v  1 e 1 0 ]
+"167
+[v _muxISR muxISR `(v  1 e 1 0 ]
+"218
+[v _tickISR tickISR `(v  1 e 1 0 ]
+"253
+[v _blankISR blankISR `(v  1 e 1 0 ]
+"282
+[v _setSecondsISR setSecondsISR `(v  1 e 1 0 ]
+"333
+[v _setMinutesISR setMinutesISR `(v  1 e 1 0 ]
+"386
+[v _setHoursISR setHoursISR `(v  1 e 1 0 ]
+"439
+[v _powerFailISR powerFailISR `(v  1 e 1 0 ]
+"469
+[v _displayToggleISR displayToggleISR `(v  1 e 1 0 ]
+"524
+[v _muxDigitCompensation muxDigitCompensation `(v  1 e 1 0 ]
+"574
+[v _updateParallelPort updateParallelPort `(v  1 e 1 0 ]
+"593
+[v _twentyFourParse twentyFourParse `(v  1 e 1 0 ]
+"640
+[v _timeParse timeParse `(v  1 e 1 0 ]
+"679
+[v _isolateDigits isolateDigits `(v  1 e 1 0 ]
+"704
+[v _updateDisplay updateDisplay `(v  1 e 1 0 ]
+"726
+[v _shutdown shutdown `(v  1 e 1 0 ]
+"807
+[v _wakeup wakeup `(v  1 e 1 0 ]
+"961
+[v _groundCathode groundCathode `(v  1 e 1 0 ]
+"983
+[v _sleepyTickISR sleepyTickISR `(v  1 e 1 0 ]
+"1002
+[v _restoreTime restoreTime `(v  1 e 1 0 ]
+"88 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"74 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"85
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"91
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"138
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"182
+[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
+"197
+[v _IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+"204
+[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"212
+[v _IOCBF1_ISR IOCBF1_ISR `(v  1 e 1 0 ]
+"227
+[v _IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+"234
+[v _IOCBF1_DefaultInterruptHandler IOCBF1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"242
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+"257
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+"264
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"272
+[v _IOCBF3_ISR IOCBF3_ISR `(v  1 e 1 0 ]
+"287
+[v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
+"294
+[v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
+"302
+[v _IOCBF4_ISR IOCBF4_ISR `(v  1 e 1 0 ]
+"317
+[v _IOCBF4_SetInterruptHandler IOCBF4_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_IOCBF4_SetInterruptHandler IOCBF4_SetInterruptHandler `(v  1 e 1 0 ]
+"324
+[v _IOCBF4_DefaultInterruptHandler IOCBF4_DefaultInterruptHandler `(v  1 e 1 0 ]
+"332
+[v _IOCBF5_ISR IOCBF5_ISR `(v  1 e 1 0 ]
+"347
+[v _IOCBF5_SetInterruptHandler IOCBF5_SetInterruptHandler `(v  1 e 1 0 ]
+"354
+[v _IOCBF5_DefaultInterruptHandler IOCBF5_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"108
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"125
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"129
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"95
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"101
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"155
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"175
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"92
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+[v i1_TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+"98
+[v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+[v i1_TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+"124
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"137
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+[v i1_TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+"141
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+[s S22 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"372 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16lf1519.h
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+[s S720 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"444
+[u S729 . 1 `S720 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES729  1 e 1 @12 ]
+[s S1153 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"506
+[u S1162 . 1 `S1153 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1162  1 e 1 @13 ]
+[s S741 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"568
+[u S750 . 1 `S741 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES750  1 e 1 @14 ]
+[s S93 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"730
+[u S102 . 1 `S93 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES102  1 e 1 @17 ]
+"809
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"836
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"856
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"876
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S148 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+"898
+[s S155 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[u S161 . 1 `S148 1 . 1 0 `S155 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES161  1 e 1 @24 ]
+"948
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S178 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"968
+[s S186 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+]
+[u S189 . 1 `S178 1 . 1 0 `S186 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES189  1 e 1 @25 ]
+"1018
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"1038
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"1058
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+[s S291 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"1079
+[s S295 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S303 . 1 `S291 1 . 1 0 `S295 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES303  1 e 1 @28 ]
+"1129
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+[s S1032 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1146
+[u S1041 . 1 `S1032 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1041  1 e 1 @140 ]
+"1191
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S1011 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1208
+[u S1020 . 1 `S1011 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES1020  1 e 1 @141 ]
+"1253
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S969 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1270
+[u S978 . 1 `S969 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES978  1 e 1 @142 ]
+"1315
+[v _TRISD TRISD `VEuc  1 e 1 @143 ]
+[s S948 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"1332
+[u S957 . 1 `S948 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES957  1 e 1 @143 ]
+"1377
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S886 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+]
+"1389
+[u S890 . 1 `S886 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES890  1 e 1 @144 ]
+[s S114 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1426
+[u S123 . 1 `S114 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES123  1 e 1 @145 ]
+"1505
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+[s S441 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1528
+[s S448 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S455 . 1 `S441 1 . 1 0 `S448 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES455  1 e 1 @149 ]
+"1645
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1704
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S1234 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+"1725
+[s S1238 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+]
+[u S1246 . 1 `S1234 1 . 1 0 `S1238 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES1246  1 e 1 @153 ]
+"2018
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S792 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2035
+[u S801 . 1 `S792 1 . 1 0 ]
+[v _LATAbits LATAbits `VES801  1 e 1 @268 ]
+"2080
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2142
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S990 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"2159
+[u S999 . 1 `S990 1 . 1 0 ]
+[v _LATCbits LATCbits `VES999  1 e 1 @270 ]
+"2204
+[v _LATD LATD `VEuc  1 e 1 @271 ]
+[s S1110 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"2224
+[s S1119 . 1 `uc 1 LATD 1 0 :8:0 
+]
+[u S1121 . 1 `S1110 1 . 1 0 `S1119 1 . 1 0 ]
+[v _LATDbits LATDbits `VES1121  1 e 1 @271 ]
+"2274
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+[s S762 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"2286
+[u S766 . 1 `S762 1 . 1 0 ]
+[v _LATEbits LATEbits `VES766  1 e 1 @272 ]
+"2398
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"2424
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2477
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2535
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"2597
+[v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
+"2667
+[v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"2714
+[v _PMADRL PMADRL `VEuc  1 e 1 @401 ]
+"2734
+[v _PMADRH PMADRH `VEuc  1 e 1 @402 ]
+"2761
+[v _PMDATL PMDATL `VEuc  1 e 1 @403 ]
+"2781
+[v _PMDATH PMDATH `VEuc  1 e 1 @404 ]
+"3192
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3262
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+[s S526 . 1 `uc 1 IOCBP0 1 0 :1:0 
+`uc 1 IOCBP1 1 0 :1:1 
+`uc 1 IOCBP2 1 0 :1:2 
+`uc 1 IOCBP3 1 0 :1:3 
+`uc 1 IOCBP4 1 0 :1:4 
+`uc 1 IOCBP5 1 0 :1:5 
+`uc 1 IOCBP6 1 0 :1:6 
+`uc 1 IOCBP7 1 0 :1:7 
+]
+"4209
+[s S535 . 1 `uc 1 IOCBP 1 0 :8:0 
+]
+[u S537 . 1 `S526 1 . 1 0 `S535 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES537  1 e 1 @916 ]
+[s S500 . 1 `uc 1 IOCBN0 1 0 :1:0 
+`uc 1 IOCBN1 1 0 :1:1 
+`uc 1 IOCBN2 1 0 :1:2 
+`uc 1 IOCBN3 1 0 :1:3 
+`uc 1 IOCBN4 1 0 :1:4 
+`uc 1 IOCBN5 1 0 :1:5 
+`uc 1 IOCBN6 1 0 :1:6 
+`uc 1 IOCBN7 1 0 :1:7 
+]
+"4279
+[s S509 . 1 `uc 1 IOCBN 1 0 :8:0 
+]
+[u S511 . 1 `S500 1 . 1 0 `S509 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES511  1 e 1 @917 ]
+[s S474 . 1 `uc 1 IOCBF0 1 0 :1:0 
+`uc 1 IOCBF1 1 0 :1:1 
+`uc 1 IOCBF2 1 0 :1:2 
+`uc 1 IOCBF3 1 0 :1:3 
+`uc 1 IOCBF4 1 0 :1:4 
+`uc 1 IOCBF5 1 0 :1:5 
+`uc 1 IOCBF6 1 0 :1:6 
+`uc 1 IOCBF7 1 0 :1:7 
+]
+"4349
+[s S483 . 1 `uc 1 IOCBF 1 0 :8:0 
+]
+[u S485 . 1 `S474 1 . 1 0 `S483 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES485  1 e 1 @918 ]
+"4790
+[v _CFGS CFGS `VEb  1 e 0 @3246 ]
+"4844
+[v _HFIOFR HFIOFR `VEb  1 e 0 @1236 ]
+"4984
+[v _LFIOFR LFIOFR `VEb  1 e 0 @1233 ]
+"4994
+[v _OSTS OSTS `VEb  1 e 0 @1237 ]
+"5066
+[v _RD RD `VEb  1 e 0 @3240 ]
+"5194
+[v _TMR0CS TMR0CS `VEb  1 e 0 @1197 ]
+"5366
+[v _nT1SYNC nT1SYNC `VEb  1 e 0 @194 ]
+[s S1215 . 1 `uc 1 BCD 1 0 :4:0 
+`uc 1 BCO 1 0 :3:4 
+]
+"120 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\definitions.h
+[u S1218 . 1 `S1215 1 . 1 0 ]
+[v _ParallelPort ParallelPort `VES1218  1 e 1 @271 ]
+"23 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\global_variables.h
+[v _mux_digit mux_digit `VEui  1 e 2 0 ]
+"24
+[v _mux_digit_compensated mux_digit_compensated `VEui  1 e 2 0 ]
+"25
+[v _mux_numeral mux_numeral `VE[6]ui  1 e 12 0 ]
+"28
+[v _seconds seconds `VEui  1 e 2 0 ]
+"29
+[v _minutes minutes `VEui  1 e 2 0 ]
+"30
+[v _hours hours `VEui  1 e 2 0 ]
+"34
+[v _display_hours display_hours `VEui  1 e 2 0 ]
+"37
+[v _seconds_LSD seconds_LSD `VEui  1 e 2 0 ]
+"38
+[v _seconds_MSD seconds_MSD `VEui  1 e 2 0 ]
+"39
+[v _minutes_LSD minutes_LSD `VEui  1 e 2 0 ]
+"40
+[v _minutes_MSD minutes_MSD `VEui  1 e 2 0 ]
+"41
+[v _hours_LSD hours_LSD `VEui  1 e 2 0 ]
+"42
+[v _hours_MSD hours_MSD `VEui  1 e 2 0 ]
+"45
+[v _asleep_flag asleep_flag `VEb  1 e 0 0 ]
+"48
+[v _sleepy_seconds sleepy_seconds `VEum  1 e 3 0 ]
+"51
+[v _extended_calibration extended_calibration `DCf  1 e 3 0 ]
+"55
+[v _expected_user_ID expected_user_ID `DC[4]us  1 e 8 0 ]
+"56
+[v _expected_device_ID expected_device_ID `DCus  1 e 2 0 ]
+"51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _IOCBF0_InterruptHandler IOCBF0_InterruptHandler `*.37(v  1 e 2 0 ]
+"52
+[v _IOCBF1_InterruptHandler IOCBF1_InterruptHandler `*.37(v  1 e 2 0 ]
+"53
+[v _IOCBF2_InterruptHandler IOCBF2_InterruptHandler `*.37(v  1 e 2 0 ]
+"54
+[v _IOCBF3_InterruptHandler IOCBF3_InterruptHandler `*.37(v  1 e 2 0 ]
+"55
+[v _IOCBF4_InterruptHandler IOCBF4_InterruptHandler `*.37(v  1 e 2 0 ]
+"56
+[v _IOCBF5_InterruptHandler IOCBF5_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
+"58
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
+"57
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
+"88 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"164
+} 0
+"26 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _startup startup `(v  1 e 1 0 ]
+{
+"159
+} 0
+"24 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\checkIDs.c
+[v _checkIDs checkIDs `(v  1 e 1 0 ]
+{
+"75
+[v checkIDs@device_ID device_ID `us  1 a 2 10 ]
+"64
+[v checkIDs@user_ID_3 user_ID_3 `us  1 a 2 8 ]
+"55
+[v checkIDs@user_ID_2 user_ID_2 `us  1 a 2 6 ]
+"46
+[v checkIDs@user_ID_1 user_ID_1 `us  1 a 2 4 ]
+"37
+[v checkIDs@user_ID_0 user_ID_0 `us  1 a 2 2 ]
+"79
+} 0
+"98 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v _TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+{
+"102
+} 0
+"74 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"91
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"95
+} 0
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"92
+[v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+{
+"96
+} 0
+"137
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"139
+} 0
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"93
+} 0
+"95
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"99
+} 0
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"173
+} 0
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"84
+} 0
+"125
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"127
+} 0
+"58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"136
+} 0
+"347
+[v _IOCBF5_SetInterruptHandler IOCBF5_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF5_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"349
+} 0
+"317
+[v _IOCBF4_SetInterruptHandler IOCBF4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"319
+} 0
+"287
+[v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"289
+} 0
+"257
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"259
+} 0
+"227
+[v _IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"229
+} 0
+"197
+[v _IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"199
+} 0
+"85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"124 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"134
+} 0
+"141
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"144
+} 0
+"253 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _blankISR blankISR `(v  1 e 1 0 ]
+{
+"274
+} 0
+"961
+[v _groundCathode groundCathode `(v  1 e 1 0 ]
+{
+"975
+} 0
+"155 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"168
+} 0
+"983 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _sleepyTickISR sleepyTickISR `(v  1 e 1 0 ]
+{
+"994
+} 0
+"175 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"178
+} 0
+"218 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _tickISR tickISR `(v  1 e 1 0 ]
+{
+"245
+} 0
+"640
+[v _timeParse timeParse `(v  1 e 1 0 ]
+{
+"671
+} 0
+"108 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"122
+} 0
+"129
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"132
+} 0
+"167 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _muxISR muxISR `(v  1 e 1 0 ]
+{
+"210
+} 0
+"574
+[v _updateParallelPort updateParallelPort `(v  1 e 1 0 ]
+{
+"585
+} 0
+"524
+[v _muxDigitCompensation muxDigitCompensation `(v  1 e 1 0 ]
+{
+"566
+} 0
+"138 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"177
+} 0
+"332
+[v _IOCBF5_ISR IOCBF5_ISR `(v  1 e 1 0 ]
+{
+"342
+} 0
+"354
+[v _IOCBF5_DefaultInterruptHandler IOCBF5_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"357
+} 0
+"302
+[v _IOCBF4_ISR IOCBF4_ISR `(v  1 e 1 0 ]
+{
+"312
+} 0
+"324
+[v _IOCBF4_DefaultInterruptHandler IOCBF4_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"327
+} 0
+"439 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _powerFailISR powerFailISR `(v  1 e 1 0 ]
+{
+"461
+} 0
+"807
+[v _wakeup wakeup `(v  1 e 1 0 ]
+{
+"953
+} 0
+"92 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v i1_TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]
+{
+"96
+} 0
+"137
+[v i1_TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"139
+} 0
+"125 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr0.c
+[v i1_TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"127
+} 0
+"317 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v i1_IOCBF4_SetInterruptHandler IOCBF4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1IOCBF4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"319
+} 0
+"287
+[v i1_IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"289
+} 0
+"257
+[v i1_IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"259
+} 0
+"227
+[v i1_IOCBF1_SetInterruptHandler IOCBF1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1IOCBF1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"229
+} 0
+"197
+[v i1_IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"199
+} 0
+"1002 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _restoreTime restoreTime `(v  1 e 1 0 ]
+{
+"1010
+[v restoreTime@sleepy_seconds_rounded sleepy_seconds_rounded `f  1 a 3 45 ]
+"1009
+[v restoreTime@sleepy_seconds_adjusted sleepy_seconds_adjusted `f  1 a 3 42 ]
+"1023
+[v restoreTime@calc_hours calc_hours `i  1 a 2 52 ]
+"1022
+[v restoreTime@calc_minutes calc_minutes `i  1 a 2 50 ]
+"1021
+[v restoreTime@calc_seconds calc_seconds `i  1 a 2 48 ]
+"1054
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\round.c
+[v _round round `(d  1 e 3 0 ]
+{
+"8
+[v round@f f `d  1 a 3 36 ]
+"6
+[v round@x x `d  1 p 3 33 ]
+"13
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\trunc.c
+[v _trunc trunc `(d  1 e 3 0 ]
+{
+"15
+[v trunc@i i `d  1 a 3 12 ]
+"16
+[v trunc@expon expon `i  1 a 2 15 ]
+"13
+[v trunc@x x `d  1 p 3 8 ]
+"25
+} 0
+"254 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+{
+[v frexp@value value `d  1 p 3 0 ]
+[v frexp@eptr eptr `*.4i  1 p 1 3 ]
+"274
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 9 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 8 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0
+"42 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+{
+"44
+[v ___altoft@sign sign `uc  1 a 1 7 ]
+[v ___altoft@exp exp `uc  1 a 1 6 ]
+"42
+[v ___altoft@c c `l  1 p 4 0 ]
+"57
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 17 ]
+"20
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 32 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 31 ]
+[v ___ftadd@sign sign `uc  1 a 1 30 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 20 ]
+[v ___ftadd@f2 f2 `f  1 p 3 23 ]
+"148
+} 0
+"30 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+{
+[v ___lttoft@c c `um  1 p 3 8 ]
+"33
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+{
+"11
+[v ___ltmod@counter counter `uc  1 a 1 7 ]
+"6
+[v ___ltmod@divisor divisor `um  1 p 3 0 ]
+[v ___ltmod@dividend dividend `um  1 p 3 3 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+{
+"11
+[v ___ltdiv@quotient quotient `um  1 a 3 1 ]
+"12
+[v ___ltdiv@counter counter `uc  1 a 1 4 ]
+"6
+[v ___ltdiv@divisor divisor `um  1 p 3 8 ]
+[v ___ltdiv@dividend dividend `um  1 p 3 11 ]
+"31
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+{
+"11
+[v ___almod@sign sign `uc  1 a 1 10 ]
+[v ___almod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___almod@divisor divisor `l  1 p 4 0 ]
+[v ___almod@dividend dividend `l  1 p 4 4 ]
+"35
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"11
+[v ___aldiv@quotient quotient `l  1 a 4 10 ]
+"12
+[v ___aldiv@sign sign `uc  1 a 1 9 ]
+[v ___aldiv@counter counter `uc  1 a 1 8 ]
+"6
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"42
+} 0
+"726 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _shutdown shutdown `(v  1 e 1 0 ]
+{
+"799
+} 0
+"98 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr2.c
+[v i1_TMR2_StopTimer TMR2_StopTimer `(v  1 e 1 0 ]
+{
+"102
+} 0
+"171 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v i1_TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v i1TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37v  1 p 2 0 ]
+"173
+} 0
+"272 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _IOCBF3_ISR IOCBF3_ISR `(v  1 e 1 0 ]
+{
+"282
+} 0
+"294
+[v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"297
+} 0
+"469 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _displayToggleISR displayToggleISR `(v  1 e 1 0 ]
+{
+"516
+} 0
+"242 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+{
+"252
+} 0
+"264
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"267
+} 0
+"386 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _setHoursISR setHoursISR `(v  1 e 1 0 ]
+{
+"431
+} 0
+"593
+[v _twentyFourParse twentyFourParse `(v  1 e 1 0 ]
+{
+"632
+} 0
+"212 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _IOCBF1_ISR IOCBF1_ISR `(v  1 e 1 0 ]
+{
+"222
+} 0
+"234
+[v _IOCBF1_DefaultInterruptHandler IOCBF1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"237
+} 0
+"333 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _setMinutesISR setMinutesISR `(v  1 e 1 0 ]
+{
+"378
+} 0
+"182 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/pin_manager.c
+[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
+{
+"192
+} 0
+"204
+[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"207
+} 0
+"282 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\clock_functions.c
+[v _setSecondsISR setSecondsISR `(v  1 e 1 0 ]
+{
+"325
+} 0
+"704
+[v _updateDisplay updateDisplay `(v  1 e 1 0 ]
+{
+"718
+} 0
+"679
+[v _isolateDigits isolateDigits `(v  1 e 1 0 ]
+{
+"696
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"101 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\sfw\U501_Firmware\NixieClock.X\mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"105
+} 0
