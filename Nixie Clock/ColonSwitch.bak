@@ -1,0 +1,392 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Custom Library
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:logo
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:w_analog
+LIBS:w_connectors
+LIBS:w_device
+LIBS:w_logic
+LIBS:w_memory
+LIBS:w_microcontrollers
+LIBS:w_opto
+LIBS:w_rtx
+LIBS:w_transistor
+LIBS:w_vacuum
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:Zilog
+LIBS:Nixie Clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 11 15
+Title "Lowside Colon Switches"
+Date "2017-03-06"
+Rev "2"
+Comp "Drew Maatman"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Q_NPN_BEC Q1101
+U 1 1 58B42E96
+P 5300 2700
+F 0 "Q1101" H 5750 2750 50  0000 R CNN
+F 1 "MMSTA42" H 5850 2650 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-323_SC-70" H 5500 2800 50  0001 C CNN
+F 3 "" H 5300 2700 50  0000 C CNN
+F 4 "SOT-323" H 5510 2560 50  0000 L CNN "Footprint Display"
+	1    5300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0127
+U 1 1 58B42E9D
+P 5400 2900
+F 0 "#PWR0127" H 5400 2650 50  0001 C CNN
+F 1 "GND" H 5400 2750 50  0000 C CNN
+F 2 "" H 5400 2900 50  0000 C CNN
+F 3 "" H 5400 2900 50  0000 C CNN
+	1    5400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1102
+U 1 1 58B42EA6
+P 4840 2700
+F 0 "R1102" V 4920 2700 50  0000 C CNN
+F 1 "100k" V 4840 2700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4590 2800 50  0001 L CNN
+F 3 "" V 4920 2700 50  0000 C CNN
+F 4 "1/16W" V 4660 2800 50  0000 R CNN "Wattage"
+F 5 "5%" V 4570 2800 50  0000 R CNN "Tolerance"
+F 6 "0402" V 4740 2800 50  0000 R CNN "Footprint Display"
+	1    4840 2700
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5400 2500 1    60   UnSpc ~ 0
+colon0
+$Comp
+L 74LVC2G17 U1101
+U 1 1 58B435A1
+P 4330 2700
+F 0 "U1101" H 4230 2850 50  0000 C CNN
+F 1 "74LVC2G17" H 4330 2550 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4330 2700 50  0001 C CNN
+F 3 "" H 4330 2700 50  0000 C CNN
+	1    4330 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4690 2700 4580 2700
+Wire Wire Line
+	4990 2700 5100 2700
+$Comp
+L R R1103
+U 1 1 58B43DBE
+P 3820 2940
+F 0 "R1103" V 3900 2940 50  0000 C CNN
+F 1 "10k" V 3820 2940 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3570 3040 50  0001 L CNN
+F 3 "" V 3900 2940 50  0000 C CNN
+F 4 "1/16W" H 3720 2840 50  0000 R CNN "Wattage"
+F 5 "5%" H 3720 2940 50  0000 R CNN "Tolerance"
+F 6 "0402" H 3720 3040 50  0000 R CNN "Footprint Display"
+	1    3820 2940
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0128
+U 1 1 58B43E40
+P 3820 3090
+F 0 "#PWR0128" H 3820 2840 50  0001 C CNN
+F 1 "GND" H 3820 2940 50  0000 C CNN
+F 2 "" H 3820 3090 50  0000 C CNN
+F 3 "" H 3820 3090 50  0000 C CNN
+	1    3820 3090
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1101
+U 1 1 58B43E61
+P 3270 2700
+F 0 "R1101" V 3350 2700 50  0000 C CNN
+F 1 "100" V 3270 2700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3020 2800 50  0001 L CNN
+F 3 "" V 3350 2700 50  0000 C CNN
+F 4 "1/16W" V 3170 2820 50  0000 R CNN "Wattage"
+F 5 "5%" V 3010 2740 50  0000 R CNN "Tolerance"
+F 6 "0402" V 3090 2780 50  0000 R CNN "Footprint Display"
+	1    3270 2700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3420 2700 4030 2700
+Wire Wire Line
+	3820 2790 3820 2700
+Connection ~ 3820 2700
+Text GLabel 3120 2700 0    60   Input ~ 0
+ColonDrive0
+$Comp
+L Q_NPN_BEC Q1102
+U 1 1 58B44F1C
+P 5300 4080
+F 0 "Q1102" H 5760 4130 50  0000 R CNN
+F 1 "MMSTA42" H 5850 4030 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-323_SC-70" H 5500 4180 50  0001 C CNN
+F 3 "" H 5300 4080 50  0000 C CNN
+F 4 "SOT-323" H 5510 3940 50  0000 L CNN "Footprint Display"
+	1    5300 4080
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0129
+U 1 1 58B44F22
+P 5400 4280
+F 0 "#PWR0129" H 5400 4030 50  0001 C CNN
+F 1 "GND" H 5400 4130 50  0000 C CNN
+F 2 "" H 5400 4280 50  0000 C CNN
+F 3 "" H 5400 4280 50  0000 C CNN
+	1    5400 4280
+	1    0    0    -1  
+$EndComp
+Text GLabel 5400 3880 1    60   UnSpc ~ 0
+colon1
+$Comp
+L 74LVC2G17 U1101
+U 2 1 58B44F32
+P 4330 4080
+F 0 "U1101" H 4230 4230 50  0000 C CNN
+F 1 "74LVC2G17" H 4330 3930 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4330 4080 50  0001 C CNN
+F 3 "" H 4330 4080 50  0000 C CNN
+	2    4330 4080
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4690 4080 4580 4080
+Wire Wire Line
+	4990 4080 5100 4080
+$Comp
+L R R1106
+U 1 1 58B44F3D
+P 3820 4320
+F 0 "R1106" V 3900 4320 50  0000 C CNN
+F 1 "10k" V 3820 4320 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3570 4420 50  0001 L CNN
+F 3 "" V 3900 4320 50  0000 C CNN
+F 4 "1/16W" H 3720 4220 50  0000 R CNN "Wattage"
+F 5 "5%" H 3720 4320 50  0000 R CNN "Tolerance"
+F 6 "0402" H 3720 4420 50  0000 R CNN "Footprint Display"
+	1    3820 4320
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0130
+U 1 1 58B44F43
+P 3820 4470
+F 0 "#PWR0130" H 3820 4220 50  0001 C CNN
+F 1 "GND" H 3820 4320 50  0000 C CNN
+F 2 "" H 3820 4470 50  0000 C CNN
+F 3 "" H 3820 4470 50  0000 C CNN
+	1    3820 4470
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3420 4080 4030 4080
+Wire Wire Line
+	3820 4170 3820 4080
+Connection ~ 3820 4080
+Text GLabel 3120 4080 0    60   Input ~ 0
+ColonDrive1
+$Comp
+L C C1103
+U 1 1 58B45538
+P 4670 5470
+F 0 "C1103" H 4620 5570 50  0000 R CNN
+F 1 "1nF" H 4620 5370 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 4820 5570 50  0001 L CNN
+F 3 "" H 4695 5570 50  0000 C CNN
+F 4 "25V" H 4820 5470 50  0000 L CNN "Voltage"
+F 5 "10%" H 4820 5370 50  0000 L CNN "Tolerance"
+F 6 "0402" H 4820 5570 50  0000 L CNN "Footprint Display"
+	1    4670 5470
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1102
+U 1 1 58B45542
+P 4350 5470
+F 0 "C1102" H 4300 5570 50  0000 R CNN
+F 1 "10nF" H 4300 5370 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 4500 5570 50  0001 L CNN
+F 3 "" H 4375 5570 50  0000 C CNN
+F 4 "25V" H 4500 5470 50  0001 L CNN "Voltage"
+F 5 "10%" H 4500 5370 50  0001 L CNN "Tolerance"
+F 6 "0402" H 4500 5570 50  0001 L CNN "Footprint Display"
+	1    4350 5470
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1101
+U 1 1 58B4554C
+P 4030 5470
+F 0 "C1101" H 3980 5570 50  0000 R CNN
+F 1 "0.1uF" H 3980 5370 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 4180 5570 50  0001 L CNN
+F 3 "" H 4055 5570 50  0000 C CNN
+F 4 "25V" H 4180 5470 50  0001 L CNN "Voltage"
+F 5 "10%" H 4180 5370 50  0001 L CNN "Tolerance"
+F 6 "0402" H 4180 5570 50  0001 L CNN "Footprint Display"
+	1    4030 5470
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR0131
+U 1 1 58B45553
+P 4350 5240
+F 0 "#PWR0131" H 4350 5090 50  0001 C CNN
+F 1 "VCC" H 4350 5390 50  0000 C CNN
+F 2 "" H 4350 5240 50  0000 C CNN
+F 3 "" H 4350 5240 50  0000 C CNN
+	1    4350 5240
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0132
+U 1 1 58B45559
+P 4350 5700
+F 0 "#PWR0132" H 4350 5450 50  0001 C CNN
+F 1 "GND" H 4350 5550 50  0000 C CNN
+F 2 "" H 4350 5700 50  0000 C CNN
+F 3 "" H 4350 5700 50  0000 C CNN
+	1    4350 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 5700 4350 5620
+Wire Wire Line
+	4030 5660 4670 5660
+Wire Wire Line
+	4670 5660 4670 5620
+Connection ~ 4350 5660
+Wire Wire Line
+	4030 5660 4030 5620
+Wire Wire Line
+	4350 5320 4350 5240
+Wire Wire Line
+	4030 5280 4670 5280
+Wire Wire Line
+	4670 5280 4670 5320
+Connection ~ 4350 5280
+Wire Wire Line
+	4030 5280 4030 5320
+Text Notes 5570 1610 2    100  ~ 20
+Colon Drivers/BJT Switches
+$Comp
+L R R1104
+U 1 1 58CF9743
+P 3270 4080
+F 0 "R1104" V 3350 4080 50  0000 C CNN
+F 1 "100" V 3270 4080 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3020 4180 50  0001 L CNN
+F 3 "" V 3350 4080 50  0000 C CNN
+F 4 "1/16W" V 3170 4200 50  0000 R CNN "Wattage"
+F 5 "5%" V 3010 4120 50  0000 R CNN "Tolerance"
+F 6 "0402" V 3090 4160 50  0000 R CNN "Footprint Display"
+	1    3270 4080
+	0    1    -1   0   
+$EndComp
+$Comp
+L R R1105
+U 1 1 58D74505
+P 4840 4080
+F 0 "R1105" V 4920 4080 50  0000 C CNN
+F 1 "100k" V 4840 4080 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4590 4180 50  0001 L CNN
+F 3 "" V 4920 4080 50  0000 C CNN
+F 4 "1/16W" V 4660 4180 50  0000 R CNN "Wattage"
+F 5 "5%" V 4570 4180 50  0000 R CNN "Tolerance"
+F 6 "0402" V 4740 4180 50  0000 R CNN "Footprint Display"
+	1    4840 4080
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

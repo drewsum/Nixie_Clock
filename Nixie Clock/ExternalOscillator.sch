@@ -1,0 +1,248 @@
+EESchema Schematic File Version 2
+LIBS:Nixie Clock-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:Zilog
+LIBS:Nixie Clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 14 15
+Title "External 32.768kHz CMOS Oscillator"
+Date "2017-03-06"
+Rev "2"
+Comp "Drew Maatman"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ECS-327KE U1401
+U 1 1 58B68566
+P 5930 3560
+F 0 "U1401" H 6230 2710 60  0000 C CNN
+F 1 "ECS-327KE" H 5930 3110 60  0000 C CNN
+F 2 "Custom Footprints:ECS-327KE" H 5930 3910 60  0001 C CNN
+F 3 "" H 5930 3910 60  0001 C CNN
+	1    5930 3560
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0176
+U 1 1 58B68BB0
+P 5930 4560
+F 0 "#PWR0176" H 5930 4310 50  0001 C CNN
+F 1 "GND" H 5930 4410 50  0000 C CNN
+F 2 "" H 5930 4560 50  0000 C CNN
+F 3 "" H 5930 4560 50  0000 C CNN
+	1    5930 4560
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3180 5250 3760
+Wire Wire Line
+	5250 3760 5330 3760
+Wire Wire Line
+	6570 3760 6530 3760
+Text GLabel 6570 3760 2    60   Output ~ 0
+EXT_OSC
+$Comp
+L C C1403
+U 1 1 58B6A028
+P 4260 3990
+F 0 "C1403" H 4210 4090 50  0000 R CNN
+F 1 "1nF" H 4210 3890 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 4410 4090 50  0001 L CNN
+F 3 "" H 4285 4090 50  0000 C CNN
+F 4 "25V" H 4410 3990 50  0000 L CNN "Voltage"
+F 5 "10%" H 4410 3890 50  0000 L CNN "Tolerance"
+F 6 "0402" H 4410 4090 50  0000 L CNN "Footprint Display"
+	1    4260 3990
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1402
+U 1 1 58B6A032
+P 3940 3990
+F 0 "C1402" H 3890 4090 50  0000 R CNN
+F 1 "10nF" H 3890 3890 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 4090 4090 50  0001 L CNN
+F 3 "" H 3965 4090 50  0000 C CNN
+F 4 "25V" H 4090 3990 50  0001 L CNN "Voltage"
+F 5 "10%" H 4090 3890 50  0001 L CNN "Tolerance"
+F 6 "0402" H 4090 4090 50  0001 L CNN "Footprint Display"
+	1    3940 3990
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1401
+U 1 1 58B6A03C
+P 3620 3990
+F 0 "C1401" H 3570 4090 50  0000 R CNN
+F 1 "0.1uF" H 3570 3890 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 3770 4090 50  0001 L CNN
+F 3 "" H 3645 4090 50  0000 C CNN
+F 4 "25V" H 3770 3990 50  0001 L CNN "Voltage"
+F 5 "10%" H 3770 3890 50  0001 L CNN "Tolerance"
+F 6 "0402" H 3770 4090 50  0001 L CNN "Footprint Display"
+	1    3620 3990
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR0177
+U 1 1 58B6A049
+P 3940 4220
+F 0 "#PWR0177" H 3940 3970 50  0001 C CNN
+F 1 "GND" H 3940 4070 50  0000 C CNN
+F 2 "" H 3940 4220 50  0000 C CNN
+F 3 "" H 3940 4220 50  0000 C CNN
+	1    3940 4220
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3940 4140 3940 4220
+Wire Wire Line
+	3620 4180 4260 4180
+Wire Wire Line
+	4260 4180 4260 4140
+Connection ~ 3940 4180
+Wire Wire Line
+	3620 4180 3620 4140
+Wire Wire Line
+	3940 3180 3940 3840
+Wire Wire Line
+	3620 3800 4260 3800
+Wire Wire Line
+	4260 3800 4260 3840
+Connection ~ 3940 3800
+Wire Wire Line
+	3620 3800 3620 3840
+$Comp
+L INDUCTOR-RESCUE-Nixie_Clock L1401
+U 1 1 58D9B33C
+P 3520 3180
+F 0 "L1401" V 3470 3180 50  0000 C CNN
+F 1 "BKP1005HS121-T" V 3620 3180 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 3370 3180 50  0001 C CNN
+F 3 "" V 3470 3180 50  0000 C CNN
+F 4 "120 Ohm" V 3720 3180 50  0000 C CNN "Tolerance"
+F 5 "0402" V 3370 3180 50  0000 C CNN "Footprint Display"
+F 6 "1A" V 3270 3180 50  0000 C CNN "Amperage"
+	1    3520 3180
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3820 3180 5930 3180
+Wire Wire Line
+	5930 3040 5930 3360
+Connection ~ 3940 3180
+$Comp
+L VCC_BCKUP #PWR0178
+U 1 1 58D9C6CB
+P 2990 2940
+F 0 "#PWR0178" H 2990 2790 50  0001 C CNN
+F 1 "VCC_BCKUP" H 2990 3090 50  0000 C CNN
+F 2 "" H 2990 2940 50  0000 C CNN
+F 3 "" H 2990 2940 50  0000 C CNN
+	1    2990 2940
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2990 2940 2990 3180
+Wire Wire Line
+	2990 3180 3220 3180
+Connection ~ 5250 3180
+Text Label 4390 3180 0    60   ~ 0
+VDD_OSC
+Text Notes 6030 2360 2    100  ~ 20
+Timekeeping Oscillator
+$Comp
+L PWR_FLAG #FLG0179
+U 1 1 593780F6
+P 5930 3040
+F 0 "#FLG0179" H 5930 3135 50  0001 C CNN
+F 1 "PWR_FLAG" H 5930 3220 50  0000 C CNN
+F 2 "" H 5930 3040 50  0000 C CNN
+F 3 "" H 5930 3040 50  0000 C CNN
+	1    5930 3040
+	1    0    0    -1  
+$EndComp
+Connection ~ 5930 3180
+$EndSCHEMATC

@@ -1,0 +1,179 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Custom Library
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:logo
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:w_analog
+LIBS:w_connectors
+LIBS:w_device
+LIBS:w_logic
+LIBS:w_memory
+LIBS:w_microcontrollers
+LIBS:w_opto
+LIBS:w_rtx
+LIBS:w_transistor
+LIBS:w_vacuum
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:Zilog
+LIBS:Valve Clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 9 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 620  700  2    60   Output ~ 0
+HighSideBase0
+Text GLabel 620  800  2    60   Output ~ 0
+HighSideBase1
+Text GLabel 620  900  2    60   Output ~ 0
+HighSideBase2
+Text GLabel 620  1000 2    60   Output ~ 0
+HighSideBase3
+Text GLabel 620  1100 2    60   Output ~ 0
+HighSideBase4
+Text GLabel 620  1200 2    60   Output ~ 0
+HighSideBase5
+Text GLabel 590  6860 2    60   Output ~ 0
+LowSideBase0
+Text GLabel 590  6960 2    60   Output ~ 0
+LowSideBase1
+Text GLabel 590  7060 2    60   Output ~ 0
+LowSideBase2
+Text GLabel 590  7160 2    60   Output ~ 0
+LowSideBase3
+Text GLabel 590  7260 2    60   Output ~ 0
+LowSideBase4
+Text GLabel 590  7360 2    60   Output ~ 0
+LowSideBase5
+Text GLabel 590  7460 2    60   Output ~ 0
+LowSideBase6
+Text GLabel 590  7560 2    60   Output ~ 0
+LowSideBase7
+Text GLabel 590  7660 2    60   Output ~ 0
+LowSideBase8
+Text GLabel 590  7760 2    60   Output ~ 0
+LowSideBase9
+$Comp
+L Q_NPN_BEC Q?
+U 1 1 58B37775
+P 2460 4830
+F 0 "Q?" H 2760 4880 50  0000 R CNN
+F 1 "MMSTA42" H 3010 4780 50  0000 R CNN
+F 2 "" H 2660 4930 50  0000 C CNN
+F 3 "" H 2460 4830 50  0000 C CNN
+F 4 "SOT-323" H 2670 4690 50  0000 L CNN "Footprint Display"
+	1    2460 4830
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B37C84
+P 2560 5030
+F 0 "#PWR?" H 2560 4780 50  0001 C CNN
+F 1 "GND" H 2560 4880 50  0000 C CNN
+F 2 "" H 2560 5030 50  0000 C CNN
+F 3 "" H 2560 5030 50  0000 C CNN
+	1    2560 5030
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B37EB4
+P 2110 4830
+F 0 "R?" V 2190 4830 50  0000 C CNN
+F 1 "R" V 2110 4830 50  0000 C CNN
+F 2 "" H 1860 4930 50  0001 L CNN
+F 3 "" V 2190 4830 50  0000 C CNN
+F 4 "1/16W" V 1930 4930 50  0000 R CNN "Wattage"
+F 5 "5%" V 1840 4930 50  0000 R CNN "Tolerance"
+F 6 "0402" V 2010 4930 50  0000 R CNN "Footprint Display"
+	1    2110 4830
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2560 4630 1    60   UnSpc ~ 0
+A/0
+$EndSCHEMATC

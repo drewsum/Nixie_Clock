@@ -1,0 +1,714 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Custom Library
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:logo
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:w_analog
+LIBS:w_connectors
+LIBS:w_device
+LIBS:w_logic
+LIBS:w_memory
+LIBS:w_microcontrollers
+LIBS:w_opto
+LIBS:w_rtx
+LIBS:w_transistor
+LIBS:w_vacuum
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:Zilog
+LIBS:Nixie Clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 2 15
+Title "Power Input"
+Date "2017-03-06"
+Rev "2"
+Comp "Drew Maatman"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BARREL_JACK J201
+U 1 1 58B20C4F
+P 2120 2020
+F 0 "J201" H 2120 2270 50  0000 C CNN
+F 1 "Power Input" H 2120 1820 50  0000 C CNN
+F 2 "Connect:BARREL_JACK" H 2120 2020 50  0001 C CNN
+F 3 "" H 2120 2020 50  0000 C CNN
+	1    2120 2020
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58B20F99
+P 2500 2200
+F 0 "#PWR01" H 2500 1950 50  0001 C CNN
+F 1 "GND" H 2500 2050 50  0000 C CNN
+F 2 "" H 2500 2200 50  0000 C CNN
+F 3 "" H 2500 2200 50  0000 C CNN
+	1    2500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LTC4365IDDB U201
+U 1 1 58B247FD
+P 5910 3250
+F 0 "U201" H 6260 2500 50  0000 C CNN
+F 1 "LTC4365IDDB" H 5910 3350 50  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-8-1EP_2x3mm_Pitch0.5mm" H 5960 4850 100 0001 C CNN
+F 3 "" H 5960 4850 100 0001 C CNN
+	1    5910 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58B254B6
+P 5810 4150
+F 0 "#PWR02" H 5810 3900 50  0001 C CNN
+F 1 "GND" H 5810 4000 50  0000 C CNN
+F 2 "" H 5810 4150 50  0000 C CNN
+F 3 "" H 5810 4150 50  0000 C CNN
+	1    5810 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 58B254D7
+P 6010 4150
+F 0 "#PWR03" H 6010 3900 50  0001 C CNN
+F 1 "GND" H 6010 4000 50  0000 C CNN
+F 2 "" H 6010 4150 50  0000 C CNN
+F 3 "" H 6010 4150 50  0000 C CNN
+	1    6010 4150
+	1    0    0    -1  
+$EndComp
+Text Label 4880 2950 0    50   ~ 0
+Vin_SHDN
+$Comp
+L R R203
+U 1 1 58B26191
+P 4320 3150
+F 0 "R203" V 4400 3150 50  0000 C CNN
+F 1 "1.3M" V 4320 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4070 3250 50  0001 L CNN
+F 3 "" V 4400 3150 50  0000 C CNN
+F 4 "1/16W" H 4220 3050 50  0000 R CNN "Wattage"
+F 5 "1%" H 4220 3150 50  0000 R CNN "Tolerance"
+F 6 "0402" H 4220 3250 50  0000 R CNN "Footprint Display"
+	1    4320 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58B26376
+P 4320 4220
+F 0 "#PWR04" H 4320 3970 50  0001 C CNN
+F 1 "GND" H 4320 4070 50  0000 C CNN
+F 2 "" H 4320 4220 50  0000 C CNN
+F 3 "" H 4320 4220 50  0000 C CNN
+	1    4320 4220
+	1    0    0    -1  
+$EndComp
+$Comp
+L FUSE F201
+U 1 1 58B26ACA
+P 3230 1920
+F 0 "F201" H 3330 2040 50  0000 C CNN
+F 1 "3A" H 3130 1870 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" H 3230 1920 50  0001 C CNN
+F 3 "" H 3330 1970 50  0000 C CNN
+F 4 "1206" H 3130 1770 50  0000 C CNN "Footprint Display"
+	1    3230 1920
+	1    0    0    -1  
+$EndComp
+Text Label 2450 1920 0    50   ~ 0
+Vin_Unfused
+Text Label 4530 3400 0    50   ~ 0
+Vin_UV
+Text Label 4550 3850 0    50   ~ 0
+Vin_OV
+Text Label 5530 2260 0    50   ~ 0
+Vin_Gate
+Text Label 5740 1920 0    50   ~ 0
+Vin_Source
+$Comp
+L VCOM #PWR05
+U 1 1 58B28F2D
+P 6740 1840
+F 0 "#PWR05" H 6740 1690 50  0001 C CNN
+F 1 "VCOM" H 6740 1990 50  0000 C CNN
+F 2 "" H 6740 1840 50  0000 C CNN
+F 3 "" H 6740 1840 50  0000 C CNN
+	1    6740 1840
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 58B2DCEB
+P 1920 2970
+F 0 "#PWR06" H 1920 2720 50  0001 C CNN
+F 1 "GND" H 1920 2820 50  0000 C CNN
+F 2 "" H 1920 2970 50  0000 C CNN
+F 3 "" H 1920 2970 50  0000 C CNN
+	1    1920 2970
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR07
+U 1 1 58B2DD38
+P 1920 2970
+F 0 "#PWR07" H 1920 2820 50  0001 C CNN
+F 1 "VSS" H 1920 3120 50  0000 C CNN
+F 2 "" H 1920 2970 50  0000 C CNN
+F 3 "" H 1920 2970 50  0000 C CNN
+	1    1920 2970
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 58B2DD85
+P 2270 2970
+F 0 "#PWR08" H 2270 2720 50  0001 C CNN
+F 1 "GND" H 2270 2820 50  0000 C CNN
+F 2 "" H 2270 2970 50  0000 C CNN
+F 3 "" H 2270 2970 50  0000 C CNN
+	1    2270 2970
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG09
+U 1 1 58B2DDD2
+P 2270 2970
+F 0 "#FLG09" H 2270 3065 50  0001 C CNN
+F 1 "PWR_FLAG" H 2270 3150 50  0000 C CNN
+F 2 "" H 2270 2970 50  0000 C CNN
+F 3 "" H 2270 2970 50  0000 C CNN
+	1    2270 2970
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCOM #PWR010
+U 1 1 58B2E096
+P 7380 1850
+F 0 "#PWR010" H 7380 1700 50  0001 C CNN
+F 1 "VCOM" H 7380 2000 50  0000 C CNN
+F 2 "" H 7380 1850 50  0000 C CNN
+F 3 "" H 7380 1850 50  0000 C CNN
+	1    7380 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG011
+U 1 1 58B2E0E3
+P 7380 1850
+F 0 "#FLG011" H 7380 1945 50  0001 C CNN
+F 1 "PWR_FLAG" H 7380 2030 50  0000 C CNN
+F 2 "" H 7380 1850 50  0000 C CNN
+F 3 "" H 7380 1850 50  0000 C CNN
+	1    7380 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Vin #PWR012
+U 1 1 58B2F804
+P 4320 1840
+F 0 "#PWR012" H 4320 1690 50  0001 C CNN
+F 1 "Vin" H 4320 1990 50  0000 C CNN
+F 2 "" H 4320 1840 50  0000 C CNN
+F 3 "" H 4320 1840 50  0000 C CNN
+	1    4320 1840
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vin #PWR013
+U 1 1 58B2FAAA
+P 3910 1600
+F 0 "#PWR013" H 3910 1450 50  0001 C CNN
+F 1 "Vin" H 3910 1750 50  0000 C CNN
+F 2 "" H 3910 1600 50  0000 C CNN
+F 3 "" H 3910 1600 50  0000 C CNN
+	1    3910 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG014
+U 1 1 58B2FAF0
+P 3910 1600
+F 0 "#FLG014" H 3910 1695 50  0001 C CNN
+F 1 "PWR_FLAG" H 3910 1780 50  0000 C CNN
+F 2 "" H 3910 1600 50  0000 C CNN
+F 3 "" H 3910 1600 50  0000 C CNN
+	1    3910 1600
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C203
+U 1 1 58B2FDF8
+P 9290 4100
+F 0 "C203" H 9240 4200 50  0000 R CNN
+F 1 "1nF" H 9240 4000 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 9440 4200 50  0001 L CNN
+F 3 "" H 9315 4200 50  0000 C CNN
+F 4 "50V" H 9440 4100 50  0000 L CNN "Voltage"
+F 5 "10%" H 9440 4000 50  0000 L CNN "Tolerance"
+F 6 "0402" H 9440 4200 50  0000 L CNN "Footprint Display"
+	1    9290 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 58B2FE16
+P 8970 4330
+F 0 "#PWR015" H 8970 4080 50  0001 C CNN
+F 1 "GND" H 8970 4180 50  0000 C CNN
+F 2 "" H 8970 4330 50  0000 C CNN
+F 3 "" H 8970 4330 50  0000 C CNN
+	1    8970 4330
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C201
+U 1 1 58B2FE0A
+P 8650 4100
+F 0 "C201" H 8600 4200 50  0000 R CNN
+F 1 "0.1uF" H 8600 4000 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 8800 4200 50  0001 L CNN
+F 3 "" H 8675 4200 50  0000 C CNN
+F 4 "50V" H 8800 4100 50  0001 L CNN "Voltage"
+F 5 "10%" H 8800 4000 50  0001 L CNN "Tolerance"
+F 6 "0402" H 8800 4200 50  0001 L CNN "Footprint Display"
+	1    8650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C202
+U 1 1 58B2FE01
+P 8970 4100
+F 0 "C202" H 8920 4200 50  0000 R CNN
+F 1 "10nF" H 8920 4000 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 9120 4200 50  0001 L CNN
+F 3 "" H 8995 4200 50  0000 C CNN
+F 4 "50V" H 9120 4100 50  0001 L CNN "Voltage"
+F 5 "10%" H 9120 4000 50  0001 L CNN "Tolerance"
+F 6 "0402" H 9120 4200 50  0001 L CNN "Footprint Display"
+	1    8970 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Vin #PWR016
+U 1 1 58B3020C
+P 8970 3870
+F 0 "#PWR016" H 8970 3720 50  0001 C CNN
+F 1 "Vin" H 8970 4020 50  0000 C CNN
+F 2 "" H 8970 3870 50  0000 C CNN
+F 3 "" H 8970 3870 50  0000 C CNN
+	1    8970 3870
+	1    0    0    -1  
+$EndComp
+Text Notes 3200 1110 0    100  ~ 20
+Overvoltage/Undervoltage/Reverse Polarity Lockout
+$Comp
+L R R201
+U 1 1 58B7C443
+P 4760 2770
+F 0 "R201" V 4840 2770 50  0000 C CNN
+F 1 "100k" V 4760 2770 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4510 2870 50  0001 L CNN
+F 3 "" V 4840 2770 50  0000 C CNN
+F 4 "1/16W" H 4660 2670 50  0000 R CNN "Wattage"
+F 5 "5%" H 4660 2770 50  0000 R CNN "Tolerance"
+F 6 "0402" H 4660 2870 50  0000 R CNN "Footprint Display"
+	1    4760 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R205
+U 1 1 58B7C4B1
+P 4320 3630
+F 0 "R205" V 4400 3630 50  0000 C CNN
+F 1 "4.64k" V 4320 3630 39  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4070 3730 50  0001 L CNN
+F 3 "" V 4400 3630 50  0000 C CNN
+F 4 "1/16W" H 4220 3530 50  0000 R CNN "Wattage"
+F 5 "1%" H 4220 3630 50  0000 R CNN "Tolerance"
+F 6 "0402" H 4220 3730 50  0000 R CNN "Footprint Display"
+	1    4320 3630
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R206
+U 1 1 58B7C523
+P 4320 4070
+F 0 "R206" V 4400 4070 50  0000 C CNN
+F 1 "25.5k" V 4320 4070 39  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 4070 4170 50  0001 L CNN
+F 3 "" V 4400 4070 50  0000 C CNN
+F 4 "1/16W" H 4220 3970 50  0000 R CNN "Wattage"
+F 5 "1%" H 4220 4070 50  0000 R CNN "Tolerance"
+F 6 "0402" H 4220 4170 50  0000 R CNN "Footprint Display"
+	1    4320 4070
+	1    0    0    -1  
+$EndComp
+$Comp
+L IRF7309IPBF Q201
+U 1 1 58B26751
+P 5410 2020
+F 0 "Q201" V 5840 1910 50  0000 L CNN
+F 1 "Si4946" V 5760 1880 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5660 1945 50  0001 L CNN
+F 3 "" H 5410 2020 50  0000 L CNN
+F 4 "SOIC-8" V 5680 2000 50  0000 C CNN "Footprint Display"
+	1    5410 2020
+	0    -1   -1   0   
+$EndComp
+$Comp
+L IRF7309IPBF Q201
+U 2 1 58B2752F
+P 6410 2020
+F 0 "Q201" V 6840 1880 50  0000 L CNN
+F 1 "Si4946" V 6760 1880 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6660 1945 50  0001 L CNN
+F 3 "" H 6410 2020 50  0000 L CNN
+F 4 "SOIC-8" V 6680 2020 50  0000 C CNN "Footprint Display"
+	2    6410 2020
+	0    1    -1   0   
+$EndComp
+Text Notes 1850 1600 0    50   ~ 0
+VIN:\nMIN 22V,\nNOM 24V,\nMAX 26V
+$Comp
+L R R207
+U 1 1 58CF53D0
+P 4220 5260
+F 0 "R207" V 4300 5260 50  0000 C CNN
+F 1 "1M" V 4220 5260 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3970 5360 50  0001 L CNN
+F 3 "" V 4300 5260 50  0000 C CNN
+F 4 "1/16W" H 4120 5160 50  0000 R CNN "Wattage"
+F 5 "5%" H 4120 5260 50  0000 R CNN "Tolerance"
+F 6 "0402" H 4120 5360 50  0000 R CNN "Footprint Display"
+	1    4220 5260
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC_BCKUP #PWR017
+U 1 1 58CF583C
+P 4220 5110
+F 0 "#PWR017" H 4220 4960 50  0001 C CNN
+F 1 "VCC_BCKUP" H 4220 5260 50  0000 C CNN
+F 2 "" H 4220 5110 50  0000 C CNN
+F 3 "" H 4220 5110 50  0000 C CNN
+	1    4220 5110
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 58CF5CE5
+P 4220 6340
+F 0 "#PWR018" H 4220 6090 50  0001 C CNN
+F 1 "GND" H 4220 6190 50  0000 C CNN
+F 2 "" H 4220 6340 50  0000 C CNN
+F 3 "" H 4220 6340 50  0000 C CNN
+	1    4220 6340
+	1    0    0    -1  
+$EndComp
+Text Label 2430 2020 0    60   ~ 0
+PlugSense
+Wire Wire Line
+	2910 2020 2420 2020
+Wire Wire Line
+	2500 2120 2500 2200
+Connection ~ 6660 1920
+Wire Wire Line
+	6660 1820 6660 1920
+Wire Wire Line
+	6610 1820 6660 1820
+Connection ~ 5150 1920
+Wire Wire Line
+	5150 1920 5150 1820
+Wire Wire Line
+	5150 1820 5210 1820
+Wire Wire Line
+	8650 3910 8650 3950
+Connection ~ 8970 3910
+Wire Wire Line
+	9290 3910 9290 3950
+Wire Wire Line
+	8650 3910 9290 3910
+Wire Wire Line
+	8970 3870 8970 3950
+Wire Wire Line
+	8650 4290 8650 4250
+Connection ~ 8970 4290
+Wire Wire Line
+	9290 4290 9290 4250
+Wire Wire Line
+	8650 4290 9290 4290
+Wire Wire Line
+	8970 4250 8970 4330
+Connection ~ 6740 1920
+Connection ~ 5910 2260
+Wire Wire Line
+	6360 2260 6360 2220
+Wire Wire Line
+	5460 2260 5460 2220
+Wire Wire Line
+	5460 2260 6360 2260
+Wire Wire Line
+	5910 2300 5910 2260
+Connection ~ 4320 1920
+Wire Wire Line
+	2980 1920 2420 1920
+Wire Wire Line
+	6610 1920 6740 1920
+Wire Wire Line
+	6740 1840 6740 2600
+Wire Wire Line
+	6740 2600 6560 2600
+Connection ~ 4760 1920
+Wire Wire Line
+	4320 1840 4320 3000
+Connection ~ 4320 3850
+Wire Wire Line
+	4320 3780 4320 3920
+Wire Wire Line
+	5260 3850 4320 3850
+Connection ~ 4320 3400
+Wire Wire Line
+	4320 3300 4320 3480
+Wire Wire Line
+	5260 3400 4320 3400
+Connection ~ 4760 2600
+Wire Wire Line
+	3480 1920 5210 1920
+Wire Wire Line
+	4760 2600 5260 2600
+Wire Wire Line
+	4760 1920 4760 2620
+Wire Wire Line
+	4760 2950 4760 2920
+Wire Wire Line
+	4760 2950 5260 2950
+Wire Wire Line
+	5610 1920 6210 1920
+Wire Wire Line
+	2500 2120 2420 2120
+Text GLabel 5190 5520 2    60   Output ~ 0
+PLUG
+$Comp
+L R R208
+U 1 1 58CFCC8B
+P 3710 5520
+F 0 "R208" V 3790 5520 50  0000 C CNN
+F 1 "100" V 3710 5520 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3460 5620 50  0001 L CNN
+F 3 "" V 3790 5520 50  0000 C CNN
+F 4 "1/16W" V 3520 5620 50  0000 R CNN "Wattage"
+F 5 "5%" V 3430 5620 50  0000 R CNN "Tolerance"
+F 6 "0402" V 3600 5620 50  0000 R CNN "Footprint Display"
+	1    3710 5520
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2910 5520 3560 5520
+Wire Wire Line
+	4220 5410 4220 5740
+Wire Wire Line
+	3860 5520 5190 5520
+Connection ~ 4220 5520
+Text Notes 2720 7100 0    100  ~ 20
+Input Presence Detection
+Wire Wire Line
+	2910 5520 2910 2020
+$Comp
+L TVS D203
+U 1 1 58CF54AA
+P 4220 6040
+F 0 "D203" V 4220 6190 50  0000 C CNN
+F 1 "3.3V" V 4120 5940 50  0000 R CNN
+F 2 "Diodes_SMD:D_SOD-323" H 4220 6040 50  0001 C CNN
+F 3 "" H 4220 6190 50  0000 C CNN
+F 4 "PESD3V3L1BA" V 4220 5940 50  0000 R CNN "Part Number"
+F 5 "SOD-323" V 4320 5940 50  0000 R CNN "Footprint Display"
+	1    4220 6040
+	0    1    -1   0   
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 58D1F27E
+P 5000 6150
+F 0 "#PWR019" H 5000 5900 50  0001 C CNN
+F 1 "GND" H 5000 6000 50  0000 C CNN
+F 2 "" H 5000 6150 50  0000 C CNN
+F 3 "" H 5000 6150 50  0000 C CNN
+	1    5000 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6150 5000 6000
+$Comp
+L D_Schottky D201
+U 1 1 58D1F304
+P 5000 5190
+F 0 "D201" H 5000 5290 50  0000 C CNN
+F 1 "SMD1200PL" H 5000 5090 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123F" H 5000 5190 50  0001 C CNN
+F 3 "" H 5000 5190 50  0000 C CNN
+F 4 "SOD-123F" H 5000 5390 50  0000 C CNN "Footprint Display"
+	1    5000 5190
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC_BCKUP #PWR020
+U 1 1 58D1F40E
+P 5000 5040
+F 0 "#PWR020" H 5000 4890 50  0001 C CNN
+F 1 "VCC_BCKUP" H 5000 5190 50  0000 C CNN
+F 2 "" H 5000 5040 50  0000 C CNN
+F 3 "" H 5000 5040 50  0000 C CNN
+	1    5000 5040
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 5340 5000 5700
+Connection ~ 5000 5520
+$Comp
+L R R204
+U 1 1 58E17C81
+P 6770 3400
+F 0 "R204" V 6850 3400 50  0000 C CNN
+F 1 "100" V 6770 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 6520 3500 50  0001 L CNN
+F 3 "" V 6850 3400 50  0000 C CNN
+F 4 "1/16W" V 6520 3480 50  0000 R CNN "Wattage"
+F 5 "5%" V 6600 3480 50  0000 R CNN "Tolerance"
+F 6 "0402" V 6680 3480 50  0000 R CNN "Footprint Display"
+	1    6770 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R202
+U 1 1 58E17C8C
+P 7060 3110
+F 0 "R202" V 7140 3110 50  0000 C CNN
+F 1 "1M" V 7060 3110 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 6810 3210 50  0001 L CNN
+F 3 "" V 7140 3110 50  0000 C CNN
+F 4 "1/16W" H 6960 3010 50  0000 R CNN "Wattage"
+F 5 "5%" H 6960 3110 50  0000 R CNN "Tolerance"
+F 6 "0402" H 6960 3210 50  0000 R CNN "Footprint Display"
+	1    7060 3110
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6620 3400 6560 3400
+Wire Wire Line
+	7060 3260 7060 3400
+Wire Wire Line
+	6920 3400 7160 3400
+Text GLabel 7160 3400 2    60   Output ~ 0
+VCOM_PGOOD
+Connection ~ 7060 3400
+Text Label 4390 5520 0    60   ~ 0
+PLUG_R
+$Comp
+L D_Schottky D202
+U 1 1 5937B3B4
+P 5000 5850
+F 0 "D202" H 5000 5950 50  0000 C CNN
+F 1 "SMD1200PL" H 5000 5750 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123F" H 5000 5850 50  0001 C CNN
+F 3 "" H 5000 5850 50  0000 C CNN
+F 4 "SOD-123F" H 5000 6050 50  0000 C CNN "Footprint Display"
+	1    5000 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L VCC_BCKUP #PWR021
+U 1 1 593C3552
+P 7060 2960
+F 0 "#PWR021" H 7060 2810 50  0001 C CNN
+F 1 "VCC_BCKUP" H 7060 3110 50  0000 C CNN
+F 2 "" H 7060 2960 50  0000 C CNN
+F 3 "" H 7060 2960 50  0000 C CNN
+	1    7060 2960
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

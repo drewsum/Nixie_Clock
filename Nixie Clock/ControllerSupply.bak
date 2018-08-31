@@ -1,0 +1,519 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Custom Library
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:Lattice
+LIBS:logo
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:w_analog
+LIBS:w_connectors
+LIBS:w_device
+LIBS:w_logic
+LIBS:w_memory
+LIBS:w_microcontrollers
+LIBS:w_opto
+LIBS:w_rtx
+LIBS:w_transistor
+LIBS:w_vacuum
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:Zilog
+LIBS:Nixie Clock-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 3 15
+Title "Controller Supply (Vdd and Vcc)"
+Date "2017-03-06"
+Rev "2"
+Comp "Drew Maatman"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LT3973-DD U301
+U 1 1 58BBE197
+P 4960 3980
+F 0 "U301" H 5410 2880 60  0000 C CNN
+F 1 "LT3973-DD" H 4960 5060 60  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm" H 4960 5480 60  0001 C CNN
+F 3 "" H 4960 5480 60  0001 C CNN
+	1    4960 3980
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C301
+U 1 1 58BBE200
+P 6360 3340
+F 0 "C301" H 6310 3440 50  0000 R CNN
+F 1 "0.47uF" H 6310 3240 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 6510 3440 50  0001 L CNN
+F 3 "" H 6385 3440 50  0000 C CNN
+F 4 "25V" H 6510 3340 50  0000 L CNN "Voltage"
+F 5 "10%" H 6510 3240 50  0000 L CNN "Tolerance"
+F 6 "0402" H 6510 3440 50  0000 L CNN "Footprint Display"
+	1    6360 3340
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5710 3580 6830 3580
+Wire Wire Line
+	6360 3580 6360 3490
+Wire Wire Line
+	6360 3080 6360 3190
+Wire Wire Line
+	5710 3080 6360 3080
+$Comp
+L INDUCTOR L301
+U 1 1 58BBE739
+P 7130 3580
+F 0 "L301" V 7080 3580 50  0000 C CNN
+F 1 "10uH" V 7230 3580 50  0000 C CNN
+F 2 "Custom Footprints:IHLP-2525CZ-01" V 6980 3580 50  0001 C CNN
+F 3 "" V 7080 3580 50  0000 C CNN
+F 4 "10%" V 7330 3580 50  0000 C CNN "Tolerance"
+F 5 "IHLP2525CZER100M01" V 6980 3580 50  0000 C CNN "Footprint Display"
+F 6 "3A" V 6880 3580 50  0000 C CNN "Amperage"
+	1    7130 3580
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6360 3580
+$Comp
+L GND #PWR022
+U 1 1 58BBEC72
+P 4860 5180
+F 0 "#PWR022" H 4860 4930 50  0001 C CNN
+F 1 "GND" H 4860 5030 50  0000 C CNN
+F 2 "" H 4860 5180 50  0000 C CNN
+F 3 "" H 4860 5180 50  0000 C CNN
+	1    4860 5180
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR023
+U 1 1 58BBF169
+P 5060 5180
+F 0 "#PWR023" H 5060 4930 50  0001 C CNN
+F 1 "GND" H 5060 5030 50  0000 C CNN
+F 2 "" H 5060 5180 50  0000 C CNN
+F 3 "" H 5060 5180 50  0000 C CNN
+	1    5060 5180
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R306
+U 1 1 58BBF1D0
+P 3640 5110
+F 0 "R306" V 3720 5110 50  0000 C CNN
+F 1 "115k" V 3640 5110 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 3390 5210 50  0001 L CNN
+F 3 "" V 3720 5110 50  0000 C CNN
+F 4 "1/16W" H 3540 5010 50  0000 R CNN "Wattage"
+F 5 "1%" H 3540 5110 50  0000 R CNN "Tolerance"
+F 6 "0402" H 3540 5210 50  0000 R CNN "Footprint Display"
+	1    3640 5110
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR024
+U 1 1 58BBF22E
+P 3640 5260
+F 0 "#PWR024" H 3640 5010 50  0001 C CNN
+F 1 "GND" H 3640 5110 50  0000 C CNN
+F 2 "" H 3640 5260 50  0000 C CNN
+F 3 "" H 3640 5260 50  0000 C CNN
+	1    3640 5260
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3640 4960 3640 4880
+Wire Wire Line
+	3640 4880 4210 4880
+Wire Wire Line
+	5710 4080 5770 4080
+Wire Wire Line
+	5770 4080 5770 3980
+Wire Wire Line
+	5710 3980 7750 3980
+Wire Wire Line
+	7750 3580 7750 4130
+Wire Wire Line
+	7430 3580 8610 3580
+Connection ~ 5770 3980
+$Comp
+L C C304
+U 1 1 58BC0110
+P 6850 4280
+F 0 "C304" H 6800 4380 50  0000 R CNN
+F 1 "15pF" H 6800 4180 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0402" H 7000 4380 50  0001 L CNN
+F 3 "" H 6875 4380 50  0000 C CNN
+F 4 "50V" H 7000 4280 50  0000 L CNN "Voltage"
+F 5 "10%" H 7000 4180 50  0000 L CNN "Tolerance"
+F 6 "0402" H 7000 4380 50  0000 L CNN "Footprint Display"
+	1    6850 4280
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4130 6850 3980
+Connection ~ 6850 3980
+Wire Wire Line
+	6850 4430 6850 4580
+Wire Wire Line
+	5710 4580 7750 4580
+$Comp
+L R R303
+U 1 1 58BC072C
+P 7750 4280
+F 0 "R303" V 7830 4280 50  0000 C CNN
+F 1 "2.2M" V 7750 4280 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 7500 4380 50  0001 L CNN
+F 3 "" V 7830 4280 50  0000 C CNN
+F 4 "1/16W" H 7650 4180 50  0000 R CNN "Wattage"
+F 5 "1%" H 7650 4280 50  0000 R CNN "Tolerance"
+F 6 "0402" H 7650 4380 50  0000 R CNN "Footprint Display"
+	1    7750 4280
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7750 3980
+Wire Wire Line
+	7750 4430 7750 4770
+Connection ~ 6850 4580
+$Comp
+L R R305
+U 1 1 58BC0892
+P 7750 4920
+F 0 "R305" V 7830 4920 50  0000 C CNN
+F 1 "1.3M" V 7750 4920 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 7500 5020 50  0001 L CNN
+F 3 "" V 7830 4920 50  0000 C CNN
+F 4 "1/16W" H 7650 4820 50  0000 R CNN "Wattage"
+F 5 "1%" H 7650 4920 50  0000 R CNN "Tolerance"
+F 6 "0402" H 7650 5020 50  0000 R CNN "Footprint Display"
+	1    7750 4920
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7750 4580
+$Comp
+L GND #PWR025
+U 1 1 58BC0983
+P 7750 5070
+F 0 "#PWR025" H 7750 4820 50  0001 C CNN
+F 1 "GND" H 7750 4920 50  0000 C CNN
+F 2 "" H 7750 5070 50  0000 C CNN
+F 3 "" H 7750 5070 50  0000 C CNN
+	1    7750 5070
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R304
+U 1 1 58BC1854
+P 3120 4350
+F 0 "R304" V 3200 4350 50  0000 C CNN
+F 1 "1M" V 3120 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 2870 4450 50  0001 L CNN
+F 3 "" V 3200 4350 50  0000 C CNN
+F 4 "1/16W" H 3020 4250 50  0000 R CNN "Wattage"
+F 5 "5%" H 3020 4350 50  0000 R CNN "Tolerance"
+F 6 "0402" H 3020 4450 50  0000 R CNN "Footprint Display"
+	1    3120 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C302
+U 1 1 58BC1F61
+P 2170 3390
+F 0 "C302" H 2120 3490 50  0000 R CNN
+F 1 "4.7uF" H 2120 3290 50  0000 R CNN
+F 2 "Capacitors_SMD:C_1206" H 2320 3490 50  0001 L CNN
+F 3 "" H 2195 3490 50  0000 C CNN
+F 4 "35V" H 2320 3390 50  0000 L CNN "Voltage"
+F 5 "20%" H 2320 3290 50  0000 L CNN "Tolerance"
+F 6 "1206" H 2320 3490 50  0000 L CNN "Footprint Display"
+	1    2170 3390
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 58BC2105
+P 2170 3540
+F 0 "#PWR026" H 2170 3290 50  0001 C CNN
+F 1 "GND" H 2170 3390 50  0000 C CNN
+F 2 "" H 2170 3540 50  0000 C CNN
+F 3 "" H 2170 3540 50  0000 C CNN
+	1    2170 3540
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2170 3000 2170 3240
+Wire Wire Line
+	2170 3080 4210 3080
+Connection ~ 2170 3080
+Wire Wire Line
+	2640 3980 4210 3980
+Wire Wire Line
+	3120 3980 3120 3800
+$Comp
+L R R302
+U 1 1 58BC2C1F
+P 2490 3980
+F 0 "R302" V 2570 3980 50  0000 C CNN
+F 1 "100" V 2490 3980 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 2240 4080 50  0001 L CNN
+F 3 "" V 2570 3980 50  0000 C CNN
+F 4 "1/16W" V 2240 4060 50  0000 R CNN "Wattage"
+F 5 "5%" V 2320 4060 50  0000 R CNN "Tolerance"
+F 6 "0402" V 2400 4060 50  0000 R CNN "Footprint Display"
+	1    2490 3980
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3120 3980
+$Comp
+L R R301
+U 1 1 58BC2EBF
+P 3120 3650
+F 0 "R301" V 3200 3650 50  0000 C CNN
+F 1 "1M" V 3120 3650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 2870 3750 50  0001 L CNN
+F 3 "" V 3200 3650 50  0000 C CNN
+F 4 "1/16W" H 3020 3550 50  0000 R CNN "Wattage"
+F 5 "5%" H 3020 3650 50  0000 R CNN "Tolerance"
+F 6 "0402" H 3020 3750 50  0000 R CNN "Footprint Display"
+	1    3120 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 2340 3980 0    60   Output ~ 0
+VCC_PGOOD
+$Comp
+L C C303
+U 1 1 58BC3175
+P 8610 3880
+F 0 "C303" H 8560 3980 50  0000 R CNN
+F 1 "22uF" H 8560 3780 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0805" H 8760 3980 50  0001 L CNN
+F 3 "" H 8635 3980 50  0000 C CNN
+F 4 "6.3V" H 8760 3880 50  0000 L CNN "Voltage"
+F 5 "20%" H 8760 3780 50  0000 L CNN "Tolerance"
+F 6 "0805" H 8760 3980 50  0000 L CNN "Footprint Display"
+	1    8610 3880
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 58BC31FB
+P 8610 4030
+F 0 "#PWR027" H 8610 3780 50  0001 C CNN
+F 1 "GND" H 8610 3880 50  0000 C CNN
+F 2 "" H 8610 4030 50  0000 C CNN
+F 3 "" H 8610 4030 50  0000 C CNN
+	1    8610 4030
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8610 3500 8610 3730
+Connection ~ 7750 3580
+Connection ~ 8610 3580
+Text Label 3670 4880 0    60   ~ 0
+3P3_RT
+Text Label 5750 4580 0    60   ~ 0
+3P3_FB
+Text Label 5750 3580 0    60   ~ 0
+3P3_SW
+Text Label 5730 3080 0    60   ~ 0
+3P3_BOOST
+Text Label 3280 3980 0    60   ~ 0
+3P3_PGOODR
+Text Label 3330 4530 0    60   ~ 0
+3P3_RUN
+Text Notes 3720 1830 0    100  ~ 20
+Monolithic Buck Switching Regulator\nwith Burst Mode and PGOOD flag\n+3.3 Volts, 300mA @ 2.2MHz
+$Comp
+L VCOM #PWR028
+U 1 1 58BBB30B
+P 2170 3000
+F 0 "#PWR028" H 2170 2850 50  0001 C CNN
+F 1 "VCOM" H 2170 3150 50  0000 C CNN
+F 2 "" H 2170 3000 50  0000 C CNN
+F 3 "" H 2170 3000 50  0000 C CNN
+	1    2170 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR029
+U 1 1 58BBB733
+P 8610 3500
+F 0 "#PWR029" H 8610 3350 50  0001 C CNN
+F 1 "+3.3V" H 8610 3640 50  0000 C CNN
+F 2 "" H 8610 3500 50  0000 C CNN
+F 3 "" H 8610 3500 50  0000 C CNN
+	1    8610 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR030
+U 1 1 58BCC9A1
+P 9130 3500
+F 0 "#PWR030" H 9130 3350 50  0001 C CNN
+F 1 "VCC" H 9130 3650 50  0000 C CNN
+F 2 "" H 9130 3500 50  0000 C CNN
+F 3 "" H 9130 3500 50  0000 C CNN
+	1    9130 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR031
+U 1 1 58BCC9DC
+P 9130 3500
+F 0 "#PWR031" H 9130 3350 50  0001 C CNN
+F 1 "+3.3V" H 9130 3640 50  0000 C CNN
+F 2 "" H 9130 3500 50  0000 C CNN
+F 3 "" H 9130 3500 50  0000 C CNN
+	1    9130 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L VDD #PWR032
+U 1 1 58BCCA17
+P 9460 3500
+F 0 "#PWR032" H 9460 3350 50  0001 C CNN
+F 1 "VDD" H 9460 3650 50  0000 C CNN
+F 2 "" H 9460 3500 50  0000 C CNN
+F 3 "" H 9460 3500 50  0000 C CNN
+	1    9460 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR033
+U 1 1 58BCCA52
+P 9460 3500
+F 0 "#PWR033" H 9460 3350 50  0001 C CNN
+F 1 "+3.3V" H 9460 3640 50  0000 C CNN
+F 2 "" H 9460 3500 50  0000 C CNN
+F 3 "" H 9460 3500 50  0000 C CNN
+	1    9460 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCOM #PWR034
+U 1 1 58E47B46
+P 3120 4200
+F 0 "#PWR034" H 3120 4050 50  0001 C CNN
+F 1 "VCOM" H 3120 4350 50  0000 C CNN
+F 2 "" H 3120 4200 50  0000 C CNN
+F 3 "" H 3120 4200 50  0000 C CNN
+	1    3120 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3120 4500 3120 4530
+Wire Wire Line
+	3120 4530 4210 4530
+$Comp
+L +3.3V #PWR035
+U 1 1 59376B84
+P 9860 3480
+F 0 "#PWR035" H 9860 3330 50  0001 C CNN
+F 1 "+3.3V" H 9860 3620 50  0000 C CNN
+F 2 "" H 9860 3480 50  0000 C CNN
+F 3 "" H 9860 3480 50  0000 C CNN
+	1    9860 3480
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG036
+U 1 1 59376BCD
+P 9860 3480
+F 0 "#FLG036" H 9860 3575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9860 3660 50  0000 C CNN
+F 2 "" H 9860 3480 50  0000 C CNN
+F 3 "" H 9860 3480 50  0000 C CNN
+	1    9860 3480
+	-1   0    0    1   
+$EndComp
+$Comp
+L VCC_BCKUP #PWR037
+U 1 1 593C3176
+P 3120 3500
+F 0 "#PWR037" H 3120 3350 50  0001 C CNN
+F 1 "VCC_BCKUP" H 3120 3650 50  0000 C CNN
+F 2 "" H 3120 3500 50  0000 C CNN
+F 3 "" H 3120 3500 50  0000 C CNN
+	1    3120 3500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
