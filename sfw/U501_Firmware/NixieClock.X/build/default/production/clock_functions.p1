@@ -2796,12 +2796,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;clock_functions.c: 225: LATEbits.LATE1 = !(LATEbits.LATE1);
 "225
 [e = . . _LATEbits 0 1 -> -> ! != -> . . _LATEbits 0 1 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;clock_functions.c: 228: LATCbits.LATC3 = LATEbits.LATE1;
+[; ;clock_functions.c: 228: LATCbits.LATC3 = 1;
 "228
-[e = . . _LATCbits 0 3 . . _LATEbits 0 1 ]
-[; ;clock_functions.c: 229: LATCbits.LATC4 = LATEbits.LATE1;
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+[; ;clock_functions.c: 229: LATCbits.LATC4 = 1;
 "229
-[e = . . _LATCbits 0 4 . . _LATEbits 0 1 ]
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 [; ;clock_functions.c: 232: if (PORTBbits.RB0 == 1) {
 "232
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 260  ]

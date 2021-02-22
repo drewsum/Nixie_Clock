@@ -3404,8 +3404,8 @@ void tickISR(void) {
 LATEbits.LATE1 = !(LATEbits.LATE1);
 
 
-LATCbits.LATC3 = LATEbits.LATE1;
-LATCbits.LATC4 = LATEbits.LATE1;
+LATCbits.LATC3 = 1;
+LATCbits.LATC4 = 1;
 
 
 if (PORTBbits.RB0 == 1) {

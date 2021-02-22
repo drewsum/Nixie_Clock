@@ -225,8 +225,8 @@ void tickISR(void) {
     tick_ind = !(tick_ind);
 
     // toggle colons
-    colon_drive_0 = tick_ind;
-    colon_drive_1 = tick_ind;
+    colon_drive_0 = HIGH;
+    colon_drive_1 = HIGH;
 
     // Only count when not setting seconds
     if (n_set_seconds == HIGH) {
