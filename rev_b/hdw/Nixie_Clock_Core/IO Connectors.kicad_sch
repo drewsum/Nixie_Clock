@@ -1,0 +1,22 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid c00f4515-260e-4900-90c3-6b887043998c)
+
+  (paper "A")
+
+  (title_block
+    (date "2023-05-12")
+    (rev "PRELIM")
+    (company "Drew Maatman")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "FIND A CONNECTOR THAT CAN HANDLE HIGH VOLTAGE\nAND SIGNALLING THAT ISNT AWFUL"
+    (at 59.69 43.18 0)
+    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
+    (uuid b733c1bc-8771-420c-b440-b6376e288024)
+  )
+)

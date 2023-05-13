@@ -1,0 +1,416 @@
+{
+  "board": {
+    "3dviewports": [],
+    "design_settings": {
+      "defaults": {
+        "board_outline_line_width": 0.1,
+        "copper_line_width": 0.2,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "copper_text_thickness": 0.3,
+        "other_line_width": 0.15,
+        "silk_line_width": 0.15,
+        "silk_text_size_h": 1.0,
+        "silk_text_size_v": 1.0,
+        "silk_text_thickness": 0.15
+      },
+      "diff_pair_dimensions": [],
+      "drc_exclusions": [],
+      "rules": {
+        "min_copper_edge_clearance": 0.0,
+        "solder_mask_clearance": 0.0,
+        "solder_mask_min_width": 0.0
+      },
+      "track_widths": [],
+      "via_dimensions": []
+    },
+    "layer_presets": [],
+    "viewports": []
+  },
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "similar_labels": "warning",
+      "simulation_model_issue": "error",
+      "unannotated": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "Nixie_Clock_Core.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      }
+    ],
+    "meta": {
+      "version": 3
+    },
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": []
+  },
+  "pcbnew": {
+    "last_paths": {
+      "gencad": "",
+      "idf": "",
+      "netlist": "",
+      "specctra_dsn": "",
+      "step": "",
+      "vrml": ""
+    },
+    "page_layout_descr_file": ""
+  },
+  "schematic": {
+    "annotate_start_num": 0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
+    },
+    "legacy_lib_dir": "",
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
+  },
+  "sheets": [
+    [
+      "16fdce21-b570-4d81-a458-e8839d611806",
+      ""
+    ],
+    [
+      "033277b9-3b61-4d88-889d-97b223ca74c5",
+      "Power Input"
+    ],
+    [
+      "d3d97ac9-d41a-4214-a50e-da1534283246",
+      "Power Input Telemetry"
+    ],
+    [
+      "b9e3b07e-337a-481e-964b-cf3238d1c75e",
+      "+3.3V Power Supply"
+    ],
+    [
+      "9c9d19c1-3649-44f4-8893-4087e4bbe058",
+      "+3.3V Telemetry"
+    ],
+    [
+      "0b6dccc1-0a92-424d-9916-2441ea7dc052",
+      "+180V Power Supply"
+    ],
+    [
+      "2f89509e-1daf-4eca-8cda-923804eff633",
+      "+180V Telemetry"
+    ],
+    [
+      "0953f70f-0c64-48c1-b5cf-d1f41f95ef1f",
+      "PIC32MZ Programming"
+    ],
+    [
+      "bb75afd6-2e66-4757-b7e8-759adafd25d0",
+      "PIC32MZ Bypass"
+    ],
+    [
+      "f7cc5c4d-c1a6-4096-b212-cb6ae1584770",
+      "PIC32MZ"
+    ],
+    [
+      "e5c9ef11-2d61-484d-80e2-ac34f2486528",
+      "PIC32MZ Clocking"
+    ],
+    [
+      "1b5c0df1-6e31-4448-8d73-7a80c33af8aa",
+      "Backup RTC"
+    ],
+    [
+      "4cb440c2-4356-400c-9387-edaaa635d5a5",
+      "USB UART Bridge"
+    ],
+    [
+      "11a34b20-5daa-4c08-81cd-ab38890da7e9",
+      "USB Telemetry"
+    ],
+    [
+      "61f04371-5be4-452b-bab3-2ded046cc354",
+      "Platform ETC"
+    ],
+    [
+      "2cd2cc24-63f3-4ff7-b2ec-a0dfd71a27e5",
+      "PGOOD LEDs"
+    ],
+    [
+      "a70699a4-576e-4ec8-849a-1fef897ca4f3",
+      "Status LEDs"
+    ],
+    [
+      "010acd62-4c34-490e-a56e-313765aa4851",
+      "IO Buffers 1"
+    ],
+    [
+      "8bfc37a9-2570-4706-99e7-147636a5a42e",
+      "IO Buffers 2"
+    ],
+    [
+      "2e22fd27-425d-47fb-8810-3fe495af3afd",
+      "IO Connectors"
+    ],
+    [
+      "598739f3-768e-44e6-92d3-e17fa168c78a",
+      "Mechanical"
+    ],
+    [
+      "f6977569-eb36-4778-b70b-37896d4c3d9a",
+      "Misc Circuits"
+    ]
+  ],
+  "text_variables": {}
+}
