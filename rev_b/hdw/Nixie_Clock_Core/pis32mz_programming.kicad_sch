@@ -817,7 +817,7 @@
   (symbol (lib_id "Switch:SW_Push") (at 86.36 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 02cc6ecd-480e-42c4-aae4-2342387a960c)
-    (property "Reference" "SW801" (at 86.36 135.001 0)
+    (property "Reference" "SW?" (at 86.36 135.001 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MRST" (at 86.36 137.3124 0)
@@ -834,12 +834,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "SW801") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "SW801") (unit 1)
+          (reference "SW?") (unit 1)
         )
       )
     )
@@ -848,7 +848,7 @@
   (symbol (lib_id "Power_Protection:PESD3V3L5UY") (at 99.06 76.454 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 06355437-c53a-4fd7-91e1-af1c120ffa48)
-    (property "Reference" "D801" (at 101.6 76.454 0)
+    (property "Reference" "D?" (at 101.6 76.454 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PESD3V3L5UY" (at 87.63 76.454 90)
@@ -872,12 +872,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "D801") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "D801") (unit 1)
+          (reference "D?") (unit 1)
         )
       )
     )
@@ -912,7 +912,7 @@
           (reference "L?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "L801") (unit 1)
+          (reference "L?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e697934"
           (reference "L?") (unit 1)
@@ -926,7 +926,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "L801") (unit 1)
+          (reference "L?") (unit 1)
         )
       )
     )
@@ -935,7 +935,7 @@
   (symbol (lib_id "Power_Protection:PESD3V3L5UY") (at 118.11 76.454 270) (unit 3)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 105773f0-cbd4-4b79-892a-8e3dbe02313d)
-    (property "Reference" "D801" (at 120.65 76.454 0)
+    (property "Reference" "D?" (at 120.65 76.454 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PESD3V3L5UY" (at 115.57 76.454 0)
@@ -959,12 +959,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "D801") (unit 3)
+          (reference "D?") (unit 3)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "D801") (unit 3)
+          (reference "D?") (unit 3)
         )
       )
     )
@@ -973,7 +973,7 @@
   (symbol (lib_id "Power_Protection:PESD3V3L5UY") (at 105.41 76.454 270) (unit 5)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2a4d5a25-dc51-491f-8a78-dc246879e1b0)
-    (property "Reference" "D801" (at 107.95 76.454 0)
+    (property "Reference" "D?" (at 107.95 76.454 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PESD3V3L5UY" (at 102.87 76.454 0)
@@ -997,12 +997,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "D801") (unit 5)
+          (reference "D?") (unit 5)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "D801") (unit 5)
+          (reference "D?") (unit 5)
         )
       )
     )
@@ -1011,7 +1011,7 @@
   (symbol (lib_id "power:GND") (at 185.166 56.896 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2eac608c-761c-417c-b800-0d49980f367c)
-    (property "Reference" "#PWR0810" (at 185.166 63.246 0)
+    (property "Reference" "#PWR?" (at 185.166 63.246 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 185.166 60.706 0)
@@ -1027,12 +1027,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0810") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0810") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1041,7 +1041,7 @@
   (symbol (lib_id "Power_Protection:PESD3V3L5UY") (at 92.71 76.454 270) (unit 2)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 30e74208-215c-47fc-921f-ed164dd5b7e5)
-    (property "Reference" "D801" (at 95.25 76.454 0)
+    (property "Reference" "D?" (at 95.25 76.454 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PESD3V3L5UY" (at 90.17 76.454 0)
@@ -1065,12 +1065,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "D801") (unit 2)
+          (reference "D?") (unit 2)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "D801") (unit 2)
+          (reference "D?") (unit 2)
         )
       )
     )
@@ -1079,7 +1079,7 @@
   (symbol (lib_id "power:GND") (at 172.212 55.626 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32a2b414-96db-46b5-b4ff-b9a4e34d5e07)
-    (property "Reference" "#PWR0808" (at 172.212 61.976 0)
+    (property "Reference" "#PWR?" (at 172.212 61.976 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 172.212 59.436 0)
@@ -1095,12 +1095,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0808") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0808") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1109,7 +1109,7 @@
   (symbol (lib_id "Power_Protection:PESD3V3L5UY") (at 111.76 76.454 270) (unit 4)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 363b2f3d-aa11-40b7-ba3a-4ca0da064b85)
-    (property "Reference" "D801" (at 114.3 76.454 0)
+    (property "Reference" "D?" (at 114.3 76.454 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PESD3V3L5UY" (at 109.22 76.454 0)
@@ -1133,12 +1133,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "D801") (unit 4)
+          (reference "D?") (unit 4)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "D801") (unit 4)
+          (reference "D?") (unit 4)
         )
       )
     )
@@ -1147,7 +1147,7 @@
   (symbol (lib_id "power:GND") (at 124.206 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36dfa0b4-b5ea-4151-8b5c-2afdbc65d2c0)
-    (property "Reference" "#PWR0804" (at 124.206 153.67 0)
+    (property "Reference" "#PWR?" (at 124.206 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 124.206 151.13 0)
@@ -1163,12 +1163,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0804") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0804") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1177,7 +1177,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x08") (at 79.502 56.896 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 40665723-86cc-43e8-b269-5a66d38de0d6)
-    (property "Reference" "J801" (at 82.804 43.18 0)
+    (property "Reference" "J?" (at 82.804 43.18 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "PICKIT4" (at 82.804 45.72 0)
@@ -1200,12 +1200,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "J801") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "J801") (unit 1)
+          (reference "J?") (unit 1)
         )
       )
     )
@@ -1214,7 +1214,7 @@
   (symbol (lib_id "Custom_Library:C_Custom") (at 150.622 143.764 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 409dd73f-deb2-4d6d-a4d9-a0d471aaea8e)
-    (property "Reference" "C801" (at 151.257 141.224 0)
+    (property "Reference" "C?" (at 151.257 141.224 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 151.257 146.304 0)
@@ -1243,12 +1243,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "C801") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "C801") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1257,7 +1257,7 @@
   (symbol (lib_id "Transistor_FET:BSS214NW") (at 121.666 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4ae6426c-fcd5-46e3-bf1d-4c1be045136a)
-    (property "Reference" "Q801" (at 126.746 140.335 0)
+    (property "Reference" "Q?" (at 126.746 140.335 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BSS214NW" (at 126.746 142.24 0)
@@ -1278,12 +1278,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "Q801") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "Q801") (unit 1)
+          (reference "Q?") (unit 1)
         )
       )
     )
@@ -1292,7 +1292,7 @@
   (symbol (lib_id "power:+3.3V") (at 150.622 119.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51382c00-4c8a-4066-a30e-1eb4c0c56993)
-    (property "Reference" "#PWR0805" (at 150.622 123.19 0)
+    (property "Reference" "#PWR?" (at 150.622 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 150.622 115.824 0)
@@ -1308,12 +1308,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0805") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0805") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1322,7 +1322,7 @@
   (symbol (lib_id "Custom_Library:C_Custom") (at 185.166 53.086 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51e844e7-4489-46e7-8ab4-d606f75fdbd1)
-    (property "Reference" "C802" (at 185.801 50.546 0)
+    (property "Reference" "C?" (at 185.801 50.546 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.1uF" (at 185.801 55.626 0)
@@ -1351,12 +1351,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "C802") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "C802") (unit 1)
+          (reference "C?") (unit 1)
         )
       )
     )
@@ -1365,7 +1365,7 @@
   (symbol (lib_id "power:GND") (at 109.22 151.892 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 60285b04-ad4a-4a6f-a3c0-62be4fa3067c)
-    (property "Reference" "#PWR0803" (at 109.22 158.242 0)
+    (property "Reference" "#PWR?" (at 109.22 158.242 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 109.22 155.702 0)
@@ -1381,12 +1381,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0803") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0803") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1395,7 +1395,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 164.084 129.032 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 67ed0fed-e909-4b22-898a-387845b21644)
-    (property "Reference" "R805" (at 164.084 126.492 90)
+    (property "Reference" "R?" (at 164.084 126.492 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "1k" (at 164.084 129.032 90)
@@ -1424,12 +1424,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "R805") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "R805") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1438,7 +1438,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 97.79 142.24 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6b32dc83-1884-4c79-a008-4c7d49bb4f13)
-    (property "Reference" "R801" (at 97.79 144.78 90)
+    (property "Reference" "R?" (at 97.79 144.78 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 97.79 142.24 90)
@@ -1467,12 +1467,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "R801") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "R801") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1519,7 +1519,7 @@
           (reference "R?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "R804") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005baae16c"
           (reference "R?") (unit 1)
@@ -1536,7 +1536,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "R804") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1571,7 +1571,7 @@
           (reference "L?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "L802") (unit 1)
+          (reference "L?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e697934"
           (reference "L?") (unit 1)
@@ -1585,7 +1585,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "L802") (unit 1)
+          (reference "L?") (unit 1)
         )
       )
     )
@@ -1594,7 +1594,7 @@
   (symbol (lib_id "power:+3.3V") (at 77.47 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 89fdbda1-9d61-4f4b-a186-99c80770d8dd)
-    (property "Reference" "#PWR0801" (at 77.47 144.78 0)
+    (property "Reference" "#PWR?" (at 77.47 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 77.47 137.414 0)
@@ -1610,12 +1610,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0801") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0801") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1624,7 +1624,7 @@
   (symbol (lib_id "power:+3.3V") (at 185.166 49.276 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 92ed11ed-bf76-4d5c-9b75-114694cfa0d9)
-    (property "Reference" "#PWR0809" (at 185.166 53.086 0)
+    (property "Reference" "#PWR?" (at 185.166 53.086 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 185.166 45.72 0)
@@ -1640,12 +1640,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0809") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0809") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1654,7 +1654,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 133.096 129.032 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 93227ddb-cb34-49a8-8652-d1901da4f44f)
-    (property "Reference" "R803" (at 133.096 131.572 90)
+    (property "Reference" "R?" (at 133.096 131.572 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 133.096 129.032 90)
@@ -1683,12 +1683,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "R803") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "R803") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -1697,7 +1697,7 @@
   (symbol (lib_id "power:GND") (at 150.622 147.574 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bb8706cc-eab8-40ac-b000-d64e81d5dfd2)
-    (property "Reference" "#PWR0806" (at 150.622 153.924 0)
+    (property "Reference" "#PWR?" (at 150.622 153.924 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 150.622 151.384 0)
@@ -1713,12 +1713,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0806") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0806") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1727,7 +1727,7 @@
   (symbol (lib_id "power:+3.3V") (at 172.212 50.038 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e84b6013-eb88-4732-aa95-fd896826f68f)
-    (property "Reference" "#PWR0807" (at 172.212 53.848 0)
+    (property "Reference" "#PWR?" (at 172.212 53.848 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 172.212 46.482 0)
@@ -1743,12 +1743,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0807") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0807") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1757,7 +1757,7 @@
   (symbol (lib_id "power:GND") (at 99.06 78.994 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ee6d16fa-e9a5-4fc4-a436-06777ea7a3bb)
-    (property "Reference" "#PWR0802" (at 99.06 85.344 0)
+    (property "Reference" "#PWR?" (at 99.06 85.344 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 99.06 82.804 0)
@@ -1773,12 +1773,12 @@
     (instances
       (project "Analog_Clock"
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "#PWR0802") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "#PWR0802") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1834,7 +1834,7 @@
           (reference "R?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939eaf"
-          (reference "R802") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e697920"
           (reference "R?") (unit 1)
@@ -1845,7 +1845,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/0953f70f-0c64-48c1-b5cf-d1f41f95ef1f"
-          (reference "R802") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
     )

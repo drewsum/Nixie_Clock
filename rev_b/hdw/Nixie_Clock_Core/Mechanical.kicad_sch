@@ -336,6 +336,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 43b0e817-83b4-4b4a-963a-9688f84359b3)
   )
+  (text "ENSURE STACK IS CORRECT HEIGHT" (at 65.405 22.225 0)
+    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
+    (uuid 9a2443f3-ca73-4ce9-96cd-6863b8707a50)
+  )
   (text "Top" (at 61.468 122.682 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c06d0606-6924-4ff0-a584-d871dd56c5a2)
@@ -344,7 +348,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 62.992 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 121ed851-d38b-4714-a4c6-a8a0463b3dea)
-    (property "Reference" "MK3101" (at 90.17 59.182 0)
+    (property "Reference" "MK?" (at 90.17 59.182 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 56.642 0)
@@ -362,12 +366,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3101") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2101") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -376,7 +380,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 75.692 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26585703-73dc-4bb5-98ae-79d787acf7da)
-    (property "Reference" "MK3118" (at 128.27 71.882 0)
+    (property "Reference" "MK?" (at 128.27 71.882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 69.342 0)
@@ -394,12 +398,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3118") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2118") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -408,7 +412,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 90.17 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 29344bdd-bad0-4ab0-b80a-5c58054b4f7c)
-    (property "Reference" "H3101" (at 90.17 33.02 0)
+    (property "Reference" "H?" (at 90.17 33.02 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 90.17 34.925 0)
@@ -423,12 +427,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3101") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2101") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -437,7 +441,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 90.17 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2994a535-be5b-4a1c-b7b6-b30d1a89d939)
-    (property "Reference" "MK3107" (at 90.17 139.446 0)
+    (property "Reference" "MK?" (at 90.17 139.446 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 90.17 136.906 0)
@@ -455,12 +459,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3107") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2107") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -469,7 +473,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 127.762 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2dd2fdd6-2d73-4547-8022-6d96ebcb7e5e)
-    (property "Reference" "MK3122" (at 128.27 123.952 0)
+    (property "Reference" "MK?" (at 128.27 123.952 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 121.412 0)
@@ -487,12 +491,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3122") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2122") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -501,7 +505,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 109.22 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 354fb567-e927-4175-a086-12719d8991f6)
-    (property "Reference" "H3104" (at 109.22 45.72 0)
+    (property "Reference" "H?" (at 109.22 45.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 109.22 47.625 0)
@@ -516,12 +520,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3104") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2104") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -530,7 +534,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 75.692 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3758c0f0-6c66-4011-bfcd-2d89807dabd3)
-    (property "Reference" "MK3126" (at 147.32 71.882 0)
+    (property "Reference" "MK?" (at 147.32 71.882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 69.342 0)
@@ -548,12 +552,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3126") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2126") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -562,7 +566,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 115.062 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 39ef26bf-8387-4f1d-8710-4dd57728b255)
-    (property "Reference" "MK3113" (at 109.22 111.252 0)
+    (property "Reference" "MK?" (at 109.22 111.252 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 108.712 0)
@@ -580,12 +584,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3113") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2113") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -594,7 +598,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 62.992 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ca37c39-569d-490d-aaa0-eacf3dc32e03)
-    (property "Reference" "MK3125" (at 147.32 59.182 0)
+    (property "Reference" "MK?" (at 147.32 59.182 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 56.642 0)
@@ -612,12 +616,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3125") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2125") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -626,7 +630,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 88.392 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3cdf8a84-103b-4ee7-880b-09b8c26f6c85)
-    (property "Reference" "MK3119" (at 128.27 84.582 0)
+    (property "Reference" "MK?" (at 128.27 84.582 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 82.042 0)
@@ -644,12 +648,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3119") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2119") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -658,7 +662,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 128.27 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 430fe053-50cd-4b96-b686-f1a5b3b0d64e)
-    (property "Reference" "H3106" (at 128.27 45.72 0)
+    (property "Reference" "H?" (at 128.27 45.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 128.27 47.625 0)
@@ -673,12 +677,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3106") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2106") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -687,7 +691,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 90.17 154.686 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 538f9ef0-cea8-41e9-85f6-8b3ea52cb927)
-    (property "Reference" "MK3108" (at 90.17 152.146 0)
+    (property "Reference" "MK?" (at 90.17 152.146 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 90.17 149.606 0)
@@ -705,12 +709,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3108") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2108") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -719,7 +723,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 101.092 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 588eafce-ada3-4279-b458-cc72c726820e)
-    (property "Reference" "MK3128" (at 147.32 97.282 0)
+    (property "Reference" "MK?" (at 147.32 97.282 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 94.742 0)
@@ -737,12 +741,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3128") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2128") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -751,7 +755,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 90.17 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5d3e097d-efd1-4385-a5a1-2756d593f87d)
-    (property "Reference" "H3102" (at 90.17 45.72 0)
+    (property "Reference" "H?" (at 90.17 45.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 90.17 47.625 0)
@@ -766,12 +770,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3102") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2102") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -780,7 +784,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 62.992 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5ecb430d-b7c0-424d-a4da-592e86a28448)
-    (property "Reference" "MK3109" (at 109.22 59.182 0)
+    (property "Reference" "MK?" (at 109.22 59.182 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 56.642 0)
@@ -798,12 +802,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3109") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2109") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -812,7 +816,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 62.992 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 74a54b67-0271-417d-8015-a4bcfe5ea131)
-    (property "Reference" "MK3117" (at 128.27 59.182 0)
+    (property "Reference" "MK?" (at 128.27 59.182 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 56.642 0)
@@ -830,12 +834,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3117") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2117") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -844,7 +848,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 127.762 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 761df461-076c-4d94-958b-6a2dc408fea0)
-    (property "Reference" "MK3114" (at 109.22 123.952 0)
+    (property "Reference" "MK?" (at 109.22 123.952 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 121.412 0)
@@ -862,12 +866,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3114") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2114") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -876,7 +880,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 75.692 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 827f8998-da0b-4ef7-8585-9326a61c204d)
-    (property "Reference" "MK3110" (at 109.22 71.882 0)
+    (property "Reference" "MK?" (at 109.22 71.882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 69.342 0)
@@ -894,12 +898,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3110") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2110") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -908,7 +912,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 88.392 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 93e70a92-a087-41df-bfb9-0408ae329e14)
-    (property "Reference" "MK3111" (at 109.22 84.582 0)
+    (property "Reference" "MK?" (at 109.22 84.582 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 82.042 0)
@@ -926,12 +930,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3111") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2111") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -940,7 +944,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 127.762 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 95106942-610f-4150-8fdd-a1ddb0f8ee40)
-    (property "Reference" "MK3130" (at 147.32 123.952 0)
+    (property "Reference" "MK?" (at 147.32 123.952 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 121.412 0)
@@ -958,12 +962,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3130") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2130") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -972,7 +976,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 128.27 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f2a2047-eaf0-41d5-8e05-3a83be208fa0)
-    (property "Reference" "MK3123" (at 128.27 139.446 0)
+    (property "Reference" "MK?" (at 128.27 139.446 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 128.27 136.906 0)
@@ -990,12 +994,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3123") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2123") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1004,7 +1008,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 101.092 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a0d384d9-695f-4c6a-9c5f-552735058203)
-    (property "Reference" "MK3104" (at 90.17 97.282 0)
+    (property "Reference" "MK?" (at 90.17 97.282 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 94.742 0)
@@ -1022,12 +1026,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3104") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2104") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1036,7 +1040,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 109.22 101.092 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a628fd77-1b5e-44c4-8d5e-e6c6656761b8)
-    (property "Reference" "MK3112" (at 109.22 97.282 0)
+    (property "Reference" "MK?" (at 109.22 97.282 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 109.22 94.742 0)
@@ -1054,12 +1058,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3112") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2112") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1068,7 +1072,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 115.062 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aaf404fe-b750-486b-abba-5f251fec4324)
-    (property "Reference" "MK3129" (at 147.32 111.252 0)
+    (property "Reference" "MK?" (at 147.32 111.252 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 108.712 0)
@@ -1086,12 +1090,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3129") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2129") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1100,7 +1104,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 109.22 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b1ee1cec-2575-4230-a75b-c301448d9e4b)
-    (property "Reference" "H3103" (at 109.22 33.02 0)
+    (property "Reference" "H?" (at 109.22 33.02 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 109.22 34.925 0)
@@ -1115,12 +1119,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3103") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2103") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -1129,7 +1133,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 109.22 154.686 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b8d4d86e-9466-4990-872c-9e6a9cec1674)
-    (property "Reference" "MK3116" (at 109.22 152.146 0)
+    (property "Reference" "MK?" (at 109.22 152.146 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 109.22 149.606 0)
@@ -1147,12 +1151,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3116") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2116") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1161,7 +1165,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 128.27 154.686 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b9f2f241-7f88-4eda-a959-645fa2b4b9ca)
-    (property "Reference" "MK3124" (at 128.27 152.146 0)
+    (property "Reference" "MK?" (at 128.27 152.146 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 128.27 149.606 0)
@@ -1179,12 +1183,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3124") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2124") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1193,7 +1197,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 147.32 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bc7e1815-7970-4c89-adfd-0eedd52cb88c)
-    (property "Reference" "H3107" (at 147.32 33.02 0)
+    (property "Reference" "H?" (at 147.32 33.02 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 147.32 34.925 0)
@@ -1208,12 +1212,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3107") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2107") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -1222,7 +1226,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 147.32 88.392 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bca16b4b-3ce8-4e1b-be27-aa3a3a40fba1)
-    (property "Reference" "MK3127" (at 147.32 84.582 0)
+    (property "Reference" "MK?" (at 147.32 84.582 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 147.32 82.042 0)
@@ -1240,12 +1244,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3127") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2127") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1254,7 +1258,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 115.062 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ca5ba041-2967-44f3-94e1-a1e5dce5b37e)
-    (property "Reference" "MK3121" (at 128.27 111.252 0)
+    (property "Reference" "MK?" (at 128.27 111.252 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 108.712 0)
@@ -1272,12 +1276,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3121") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2121") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1286,7 +1290,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 127.762 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d4a8495e-44c1-4a87-8eb8-2af2ba72d506)
-    (property "Reference" "MK3106" (at 90.17 123.952 0)
+    (property "Reference" "MK?" (at 90.17 123.952 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 121.412 0)
@@ -1304,12 +1308,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3106") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2106") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1318,7 +1322,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 75.692 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d8fa80e4-883d-41db-b69c-74ea47ce1bb0)
-    (property "Reference" "MK3102" (at 90.17 71.882 0)
+    (property "Reference" "MK?" (at 90.17 71.882 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 69.342 0)
@@ -1336,12 +1340,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3102") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2102") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1350,7 +1354,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 128.27 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e1b2f5ac-14ad-43ac-9b98-72ee491b1e47)
-    (property "Reference" "H3105" (at 128.27 33.02 0)
+    (property "Reference" "H?" (at 128.27 33.02 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 128.27 34.925 0)
@@ -1365,12 +1369,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3105") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2105") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -1379,7 +1383,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 147.32 154.686 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e3a13595-f857-4cac-b6ad-89a3d7428636)
-    (property "Reference" "MK3132" (at 147.32 152.146 0)
+    (property "Reference" "MK?" (at 147.32 152.146 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 147.32 149.606 0)
@@ -1397,12 +1401,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3132") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2132") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1411,7 +1415,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 147.32 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eacafd34-622d-4bfa-a3f0-f642155da6b8)
-    (property "Reference" "MK3131" (at 147.32 139.446 0)
+    (property "Reference" "MK?" (at 147.32 139.446 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 147.32 136.906 0)
@@ -1429,12 +1433,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3131") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2131") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1443,7 +1447,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 128.27 101.092 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eb81b156-6ccf-4a3a-b736-76275883c789)
-    (property "Reference" "MK3120" (at 128.27 97.282 0)
+    (property "Reference" "MK?" (at 128.27 97.282 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 128.27 94.742 0)
@@ -1461,12 +1465,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3120") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2120") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1475,7 +1479,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 115.062 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eda5e536-4fce-465e-b54c-c756c937e2d7)
-    (property "Reference" "MK3105" (at 90.17 111.252 0)
+    (property "Reference" "MK?" (at 90.17 111.252 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 108.712 0)
@@ -1493,12 +1497,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3105") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2105") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1507,7 +1511,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 147.32 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f0a2698f-250c-40e1-afd2-9f5ceb34a46d)
-    (property "Reference" "H3108" (at 147.32 45.72 0)
+    (property "Reference" "H?" (at 147.32 45.72 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "MountingHole" (at 147.32 47.625 0)
@@ -1522,12 +1526,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "H3108") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H2108") (unit 1)
+          (reference "H?") (unit 1)
         )
       )
     )
@@ -1536,7 +1540,7 @@
   (symbol (lib_id "Custom_Library:Screw") (at 109.22 141.986 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f167dd47-31b4-4b4a-9372-b7ac9e28fd45)
-    (property "Reference" "MK3115" (at 109.22 139.446 0)
+    (property "Reference" "MK?" (at 109.22 139.446 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Screw" (at 109.22 136.906 0)
@@ -1554,12 +1558,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3115") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2115") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )
@@ -1568,7 +1572,7 @@
   (symbol (lib_id "Custom_Library:Standoff") (at 90.17 88.392 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f789cdb4-9b8f-4f87-9ded-fd6537909311)
-    (property "Reference" "MK3103" (at 90.17 84.582 0)
+    (property "Reference" "MK?" (at 90.17 84.582 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "Standoff" (at 90.17 82.042 0)
@@ -1586,12 +1590,12 @@
     (instances
       (project "VFD_Clock"
         (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
-          (reference "MK3103") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK2103") (unit 1)
+          (reference "MK?") (unit 1)
         )
       )
     )

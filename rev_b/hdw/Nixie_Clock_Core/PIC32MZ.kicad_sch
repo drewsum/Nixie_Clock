@@ -960,7 +960,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 211.328 103.632 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 221fea3f-ed4d-4a03-83c0-bb37468aad1a)
-    (property "Reference" "R1003" (at 209.296 103.632 0)
+    (property "Reference" "R?" (at 209.296 103.632 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 211.328 103.632 90)
@@ -989,7 +989,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "R1003") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1012,7 +1012,7 @@
           (reference "R?") (unit 1)
         )
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "R1101") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005c1de17a"
           (reference "R?") (unit 1)
@@ -1042,7 +1042,7 @@
   (symbol (lib_id "Custom_Library:+3.3VA_MZ") (at 113.03 22.352 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 31440fdb-0445-470a-80e6-b3337b48436c)
-    (property "Reference" "#PWR01007" (at 113.03 26.162 0)
+    (property "Reference" "#PWR?" (at 113.03 26.162 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3VA_MZ" (at 113.03 18.796 0)
@@ -1058,12 +1058,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01007") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01102") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1072,7 +1072,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 226.314 103.632 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4720b60d-47f7-407d-96dc-a2dc7d584dad)
-    (property "Reference" "R1004" (at 224.282 103.632 0)
+    (property "Reference" "R?" (at 224.282 103.632 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 226.314 103.632 90)
@@ -1101,7 +1101,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "R1004") (unit 1)
+          (reference "R?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1124,7 +1124,7 @@
           (reference "R?") (unit 1)
         )
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "R1102") (unit 1)
+          (reference "R?") (unit 1)
         )
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005c1de17a"
           (reference "R?") (unit 1)
@@ -1154,7 +1154,7 @@
   (symbol (lib_id "power:+3.3V") (at 125.73 22.352 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 49e3cc07-e077-454a-b16b-44f4eb5d66c2)
-    (property "Reference" "#PWR01009" (at 125.73 26.162 0)
+    (property "Reference" "#PWR?" (at 125.73 26.162 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 125.73 18.796 0)
@@ -1170,12 +1170,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01009") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01104") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1184,7 +1184,7 @@
   (symbol (lib_id "power:+3.3V") (at 226.314 99.822 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6d5062fe-d6a9-41c3-9dca-3e92710b0472)
-    (property "Reference" "#PWR01012" (at 226.314 103.632 0)
+    (property "Reference" "#PWR?" (at 226.314 103.632 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 226.314 96.266 0)
@@ -1200,12 +1200,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01012") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01107") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1214,7 +1214,7 @@
   (symbol (lib_id "power:+3.3V") (at 211.328 99.822 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8409e810-fad5-415e-8ccd-7c313ce85655)
-    (property "Reference" "#PWR01011" (at 211.328 103.632 0)
+    (property "Reference" "#PWR?" (at 211.328 103.632 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 211.328 96.266 0)
@@ -1230,12 +1230,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01011") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01106") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1244,7 +1244,7 @@
   (symbol (lib_id "Custom_Library:GNDA_MZ") (at 113.03 158.496 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a06d1251-00f5-45d4-a6d9-7e0afae0c7f4)
-    (property "Reference" "#PWR01008" (at 113.03 164.846 0)
+    (property "Reference" "#PWR?" (at 113.03 164.846 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GNDA_MZ" (at 113.03 162.306 0)
@@ -1260,12 +1260,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01008") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01103") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1274,7 +1274,7 @@
   (symbol (lib_id "Custom_Library:PIC32MZ2048EFG100_IPF") (at 129.54 90.424 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c05a588a-1c6b-4545-a6c8-01f56f5bccdc)
-    (property "Reference" "U1002" (at 175.26 153.924 0)
+    (property "Reference" "U?" (at 175.26 153.924 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "PIC32MZ2048EFG100_IPF" (at 129.54 75.184 0)
@@ -1392,12 +1392,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "U1002") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "U1101") (unit 1)
+          (reference "U?") (unit 1)
         )
       )
     )
@@ -1406,7 +1406,7 @@
   (symbol (lib_id "power:GND") (at 129.54 158.496 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d1021f95-28ca-424f-97e2-27300fbec048)
-    (property "Reference" "#PWR01010" (at 129.54 164.846 0)
+    (property "Reference" "#PWR?" (at 129.54 164.846 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 129.54 162.306 0)
@@ -1422,12 +1422,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01010") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01105") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
@@ -1436,7 +1436,7 @@
   (symbol (lib_id "power:GND") (at 75.946 139.446 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ecd92040-5583-4cb7-8b5d-e00c8d78e96f)
-    (property "Reference" "#PWR01004" (at 75.946 145.796 0)
+    (property "Reference" "#PWR?" (at 75.946 145.796 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 75.946 143.256 0)
@@ -1452,12 +1452,12 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/f7cc5c4d-c1a6-4096-b212-cb6ae1584770"
-          (reference "#PWR01004") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
         (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f5829d3"
-          (reference "#PWR01101") (unit 1)
+          (reference "#PWR?") (unit 1)
         )
       )
     )
