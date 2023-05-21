@@ -1,0 +1,16 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 5ce0d9c6-966f-4d8a-b589-c8cf3a42efa7)
+
+  (paper "A")
+
+  (title_block
+    (date "2023-05-21")
+    (rev "PRELIM")
+    (company "Drew Maatman")
+  )
+
+  (lib_symbols
+  )
+
+)

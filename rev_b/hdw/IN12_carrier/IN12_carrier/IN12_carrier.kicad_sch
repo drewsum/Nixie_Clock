@@ -1,0 +1,178 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c)
+
+  (paper "A")
+
+  (title_block
+    (date "2023-05-21")
+    (rev "PRELIM")
+    (company "Drew Maatman")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "CHANGE ALL RESISTORS TO 0603" (at 121.92 52.07 0)
+    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 1.016) bold (color 194 0 0 1)) (justify left bottom))
+    (uuid 26e75e7d-5e54-41b4-8bda-50afbaf1a778)
+  )
+
+  (sheet (at 19.05 46.99) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 1f5b1d54-7b31-4bb3-9a00-e31d85b3c11c)
+    (property "Sheetname" "Cathode Drive" (at 19.05 46.2784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Cathode_Drive.kicad_sch" (at 19.05 51.3846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "5"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 57.15) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 364ea03e-c5ca-4ec9-aca8-c88c22a6aee2)
+    (property "Sheetname" "IN12 Tubes" (at 19.05 56.4384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "IN12_Tubes.kicad_sch" (at 19.05 61.5446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "6"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 16.51) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 69adbe3d-b414-4221-86a2-c186a7447efb)
+    (property "Sheetname" "IO Connector" (at 19.05 15.7984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "IO_Connector.kicad_sch" (at 19.05 20.9046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 97.79) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 815dbf76-232e-4bad-8c07-aee05ae43ace)
+    (property "Sheetname" "Menu LEDs" (at 19.05 97.0784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Menu_LEDs.kicad_sch" (at 19.05 102.1846 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "10"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 26.67) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 84500e28-af87-4d07-8059-0f12d4d45ee2)
+    (property "Sheetname" "Elapsed Time Counter" (at 19.05 25.9584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Elapsed_Time_Counter.kicad_sch" (at 19.05 31.0646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 36.83) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c062b999-cefd-4adf-a869-c29921fae1ed)
+    (property "Sheetname" "Anode Drive" (at 19.05 36.1184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Anode_Drive.kicad_sch" (at 19.05 41.2246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 87.63) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c2a3d93b-f6d3-42f3-baff-03db67a5d3d0)
+    (property "Sheetname" "Pushbuttons" (at 19.05 86.9184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Pushbutons.kicad_sch" (at 19.05 92.0246 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "9"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 67.31) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c710c274-9ef6-4493-9995-cccebf092ebf)
+    (property "Sheetname" "LED Driver" (at 19.05 66.5984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "LED_Driver.kicad_sch" (at 19.05 71.7046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "7"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 77.47) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid ff1f23e1-f05d-473f-a960-84071c36dbd2)
+    (property "Sheetname" "Anti-Ghost" (at 19.05 76.7584 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Anti_Ghost.kicad_sch" (at 19.05 81.8646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "8"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
