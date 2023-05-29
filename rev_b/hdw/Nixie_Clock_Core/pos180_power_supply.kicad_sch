@@ -1333,7 +1333,7 @@
     (uuid fbb6a619-3356-47e4-9d1f-61f7705607e3)
   )
 
-  (text "VERIFY COMPARATOR RESISTOR VALUES" (at 59.69 143.51 0)
+  (text "POS90_PGOOD COMPARATOR RESISTOR VALUES WRONG" (at 59.69 143.51 0)
     (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
     (uuid 3a3813b4-a29d-45cc-8c26-f67b45ff3851)
   )
@@ -1515,7 +1515,7 @@
     (property "Reference" "R?" (at 136.652 96.52 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "0.16" (at 134.62 96.52 90)
+    (property "Value" "0.36" (at 134.62 96.52 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistors_SMD:R_0805" (at 128.27 93.98 0)
@@ -1532,6 +1532,9 @@
     )
     (property "Footprint Display" "0805" (at 132.08 93.98 0)
       (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Digi-Key PN" "RL12S.36FCT-ND" (at 134.62 96.52 90)
+      (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6911c164-5160-454c-ba16-1a7489bee014))
     (pin "2" (uuid 3c113caf-aaab-4cb9-9a89-d7f584ada272))
@@ -1702,79 +1705,6 @@
     )
   )
 
-  (symbol (lib_id "Custom_Library:C_Custom") (at 62.23 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 12f3558e-26f3-4015-becd-5f7da35c93bc)
-    (property "Reference" "C?" (at 62.865 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10nF" (at 62.865 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitors_SMD:C_0402" (at 63.1952 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 62.865 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "display_footprint" "0402" (at 58.42 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Voltage" "50V" (at 58.42 101.6 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Dielectric" "X7R" (at 58.42 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Digi-Key PN" "399-3066-1-ND" (at 73.025 88.9 0)
-      (effects (font (size 1.524 1.524)) hide)
-    )
-    (pin "1" (uuid c20d7210-b7e8-4b78-8c1f-00c557d354f9))
-    (pin "2" (uuid 4a744cb4-4b1a-4030-9e76-6012a6119377))
-    (instances
-      (project "Nixie_Clock_Core"
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/0b6dccc1-0a92-424d-9916-2441ea7dc052"
-          (reference "C?") (unit 1)
-        )
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/033277b9-3b61-4d88-889d-97b223ca74c5"
-          (reference "C?") (unit 1)
-        )
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
-        )
-      )
-      (project "LED_Panel_Controller"
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bb181d8"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae0fa"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005d77a516"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005eae2d66"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae16c"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bb86f23"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f581b41"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005e939cff"
-          (reference "C?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bb2595e"
-          (reference "C?") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Nixie-Clock-rescue:R") (at 62.23 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 138d5211-fe78-42c2-b380-1e0445ff6a81)
@@ -1840,6 +1770,55 @@
       (project "Nixie Clock"
         (path "/2a5e6550-1edc-4b7d-9ce1-3930249972d7/00000000-0000-0000-0000-000058b0f8c0"
           (reference "#PWR?") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Custom_Library:R_Custom") (at 88.9 118.11 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1f9a441a-2910-4ae8-a709-c4045be99972)
+    (property "Reference" "R?" (at 87.122 114.808 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "100k" (at 88.9 118.11 90)
+      (effects (font (size 1.016 1.016)))
+    )
+    (property "Footprint" "Resistors_SMD:R_0603" (at 88.9 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 88.9 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "display_footprint" "0603" (at 87.122 116.84 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Tolerance" "1%" (at 87.122 119.126 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Wattage" "1/10W" (at 87.122 121.412 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Digi-Key PN" "RMCF0603FT100KCT-ND" (at 88.9 118.11 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 21f89357-bcb4-4231-a89d-ddec9eefc8bf))
+    (pin "2" (uuid 1ef3c644-6391-4d80-996a-91153f0e7340))
+    (instances
+      (project "Analog_Clock"
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939f76"
+          (reference "R?") (unit 1)
+        )
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939d51"
+          (reference "R?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/4cb440c2-4356-400c-9387-edaaa635d5a5"
+          (reference "R?") (unit 1)
+        )
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/0b6dccc1-0a92-424d-9916-2441ea7dc052"
+          (reference "R?") (unit 1)
         )
       )
     )
@@ -3174,46 +3153,6 @@
     )
   )
 
-  (symbol (lib_id "Nixie-Clock-rescue:R") (at 88.9 118.11 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9a4b4006-441e-4154-b179-d0af3188b2c8)
-    (property "Reference" "R?" (at 90.932 118.11 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "22k" (at 88.9 118.11 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 82.55 115.57 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Datasheet" "" (at 90.932 118.11 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Wattage" "1/16W" (at 86.36 120.65 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Tolerance" "1%" (at 86.36 118.11 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint Display" "0402" (at 86.36 115.57 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (pin "1" (uuid a6e6f1f1-5be8-491d-98f4-37f2c411087a))
-    (pin "2" (uuid 72bc2bb0-775d-4625-ac84-800a2d38ffc3))
-    (instances
-      (project "Nixie_Clock_Core"
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/0b6dccc1-0a92-424d-9916-2441ea7dc052"
-          (reference "R?") (unit 1)
-        )
-      )
-      (project "Nixie Clock"
-        (path "/2a5e6550-1edc-4b7d-9ce1-3930249972d7/00000000-0000-0000-0000-000058b0f8c0"
-          (reference "R?") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Custom_Library:C_Custom") (at 140.97 187.96 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f101ac7-12c1-46cf-a55e-788c213e1e49)
@@ -3335,6 +3274,64 @@
       (project "Nixie Clock"
         (path "/2a5e6550-1edc-4b7d-9ce1-3930249972d7/00000000-0000-0000-0000-000058b0f8c0"
           (reference "Q?") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Custom_Library:C_Custom") (at 62.23 101.6 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid a94df8cd-9393-4d36-abd7-65a04d28df56)
+    (property "Reference" "C?" (at 61.595 99.06 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "0.1uF" (at 61.595 104.14 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitors_SMD:C_0603" (at 61.2648 105.41 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 61.595 99.06 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Digi-Key PN" "399-7845-1-ND" (at 51.435 88.9 0)
+      (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "display_footprint" "0603" (at 66.04 99.06 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Voltage" "50V" (at 66.04 101.6 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Dielectric" "X7R" (at 66.04 104.14 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (pin "1" (uuid 647ab359-76f3-428b-ac15-a1b00fb0c3f3))
+    (pin "2" (uuid 593406b1-72d9-44cc-8e7c-b738eb1d273b))
+    (instances
+      (project "Analog_Clock"
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005baae1cb"
+          (reference "C?") (unit 1)
+        )
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005cad2d97"
+          (reference "C?") (unit 1)
+        )
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005baae1f3"
+          (reference "C?") (unit 1)
+        )
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005e939f76"
+          (reference "C?") (unit 1)
+        )
+        (path "/0dc9b974-a945-4291-bc55-04b8e342b0e5/00000000-0000-0000-0000-00005be48f98"
+          (reference "C?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/4cb440c2-4356-400c-9387-edaaa635d5a5"
+          (reference "C?") (unit 1)
+        )
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/0b6dccc1-0a92-424d-9916-2441ea7dc052"
+          (reference "C?") (unit 1)
         )
       )
     )

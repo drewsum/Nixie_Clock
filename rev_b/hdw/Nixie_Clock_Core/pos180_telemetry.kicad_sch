@@ -558,11 +558,6 @@
     (uuid f683a981-1649-439d-bac6-043b57a455ac)
   )
 
-  (text "USE THIS TO MONITOR +180V AND +90V" (at 82.55 31.75 0)
-    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
-    (uuid 4960df8e-9d5d-46dd-a6e5-3833a6dce21f)
-  )
-
   (global_label "I2C_SDA" (shape bidirectional) (at 151.13 62.23 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 111cf310-8d9d-4c42-9dfd-353b530da25e)
@@ -733,6 +728,9 @@
     )
     (property "Digi-Key PN" "RMCF0402FT1K00CT-ND" (at 71.12 60.96 0)
       (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "Configuration" "Telemetry" (at 76.2 71.12 90)
+      (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid bf84779a-938f-4711-923b-6abaa71b8fcc))
     (pin "2" (uuid 3e1c62d6-4378-4566-8d8e-3a7e4893f46a))
@@ -1299,82 +1297,6 @@
     )
   )
 
-  (symbol (lib_id "Custom_Library:R_Custom") (at 66.04 71.12 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 7c11c7a2-3580-4fc6-a080-58b6122f06e1)
-    (property "Reference" "R?" (at 67.564 71.12 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "1k" (at 66.04 71.12 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 66.04 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 66.04 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "display_footprint" "0402" (at 64.262 69.088 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Tolerance" "1%" (at 64.262 71.12 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Wattage" "1/16W" (at 64.262 72.898 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Digi-Key PN" "RMCF0402FT1K00CT-ND" (at 58.42 60.96 0)
-      (effects (font (size 1.524 1.524)) hide)
-    )
-    (pin "1" (uuid c196748f-8659-4715-b362-75b177abbb89))
-    (pin "2" (uuid 9cec8309-f23b-4ef7-9852-f0adff8a842c))
-    (instances
-      (project "Nixie_Clock_Core"
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/2cd2cc24-63f3-4ff7-b2ec-a0dfd71a27e5"
-          (reference "R?") (unit 1)
-        )
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/4cb440c2-4356-400c-9387-edaaa635d5a5"
-          (reference "R?") (unit 1)
-        )
-        (path "/16fdce21-b570-4d81-a458-e8839d611806/2f89509e-1daf-4eca-8cda-923804eff633"
-          (reference "R?") (unit 1)
-        )
-      )
-      (project "LED_Panel_Controller"
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae1dc"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bb844fd"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cad2d97"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cb7a8c3"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f582e4a"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae16c"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cb7a8bc"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae1f3"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005e93cc4e"
-          (reference "R?") (unit 1)
-        )
-        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bf346b3"
-          (reference "R?") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:+3.3V") (at 140.97 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7f7c07e6-cca9-44f5-9d95-2ebe06ef46cc)
@@ -1449,6 +1371,9 @@
     )
     (property "Digi-Key PN" "" (at 71.12 43.815 0)
       (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "Configuration" "Telemetry" (at 76.2 54.61 90)
+      (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid 17cdeb2d-aade-4341-be0a-e4c6e651bb70))
     (pin "2" (uuid c77bd440-7c14-444f-aa35-53e15db3122c))
@@ -1740,6 +1665,85 @@
     )
   )
 
+  (symbol (lib_id "Custom_Library:R_Custom") (at 66.04 71.12 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid db143440-c660-4251-9da7-c81dafe90a88)
+    (property "Reference" "R?" (at 67.564 71.12 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "1k" (at 66.04 71.12 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistors_SMD:R_0402" (at 66.04 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 66.04 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "display_footprint" "0402" (at 64.262 69.088 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Tolerance" "1%" (at 64.262 71.12 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Wattage" "1/16W" (at 64.262 72.898 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Digi-Key PN" "RMCF0402FT1K00CT-ND" (at 58.42 60.96 0)
+      (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "Configuration" "Telemetry" (at 63.5 71.12 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (pin "1" (uuid d8006bd2-d340-4876-9e93-040e42e573b5))
+    (pin "2" (uuid b0d9f173-11e1-4070-a658-a97b158b3178))
+    (instances
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/2cd2cc24-63f3-4ff7-b2ec-a0dfd71a27e5"
+          (reference "R?") (unit 1)
+        )
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/4cb440c2-4356-400c-9387-edaaa635d5a5"
+          (reference "R?") (unit 1)
+        )
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/2f89509e-1daf-4eca-8cda-923804eff633"
+          (reference "R?") (unit 1)
+        )
+      )
+      (project "LED_Panel_Controller"
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae1dc"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bb844fd"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cad2d97"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cb7a8c3"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005f582e4a"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae16c"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005cb7a8bc"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005baae1f3"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005e93cc4e"
+          (reference "R?") (unit 1)
+        )
+        (path "/22e05ee1-b227-4be7-9418-94433f274720/00000000-0000-0000-0000-00005bf346b3"
+          (reference "R?") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 78.74 74.93 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid db8d66fb-ead2-4873-b282-6192804992fd)
@@ -1865,6 +1869,9 @@
     )
     (property "Digi-Key PN" "" (at 58.42 43.815 0)
       (effects (font (size 1.524 1.524)) hide)
+    )
+    (property "Configuration" "Telemetry" (at 63.5 54.61 90)
+      (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid e8b52167-8a7f-4b3d-afa4-da550d512caf))
     (pin "2" (uuid 92dce152-e71b-4a90-8ccc-95637f2829b2))
