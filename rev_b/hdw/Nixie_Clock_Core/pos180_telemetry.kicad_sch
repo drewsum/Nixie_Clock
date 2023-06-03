@@ -1103,7 +1103,7 @@
     (uuid fe79bea0-cb0e-4672-987c-11fdedbcedfa)
   )
 
-  (text "POS180 ADC gain = 151\nPOS90 ADC gain = 76" (at 158.115 50.165 0)
+  (text "POS180 ADC gain = 151\nPOS90 ADC gain = 76" (at 239.395 61.595 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4ac164cb-6959-4394-bc7e-89d9fe399c4b)
   )
@@ -1120,7 +1120,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f42cbf47-dfd9-4d09-98b5-2c6dfd4e5a08)
   )
-  (text "INA219 SCALING NOTES WRONG" (at 72.39 32.385 0)
+  (text "INA219 SCALING NOTES WRONG, RSHUNT = 1.5Ohm" (at 40.64 32.385 0)
     (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
     (uuid fe9784f5-3493-4f70-9221-0dd8cd12a17d)
   )

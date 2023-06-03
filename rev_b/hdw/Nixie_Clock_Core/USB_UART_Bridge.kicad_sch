@@ -1488,11 +1488,6 @@
     (uuid fefc1f75-6188-4372-a407-21270a94df43)
   )
 
-  (text "FIX THIS, THIS IS WRONG, ADD LEGIT ISOLATION" (at 37.465 -6.35 0)
-    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
-    (uuid bc5152bd-b3be-49d1-b306-7659fdd279ec)
-  )
-
   (label "BRIDGE_USB-" (at 97.79 96.52 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 186527e1-3cb3-49e8-8dff-a4645fa8e94c)
