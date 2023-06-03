@@ -371,7 +371,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2001") (unit 1)
         )
       )
     )
@@ -403,7 +403,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2018") (unit 1)
         )
       )
     )
@@ -432,7 +432,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2001") (unit 1)
         )
       )
     )
@@ -464,7 +464,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2007") (unit 1)
         )
       )
     )
@@ -496,7 +496,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2022") (unit 1)
         )
       )
     )
@@ -525,7 +525,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2004") (unit 1)
         )
       )
     )
@@ -557,7 +557,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2026") (unit 1)
         )
       )
     )
@@ -589,7 +589,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2013") (unit 1)
         )
       )
     )
@@ -621,7 +621,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2025") (unit 1)
         )
       )
     )
@@ -653,7 +653,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2019") (unit 1)
         )
       )
     )
@@ -682,7 +682,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2006") (unit 1)
         )
       )
     )
@@ -714,7 +714,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2008") (unit 1)
         )
       )
     )
@@ -746,7 +746,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2028") (unit 1)
         )
       )
     )
@@ -775,7 +775,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2002") (unit 1)
         )
       )
     )
@@ -807,7 +807,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2009") (unit 1)
         )
       )
     )
@@ -839,7 +839,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2017") (unit 1)
         )
       )
     )
@@ -871,7 +871,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2014") (unit 1)
         )
       )
     )
@@ -903,7 +903,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2010") (unit 1)
         )
       )
     )
@@ -935,7 +935,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2011") (unit 1)
         )
       )
     )
@@ -967,7 +967,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2030") (unit 1)
         )
       )
     )
@@ -999,7 +999,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2023") (unit 1)
         )
       )
     )
@@ -1031,7 +1031,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2004") (unit 1)
         )
       )
     )
@@ -1063,7 +1063,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2012") (unit 1)
         )
       )
     )
@@ -1095,7 +1095,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2029") (unit 1)
         )
       )
     )
@@ -1124,7 +1124,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2003") (unit 1)
         )
       )
     )
@@ -1156,7 +1156,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2016") (unit 1)
         )
       )
     )
@@ -1188,7 +1188,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2024") (unit 1)
         )
       )
     )
@@ -1217,7 +1217,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2007") (unit 1)
         )
       )
     )
@@ -1249,7 +1249,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2027") (unit 1)
         )
       )
     )
@@ -1281,7 +1281,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2021") (unit 1)
         )
       )
     )
@@ -1313,7 +1313,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2006") (unit 1)
         )
       )
     )
@@ -1345,7 +1345,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2002") (unit 1)
         )
       )
     )
@@ -1374,7 +1374,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2005") (unit 1)
         )
       )
     )
@@ -1406,7 +1406,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2032") (unit 1)
         )
       )
     )
@@ -1438,7 +1438,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2031") (unit 1)
         )
       )
     )
@@ -1470,7 +1470,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2020") (unit 1)
         )
       )
     )
@@ -1502,7 +1502,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2005") (unit 1)
         )
       )
     )
@@ -1531,7 +1531,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "H?") (unit 1)
+          (reference "H2008") (unit 1)
         )
       )
     )
@@ -1563,7 +1563,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2015") (unit 1)
         )
       )
     )
@@ -1595,7 +1595,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
-          (reference "MK?") (unit 1)
+          (reference "MK2003") (unit 1)
         )
       )
     )

@@ -1,4 +1,4 @@
-25347753124615796
+25351123648161306
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56735,6 +56735,13 @@ IC_TPD12S016RKTR
 24
 24
 Custom Footprints Library
+IN-12B
+Nixie Tube IN-12B
+
+0
+52
+12
+Custom Footprints Library
 IV-1
 
 
@@ -57112,6 +57119,13 @@ Wuerth_7461096_M4_Shank_9pos
 0
 9
 1
+Custom Footprints Library
+Wurth_7447709681
+
+
+0
+2
+2
 Custom Footprints Library
 Wurth_Logo
 

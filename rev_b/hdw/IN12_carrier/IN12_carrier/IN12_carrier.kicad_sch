@@ -14,7 +14,7 @@
   )
 
 
-  (text "CHANGE ALL RESISTORS TO 0603" (at 121.92 52.07 0)
+  (text "CONSIDER 0805 RESISTORS FOR HV" (at 121.92 52.07 0)
     (effects (font (face "Courier New") (size 5.08 5.08) (thickness 1.016) bold (color 194 0 0 1)) (justify left bottom))
     (uuid 26e75e7d-5e54-41b4-8bda-50afbaf1a778)
   )

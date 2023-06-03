@@ -455,6 +455,9 @@
     (property "Configuration" "ETC" (at 81.28 70.8025 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
+    (property "Digi-Key PN" "497-5711-1-ND" (at 78.74 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid d2857781-4149-4a6c-8235-0d2fba8c29b1))
     (pin "2" (uuid f4058c38-0ded-4beb-a215-2547fa257332))
     (instances
@@ -465,7 +468,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "D?") (unit 1)
+          (reference "D1401") (unit 1)
         )
       )
     )
@@ -495,7 +498,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01403") (unit 1)
         )
       )
     )
@@ -516,7 +519,7 @@
     (property "Datasheet" "" (at 112.395 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "490-14372-1-ND" (at 122.555 67.31 0)
+    (property "Digi-Key PN" "" (at 122.555 67.31 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "display_footprint" "0603" (at 107.95 77.47 0)
@@ -568,7 +571,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "C?") (unit 1)
+          (reference "C1403") (unit 1)
         )
       )
     )
@@ -598,7 +601,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01404") (unit 1)
         )
       )
     )
@@ -628,7 +631,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#FLG?") (unit 1)
+          (reference "#FLG01401") (unit 1)
         )
       )
     )
@@ -649,7 +652,7 @@
     (property "Datasheet" "" (at 95.885 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "490-14372-1-ND" (at 106.045 67.31 0)
+    (property "Digi-Key PN" "" (at 106.045 67.31 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "display_footprint" "0603" (at 91.44 77.47 0)
@@ -701,7 +704,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "C?") (unit 1)
+          (reference "C1402") (unit 1)
         )
       )
     )
@@ -730,7 +733,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "DOC?") (unit 1)
+          (reference "DOC1401") (unit 1)
         )
       )
     )
@@ -760,7 +763,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01402") (unit 1)
         )
       )
     )
@@ -790,7 +793,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01407") (unit 1)
         )
       )
     )
@@ -820,7 +823,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01405") (unit 1)
         )
       )
     )
@@ -850,7 +853,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01401") (unit 1)
         )
       )
     )
@@ -880,7 +883,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR01406") (unit 1)
         )
       )
     )
@@ -910,7 +913,7 @@
     (property "Dielectric" "X7R" (at 124.46 82.55 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "311-1344-1-ND" (at 128.27 80.01 0)
+    (property "Digi-Key PN" "" (at 128.27 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Configuration" "ETC" (at 121.92 75.946 0)
@@ -926,7 +929,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "C?") (unit 1)
+          (reference "C1404") (unit 1)
         )
       )
     )
@@ -969,7 +972,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "U?") (unit 1)
+          (reference "U1401") (unit 1)
         )
       )
     )
@@ -990,7 +993,7 @@
     (property "Datasheet" "" (at 79.375 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "490-14372-1-ND" (at 89.535 67.31 0)
+    (property "Digi-Key PN" "" (at 89.535 67.31 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "display_footprint" "0603" (at 74.93 77.47 0)
@@ -1042,7 +1045,7 @@
       )
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/61f04371-5be4-452b-bab3-2ded046cc354"
-          (reference "C?") (unit 1)
+          (reference "C1401") (unit 1)
         )
       )
     )

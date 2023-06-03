@@ -34,14 +34,11 @@
       3,
       4,
       5,
-      8,
+      6,
       9,
       10,
-      11,
-      12,
-      13,
+      14,
       15,
-      16,
       17,
       18,
       19,
@@ -64,8 +61,8 @@
       39,
       40
     ],
-    "visible_layers": "fffffff_ffffffff",
-    "zone_display_mode": 0
+    "visible_layers": "000192f_80000007",
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "Nixie Clock.kicad_prl",

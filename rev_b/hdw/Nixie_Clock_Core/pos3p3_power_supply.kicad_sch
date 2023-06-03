@@ -1232,28 +1232,28 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 106.68 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 01cb2e37-2f21-46d8-acd3-8b87ff0906bf)
-    (property "Reference" "R?" (at 104.648 175.26 0)
+    (property "Reference" "R404" (at 104.648 175.26 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 106.68 175.26 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 106.68 175.26 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 106.68 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 106.68 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 109.22 173.228 0)
+    (property "display_footprint" "0603" (at 109.22 173.228 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Tolerance" "1%" (at 109.22 175.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Wattage" "1/16W" (at 109.474 177.292 0)
+    (property "Wattage" "1/10W" (at 109.474 177.292 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Digi-Key PN" "RMCF0402FT10K0CT-ND" (at 114.3 165.1 0)
+    (property "Digi-Key PN" "" (at 114.3 165.1 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 41331c3b-7757-47bc-8161-2ea1547f1d42))
@@ -1261,7 +1261,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R404") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1305,7 +1305,7 @@
   (symbol (lib_id "Diode:BAT48JFILM") (at 88.9 163.83 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 049c92a8-cb8f-4e21-bafe-7f2541f5b04d)
-    (property "Reference" "D?" (at 91.948 162.052 90)
+    (property "Reference" "D401" (at 91.948 162.052 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "BAT48JFILM" (at 91.948 164.592 90)
@@ -1325,7 +1325,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "D?") (unit 1)
+          (reference "D401") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1342,28 +1342,28 @@
   (symbol (lib_id "Custom_Library:C_Custom") (at 88.9 175.26 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 077fead9-6409-4e8a-84ba-031f538be338)
-    (property "Reference" "C?" (at 89.535 172.72 0)
+    (property "Reference" "C405" (at 89.535 172.72 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 89.535 177.8 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitors_SMD:C_0402" (at 89.8652 179.07 0)
+    (property "Footprint" "Capacitors_SMD:C_0603" (at 89.8652 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 89.535 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 85.09 172.72 0)
+    (property "display_footprint" "0603" (at 85.09 172.72 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Voltage" "6.3V" (at 85.09 175.26 0)
+    (property "Voltage" "10V" (at 85.09 175.26 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Dielectric" "X5R" (at 85.09 177.8 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-1451-1-ND" (at 88.9 175.26 0)
+    (property "Digi-Key PN" "" (at 88.9 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 82ab7931-b691-4d3e-a6da-ab0309c69ccd))
@@ -1371,7 +1371,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C405") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1415,7 +1415,7 @@
   (symbol (lib_id "power:+3.3V") (at 125.73 176.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 143851d4-739d-4374-8785-594abe1d37c8)
-    (property "Reference" "#PWR?" (at 125.73 180.34 0)
+    (property "Reference" "#PWR0414" (at 125.73 180.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 125.73 172.974 0)
@@ -1431,7 +1431,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0414") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1454,7 +1454,7 @@
     (property "Value" "10uF" (at 163.195 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 163.5252 77.47 0)
+    (property "Footprint" "Capacitors_SMD:C_1206" (at 163.5252 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 163.195 71.12 0)
@@ -1469,7 +1469,7 @@
     (property "Dielectric" "X5R" (at 158.75 76.2 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-6736-1-ND" (at 173.355 60.96 0)
+    (property "Digi-Key PN" "" (at 173.355 60.96 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 4dd9da09-3cd4-41e2-b5a1-4c6c9b2ac1de))
@@ -1480,7 +1480,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C407") (unit 1)
         )
       )
     )
@@ -1514,7 +1514,7 @@
   (symbol (lib_id "Custom Library:L_Custom") (at 153.67 67.31 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3ed3051b-57ab-4898-95f1-e57fc9f6fc21)
-    (property "Reference" "L?" (at 153.67 68.58 90)
+    (property "Reference" "L401" (at 153.67 68.58 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "2.2uH" (at 153.67 65.405 90)
@@ -1543,7 +1543,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "L?") (unit 1)
+          (reference "L401") (unit 1)
         )
       )
     )
@@ -1552,7 +1552,7 @@
   (symbol (lib_id "power:GND") (at 125.73 186.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56ca4495-b247-4721-9152-1f498c916f55)
-    (property "Reference" "#PWR?" (at 125.73 193.04 0)
+    (property "Reference" "#PWR0415" (at 125.73 193.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 125.73 190.5 0)
@@ -1568,7 +1568,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0415") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1585,25 +1585,25 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 223.52 86.36 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5cb60b00-5c72-4f00-9f82-ed37cafe667c)
-    (property "Reference" "R?" (at 225.552 86.36 0)
+    (property "Reference" "R408" (at 225.552 86.36 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1M" (at 223.52 86.36 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 223.52 86.36 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 223.52 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 223.52 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 220.98 84.328 0)
+    (property "display_footprint" "0603" (at 220.98 84.328 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Tolerance" "1%" (at 220.98 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Wattage" "1/16W" (at 220.726 88.392 0)
+    (property "Wattage" "1/10W" (at 220.726 88.392 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Digi-Key PN" "" (at 215.9 76.2 0)
@@ -1614,7 +1614,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R408") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1658,28 +1658,28 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 190.5 58.42 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6e251594-786b-4c1e-be46-892349531d3f)
-    (property "Reference" "R?" (at 193.04 58.42 90)
+    (property "Reference" "R405" (at 193.04 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 190.5 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 190.5 58.42 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 190.5 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 190.5 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 187.96 58.42 90)
+    (property "display_footprint" "0603" (at 187.96 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Tolerance" "1%" (at 185.42 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Wattage" "1/16W" (at 182.88 58.42 90)
+    (property "Wattage" "1/10W" (at 182.88 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "RMCF0402FT10R0CT-ND" (at 190.5 58.42 0)
+    (property "Digi-Key PN" "" (at 190.5 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Configuration" "Telemetry" (at 187.96 58.42 90)
@@ -1690,7 +1690,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R405") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1758,13 +1758,13 @@
     (property "Value" "10nF" (at 69.215 96.52 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitors_SMD:C_0402" (at 69.5452 97.79 0)
+    (property "Footprint" "Capacitors_SMD:C_0603" (at 69.5452 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 69.215 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 64.77 91.44 0)
+    (property "display_footprint" "" (at 64.77 91.44 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Voltage" "50V" (at 64.77 93.98 0)
@@ -1773,7 +1773,7 @@
     (property "Dielectric" "X7R" (at 64.77 96.52 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "399-3066-1-ND" (at 79.375 81.28 0)
+    (property "Digi-Key PN" "" (at 79.375 81.28 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 4bc9b134-e6e0-42a3-bbb2-dac3c19e0a22))
@@ -1787,7 +1787,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C404") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1825,25 +1825,25 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 81.28 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 784a2c94-401d-4148-b594-9e7217d43a95)
-    (property "Reference" "R?" (at 79.248 93.98 0)
+    (property "Reference" "R403" (at 79.248 93.98 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "18.2k" (at 81.28 93.98 90)
       (effects (font (size 1.016 1.016)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 81.28 93.98 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 81.28 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 81.28 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 83.82 91.948 0)
+    (property "display_footprint" "0603" (at 83.82 91.948 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Tolerance" "1%" (at 83.82 93.98 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Wattage" "1/16W" (at 84.074 96.012 0)
+    (property "Wattage" "1/10W" (at 84.074 96.012 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Digi-Key PN" "" (at 88.9 83.82 0)
@@ -1854,7 +1854,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R403") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1898,7 +1898,7 @@
   (symbol (lib_id "Transistor_FET:BSS214NW") (at 104.14 189.23 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7a1de0c8-c2e8-47bc-b813-86e75e613a69)
-    (property "Reference" "Q?" (at 109.22 187.325 0)
+    (property "Reference" "Q401" (at 109.22 187.325 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "BSS214NW" (at 109.22 189.23 0)
@@ -1919,7 +1919,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "Q?") (unit 1)
+          (reference "Q401") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1936,7 +1936,7 @@
   (symbol (lib_id "power:GND") (at 88.9 179.07 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7baa18fa-d2de-4e4b-9329-7df044c8504c)
-    (property "Reference" "#PWR?" (at 88.9 185.42 0)
+    (property "Reference" "#PWR0412" (at 88.9 185.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 88.9 182.88 0)
@@ -1952,7 +1952,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0412") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -1969,7 +1969,7 @@
   (symbol (lib_id "power:+3.3V") (at 88.9 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7c3d7d31-798b-4321-ad01-958a69860b55)
-    (property "Reference" "#PWR?" (at 88.9 163.83 0)
+    (property "Reference" "#PWR0411" (at 88.9 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 88.9 156.464 0)
@@ -1985,7 +1985,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0411") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2002,7 +2002,7 @@
   (symbol (lib_id "power:GND") (at 106.68 194.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 80fe0446-c18f-4032-a64c-8ef2f5df873a)
-    (property "Reference" "#PWR?" (at 106.68 200.66 0)
+    (property "Reference" "#PWR0413" (at 106.68 200.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 106.68 198.12 0)
@@ -2018,7 +2018,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0413") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2056,7 +2056,7 @@
     (property "Dielectric" "X7R" (at 46.99 96.52 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-2970-1-ND" (at -99.06 209.804 0)
+    (property "Digi-Key PN" "" (at -99.06 209.804 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e20257ba-0531-4d28-a76f-6e2fe02e9783))
@@ -2078,7 +2078,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C402") (unit 1)
         )
       )
     )
@@ -2087,7 +2087,7 @@
   (symbol (lib_id "power:+3.3V") (at 231.14 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87ed8a5b-3f35-4d61-b0b4-95303614f8b5)
-    (property "Reference" "#PWR?" (at 231.14 68.58 0)
+    (property "Reference" "#PWR0417" (at 231.14 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 231.14 61.214 0)
@@ -2103,7 +2103,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0417") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2129,7 +2129,7 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 196.85 67.31 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8904586a-1794-465d-8a7e-ae7f4625808c)
-    (property "Reference" "R?" (at 196.85 69.85 90)
+    (property "Reference" "R406" (at 196.85 69.85 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0.02" (at 196.85 67.31 90)
@@ -2158,7 +2158,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R406") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2208,7 +2208,7 @@
     (property "Dielectric" "NP0" (at 209.55 88.9 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Digi-Key PN" "399-7918-1-ND" (at 213.36 86.36 0)
+    (property "Digi-Key PN" "" (at 213.36 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2388259c-0c13-4e36-a47a-eb466c4ca592))
@@ -2224,7 +2224,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C409") (unit 1)
         )
       )
     )
@@ -2233,7 +2233,7 @@
   (symbol (lib_id "power:+3.3V") (at 240.03 64.77 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 92f88119-551c-4443-a995-02fa5cec8f40)
-    (property "Reference" "#PWR?" (at 240.03 60.96 0)
+    (property "Reference" "#PWR0418" (at 240.03 60.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 240.03 68.326 0)
@@ -2249,7 +2249,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0418") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2287,7 +2287,7 @@
     (property "Datasheet" "" (at 136.525 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "399-7845-1-ND" (at 126.365 49.53 0)
+    (property "Digi-Key PN" "" (at 126.365 49.53 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "display_footprint" "0603" (at 140.97 59.69 0)
@@ -2327,7 +2327,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C406") (unit 1)
         )
       )
     )
@@ -2336,7 +2336,7 @@
   (symbol (lib_id "Custom Library:LT8609A-DD") (at 113.03 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a1e3543b-3993-4bdf-82db-4c17a8dff7e1)
-    (property "Reference" "U?" (at 125.73 91.44 0)
+    (property "Reference" "U401" (at 125.73 91.44 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "LT8609A-DD" (at 113.03 72.39 0)
@@ -2365,7 +2365,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "U?") (unit 1)
+          (reference "U401") (unit 1)
         )
       )
     )
@@ -2380,7 +2380,7 @@
     (property "Value" "10uF" (at 69.215 66.04 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 69.5452 67.31 0)
+    (property "Footprint" "Capacitors_SMD:C_1206" (at 69.5452 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 69.215 60.96 0)
@@ -2395,7 +2395,7 @@
     (property "Dielectric" "X5R" (at 64.77 66.04 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-6736-1-ND" (at 79.375 50.8 0)
+    (property "Digi-Key PN" "" (at 79.375 50.8 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid aebbe51c-783c-4184-89ca-eb381785c3c4))
@@ -2406,7 +2406,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C403") (unit 1)
         )
       )
     )
@@ -2448,28 +2448,28 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 81.28 71.12 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b8baf7c8-0983-4603-926a-e28f47f7982b)
-    (property "Reference" "R?" (at 83.312 71.12 0)
+    (property "Reference" "R402" (at 83.312 71.12 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (at 81.28 71.12 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 81.28 71.12 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 81.28 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 81.28 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 78.74 69.088 0)
+    (property "display_footprint" "0603" (at 78.74 69.088 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Tolerance" "1%" (at 78.74 71.12 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Wattage" "1/16W" (at 78.486 73.152 0)
+    (property "Wattage" "1/10W" (at 78.486 73.152 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Digi-Key PN" "RMCF0402FT10K0CT-ND" (at 73.66 60.96 0)
+    (property "Digi-Key PN" "" (at 73.66 60.96 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid c4ad5450-c583-4005-a24c-db431101478c))
@@ -2477,7 +2477,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R402") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2579,7 +2579,7 @@
   (symbol (lib_id "Custom_Library:TP") (at 223.52 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c0449d84-d8b4-44fa-b68e-422553538e3d)
-    (property "Reference" "TP?" (at 223.52 60.96 0)
+    (property "Reference" "TP401" (at 223.52 60.96 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TP" (at 223.52 60.96 0)
@@ -2595,7 +2595,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "TP?") (unit 1)
+          (reference "TP401") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2658,28 +2658,28 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 46.99 166.37 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d9ec26d6-0fd7-454b-a6d3-316498c5fa9f)
-    (property "Reference" "R?" (at 46.99 163.83 90)
+    (property "Reference" "R401" (at 46.99 163.83 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "0" (at 46.99 166.37 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 46.99 166.37 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 46.99 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 46.99 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 46.99 168.91 90)
+    (property "display_footprint" "0603" (at 46.99 168.91 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Tolerance" "1%" (at 46.99 171.45 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Wattage" "1/16W" (at 46.99 173.99 90)
+    (property "Wattage" "1/10W" (at 46.99 173.99 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "RMCF0402ZT0R00CT-ND" (at 46.99 166.37 0)
+    (property "Digi-Key PN" "" (at 46.99 166.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 0a1b7d13-f788-48b5-a9ef-371f4cec9413))
@@ -2687,7 +2687,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R401") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2710,25 +2710,25 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 223.52 109.22 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dd2ac1fb-77fe-4ee9-a863-5c67ff1b2962)
-    (property "Reference" "R?" (at 225.552 109.22 0)
+    (property "Reference" "R409" (at 225.552 109.22 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "309k" (at 223.52 109.22 90)
       (effects (font (size 1.016 1.016)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 223.52 109.22 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 223.52 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 223.52 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 220.98 107.188 0)
+    (property "display_footprint" "0603" (at 220.98 107.188 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Tolerance" "1%" (at 220.98 109.22 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Wattage" "1/16W" (at 220.726 111.252 0)
+    (property "Wattage" "1/10W" (at 220.726 111.252 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Digi-Key PN" "" (at 215.9 99.06 0)
@@ -2739,7 +2739,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R409") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2789,7 +2789,7 @@
     (property "Value" "10uF" (at 51.435 66.04 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 51.7652 67.31 0)
+    (property "Footprint" "Capacitors_SMD:C_1206" (at 51.7652 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 51.435 60.96 0)
@@ -2804,7 +2804,7 @@
     (property "Dielectric" "X5R" (at 46.99 66.04 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-6736-1-ND" (at 61.595 50.8 0)
+    (property "Digi-Key PN" "" (at 61.595 50.8 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 13211d6b-b63f-47ee-9023-f2ef6608763e))
@@ -2815,7 +2815,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C401") (unit 1)
         )
       )
     )
@@ -2857,7 +2857,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 240.03 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e9cc0fb7-2489-4118-903a-3ea2e7fb9391)
-    (property "Reference" "#FLG?" (at 240.03 62.865 0)
+    (property "Reference" "#FLG0401" (at 240.03 62.865 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 240.03 60.96 0)
@@ -2873,7 +2873,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#FLG?") (unit 1)
+          (reference "#FLG0401") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2887,7 +2887,7 @@
   (symbol (lib_id "Custom_Library:ZXMS6004FFTA") (at 123.19 181.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid eced972b-5899-4100-8de0-0108865edbcd)
-    (property "Reference" "Q?" (at 128.27 179.705 0)
+    (property "Reference" "Q402" (at 128.27 179.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "ZXMS6004FFTA" (at 128.27 181.61 0)
@@ -2908,7 +2908,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "Q?") (unit 1)
+          (reference "Q402") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -2925,28 +2925,28 @@
   (symbol (lib_id "Custom_Library:R_Custom") (at 203.2 58.42 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8b1f184-9d4b-4b00-9c09-0a8e98a75dd6)
-    (property "Reference" "R?" (at 205.74 58.42 90)
+    (property "Reference" "R407" (at 205.74 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10" (at 203.2 58.42 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0402" (at 203.2 58.42 0)
+    (property "Footprint" "Resistors_SMD:R_0603" (at 203.2 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 203.2 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "display_footprint" "0402" (at 200.66 58.42 90)
+    (property "display_footprint" "0603" (at 200.66 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Tolerance" "1%" (at 198.12 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Wattage" "1/16W" (at 195.58 58.42 90)
+    (property "Wattage" "1/10W" (at 195.58 58.42 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "RMCF0402FT10R0CT-ND" (at 203.2 58.42 0)
+    (property "Digi-Key PN" "" (at 203.2 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Configuration" "Telemetry" (at 200.66 58.42 90)
@@ -2957,7 +2957,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "R?") (unit 1)
+          (reference "R407") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -3036,7 +3036,7 @@
   (symbol (lib_id "power:GND") (at 223.52 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe967e9f-416a-41cb-a126-60efc2f4be61)
-    (property "Reference" "#PWR?" (at 223.52 119.38 0)
+    (property "Reference" "#PWR0416" (at 223.52 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 223.52 116.84 0)
@@ -3052,7 +3052,7 @@
     (instances
       (project "Nixie_Clock_Core"
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0416") (unit 1)
         )
       )
       (project "LED_Panel_Controller"
@@ -3117,7 +3117,7 @@
     (property "Value" "10uF" (at 180.975 76.2 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 181.3052 77.47 0)
+    (property "Footprint" "Capacitors_SMD:C_1206" (at 181.3052 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 180.975 71.12 0)
@@ -3132,7 +3132,7 @@
     (property "Dielectric" "X5R" (at 176.53 76.2 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "1276-6736-1-ND" (at 191.135 60.96 0)
+    (property "Digi-Key PN" "" (at 191.135 60.96 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid 39e96d26-29a6-4ca3-8bc7-df99dbbcb6ec))
@@ -3143,7 +3143,7 @@
           (reference "C?") (unit 1)
         )
         (path "/16fdce21-b570-4d81-a458-e8839d611806/b9e3b07e-337a-481e-964b-cf3238d1c75e"
-          (reference "C?") (unit 1)
+          (reference "C408") (unit 1)
         )
       )
     )
