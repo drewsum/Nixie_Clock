@@ -14,9 +14,9 @@
   )
 
 
-  (text "CONSIDER 0805 RESISTORS FOR HV" (at 121.92 52.07 0)
-    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 1.016) bold (color 194 0 0 1)) (justify left bottom))
-    (uuid 26e75e7d-5e54-41b4-8bda-50afbaf1a778)
+  (text "ADD MOUNTING HOLES" (at 133.985 66.04 0)
+    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 1.016) bold (color 255 0 0 1)) (justify left bottom))
+    (uuid dad07b60-8968-4a15-9f05-79b85342025c)
   )
 
   (sheet (at 19.05 46.99) (size 12.7 3.81) (fields_autoplaced)
@@ -125,10 +125,10 @@
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid c2a3d93b-f6d3-42f3-baff-03db67a5d3d0)
-    (property "Sheetname" "Pushbuttons" (at 19.05 86.9184 0)
+    (property "Sheetname" "Capacitive Pushbuttons" (at 19.05 86.9184 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "Pushbutons.kicad_sch" (at 19.05 92.0246 0)
+    (property "Sheetfile" "Capacitive_Pushbutons.kicad_sch" (at 19.05 92.0246 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
@@ -151,6 +151,23 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "7"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 107.95) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid e71e185e-8436-4b41-b7c1-e246b88c3620)
+    (property "Sheetname" "Mechanical Pushbuttons" (at 19.05 107.2384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Mechanical_Pushbuttons.kicad_sch" (at 19.05 112.3446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "11"))
       )
     )
   )

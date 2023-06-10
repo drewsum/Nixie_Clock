@@ -999,7 +999,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 176.53 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c1f0c4a-af2e-4576-941c-931621b1f712)
-    (property "Reference" "V?" (at 174.625 14.605 0)
+    (property "Reference" "V605" (at 174.625 14.605 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 174.625 17.145 0)
@@ -1026,7 +1026,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V605") (unit 1)
         )
       )
     )
@@ -1057,7 +1057,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V606") (unit 1)
         )
       )
     )
@@ -1066,7 +1066,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 113.03 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 254d4aa2-f1e9-4c08-b0a5-eccd6acb8ae2)
-    (property "Reference" "V?" (at 111.125 109.855 0)
+    (property "Reference" "V604" (at 111.125 109.855 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 111.125 112.395 0)
@@ -1093,7 +1093,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V604") (unit 1)
         )
       )
     )
@@ -1133,7 +1133,7 @@
     (property "Value" "10k" (at 194.31 126.365 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0603" (at 191.77 132.715 0)
+    (property "Footprint" "Resistors_SMD:R_0805" (at 191.77 132.715 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "" (at 194.31 124.333 90)
@@ -1148,8 +1148,8 @@
     (property "Footprint Display" "" (at 192.278 128.905 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "display_footprint" "0603" (at 194.31 126.365 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "display_footprint" "0805" (at 194.31 128.905 90)
+      (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid ef1541f1-8a78-4470-a81d-2e2805214d6b))
     (pin "2" (uuid be678ea5-0047-40e2-b67f-32b50479cdb6))
@@ -1164,7 +1164,7 @@
           (reference "R?") (unit 1)
         )
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "R?") (unit 1)
+          (reference "R601") (unit 1)
         )
       )
     )
@@ -1173,7 +1173,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 49.53 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f597348-684e-4482-95dd-58d90e3f42aa)
-    (property "Reference" "V?" (at 47.625 109.855 0)
+    (property "Reference" "V602" (at 47.625 109.855 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 47.625 112.395 0)
@@ -1200,7 +1200,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V602") (unit 1)
         )
       )
     )
@@ -1240,7 +1240,7 @@
     (property "Value" "10k" (at 194.31 151.765 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Resistors_SMD:R_0603" (at 191.77 158.115 0)
+    (property "Footprint" "Resistors_SMD:R_0805" (at 191.77 158.115 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "" (at 194.31 149.733 90)
@@ -1255,8 +1255,8 @@
     (property "Footprint Display" "" (at 192.278 154.305 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "display_footprint" "0603" (at 194.31 151.765 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "display_footprint" "0805" (at 194.31 154.305 90)
+      (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid b0a94e51-e633-4c83-a3dd-c87f2b861d2b))
     (pin "2" (uuid 2043f4f1-ee18-468e-a5d0-cb084a6d0429))
@@ -1271,7 +1271,7 @@
           (reference "R?") (unit 1)
         )
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "R?") (unit 1)
+          (reference "R602") (unit 1)
         )
       )
     )
@@ -1302,7 +1302,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V607") (unit 1)
         )
       )
     )
@@ -1311,7 +1311,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 49.53 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ae1db6cb-e748-4b8c-9f78-b7995906ed53)
-    (property "Reference" "V?" (at 47.625 14.605 0)
+    (property "Reference" "V601" (at 47.625 14.605 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 47.625 17.145 0)
@@ -1338,7 +1338,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V601") (unit 1)
         )
       )
     )
@@ -1347,7 +1347,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 236.22 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e1abe458-17df-4a72-920a-b685eae6519d)
-    (property "Reference" "V?" (at 234.315 14.605 0)
+    (property "Reference" "V608" (at 234.315 14.605 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 234.315 17.145 0)
@@ -1374,7 +1374,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V608") (unit 1)
         )
       )
     )
@@ -1383,7 +1383,7 @@
   (symbol (lib_id "Custom Library:IN12B") (at 113.03 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f2cc76d1-471d-41b6-821f-5f0896de369f)
-    (property "Reference" "V?" (at 111.125 14.605 0)
+    (property "Reference" "V603" (at 111.125 14.605 0)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "IN12B" (at 111.125 17.145 0)
@@ -1410,7 +1410,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/364ea03e-c5ca-4ec9-aca8-c88c22a6aee2"
-          (reference "V?") (unit 1)
+          (reference "V603") (unit 1)
         )
       )
     )

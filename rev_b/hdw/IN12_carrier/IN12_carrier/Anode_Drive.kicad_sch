@@ -628,7 +628,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 161.29 90.17 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00038a0a-12e1-40a5-aab1-ac2ee1fafdc3)
-    (property "Reference" "R?" (at 161.29 92.71 90)
+    (property "Reference" "R417" (at 161.29 92.71 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 161.29 90.17 90)
@@ -657,7 +657,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R417") (unit 1)
         )
       )
     )
@@ -666,7 +666,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 161.29 137.16 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 001e6e96-83c5-4a7a-8527-0c3b1b07d19a)
-    (property "Reference" "R?" (at 161.29 139.7 90)
+    (property "Reference" "R418" (at 161.29 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 161.29 137.16 90)
@@ -695,7 +695,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R418") (unit 1)
         )
       )
     )
@@ -704,7 +704,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 179.07 99.06 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 09a18129-e5c9-4cd6-bbb0-aa2b0b20784a)
-    (property "Reference" "R?" (at 181.61 95.885 0)
+    (property "Reference" "R423" (at 181.61 95.885 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 179.07 99.06 90)
@@ -733,7 +733,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R423") (unit 1)
         )
       )
     )
@@ -742,7 +742,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 144.78 49.53 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c9f30cb-900c-4bc0-a506-b601e6c019b4)
-    (property "Reference" "R?" (at 144.78 52.07 90)
+    (property "Reference" "R413" (at 144.78 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 144.78 49.53 90)
@@ -771,7 +771,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R413") (unit 1)
         )
       )
     )
@@ -806,7 +806,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q408") (unit 1)
         )
       )
     )
@@ -866,7 +866,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q405") (unit 1)
         )
       )
     )
@@ -905,7 +905,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 96.52 146.05 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 204b22ca-1020-41d5-a7f5-4fa6a325d773)
-    (property "Reference" "R?" (at 99.06 142.875 0)
+    (property "Reference" "R412" (at 99.06 142.875 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 96.52 146.05 90)
@@ -934,7 +934,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R412") (unit 1)
         )
       )
     )
@@ -943,7 +943,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 62.23 97.79 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2f5958a6-cf94-4af8-be13-0ec43bb60128)
-    (property "Reference" "R?" (at 62.23 100.33 90)
+    (property "Reference" "R402" (at 62.23 100.33 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 62.23 97.79 90)
@@ -972,7 +972,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R402") (unit 1)
         )
       )
     )
@@ -1037,7 +1037,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q410") (unit 1)
         )
       )
     )
@@ -1072,7 +1072,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q401") (unit 1)
         )
       )
     )
@@ -1081,7 +1081,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 144.78 144.78 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 43edc3b0-e1c0-4325-a36a-7cd834d1cdeb)
-    (property "Reference" "R?" (at 144.78 147.32 90)
+    (property "Reference" "R415" (at 144.78 147.32 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 144.78 144.78 90)
@@ -1110,7 +1110,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R415") (unit 1)
         )
       )
     )
@@ -1119,7 +1119,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 161.29 43.18 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 58987840-4ced-4a47-99b0-be142e5fe764)
-    (property "Reference" "R?" (at 161.29 45.72 90)
+    (property "Reference" "R416" (at 161.29 45.72 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 161.29 43.18 90)
@@ -1148,7 +1148,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R416") (unit 1)
         )
       )
     )
@@ -1207,7 +1207,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 172.72 34.29 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6dcf5871-5af2-49b3-80a4-4213a0a19ab9)
-    (property "Reference" "R?" (at 172.72 36.83 90)
+    (property "Reference" "R419" (at 172.72 36.83 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 172.72 34.29 90)
@@ -1236,7 +1236,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R419") (unit 1)
         )
       )
     )
@@ -1245,7 +1245,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 96.52 99.06 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 72228971-f2c6-4e1e-a304-b442b56fc8a2)
-    (property "Reference" "R?" (at 99.06 95.885 0)
+    (property "Reference" "R411" (at 99.06 95.885 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 96.52 99.06 90)
@@ -1274,7 +1274,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R411") (unit 1)
         )
       )
     )
@@ -1309,7 +1309,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q402") (unit 1)
         )
       )
     )
@@ -1318,7 +1318,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 179.07 146.05 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 888582f1-50ff-421f-aa59-6d55ccbc5c28)
-    (property "Reference" "R?" (at 181.61 142.875 0)
+    (property "Reference" "R424" (at 181.61 142.875 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 179.07 146.05 90)
@@ -1347,7 +1347,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R424") (unit 1)
         )
       )
     )
@@ -1356,7 +1356,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 78.74 137.16 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8f548d8c-f86d-41be-9b1d-fd7835bed07b)
-    (property "Reference" "R?" (at 78.74 139.7 90)
+    (property "Reference" "R406" (at 78.74 139.7 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 78.74 137.16 90)
@@ -1385,7 +1385,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R406") (unit 1)
         )
       )
     )
@@ -1394,7 +1394,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 96.52 52.07 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8fa6d3f6-3a01-40f4-86e0-5ab5b7b34598)
-    (property "Reference" "R?" (at 99.06 48.895 0)
+    (property "Reference" "R410" (at 99.06 48.895 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 96.52 52.07 90)
@@ -1423,7 +1423,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R410") (unit 1)
         )
       )
     )
@@ -1432,7 +1432,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 90.17 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9481a933-5a3a-4afc-bcfe-0377b693ed37)
-    (property "Reference" "R?" (at 90.17 85.09 90)
+    (property "Reference" "R408" (at 90.17 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 90.17 82.55 90)
@@ -1461,7 +1461,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R408") (unit 1)
         )
       )
     )
@@ -1470,7 +1470,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 172.72 82.55 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f952034-e6dc-4d3a-b773-d15817643ca4)
-    (property "Reference" "R?" (at 172.72 85.09 90)
+    (property "Reference" "R420" (at 172.72 85.09 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 172.72 82.55 90)
@@ -1499,7 +1499,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R420") (unit 1)
         )
       )
     )
@@ -1508,7 +1508,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 172.72 129.54 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a077bcf1-2b19-4828-ac3a-141e8d84261c)
-    (property "Reference" "R?" (at 172.72 132.08 90)
+    (property "Reference" "R421" (at 172.72 132.08 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 172.72 129.54 90)
@@ -1537,7 +1537,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R421") (unit 1)
         )
       )
     )
@@ -1546,7 +1546,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 90.17 34.29 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a7e3e00b-41f8-4c3e-8156-4a62936d9efa)
-    (property "Reference" "R?" (at 90.17 36.83 90)
+    (property "Reference" "R407" (at 90.17 36.83 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 90.17 34.29 90)
@@ -1575,7 +1575,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R407") (unit 1)
         )
       )
     )
@@ -1610,7 +1610,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q412") (unit 1)
         )
       )
     )
@@ -1645,7 +1645,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q407") (unit 1)
         )
       )
     )
@@ -1680,7 +1680,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q404") (unit 1)
         )
       )
     )
@@ -1714,7 +1714,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 62.23 144.78 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c133fbd7-a977-4a17-b5c4-ee768b87dca3)
-    (property "Reference" "R?" (at 62.23 147.32 90)
+    (property "Reference" "R403" (at 62.23 147.32 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 62.23 144.78 90)
@@ -1743,7 +1743,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R403") (unit 1)
         )
       )
     )
@@ -1893,7 +1893,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q403") (unit 1)
         )
       )
     )
@@ -1928,7 +1928,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q411") (unit 1)
         )
       )
     )
@@ -1967,7 +1967,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 78.74 90.17 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e77764d3-7a5c-4ab6-9f72-ee5ad8fe81ae)
-    (property "Reference" "R?" (at 78.74 92.71 90)
+    (property "Reference" "R405" (at 78.74 92.71 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 78.74 90.17 90)
@@ -1996,7 +1996,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R405") (unit 1)
         )
       )
     )
@@ -2005,7 +2005,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 179.07 52.07 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e94269b9-5c3a-4e6a-8778-e2c49ccd0623)
-    (property "Reference" "R?" (at 181.61 48.895 0)
+    (property "Reference" "R422" (at 181.61 48.895 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "18k" (at 179.07 52.07 90)
@@ -2034,7 +2034,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R422") (unit 1)
         )
       )
     )
@@ -2043,7 +2043,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 90.17 129.54 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed02d0a6-76db-4706-8025-1441f89f5d63)
-    (property "Reference" "R?" (at 90.17 132.08 90)
+    (property "Reference" "R409" (at 90.17 132.08 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100k" (at 90.17 129.54 90)
@@ -2072,7 +2072,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R409") (unit 1)
         )
       )
     )
@@ -2081,7 +2081,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 144.78 97.79 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f37c58b6-5d61-423c-8e33-df9a23ae320e)
-    (property "Reference" "R?" (at 144.78 100.33 90)
+    (property "Reference" "R414" (at 144.78 100.33 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 144.78 97.79 90)
@@ -2110,7 +2110,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R414") (unit 1)
         )
       )
     )
@@ -2145,7 +2145,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q406") (unit 1)
         )
       )
     )
@@ -2205,7 +2205,7 @@
       )
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "Q?") (unit 1)
+          (reference "Q409") (unit 1)
         )
       )
     )
@@ -2214,7 +2214,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 78.74 43.18 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid fe9a36f6-15a4-44eb-a3d9-880f513c25aa)
-    (property "Reference" "R?" (at 78.74 45.72 90)
+    (property "Reference" "R404" (at 78.74 45.72 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "470k" (at 78.74 43.18 90)
@@ -2243,7 +2243,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R404") (unit 1)
         )
       )
     )
@@ -2252,7 +2252,7 @@
   (symbol (lib_id "Custom Library:R_Custom") (at 62.23 49.53 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ff5a2563-95e6-4b30-822a-933e0bd4cb79)
-    (property "Reference" "R?" (at 62.23 52.07 90)
+    (property "Reference" "R401" (at 62.23 52.07 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "10k" (at 62.23 49.53 90)
@@ -2281,7 +2281,7 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c062b999-cefd-4adf-a869-c29921fae1ed"
-          (reference "R?") (unit 1)
+          (reference "R401") (unit 1)
         )
       )
     )
