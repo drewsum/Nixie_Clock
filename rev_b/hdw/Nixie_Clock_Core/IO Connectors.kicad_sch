@@ -1415,7 +1415,7 @@
     (property "Dielectric" "X5R" (at 213.36 79.375 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Digi-Key PN" "" (at 227.965 64.135 0)
+    (property "Digi-Key PN" "1276-6767-1-ND" (at 227.965 64.135 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid b678f99c-c9a2-4187-aaf7-10d108f1f032))
