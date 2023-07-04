@@ -61,8 +61,8 @@
       36,
       40
     ],
-    "visible_layers": "ffcfffc_ffffffed",
-    "zone_display_mode": 0
+    "visible_layers": "ffcfffc_ffffffef",
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "Nixie_Clock_Core.kicad_prl",
