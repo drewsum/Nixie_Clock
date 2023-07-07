@@ -537,7 +537,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "",
+      "specctra_dsn": "Nixie_Clock_Core.dsn",
       "step": "",
       "vrml": ""
     },
