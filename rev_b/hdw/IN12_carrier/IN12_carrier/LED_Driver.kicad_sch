@@ -565,12 +565,6 @@
     )
   )
 
-  (junction (at 40.64 105.41) (diameter 0) (color 0 0 0 0)
-    (uuid 263bda64-42d1-4128-94dd-c83e1c62c63a)
-  )
-  (junction (at 40.64 166.37) (diameter 0) (color 0 0 0 0)
-    (uuid 3916ef48-5d04-4339-9996-3b2bdec7430b)
-  )
   (junction (at 40.64 44.45) (diameter 0) (color 0 0 0 0)
     (uuid 8a353d30-9097-475c-b8f5-2d04885555a9)
   )
@@ -591,11 +585,11 @@
     (stroke (width 0) (type default))
     (uuid 05d4d160-287c-4c31-b477-e67e40b02760)
   )
-  (wire (pts (xy 40.64 105.41) (xy 83.82 105.41))
+  (wire (pts (xy 38.1 105.41) (xy 83.82 105.41))
     (stroke (width 0) (type default))
     (uuid 0935141a-44df-4557-8a87-1fd432ab6ee6)
   )
-  (wire (pts (xy 40.64 166.37) (xy 83.82 166.37))
+  (wire (pts (xy 38.1 166.37) (xy 83.82 166.37))
     (stroke (width 0) (type default))
     (uuid 2544f0fe-5b8b-41b2-95f8-68fef10d62ef)
   )
@@ -606,10 +600,6 @@
   (wire (pts (xy 60.96 184.15) (xy 60.96 189.23))
     (stroke (width 0) (type default))
     (uuid 361803ff-ab65-483e-a9a9-16969ece8ba1)
-  )
-  (wire (pts (xy 40.64 189.23) (xy 40.64 166.37))
-    (stroke (width 0) (type default))
-    (uuid 4099641e-16a1-4939-9c2f-70fe635694b7)
   )
   (wire (pts (xy 60.96 62.23) (xy 60.96 67.31))
     (stroke (width 0) (type default))
@@ -635,10 +625,6 @@
     (stroke (width 0) (type default))
     (uuid 89823258-9492-4f16-a5e1-f7bcb9702f92)
   )
-  (wire (pts (xy 38.1 166.37) (xy 40.64 166.37))
-    (stroke (width 0) (type default))
-    (uuid 9f71131e-2928-4525-b6e6-8484d899b589)
-  )
   (wire (pts (xy 83.82 123.19) (xy 60.96 123.19))
     (stroke (width 0) (type default))
     (uuid a319699f-f86e-41a9-8166-1c7fb8c2d213)
@@ -646,14 +632,6 @@
   (wire (pts (xy 38.1 171.45) (xy 83.82 171.45))
     (stroke (width 0) (type default))
     (uuid a7baf083-9493-4fe7-ab16-60cbcdd6e6b8)
-  )
-  (wire (pts (xy 38.1 105.41) (xy 40.64 105.41))
-    (stroke (width 0) (type default))
-    (uuid af9e34a4-6b05-419b-b1c4-ecab3f3f72cc)
-  )
-  (wire (pts (xy 40.64 128.27) (xy 40.64 105.41))
-    (stroke (width 0) (type default))
-    (uuid b4cab3ae-fc00-4ab6-94a4-807c8f211fe8)
   )
   (wire (pts (xy 38.1 44.45) (xy 40.64 44.45))
     (stroke (width 0) (type default))
@@ -1174,79 +1152,6 @@
     )
   )
 
-  (symbol (lib_id "Custom_Library:R_Custom") (at 40.64 193.04 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 0824e259-eaf1-4bd5-8338-b4d76a6052ce)
-    (property "Reference" "R?" (at 38.608 193.04 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "10k" (at 40.64 193.04 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistors_SMD:R_0603" (at 40.64 193.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 40.64 193.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "display_footprint" "0603" (at 43.18 191.008 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Tolerance" "1%" (at 43.18 193.04 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Wattage" "1/10W" (at 43.434 195.072 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Digi-Key PN" "" (at 48.26 182.88 0)
-      (effects (font (size 1.524 1.524)) hide)
-    )
-    (pin "1" (uuid 144b3a5c-8e83-4afd-a84a-4b8fd1d2de61))
-    (pin "2" (uuid 130e0389-b076-4208-88d7-228ad7951fbd))
-    (instances
-      (project "Analog_Clock"
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005bb27bf7"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005c1e3a08"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005cb7718d"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e0f263a"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e98cf45"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005bb27ba3"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005d779ae1"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e939d31"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005c1de17a"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005f280e04"
-          (reference "R2101") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e0dc082"
-          (reference "R?") (unit 1)
-        )
-      )
-      (project "IN12_carrier"
-        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
-          (reference "R703") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 85.344 146.304 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 129c71db-e48e-443b-8dec-a3c86d8ac772)
@@ -1290,79 +1195,6 @@
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
           (reference "#PWR0734") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Custom_Library:R_Custom") (at 40.64 132.08 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 161cd074-f498-4ded-af92-d2a02b804cf1)
-    (property "Reference" "R?" (at 38.608 132.08 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "10k" (at 40.64 132.08 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistors_SMD:R_0603" (at 40.64 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 40.64 132.08 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "display_footprint" "0603" (at 43.18 130.048 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Tolerance" "1%" (at 43.18 132.08 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Wattage" "1/10W" (at 43.434 134.112 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Digi-Key PN" "" (at 48.26 121.92 0)
-      (effects (font (size 1.524 1.524)) hide)
-    )
-    (pin "1" (uuid d5754eb3-c49b-4a8e-aba4-a36d88ddc1c2))
-    (pin "2" (uuid 104c4428-05e2-4309-87a3-2c5b33a0814b))
-    (instances
-      (project "Analog_Clock"
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005bb27bf7"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005c1e3a08"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005cb7718d"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e0f263a"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e98cf45"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005bb27ba3"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005d779ae1"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e939d31"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005c1de17a"
-          (reference "R?") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005f280e04"
-          (reference "R2101") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e0dc082"
-          (reference "R?") (unit 1)
-        )
-      )
-      (project "IN12_carrier"
-        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
-          (reference "R702") (unit 1)
         )
       )
     )
@@ -1592,39 +1424,6 @@
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
           (reference "#PWR0738") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 40.64 135.89 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 30b175b7-445c-4470-9ce4-70ee8c147635)
-    (property "Reference" "#PWR02101" (at 40.64 142.24 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 40.64 139.7 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 40.64 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 40.64 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5dbfb593-085b-4d03-bd69-2d989ee7e0aa))
-    (instances
-      (project "Analog_Clock"
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005f280e04"
-          (reference "#PWR02101") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e98cf45"
-          (reference "#PWR?") (unit 1)
-        )
-      )
-      (project "IN12_carrier"
-        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
-          (reference "#PWR0712") (unit 1)
         )
       )
     )
@@ -3607,39 +3406,6 @@
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
           (reference "R701") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 40.64 196.85 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ca045e92-a6a0-4d57-b4f1-d80635365f1e)
-    (property "Reference" "#PWR02101" (at 40.64 203.2 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 40.64 200.66 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 40.64 196.85 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 40.64 196.85 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 64804255-6ec1-4a29-a5e9-cabe96160c0f))
-    (instances
-      (project "Analog_Clock"
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005f280e04"
-          (reference "#PWR02101") (unit 1)
-        )
-        (path "/b40d07ca-3b69-4fcb-b15e-f8aade07e509/00000000-0000-0000-0000-00005e98cf45"
-          (reference "#PWR?") (unit 1)
-        )
-      )
-      (project "IN12_carrier"
-        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c/c710c274-9ef6-4493-9995-cccebf092ebf"
-          (reference "#PWR0729") (unit 1)
         )
       )
     )

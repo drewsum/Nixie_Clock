@@ -14,11 +14,6 @@
   )
 
 
-  (text "ADD MOUNTING HOLES" (at 133.985 66.04 0)
-    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 1.016) bold (color 255 0 0 1)) (justify left bottom))
-    (uuid dad07b60-8968-4a15-9f05-79b85342025c)
-  )
-
   (sheet (at 19.05 46.99) (size 12.7 3.81) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -49,6 +44,23 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "6"))
+      )
+    )
+  )
+
+  (sheet (at 19.05 118.11) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 3ccac04c-3fb1-4fbb-89c4-5dc2f5c153e1)
+    (property "Sheetname" "Mechanical" (at 19.05 117.3984 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Mechanical.kicad_sch" (at 19.05 122.5046 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "12"))
       )
     )
   )
