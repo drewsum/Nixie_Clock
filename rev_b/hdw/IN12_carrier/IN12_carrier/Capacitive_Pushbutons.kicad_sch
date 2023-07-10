@@ -11,52 +11,6 @@
   )
 
   (lib_symbols
-    (symbol "Analog_Clock-rescue:+3.3V-power" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "+3.3V-power" (at 0 3.556 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "+3.3V-power_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type solid))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type solid))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type solid))
-          (fill (type none))
-        )
-      )
-      (symbol "+3.3V-power_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+3V3" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "Custom Library:74LVC1G97_Power_BUF" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 1.524 3.81 0)
         (effects (font (size 1.27 1.27)) (justify left))
@@ -335,6 +289,58 @@
         (pin input line (at -10.16 2.54 0) (length 2.54)
           (name "SYNC" (effects (font (size 1.27 1.27))))
           (number "6" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "power:+3.3V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+3.3V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+3.3V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+3.3V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+3.3V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+3.3V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -778,7 +784,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 57.15 39.37 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 57.15 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0197ca1c-f9a8-4f6a-9fe0-928fcb75fb78)
     (property "Reference" "#PWR02201" (at 57.15 43.18 0)
@@ -859,7 +865,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 73.66 140.97 270) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 73.66 140.97 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 07f7c895-115b-4e9f-82d4-a723dd16cff2)
     (property "Reference" "#PWR02209" (at 69.85 140.97 0)
@@ -1252,7 +1258,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 57.15 115.57 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 57.15 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1358f35b-de57-4ed3-a95a-81bd13b14b9d)
     (property "Reference" "#PWR02201" (at 57.15 119.38 0)
@@ -1511,7 +1517,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 63.5 135.89 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 63.5 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1af83edf-5895-40e1-805d-4618b0228ca9)
     (property "Reference" "#PWR02205" (at 63.5 139.7 0)
@@ -1689,7 +1695,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 63.5 97.79 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 63.5 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 21006f08-dbdb-4faf-929d-544caabd3284)
     (property "Reference" "#PWR02205" (at 63.5 101.6 0)
@@ -1719,7 +1725,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 63.5 21.59 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 63.5 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 25465b39-f7b8-4e28-a83f-816f649a4c36)
     (property "Reference" "#PWR02205" (at 63.5 25.4 0)
@@ -1969,7 +1975,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 99.06 105.41 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 99.06 105.41 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 385e3461-a037-42ea-9ec8-57eb40d7c0d6)
     (property "Reference" "#PWR02215" (at 99.06 109.22 0)
@@ -2207,7 +2213,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 105.41 39.37 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 105.41 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4bf05328-280b-4791-a134-4b813e18a063)
     (property "Reference" "#PWR02219" (at 105.41 43.18 0)
@@ -2369,7 +2375,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 73.66 102.87 270) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 73.66 102.87 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 532b76fb-c35c-4a0c-8406-4d43d4d4ef30)
     (property "Reference" "#PWR02209" (at 69.85 102.87 0)
@@ -2508,7 +2514,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 105.41 115.57 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 105.41 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 595f02ad-fb26-4a42-85f3-afb1d338dcf9)
     (property "Reference" "#PWR02219" (at 105.41 119.38 0)
@@ -2631,7 +2637,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 105.41 77.47 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 105.41 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5f7feb1b-aa9a-4138-978e-aa3155543119)
     (property "Reference" "#PWR02219" (at 105.41 81.28 0)
@@ -3100,7 +3106,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 63.5 59.69 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 63.5 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7bced0de-47f1-43ce-acb4-e63169d66dc4)
     (property "Reference" "#PWR02205" (at 63.5 63.5 0)
@@ -3329,7 +3335,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 73.66 64.77 270) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 73.66 64.77 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 83db210b-7e4d-4b45-a586-1d015795ee1e)
     (property "Reference" "#PWR02209" (at 69.85 64.77 0)
@@ -3401,7 +3407,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 227.33 29.21 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 227.33 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 84b94dae-8beb-4c1d-9412-9cb1644cf110)
     (property "Reference" "#PWR02215" (at 227.33 33.02 0)
@@ -3481,7 +3487,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 99.06 67.31 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 99.06 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 85dbef7e-9a3c-443b-b2fe-a2203d1083bf)
     (property "Reference" "#PWR02215" (at 99.06 71.12 0)
@@ -3629,7 +3635,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 73.66 26.67 270) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 73.66 26.67 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a478b08-40fa-44b3-acf7-78c0e815f91b)
     (property "Reference" "#PWR02209" (at 69.85 26.67 0)
@@ -3966,7 +3972,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 99.06 143.51 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 99.06 143.51 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 99016e70-8d3a-42dc-9a95-0e0b43b2d1a2)
     (property "Reference" "#PWR02215" (at 99.06 147.32 0)
@@ -4341,7 +4347,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 57.15 153.67 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 57.15 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a7fc31e3-85f9-499e-a30c-830ec95abd90)
     (property "Reference" "#PWR02201" (at 57.15 157.48 0)
@@ -4371,7 +4377,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 99.06 29.21 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 99.06 29.21 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid aa0f9a66-15e1-45d4-90ae-6b0ceb319e62)
     (property "Reference" "#PWR02215" (at 99.06 33.02 0)
@@ -4735,7 +4741,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 191.77 21.59 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 191.77 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c665e8ba-741e-4fab-9f02-0171f4bf493d)
     (property "Reference" "#PWR02205" (at 191.77 25.4 0)
@@ -5037,7 +5043,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 233.68 39.37 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 233.68 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0ec1f63-caec-4ada-b4bf-aa6e17782671)
     (property "Reference" "#PWR02219" (at 233.68 43.18 0)
@@ -5067,7 +5073,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 185.42 39.37 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 185.42 39.37 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d388841b-b527-474c-83e2-280623808610)
     (property "Reference" "#PWR02201" (at 185.42 43.18 0)
@@ -5346,7 +5352,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 105.41 153.67 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 105.41 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d71becec-2664-43e4-990a-07059cb0691a)
     (property "Reference" "#PWR02219" (at 105.41 157.48 0)
@@ -5427,7 +5433,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 201.93 26.67 270) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 201.93 26.67 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e04649d5-32f9-4813-b738-b68f4e86ddec)
     (property "Reference" "#PWR02209" (at 198.12 26.67 0)
@@ -5645,7 +5651,7 @@
     )
   )
 
-  (symbol (lib_id "Analog_Clock-rescue:+3.3V-power") (at 57.15 77.47 0) (unit 1)
+  (symbol (lib_id "power:+3.3V") (at 57.15 77.47 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e203d203-3477-4bf9-a9dc-f05a7d37c436)
     (property "Reference" "#PWR02201" (at 57.15 81.28 0)
