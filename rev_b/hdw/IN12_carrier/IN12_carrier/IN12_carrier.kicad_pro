@@ -429,6 +429,23 @@
       },
       {
         "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.0889,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.3556,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "90_diff_outer",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.254,
+        "via_diameter": 0.4318,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "clearance": 0.635,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -494,6 +511,14 @@
         "pattern": "+3.3V*"
       },
       {
+        "netclass": "Power",
+        "pattern": "+24V*"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "+5V*"
+      },
+      {
         "netclass": "HV",
         "pattern": "+180V"
       },
@@ -502,20 +527,8 @@
         "pattern": "+90V"
       },
       {
-        "netclass": "HV",
-        "pattern": "Anode_*."
-      },
-      {
-        "netclass": "HV",
-        "pattern": "Cathode_*."
-      },
-      {
-        "netclass": "HV",
-        "pattern": "Colon_*_Cathode"
-      },
-      {
-        "netclass": "HV",
-        "pattern": "Cathode_DP"
+        "netclass": "90_diff_outer",
+        "pattern": "/*CONN_USB*"
       }
     ]
   },
@@ -602,8 +615,8 @@
       "Menu LEDs"
     ],
     [
-      "e71e185e-8436-4b41-b7c1-e246b88c3620",
-      "Mechanical Pushbuttons"
+      "1c22c65e-aaf7-48af-ba9d-ccdda03c7a98",
+      "Capacitive Pushbuttons"
     ],
     [
       "3ccac04c-3fb1-4fbb-89c4-5dc2f5c153e1",

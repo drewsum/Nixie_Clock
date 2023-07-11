@@ -14,6 +14,23 @@
   )
 
 
+  (sheet (at 19.05 107.95) (size 12.7 3.81) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 1c22c65e-aaf7-48af-ba9d-ccdda03c7a98)
+    (property "Sheetname" "Capacitive Pushbuttons" (at 19.05 107.2384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Capacitive_Pushbutons.kicad_sch" (at 19.05 112.3446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "IN12_carrier"
+        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "11"))
+      )
+    )
+  )
+
   (sheet (at 19.05 46.99) (size 12.7 3.81) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -48,14 +65,14 @@
     )
   )
 
-  (sheet (at 19.05 107.95) (size 12.7 3.81) (fields_autoplaced)
+  (sheet (at 19.05 97.79) (size 12.7 3.81) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid 3ccac04c-3fb1-4fbb-89c4-5dc2f5c153e1)
-    (property "Sheetname" "Mechanical" (at 19.05 107.2384 0)
+    (property "Sheetname" "Mechanical" (at 19.05 97.0784 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "Mechanical.kicad_sch" (at 19.05 112.3446 0)
+    (property "Sheetfile" "Mechanical.kicad_sch" (at 19.05 102.1846 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
     (instances
@@ -146,23 +163,6 @@
     (instances
       (project "IN12_carrier"
         (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "7"))
-      )
-    )
-  )
-
-  (sheet (at 19.05 97.79) (size 12.7 3.81) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid e71e185e-8436-4b41-b7c1-e246b88c3620)
-    (property "Sheetname" "Mechanical Pushbuttons" (at 19.05 97.0784 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "Mechanical_Pushbuttons.kicad_sch" (at 19.05 102.1846 0)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (instances
-      (project "IN12_carrier"
-        (path "/c4d83a5b-e6ae-4326-9df5-0c4ac01f7d8c" (page "11"))
       )
     )
   )
