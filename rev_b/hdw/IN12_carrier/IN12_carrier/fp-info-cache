@@ -1,4 +1,4 @@
-25352812402662757
+25351129984500654
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56651,12 +56651,12 @@ BR-1632A_VAN
 2
 2
 Custom Footprints Library
-CONN_5120528-1_TYC
+CONN_5120527-1_TYC
 
-5120528-1 
+5120527-1 
 0
-64
-64
+66
+66
 Custom Footprints Library
 CVS-1708_Speaker
 
@@ -56746,7 +56746,7 @@ IN-12B
 Nixie Tube IN-12B
 
 0
-52
+15
 12
 Custom Footprints Library
 IV-1
@@ -57126,13 +57126,6 @@ Wuerth_7461096_M4_Shank_9pos
 0
 9
 1
-Custom Footprints Library
-Wurth_7447709681
-
-
-0
-2
-2
 Custom Footprints Library
 Wurth_Logo
 
