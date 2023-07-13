@@ -511,14 +511,6 @@
         "pattern": "+3.3V*"
       },
       {
-        "netclass": "Power",
-        "pattern": "+24V*"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "+5V*"
-      },
-      {
         "netclass": "HV",
         "pattern": "+180V"
       },
@@ -527,8 +519,28 @@
         "pattern": "+90V"
       },
       {
-        "netclass": "90_diff_outer",
-        "pattern": "/*CONN_USB*"
+        "netclass": "HV",
+        "pattern": "Net-(V6*"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Colon_*_Cathode"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Anode_\\d"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Cathode_\\d"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Cathode_DP"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(Q*-C)"
       }
     ]
   },
