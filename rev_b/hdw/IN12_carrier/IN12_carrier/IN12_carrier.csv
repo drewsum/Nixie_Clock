@@ -1,0 +1,45 @@
+Source:,C:\Users\drewm\OneDrive\Documents\KiCad Projects\Projects\Nixie_Clock\rev_b\hdw\IN12_carrier\IN12_carrier\IN12_carrier.kicad_sch,,,,,,,,,,,,,,,,
+Date:,7/18/2023 22:20,,,,,,,,,,,,,,,,
+Tool:,Eeschema 7.0.1,,,,,,,,,,,,,,,,
+Generator:,C:\Program Files\KiCad\7.0\bin\scripting\plugins/bom_csv_grouped_by_value.py,,,,,,,,,,,,,,,,
+Component Count:,249,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Collated Components:,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,DNP,Config,Configuration,Dielectric,Digi-Key PN,Footprint Display,Sim.Enable,Tolerance,Voltage,Wattage,display_footprint
+1,9,"C301, C302, C303, C701, C702, C703, C704, C705, C706",10uF,Custom_Library:C_Custom,Capacitors_SMD:C_0603,,,,ETC,X5R,PN,,,,10V,,603
+2,17,"C304, C305, C707, C708, C709, C1001, C1002, C1003, C1004, C1005, C1006, C1011, C1012, C1013, C1014, C1015, C1017",0.1uF,Custom_Library:C_Custom,Capacitors_SMD:C_0603,,,,ETC,X7R,PN,,,,50V,,603
+3,5,"C1007, C1008, C1009, C1010, C1016",10nF,Custom_Library:C_Custom,Capacitors_SMD:C_0603,,,,,X7R,PN,,,,50V,,603
+4,1,D301,BAT48JFILM,Diode:BAT48JFILM,Diode_SMD:D_SOD-323,www.st.com/resource/en/datasheet/bat48.pdf,,,ETC,,,,,,,,
+5,8,"D701, D702, D703, D704, D705, D706, D707, D708",ASMB-MTB0-0A3A2,LED:ASMB-MTB0-0A3A2,LED_SMD:LED_Avago_PLCC4_3.2x2.8mm_CW,https://docs.broadcom.com/docs/AV02-4186EN,,,,,516-3279-1-ND,,,,,,
+6,12,"D901, D1001, D1002, D1003, D1004, D1005, D1006, D1007, D1008, D1009, D1010, D1011",Orange,Device:LED,LEDs:LED_0603,~,,,,,,,,,,,
+7,1,DOC301,0x6F,Custom_Library:I2C_Address,,,,,,,,,,,,,
+8,1,DOC701,0x14,Custom_Library:I2C_Address,,,,,,,,,,,,,
+9,1,DOC702,0x15,Custom_Library:I2C_Address,,,,,,,,,,,,,
+10,1,DOC703,0x16,Custom_Library:I2C_Address,,,,,,,,,,,,,
+11,1,DOC1001,0x50,Custom_Library:I2C_Address,,,,,,,,,,,,,
+12,1,DOC1002,0x27,Custom_Library:I2C_Address,,,,,,,,,,,,,
+13,8,"H1201, H1202, H1203, H1204, H1205, H1206, H1207, H1208",MountingHole,Mechanical:MountingHole,MountingHole:MountingHole_3mm,~,,,,,,,,,,,
+14,1,J201,Conn_02x32_Top_Bottom,Connector_Generic:Conn_02x32_Top_Bottom,Custom Footprints Library:CONN_5120528-1_TYC,~,,,,,A104089CT-ND,,,,,,
+15,1,J1001,Cap SNS,Connector_Generic:Conn_01x05,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal,~,,,,,,,,,,,
+16,24,"MK1101, MK1102, MK1103, MK1104, MK1105, MK1106, MK1109, MK1110, MK1111, MK1112, MK1113, MK1114, MK1117, MK1118, MK1119, MK1120, MK1121, MK1122, MK1125, MK1126, MK1127, MK1128, MK1129, MK1130",Standoff,Custom_Library:Standoff,,,,,,,1772-2080-ND,,,,,,
+17,16,"MK1107, MK1108, MK1115, MK1116, MK1123, MK1124, MK1131, MK1132, MK1133, MK1134, MK1135, MK1136, MK1137, MK1138, MK1139, MK1140",Screw,Custom_Library:Screw,,,,,,,36-9900-ND,,,,,,
+18,21,"Q401, Q402, Q403, Q407, Q408, Q409, Q501, Q502, Q503, Q504, Q505, Q506, Q507, Q508, Q509, Q510, Q511, Q512, Q513, Q514, Q515",MMSTA42,Nixie-Clock-rescue:Q_NPN_BEC,TO_SOT_Packages_SMD:SOT-323_SC-70,,,,,,,SOT-323,,,,,
+19,6,"Q404, Q405, Q406, Q410, Q411, Q412",MMSTA92,Nixie-Clock-rescue:Q_PNP_BEC,TO_SOT_Packages_SMD:SOT-323_SC-70,,,,,,,SOT-323,,,,,
+20,30,"R301, R302, R305, R401, R402, R403, R413, R414, R415, R501, R502, R503, R504, R505, R506, R507, R508, R509, R510, R511, R512, R513, R515, R516, R701, R1012, R1013, R1014, R1015, R1020",10k,Custom_Library:R_Custom,Resistors_SMD:R_0603,,,,ETC,,PN,,,1%,,1/10W,603
+21,1,R303,392k,Custom_Library:R_Custom,Resistors_SMD:R_0603,,,,ETC,,PN,,,1%,,1/10W,603
+22,1,R304,1M,Custom_Library:R_Custom,Resistors_SMD:R_0603,,,,ETC,,PN,,,1%,,1/10W,603
+23,23,"R404, R405, R406, R416, R417, R418, R801, R802, R803, R804, R805, R806, R807, R808, R809, R810, R811, R812, R813, R814, R815, R816, R817",470k,Custom Library:R_Custom,Resistors_SMD:R_0805,,,,,,PN,,,1%,,1/8W,805
+24,6,"R407, R408, R409, R419, R420, R421",100k,Custom Library:R_Custom,Resistors_SMD:R_0805,,,,,,PN,,,1%,,1/8W,805
+25,7,"R410, R411, R412, R422, R423, R424, R514",18k,Custom Library:R_Custom,Resistors_SMD:R_0805,,,,,,PN,,,1%,,1/8W,805
+26,4,"R601, R602, R603, R604",10k,Nixie-Clock-rescue:R,Resistors_SMD:R_0805,,,,,,,,,1%,,1/10W,805
+27,3,"R704, R705, R706",3.65k,Custom_Library:R_Custom,Resistors_SMD:R_0603,,,,,,PN,,,1%,,1/10W,603
+28,17,"R901, R1001, R1002, R1003, R1004, R1005, R1006, R1007, R1008, R1009, R1010, R1011, R1016, R1017, R1018, R1019, R1021",499,Custom_Library:R_Custom,Resistors_SMD:R_0603,,,,,,PN,,,1%,,1/10W,603
+29,1,U301,DS1683,Custom_Library:DS1683,Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm,https://datasheets.maximintegrated.com/en/ds/DS1683.pdf,,ETC,,,DS1683S+-ND,,,,,,
+30,1,U302,LTC4316DD,Custom_Library:LTC4316DD,Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm,https://www.analog.com/media/en/technical-documentation/data-sheets/4316fa.pdf,,,ETC,,LTC4316IDD#PBF-ND,,,,,,
+31,3,"U701, U702, U703",LP5009,Custom_Library:LP5009,Housings_DFN_QFN:UQFN-20-1EP_3x3mm_Pitch0.4mm,https://www.ti.com/lit/ds/symlink/lp5009.pdf?ts=1596330853683,,,,,296-LP5009RUKRCT-ND,,,,,,
+32,1,U1001,TCA9555RGER,Interface_Expansion:TCA9555RGER,Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm,http://www.ti.com/lit/ds/symlink/tca9555.pdf,,,,,296-44537-1-ND,,,,,,
+33,1,U1002,24AA02-OT,Memory_EEPROM:24AA02-OT,Package_TO_SOT_SMD:SOT-23-5,http://ww1.microchip.com/downloads/en/DeviceDoc/21709J.pdf,,,,,,,,,,,
+34,5,"U1003, U1004, U1005, U1006, U1007",AT42QT1010-TSHR,Sensor_Touch:AT42QT1010-TSHR,TO_SOT_Packages_SMD:SOT-23-6,http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-9541-AT42-QTouch-BSW-AT42QT1010_Datasheet.pdf,,,,,AT42QT1010-TSHRCT-ND,,,,,,
+35,6,"V601, V602, V603, V604, V605, V608",IN12B,Custom Library:IN12B,Custom Footprints Library:IN-12B,http://www.tube-tester.com/sites/nixie/dat_arch/IN-12A_IN-12B_03.pdf,,,,,,,,,,,
+36,4,"V606, V607, V609, V610",IN3,Nixie-Test-rescue:IN3,LED_THT:LED_D5.0mm,,,,,,,,,,,,

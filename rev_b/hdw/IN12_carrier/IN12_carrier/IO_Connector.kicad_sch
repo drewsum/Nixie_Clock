@@ -1867,7 +1867,7 @@
     (property "Datasheet" "~" (at 123.19 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "A111226CT-ND" (at 123.19 88.9 0)
+    (property "Digi-Key PN" "A104089CT-ND" (at 123.19 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f2616a4b-35cb-4ad5-b616-3883410f932c))

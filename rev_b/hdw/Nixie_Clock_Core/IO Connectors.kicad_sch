@@ -945,12 +945,6 @@
   (no_connect (at 124.46 74.93) (uuid e2ce74f7-434d-4b3b-8616-af3e61f3192f))
   (no_connect (at 124.46 82.55) (uuid e4005044-ea20-4952-8fd7-368e0c83ec5f))
 
-  (text "FIND A CONNECTOR THAT CAN HANDLE HIGH VOLTAGE\nAND SIGNALLING THAT ISNT AWFUL\n\nCONSIDER USING 0.1\" SMT HEADERS - MAY BE TOO LARGE"
-    (at 36.83 48.26 0)
-    (effects (font (face "Courier New") (size 5.08 5.08) (thickness 0.254) bold (color 255 37 56 1)) (justify left bottom))
-    (uuid b733c1bc-8771-420c-b440-b6376e288024)
-  )
-
   (global_label "Colon_3_DSP" (shape input) (at 137.16 115.57 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 064392d8-d17a-48d0-a046-0a08d58f681e)
