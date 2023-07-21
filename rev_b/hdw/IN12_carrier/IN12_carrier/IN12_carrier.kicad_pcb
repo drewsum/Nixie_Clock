@@ -13559,7 +13559,7 @@
   )
   (gr_text "WARNING: HIGH VOLTAGE" (at 215.265 92.583) (layer "B.SilkS") (tstamp 2dbebe18-1a37-498a-b7f5-6098204333c3)
     (effects (font (face "Courier New") (size 3 3) (thickness 0.4) bold) (justify left mirror))
-    (render_cache "WARNING: HIGH VOLTAGE" -0
+    (render_cache "WARNING: HIGH VOLTAGE" 0
       (polygon
         (pts
           (xy 213.997379 92.689339)          (xy 214.389389 93.828)          (xy 214.863464 93.828)          (xy 215.11479 91.858425)
@@ -17728,6 +17728,9 @@
         )
       )
     )
+  )
+  (gr_text "JLCJLCJLCJLC" (at 48.641 84.4296) (layer "F.SilkS") (tstamp f09d6725-2ccf-4ddc-8300-8bbd3d027053)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left))
   )
   (gr_text "WARNING: HIGH VOLTAGE" (at 173.863 89.0778) (layer "F.SilkS") (tstamp f5c01270-2b79-4f70-b315-0161e7ade0f8)
     (effects (font (face "Courier New") (size 3 3) (thickness 0.4) bold) (justify left))

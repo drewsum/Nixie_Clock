@@ -122,10 +122,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.199898,
+        "min_through_hole_diameter": 0.15,
         "min_track_width": 0.08889999999999999,
-        "min_via_annular_width": 0.15,
-        "min_via_diameter": 0.43179999999999996,
+        "min_via_annular_width": 0.125,
+        "min_via_diameter": 0.39999999999999997,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -423,8 +423,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.254,
-        "via_diameter": 0.4318,
-        "via_drill": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -440,8 +440,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.254,
-        "via_diameter": 0.4318,
-        "via_drill": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -457,8 +457,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.254,
-        "via_diameter": 0.4318,
-        "via_drill": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -474,8 +474,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.635,
-        "via_diameter": 0.4318,
-        "via_drill": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -491,8 +491,8 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.254,
-        "via_diameter": 0.4318,
-        "via_drill": 0.2,
+        "via_diameter": 0.4,
+        "via_drill": 0.15,
         "wire_width": 6
       }
     ],
@@ -511,14 +511,6 @@
         "pattern": "+3.3V*"
       },
       {
-        "netclass": "Power",
-        "pattern": "+24V*"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "+5V*"
-      },
-      {
         "netclass": "HV",
         "pattern": "+180V"
       },
@@ -527,8 +519,20 @@
         "pattern": "+90V"
       },
       {
-        "netclass": "90_diff_outer",
-        "pattern": "/*CONN_USB*"
+        "netclass": "Signal",
+        "pattern": "Anode_\\d"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "Cathode_\\d"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "Cathode_DP"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+24V"
       }
     ]
   },
