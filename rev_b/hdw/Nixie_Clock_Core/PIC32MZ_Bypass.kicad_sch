@@ -5,8 +5,9 @@
   (paper "A")
 
   (title_block
-    (date "2023-05-12")
-    (rev "PRELIM")
+    (title "Nixie Clock Redux Core Board")
+    (date "2023-07-30")
+    (rev "B")
     (company "Drew Maatman")
   )
 
@@ -976,7 +977,7 @@
     (property "Datasheet" "~" (at 190.5 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "" (at 94.996 -149.352 0)
+    (property "Digi-Key PN" "490-1014-1-ND" (at 94.996 -149.352 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4c7c3954-849f-4fc2-b5ba-803b6efaf115))
@@ -1402,7 +1403,7 @@
     (property "Datasheet" "~" (at 190.5 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Digi-Key PN" "" (at 94.996 -134.747 0)
+    (property "Digi-Key PN" "490-1014-1-ND" (at 94.996 -134.747 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5d07e5e8-321d-45f2-a02d-cb2988c9bcae))

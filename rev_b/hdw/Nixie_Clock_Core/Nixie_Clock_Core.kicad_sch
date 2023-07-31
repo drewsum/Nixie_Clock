@@ -5,8 +5,9 @@
   (paper "A")
 
   (title_block
-    (date "2023-05-12")
-    (rev "PRELIM")
+    (title "Nixie Clock Redux Core Board")
+    (date "2023-07-30")
+    (rev "B")
     (company "Drew Maatman")
   )
 
