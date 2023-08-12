@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "Nixie-Clock-rescue")(type "Legacy")(uri "${KIPRJMOD}/Nixie Clock-rescue.lib")(options "")(descr ""))
+)

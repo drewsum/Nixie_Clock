@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "Nixie-Test-rescue")(type "Legacy")(uri "${KIPRJMOD}/Nixie Test-rescue.lib")(options "")(descr ""))
+)

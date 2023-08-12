@@ -1,0 +1,278 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid beaf2fcd-02f8-42d5-9f89-00453a3926f2)
+
+  (paper "A")
+
+  (title_block
+    (title "Nixie Clock Redux Core Board")
+    (date "2023-08-11")
+    (rev "B")
+    (company "Drew Maatman")
+  )
+
+  (lib_symbols
+    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "MountingHole" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "mounting hole" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type default))
+          (fill (type none))
+        )
+      )
+    )
+  )
+
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 101.6 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 29344bdd-bad0-4ab0-b80a-5c58054b4f7c)
+    (property "Reference" "H?" (at 101.6 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 101.6 88.265 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 101.6 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 101.6 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2001") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 120.65 104.14 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 354fb567-e927-4175-a086-12719d8991f6)
+    (property "Reference" "H?" (at 120.65 99.06 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 120.65 100.965 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 120.65 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 120.65 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2004") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 139.7 104.14 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 430fe053-50cd-4b96-b686-f1a5b3b0d64e)
+    (property "Reference" "H?" (at 139.7 99.06 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 139.7 100.965 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 139.7 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 139.7 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2006") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 101.6 104.14 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 5d3e097d-efd1-4385-a5a1-2756d593f87d)
+    (property "Reference" "H?" (at 101.6 99.06 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 101.6 100.965 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 101.6 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 101.6 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2002") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 120.65 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b1ee1cec-2575-4230-a75b-c301448d9e4b)
+    (property "Reference" "H?" (at 120.65 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 120.65 88.265 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 120.65 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 120.65 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2003") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 158.75 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bc7e1815-7970-4c89-adfd-0eedd52cb88c)
+    (property "Reference" "H?" (at 158.75 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 158.75 88.265 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 158.75 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 158.75 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2007") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 139.7 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid e1b2f5ac-14ad-43ac-9b98-72ee491b1e47)
+    (property "Reference" "H?" (at 139.7 86.36 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 139.7 88.265 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 139.7 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 139.7 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2005") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 158.75 104.14 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid f0a2698f-250c-40e1-afd2-9f5ceb34a46d)
+    (property "Reference" "H?" (at 158.75 99.06 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "MountingHole" (at 158.75 100.965 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "MountingHole:MountingHole_3mm" (at 158.75 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 158.75 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "VFD_Clock"
+        (path "/0e0fa043-3ab8-4cb9-8105-f968ef03a597/00000000-0000-0000-0000-00005b583c3d"
+          (reference "H?") (unit 1)
+        )
+      )
+      (project "Nixie_Clock_Core"
+        (path "/16fdce21-b570-4d81-a458-e8839d611806/598739f3-768e-44e6-92d3-e17fa168c78a"
+          (reference "H2008") (unit 1)
+        )
+      )
+    )
+  )
+)
