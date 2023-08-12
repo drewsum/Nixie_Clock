@@ -2,11 +2,11 @@
 
   (uuid 6d28c631-dd42-4bd8-8194-7374e4cd0c6f)
 
-  (paper "A4")
+  (paper "A")
 
   (title_block
     (title "Nixie Clock Redux Core Board")
-    (date "2023-07-30")
+    (date "2023-08-11")
     (rev "B")
     (company "Drew Maatman")
   )
