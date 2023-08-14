@@ -83,7 +83,7 @@
 #define POS3P3_PGOOD_PIN            PORTGbits.RG1
 #define PGOOD_LED_SHDN_PIN          LATGbits.LATG12
 #define COLON_3_PIN                 LATGbits.LATG13
-#define RESET_LED_PIN               LATBgits.LATG15
+#define RESET_LED_PIN               LATGbits.LATG15
 
 #endif /* _PIN_MACROS_H */
 
