@@ -13,6 +13,7 @@
         <itemPath>32mz_interrupt_control.h</itemPath>
         <itemPath>heartbeat_timer.h</itemPath>
         <itemPath>watchdog_timer.h</itemPath>
+        <itemPath>error_handler.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="GPIO" projectFiles="true">
         <itemPath>pin_macros.h</itemPath>
@@ -20,6 +21,9 @@
       </logicalFolder>
       <logicalFolder name="f3" displayName="USB UART" projectFiles="true">
         <itemPath>terminal_control.h</itemPath>
+        <itemPath>uthash.h</itemPath>
+        <itemPath>usb_uart_rx_lookup_table.h</itemPath>
+        <itemPath>usb_uart.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -38,12 +42,15 @@
         <itemPath>32mz_interrupt_control.c</itemPath>
         <itemPath>heartbeat_timer.c</itemPath>
         <itemPath>watchdog_timer.c</itemPath>
+        <itemPath>error_handler.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="GPIO" projectFiles="true">
         <itemPath>gpio_setup.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="USB UART" projectFiles="true">
         <itemPath>terminal_control.c</itemPath>
+        <itemPath>usb_uart_rx_lookup_table.c</itemPath>
+        <itemPath>usb_uart.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -173,7 +180,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="2048"/>
+        <property key="heap-size" value="115200"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -1520,8 +1527,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/drewm/OneDrive/Documents/KiCad Projects/Projects/Nixie_Clock/rev_b/sfw/U1001_Firmware/Nixie_Clock.X/debug/default/Nixie_Clock_ptg"/>
         <property key="programmerToGoImageName" value="Nixie_Clock_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

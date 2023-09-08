@@ -18,7 +18,7 @@
 #include "32mz_interrupt_control.h"
 #include "heartbeat_timer.h"
 #include "watchdog_timer.h"
-//#include "error_handler.h"
+#include "error_handler.h"
 //#include "prefetch.h"
 //#include "cause_of_reset.h"
 //#include "rtcc.h"
@@ -42,9 +42,9 @@
 
 //// USB
 #include "terminal_control.h"
-//#include "uthash.h"
-//#include "usb_uart.h"
-//#include "usb_uart_rx_lookup_table.h"
+#include "uthash.h"
+#include "usb_uart.h"
+#include "usb_uart_rx_lookup_table.h"
 
 //// ADC
 //#include "adc.h"
@@ -134,15 +134,15 @@ void main(void) {
     enableGlobalInterrupts();
     printf("    Interrupt Controller Initialized, Global Interrupts Enabled\n\r");
     
-//    // Setup error handling
-//    errorHandlerInitialize();
-//    printf("    Error Handler Initialized\n\r");
-//    
-//    // Setup USB UART debugging
-//    usbUartInitialize();
-//    printf("    USB UART Initialized, DMA buffer method used\n\r");
-//    while(usbUartCheckIfBusy());
-//    
+    // Setup error handling
+    errorHandlerInitialize();
+    printf("    Error Handler Initialized\n\r");
+    
+    // Setup USB UART debugging
+    usbUartInitialize();
+    printf("    USB UART Initialized, DMA buffer method used\n\r");
+    while(usbUartCheckIfBusy());
+    
 //    // Setup prefetch module
 //    prefetchInitialize();
 //    printf("    CPU Instruction Prefetch Module Enabled\r\n");
@@ -268,20 +268,20 @@ void main(void) {
             kickTheDog();
             wdt_clear_request = 0;
         }
-//        
-//        // parse received USB strings if we have a new one received
-//        if (usb_uart_rx_ready) {
-//            usbUartRxLUTInterface(usb_uart_rx_buffer);
-//            // Determine length of received string
-//            uint32_t length = strlen(usb_uart_rx_buffer);
-//        
-//            // clear rx buffer
-//            uint32_t index;
-//            for (index = 0; index < length; index++) {
-//                usb_uart_rx_buffer[index] = '\0';
-//            }
-//        }
-//        
+        
+        // parse received USB strings if we have a new one received
+        if (usb_uart_rx_ready) {
+            usbUartRxLUTInterface(usb_uart_rx_buffer);
+            // Determine length of received string
+            uint32_t length = strlen(usb_uart_rx_buffer);
+        
+            // clear rx buffer
+            uint32_t index;
+            for (index = 0; index < length; index++) {
+                usb_uart_rx_buffer[index] = '\0';
+            }
+        }
+        
 //        if (live_telemetry_print_request && live_telemetry_enable) {
 //            
 //            // Clear the terminal
@@ -302,11 +302,11 @@ void main(void) {
 //            
 //        }
 //        
-//        // check to see if a clock fail has occurred and latch it
-//        clockFailCheck();
+        // check to see if a clock fail has occurred and latch it
+        clockFailCheck();
 //        
-//        // update error LEDs if needed
-//        if (update_error_leds_flag) updateErrorLEDs();
+        // update error LEDs if needed
+        if (update_error_leds_flag) updateErrorLEDs();
 //        
 //        // evaluate moving new data into panel buffer depending on display mode
 //        if (display_mode == slot_slideshow_display_mode && update_slot_slideshow == 1) externalStorageSlotSlideshowCallback(active_slideshow_slot);
