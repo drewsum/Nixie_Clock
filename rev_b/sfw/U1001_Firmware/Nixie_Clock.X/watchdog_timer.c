@@ -91,7 +91,7 @@ void verifyThumbTightEnough(void) {
     // If we've had a DMT error, set the DMT error flag
     if (DMTSTATbits.BAD1 || DMTSTATbits.BAD2 || DMTSTATbits.DMTEVENT) {
      
-        #warning "FIX ME" // error_handler.flags.DMT_error = 1;
+        error_handler.flags.DMT_error = 1;
         
     }
     

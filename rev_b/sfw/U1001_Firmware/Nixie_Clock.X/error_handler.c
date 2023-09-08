@@ -11,6 +11,7 @@
 #include "pin_macros.h"
 #include "terminal_control.h"
 #include "usb_uart.h"
+#include "watchdog_timer.h"
 
 // This function initializes the error handler structure to detect fault conditions
 void errorHandlerInitialize(void) {

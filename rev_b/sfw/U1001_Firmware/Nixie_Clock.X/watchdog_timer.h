@@ -21,7 +21,7 @@
 #include <sys/attribs.h>
 
 
-#warning "FIX ME" // #include "error_handler.h"
+#include "error_handler.h"
 #include "32mz_interrupt_control.h"
 
 // This function initializes the watchdog timer for a timeout period of 

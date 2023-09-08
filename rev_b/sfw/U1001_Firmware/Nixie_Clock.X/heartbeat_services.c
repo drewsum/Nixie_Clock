@@ -2,7 +2,8 @@
 #include "heartbeat_services.h"
 
 #include "main.h"
-//#include "error_handler.h"
+#include "error_handler.h"
+#warning "add these includes back in"
 //#include "temperature_sensors.h"
 //#include "power_monitors.h"
 //#include "telemetry.h"
@@ -32,7 +33,7 @@ void heartbeatServices(void) {
 //    }
 //        
 //    // Update error LEDs based on error handler status
-//    update_error_leds_flag = 1;
+    update_error_leds_flag = 1;
     
     // Increment on time counter
     if (heartbeat_systick % 100 == 0) device_on_time_counter++;

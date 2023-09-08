@@ -11,7 +11,9 @@
 #include "main.h"
 #include "terminal_control.h"
 #include "device_control.h"
+#include "watchdog_timer.h"
 #warning "add back these includes"
+#include "usb_uart.h"
 //#include "cause_of_reset.h"
 //#include "prefetch.h"
 #include "error_handler.h"
@@ -228,7 +230,6 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
                 "   SPI Flash\r\n"
                 "   Timer <x> (x = 1-9)\r\n");
         terminalTextAttributesReset();
-        return;
     }
 
 }
