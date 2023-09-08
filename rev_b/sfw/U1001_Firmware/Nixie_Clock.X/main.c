@@ -16,7 +16,7 @@
 #include "configuration.h"
 #include "device_control.h"
 #include "32mz_interrupt_control.h"
-//#include "heartbeat_timer.h"
+#include "heartbeat_timer.h"
 //#include "watchdog_timer.h"
 //#include "error_handler.h"
 //#include "prefetch.h"
@@ -28,7 +28,7 @@
 #include "gpio_setup.h"
 
 // Application
-//#include "heartbeat_services.h"
+#include "heartbeat_services.h"
 //#include "power_saving.h"
 //#include "telemetry.h"
 //#include "capacitive_pushbuttons.h"
@@ -153,9 +153,9 @@ void main(void) {
 //    printf("    Unused Peripheral Modules Disabled\n\r");
 //    while(usbUartCheckIfBusy());
 //        
-//    // Setup heartbeat timer
-//    heartbeatTimerInitialize();
-//    printf("    Heartbeat Timer Initialized\n\r");
+    // Setup heartbeat timer
+    heartbeatTimerInitialize();
+    printf("    Heartbeat Timer Initialized\n\r");
 //    while(usbUartCheckIfBusy());
 //    
 //    // setup watchdog timer
@@ -256,6 +256,73 @@ void main(void) {
     
     
     while(true) {
+        
+//        // get temperature sensor data
+//        if (temp_sense_data_request) tempSensorsRetrieveData();
+//
+//        // get power monitor data
+//        if (power_monitor_data_request) powerMonitorsGetData();
+//        
+//        // clear the watchdog if we need to
+//        if (wdt_clear_request) {
+//            kickTheDog();
+//            wdt_clear_request = 0;
+//        }
+//        
+//        // parse received USB strings if we have a new one received
+//        if (usb_uart_rx_ready) {
+//            usbUartRxLUTInterface(usb_uart_rx_buffer);
+//            // Determine length of received string
+//            uint32_t length = strlen(usb_uart_rx_buffer);
+//        
+//            // clear rx buffer
+//            uint32_t index;
+//            for (index = 0; index < length; index++) {
+//                usb_uart_rx_buffer[index] = '\0';
+//            }
+//        }
+//        
+//        if (live_telemetry_print_request && live_telemetry_enable) {
+//            
+//            // Clear the terminal
+//            terminalClearScreen();
+//            terminalSetCursorHome();
+//            
+//            terminalTextAttributesReset();
+//            terminalTextAttributes(CYAN_COLOR, BLACK_COLOR, BOLD_FONT);
+//            printf("Live system telemetry:\033[K\n\r\033[K");
+//            
+//            printCurrentTelemetry();
+//            
+//            terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+//            printf("Call 'Live Telemetry' command to disable\033[K\n\r");
+//            terminalTextAttributesReset();
+//            
+//            live_telemetry_print_request = 0;
+//            
+//        }
+//        
+//        // check to see if a clock fail has occurred and latch it
+//        clockFailCheck();
+//        
+//        // update error LEDs if needed
+//        if (update_error_leds_flag) updateErrorLEDs();
+//        
+//        // evaluate moving new data into panel buffer depending on display mode
+//        if (display_mode == slot_slideshow_display_mode && update_slot_slideshow == 1) externalStorageSlotSlideshowCallback(active_slideshow_slot);
+//        else if (display_mode == slot_shuffle_display_mode && update_slot_slideshow == 1) {
+//            // Load a new seed
+//            RNGCONbits.LOAD = 1;
+//            externalStorageSlotSlideshowCallback((uint16_t) RNGNUMGEN1 % (maximum_slot_in_use + 1));
+//        }
+//        else if(display_mode == void_display_mode && update_buffer_void_mode == 1) voidModeFillBuffer();
+//     
+//        // update mode LEDs periodically
+//        if (display_mode != idle_display_mode && heartbeat_systick % 20 == 0) updateDisplayModeLEDs();
+//        
+//        if (power_pushbutton_flag) powerCapTouchPushbuttonCallback();
+//        if (mode_pushbutton_flag) modeCapTouchPushbuttonCallback();
+//        
         
         Nop();
         
