@@ -23,6 +23,10 @@
         <itemPath>pin_macros.h</itemPath>
         <itemPath>gpio_setup.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="f5" displayName="I2C" projectFiles="true">
+        <itemPath>plib_i2c.h</itemPath>
+        <itemPath>plib_i2c_master.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f3" displayName="USB UART" projectFiles="true">
         <itemPath>terminal_control.h</itemPath>
         <itemPath>uthash.h</itemPath>
@@ -54,6 +58,9 @@
       </logicalFolder>
       <logicalFolder name="f3" displayName="GPIO" projectFiles="true">
         <itemPath>gpio_setup.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="I2C" projectFiles="true">
+        <itemPath>plib_i2c.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="USB UART" projectFiles="true">
         <itemPath>terminal_control.c</itemPath>
@@ -1536,6 +1543,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/drewm/OneDrive/Documents/KiCad Projects/Projects/Nixie_Clock/rev_b/sfw/U1001_Firmware/Nixie_Clock.X/debug/default/Nixie_Clock_ptg"/>
         <property key="programmerToGoImageName" value="Nixie_Clock_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
