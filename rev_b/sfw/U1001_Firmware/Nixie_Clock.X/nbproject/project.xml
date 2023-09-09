@@ -10,6 +10,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../../../../../LED_Panel_Controller/sfw/U1101_firmware/LED_Panel_Controller.X</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

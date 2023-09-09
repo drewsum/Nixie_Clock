@@ -14,8 +14,8 @@
 #include "watchdog_timer.h"
 #warning "add back these includes"
 #include "usb_uart.h"
-//#include "cause_of_reset.h"
-//#include "prefetch.h"
+#include "cause_of_reset.h"
+#include "prefetch.h"
 #include "error_handler.h"
 #include "heartbeat_services.h"
 #include "pin_macros.h"
@@ -84,7 +84,7 @@ usb_uart_command_function_t idnCommand(char * input_str) {
 usb_uart_command_function_t repositoryCommand(char * input_str) {
     terminalTextAttributesReset();
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
-    printf("Project Git repository is hosted at: https://github.com/drewsum/LED_Panel_Controller\r\n");
+    printf("Project Git repository is hosted at: %s\r\n", PROJECT_REPOSITORY_STR);
     terminalTextAttributesReset();    
 }
 
@@ -117,31 +117,31 @@ usb_uart_command_function_t hostStatusCommand(char * input_str) {
     
     printWatchdogStatus();
     printDeadmanStatus();
-    //printPrefetchStatus();
+    printPrefetchStatus();
 
-//    // Print cause of reset
-//    if (    reset_cause == Undefined ||
-//            reset_cause == Primary_Config_Registers_Error ||
-//            reset_cause == Primary_Secondary_Config_Registers_Error ||
-//            reset_cause == Config_Mismatch ||
-//            reset_cause == DMT_Reset ||
-//            reset_cause == WDT_Reset ||
-//            reset_cause == Software_Reset ||
-//            reset_cause == External_Reset ||
-//            reset_cause == BOR_Reset) {
-//    
-//        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
-//        
-//    }
-//    
-//    else {
-//     
-//        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
-//        
-//    }
-//    
-//    printf("Cause of most recent device reset: %s\r\n", getResetCauseString(reset_cause));
-//    terminalTextAttributesReset();
+    // Print cause of reset
+    if (    reset_cause == Undefined ||
+            reset_cause == Primary_Config_Registers_Error ||
+            reset_cause == Primary_Secondary_Config_Registers_Error ||
+            reset_cause == Config_Mismatch ||
+            reset_cause == DMT_Reset ||
+            reset_cause == WDT_Reset ||
+            reset_cause == Software_Reset ||
+            reset_cause == External_Reset ||
+            reset_cause == BOR_Reset) {
+    
+        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
+        
+    }
+    
+    else {
+     
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+        
+    }
+    
+    printf("Cause of most recent device reset: %s\r\n", getResetCauseString(reset_cause));
+    terminalTextAttributesReset();
 
     terminalTextAttributesReset();
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
@@ -167,18 +167,18 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
 //    else if (strcmp(rx_peripheral_name, "PMD") == 0) {
 //        printPMDStatus();
 //    }
-//    else if (strcmp(rx_peripheral_name, "WDT") == 0) {
-//        printWatchdogStatus();
-//    }
-//    else if (strcmp(rx_peripheral_name, "DMT") == 0) {
-//        printDeadmanStatus();
-//    }
-//    else if (strcmp(rx_peripheral_name, "Prefetch") == 0) {
-//       printPrefetchStatus();
-//    }
-//    else if (strcmp(rx_peripheral_name, "DMA") == 0) {
-//        printDMAStatus();
-//    }
+    else if (strcmp(rx_peripheral_name, "WDT") == 0) {
+        printWatchdogStatus();
+    }
+    else if (strcmp(rx_peripheral_name, "DMT") == 0) {
+        printDeadmanStatus();
+    }
+    else if (strcmp(rx_peripheral_name, "Prefetch") == 0) {
+       printPrefetchStatus();
+    }
+    else if (strcmp(rx_peripheral_name, "DMA") == 0) {
+        printDMAStatus();
+    }
 //    else if (strcmp(rx_peripheral_name, "ADC Channels") == 0) {
 //        printADCChannelStatus();
 //    }
@@ -205,12 +205,6 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
             printTimerStatus((uint8_t) read_timer_number);
         }
     }
-//    else if (strcmp(rx_peripheral_name, "PMP") == 0) {
-//        printPMPStatus();
-//    }
-//    else if (strcmp(rx_peripheral_name, "SPI Flash") == 0) {
-//        printSPIFlashStatus();
-//    }
     else {
         terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
         printf("Please enter a peripheral to view status. Received %s as peripheral name\r\n", rx_peripheral_name);
@@ -226,8 +220,6 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
                 "   DMA\r\n"
                 "   I2C Master\r\n"
                 "   RTCC\r\n"
-                "   PMP\r\n"
-                "   SPI Flash\r\n"
                 "   Timer <x> (x = 1-9)\r\n");
         terminalTextAttributesReset();
     }
@@ -521,8 +513,6 @@ void usbUartHashTableInitialize(void) {
             "       ADC Channels\r\n"
             "       I2C Master\r\n"
             "       RTCC\r\n"
-            "       PMP\r\n"
-            "       SPI Flash\r\n"
             "       Timer <x> (x = 1-9)",
             peripheralStatusCommand);
     usbUartAddCommand("Error Status?",
