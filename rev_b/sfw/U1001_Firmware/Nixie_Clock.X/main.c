@@ -21,7 +21,7 @@
 #include "error_handler.h"
 #include "prefetch.h"
 #include "cause_of_reset.h"
-//#include "rtcc.h"
+#include "rtcc.h"
 
 // GPIO
 #include "pin_macros.h"
@@ -163,6 +163,11 @@ void main(void) {
     printf("    Watchdog Timer Initialized\n\r");
     while(usbUartCheckIfBusy());
     
+    rtccInitialize();
+    if (reset_cause == POR_Reset) rtccClear();
+    printf("    Real Time Clock-Calendar Initialized\r\n");
+    while(usbUartCheckIfBusy());
+    
 //    // setup I2C
 //    I2CMaster_Initialize();
 //    printf("    I2C Bus Master Initialized\r\n");
@@ -217,9 +222,6 @@ void main(void) {
 //        while(usbUartCheckIfBusy());
 //        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
 //        
-//        rtccInitialize();
-//        if (reset_cause == POR_Reset) rtccClear();
-//        printf("    Real Time Clock-Calendar Initialized\r\n");
 //        
 //        backupRTCInitialize();
 //        printf("    Backup Real-Time Clock Initialized\r\n");
@@ -253,7 +255,6 @@ void main(void) {
     printf("\n\rType 'Help' for list of supported commands\n\r\n\r");
     terminalTextAttributesReset();
 
-    
     
     while(true) {
         
@@ -307,18 +308,6 @@ void main(void) {
 //        
         // update error LEDs if needed
         if (update_error_leds_flag) updateErrorLEDs();
-//        
-//        // evaluate moving new data into panel buffer depending on display mode
-//        if (display_mode == slot_slideshow_display_mode && update_slot_slideshow == 1) externalStorageSlotSlideshowCallback(active_slideshow_slot);
-//        else if (display_mode == slot_shuffle_display_mode && update_slot_slideshow == 1) {
-//            // Load a new seed
-//            RNGCONbits.LOAD = 1;
-//            externalStorageSlotSlideshowCallback((uint16_t) RNGNUMGEN1 % (maximum_slot_in_use + 1));
-//        }
-//        else if(display_mode == void_display_mode && update_buffer_void_mode == 1) voidModeFillBuffer();
-//     
-//        // update mode LEDs periodically
-//        if (display_mode != idle_display_mode && heartbeat_systick % 20 == 0) updateDisplayModeLEDs();
 //        
 //        if (power_pushbutton_flag) powerCapTouchPushbuttonCallback();
 //        if (mode_pushbutton_flag) modeCapTouchPushbuttonCallback();
