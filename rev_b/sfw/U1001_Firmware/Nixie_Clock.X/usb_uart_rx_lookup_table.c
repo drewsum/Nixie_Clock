@@ -16,6 +16,7 @@
 #include "usb_uart.h"
 #include "cause_of_reset.h"
 #include "prefetch.h"
+#include "power_saving.h"
 #include "error_handler.h"
 #include "heartbeat_services.h"
 #include "pin_macros.h"
@@ -164,9 +165,9 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
     else if (strcmp(rx_peripheral_name, "Clocks") == 0) {
         printClockStatus(SYSCLK_INT);
     }
-//    else if (strcmp(rx_peripheral_name, "PMD") == 0) {
-//        printPMDStatus();
-//    }
+    else if (strcmp(rx_peripheral_name, "PMD") == 0) {
+        printPMDStatus();
+    }
     else if (strcmp(rx_peripheral_name, "WDT") == 0) {
         printWatchdogStatus();
     }

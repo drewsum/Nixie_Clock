@@ -29,7 +29,7 @@
 
 // Application
 #include "heartbeat_services.h"
-//#include "power_saving.h"
+#include "power_saving.h"
 //#include "telemetry.h"
 //#include "capacitive_pushbuttons.h"
 
@@ -148,10 +148,10 @@ void main(void) {
     printf("    CPU Instruction Prefetch Module Enabled\r\n");
     while(usbUartCheckIfBusy());
     
-//    // Disable unused peripherals for power savings
-//    PMDInitialize();
-//    printf("    Unused Peripheral Modules Disabled\n\r");
-//    while(usbUartCheckIfBusy());
+    // Disable unused peripherals for power savings
+    PMDInitialize();
+    printf("    Unused Peripheral Modules Disabled\n\r");
+    while(usbUartCheckIfBusy());
         
     // Setup heartbeat timer
     heartbeatTimerInitialize();
