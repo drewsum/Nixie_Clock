@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=heartbeat_services.c device_control.c 32mz_interrupt_control.c heartbeat_timer.c watchdog_timer.c error_handler.c gpio_setup.c terminal_control.c usb_uart_rx_lookup_table.c usb_uart.c main.c prefetch.c cause_of_reset.c power_saving.c rtcc.c plib_i2c.c
+SOURCEFILES_QUOTED_IF_SPACED=heartbeat_services.c power_saving.c device_control.c 32mz_interrupt_control.c heartbeat_timer.c watchdog_timer.c error_handler.c prefetch.c cause_of_reset.c rtcc.c gpio_setup.c plib_i2c.c terminal_control.c usb_uart_rx_lookup_table.c usb_uart.c main.c misc_i2c_devices.c ds1683_ETC.c ds3231_rtc.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/plib_i2c.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/plib_i2c.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/plib_i2c.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/misc_i2c_devices.o.d ${OBJECTDIR}/ds1683_ETC.o.d ${OBJECTDIR}/ds3231_rtc.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/plib_i2c.o
+OBJECTFILES=${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/main.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o
 
 # Source Files
-SOURCEFILES=heartbeat_services.c device_control.c 32mz_interrupt_control.c heartbeat_timer.c watchdog_timer.c error_handler.c gpio_setup.c terminal_control.c usb_uart_rx_lookup_table.c usb_uart.c main.c prefetch.c cause_of_reset.c power_saving.c rtcc.c plib_i2c.c
+SOURCEFILES=heartbeat_services.c power_saving.c device_control.c 32mz_interrupt_control.c heartbeat_timer.c watchdog_timer.c error_handler.c prefetch.c cause_of_reset.c rtcc.c gpio_setup.c plib_i2c.c terminal_control.c usb_uart_rx_lookup_table.c usb_uart.c main.c misc_i2c_devices.c ds1683_ETC.c ds3231_rtc.c
 
 
 
@@ -107,6 +107,12 @@ ${OBJECTDIR}/heartbeat_services.o: heartbeat_services.c  .generated_files/flags/
 	@${RM} ${OBJECTDIR}/heartbeat_services.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/heartbeat_services.o.d" -o ${OBJECTDIR}/heartbeat_services.o heartbeat_services.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/power_saving.o: power_saving.c  .generated_files/flags/default/a1fe051581f62a96b50b1dc626148506684b2f5d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/power_saving.o.d 
+	@${RM} ${OBJECTDIR}/power_saving.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/power_saving.o.d" -o ${OBJECTDIR}/power_saving.o power_saving.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 ${OBJECTDIR}/device_control.o: device_control.c  .generated_files/flags/default/89fe7eb314c8f5eafbd55d42ed900030b8594581 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/device_control.o.d 
@@ -137,11 +143,35 @@ ${OBJECTDIR}/error_handler.o: error_handler.c  .generated_files/flags/default/fa
 	@${RM} ${OBJECTDIR}/error_handler.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/error_handler.o.d" -o ${OBJECTDIR}/error_handler.o error_handler.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/prefetch.o: prefetch.c  .generated_files/flags/default/a67bcf9bbee0170e0e7be4eb1fc20ab0c5b2f00c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/prefetch.o.d 
+	@${RM} ${OBJECTDIR}/prefetch.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/prefetch.o.d" -o ${OBJECTDIR}/prefetch.o prefetch.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/cause_of_reset.o: cause_of_reset.c  .generated_files/flags/default/4d73580b4d02a0f2dc38993066fcd395962ac0e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/cause_of_reset.o.d 
+	@${RM} ${OBJECTDIR}/cause_of_reset.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/cause_of_reset.o.d" -o ${OBJECTDIR}/cause_of_reset.o cause_of_reset.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/rtcc.o: rtcc.c  .generated_files/flags/default/e9c3ac2fdab8888ce9d88d569e9a7ff85f45e600 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/rtcc.o.d 
+	@${RM} ${OBJECTDIR}/rtcc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/rtcc.o.d" -o ${OBJECTDIR}/rtcc.o rtcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 ${OBJECTDIR}/gpio_setup.o: gpio_setup.c  .generated_files/flags/default/a2dcb0df25bf52a2c686a943c9f99be785632872 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/gpio_setup.o.d 
 	@${RM} ${OBJECTDIR}/gpio_setup.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/gpio_setup.o.d" -o ${OBJECTDIR}/gpio_setup.o gpio_setup.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/74f91d68f55c3c771fe426fa549356676e12cabd .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/plib_i2c.o.d 
+	@${RM} ${OBJECTDIR}/plib_i2c.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/terminal_control.o: terminal_control.c  .generated_files/flags/default/4047d04ecd49836639272c07c55867d70d834472 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -167,35 +197,23 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/749276df5c445c9a2097
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/prefetch.o: prefetch.c  .generated_files/flags/default/a67bcf9bbee0170e0e7be4eb1fc20ab0c5b2f00c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/misc_i2c_devices.o: misc_i2c_devices.c  .generated_files/flags/default/95db880c53a007d54184413d22e0f2ee1a4b53b8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/prefetch.o.d 
-	@${RM} ${OBJECTDIR}/prefetch.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/prefetch.o.d" -o ${OBJECTDIR}/prefetch.o prefetch.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/misc_i2c_devices.o.d 
+	@${RM} ${OBJECTDIR}/misc_i2c_devices.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/misc_i2c_devices.o.d" -o ${OBJECTDIR}/misc_i2c_devices.o misc_i2c_devices.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/cause_of_reset.o: cause_of_reset.c  .generated_files/flags/default/4d73580b4d02a0f2dc38993066fcd395962ac0e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ds1683_ETC.o: ds1683_ETC.c  .generated_files/flags/default/edc17a6e90ddfc64f6631f7a760dc54ab6730b59 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/cause_of_reset.o.d 
-	@${RM} ${OBJECTDIR}/cause_of_reset.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/cause_of_reset.o.d" -o ${OBJECTDIR}/cause_of_reset.o cause_of_reset.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/ds1683_ETC.o.d 
+	@${RM} ${OBJECTDIR}/ds1683_ETC.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ds1683_ETC.o.d" -o ${OBJECTDIR}/ds1683_ETC.o ds1683_ETC.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/power_saving.o: power_saving.c  .generated_files/flags/default/a1fe051581f62a96b50b1dc626148506684b2f5d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ds3231_rtc.o: ds3231_rtc.c  .generated_files/flags/default/e623807a71f4cdbb475cc393f15c9a8568e29231 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/power_saving.o.d 
-	@${RM} ${OBJECTDIR}/power_saving.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/power_saving.o.d" -o ${OBJECTDIR}/power_saving.o power_saving.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/rtcc.o: rtcc.c  .generated_files/flags/default/e9c3ac2fdab8888ce9d88d569e9a7ff85f45e600 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/rtcc.o.d 
-	@${RM} ${OBJECTDIR}/rtcc.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/rtcc.o.d" -o ${OBJECTDIR}/rtcc.o rtcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/74f91d68f55c3c771fe426fa549356676e12cabd .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/plib_i2c.o.d 
-	@${RM} ${OBJECTDIR}/plib_i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/ds3231_rtc.o.d 
+	@${RM} ${OBJECTDIR}/ds3231_rtc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ds3231_rtc.o.d" -o ${OBJECTDIR}/ds3231_rtc.o ds3231_rtc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
 ${OBJECTDIR}/heartbeat_services.o: heartbeat_services.c  .generated_files/flags/default/de9de1c1211bafc53a8bebd21f49f4e8db3774dc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -203,6 +221,12 @@ ${OBJECTDIR}/heartbeat_services.o: heartbeat_services.c  .generated_files/flags/
 	@${RM} ${OBJECTDIR}/heartbeat_services.o.d 
 	@${RM} ${OBJECTDIR}/heartbeat_services.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/heartbeat_services.o.d" -o ${OBJECTDIR}/heartbeat_services.o heartbeat_services.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/power_saving.o: power_saving.c  .generated_files/flags/default/bcaa66afc537d4be5a5496ec966054dde30b339f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/power_saving.o.d 
+	@${RM} ${OBJECTDIR}/power_saving.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/power_saving.o.d" -o ${OBJECTDIR}/power_saving.o power_saving.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/device_control.o: device_control.c  .generated_files/flags/default/6fdd11182299bbf939667dd8646edc7dfa93d3f5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -234,11 +258,35 @@ ${OBJECTDIR}/error_handler.o: error_handler.c  .generated_files/flags/default/83
 	@${RM} ${OBJECTDIR}/error_handler.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/error_handler.o.d" -o ${OBJECTDIR}/error_handler.o error_handler.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/prefetch.o: prefetch.c  .generated_files/flags/default/23f40afb609e30401864853f107897e63a096850 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/prefetch.o.d 
+	@${RM} ${OBJECTDIR}/prefetch.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/prefetch.o.d" -o ${OBJECTDIR}/prefetch.o prefetch.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/cause_of_reset.o: cause_of_reset.c  .generated_files/flags/default/d9fe76c4a9def6a8e4028bbe4d41a5736bb937cc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/cause_of_reset.o.d 
+	@${RM} ${OBJECTDIR}/cause_of_reset.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/cause_of_reset.o.d" -o ${OBJECTDIR}/cause_of_reset.o cause_of_reset.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/rtcc.o: rtcc.c  .generated_files/flags/default/90b5bd6f67bda6cfce7b338a96661728c893fe22 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/rtcc.o.d 
+	@${RM} ${OBJECTDIR}/rtcc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/rtcc.o.d" -o ${OBJECTDIR}/rtcc.o rtcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
 ${OBJECTDIR}/gpio_setup.o: gpio_setup.c  .generated_files/flags/default/4c713a173ba62396880e0dd09e6134f889244fab .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/gpio_setup.o.d 
 	@${RM} ${OBJECTDIR}/gpio_setup.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/gpio_setup.o.d" -o ${OBJECTDIR}/gpio_setup.o gpio_setup.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/fcb122b925820b0a80aafb04834b75f1edc77864 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/plib_i2c.o.d 
+	@${RM} ${OBJECTDIR}/plib_i2c.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/terminal_control.o: terminal_control.c  .generated_files/flags/default/aa90aaf509df45f8feb5bf81fc7808ced47af42b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -264,35 +312,23 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/c41d8af8db43707f9e8e
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/prefetch.o: prefetch.c  .generated_files/flags/default/23f40afb609e30401864853f107897e63a096850 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/misc_i2c_devices.o: misc_i2c_devices.c  .generated_files/flags/default/949fe5f4cd542236edd4f3a982ff09c12bdd89da .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/prefetch.o.d 
-	@${RM} ${OBJECTDIR}/prefetch.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/prefetch.o.d" -o ${OBJECTDIR}/prefetch.o prefetch.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/misc_i2c_devices.o.d 
+	@${RM} ${OBJECTDIR}/misc_i2c_devices.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/misc_i2c_devices.o.d" -o ${OBJECTDIR}/misc_i2c_devices.o misc_i2c_devices.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/cause_of_reset.o: cause_of_reset.c  .generated_files/flags/default/d9fe76c4a9def6a8e4028bbe4d41a5736bb937cc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ds1683_ETC.o: ds1683_ETC.c  .generated_files/flags/default/f998f18a2eee65e321be9bc8670c3492d0f56c37 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/cause_of_reset.o.d 
-	@${RM} ${OBJECTDIR}/cause_of_reset.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/cause_of_reset.o.d" -o ${OBJECTDIR}/cause_of_reset.o cause_of_reset.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/ds1683_ETC.o.d 
+	@${RM} ${OBJECTDIR}/ds1683_ETC.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ds1683_ETC.o.d" -o ${OBJECTDIR}/ds1683_ETC.o ds1683_ETC.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/power_saving.o: power_saving.c  .generated_files/flags/default/bcaa66afc537d4be5a5496ec966054dde30b339f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/ds3231_rtc.o: ds3231_rtc.c  .generated_files/flags/default/14eba0bf9df4e22ad6d4e974e0ed87b43bbdfaa9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/power_saving.o.d 
-	@${RM} ${OBJECTDIR}/power_saving.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/power_saving.o.d" -o ${OBJECTDIR}/power_saving.o power_saving.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/rtcc.o: rtcc.c  .generated_files/flags/default/90b5bd6f67bda6cfce7b338a96661728c893fe22 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/rtcc.o.d 
-	@${RM} ${OBJECTDIR}/rtcc.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/rtcc.o.d" -o ${OBJECTDIR}/rtcc.o rtcc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/fcb122b925820b0a80aafb04834b75f1edc77864 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/plib_i2c.o.d 
-	@${RM} ${OBJECTDIR}/plib_i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/ds3231_rtc.o.d 
+	@${RM} ${OBJECTDIR}/ds3231_rtc.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -fno-common -MP -MMD -MF "${OBJECTDIR}/ds3231_rtc.o.d" -o ${OBJECTDIR}/ds3231_rtc.o ds3231_rtc.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 

@@ -39,7 +39,7 @@
 #include "plib_i2c_master.h"
 //#include "temperature_sensors.h"
 //#include "power_monitors.h"
-//#include "misc_i2c_devices.h"
+#include "misc_i2c_devices.h"
 
 //// USB
 #include "terminal_control.h"
@@ -198,8 +198,8 @@ void main(void) {
 //        while(usbUartCheckIfBusy());
 //        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
 //    }
-//    
-//    if (nETC_CONFIG_PIN == LOW) {
+#warning "ETC seems to be broken"
+//    if (ETC_HARDSTRAP_PIN == LOW) {
 //        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
 //        printf("    Elapsed Time Configuration Detected\r\n");
 //        while(usbUartCheckIfBusy());
@@ -208,7 +208,7 @@ void main(void) {
 //        printf("    Platform Elapsed Time Counter Initialized\r\n");
 //        while(usbUartCheckIfBusy());
 //    }
-//    
+    
 //    else {
 //        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
 //        printf("    Platform Elapsed Time Configuration Not Detected\r\n");
@@ -216,29 +216,29 @@ void main(void) {
 //        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
 //    }
 //    
-//    // Setup the real time clock-calendar
-//    if (nBACKUP_RTC_CONFIG_PIN == LOW) {
-//        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
-//        printf("    Real Time Clock Configuration Detected\r\n");
-//        while(usbUartCheckIfBusy());
-//        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
-//        
-//        
-//        backupRTCInitialize();
-//        printf("    Backup Real-Time Clock Initialized\r\n");
-//        backupRTCRestoreTime();
-//        printf("    Restored time backup from previous sessions\r\n");
-//        error_handler.flags.backup_rtc = 0;
-//        
-//    }
-//    
-//    else {
-//        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
-//        printf("    Real Time Clock Configuration Not Detected\r\n");
-//        while(usbUartCheckIfBusy());
-//        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
-//    }
-//    
+    // Setup the real time clock-calendar
+    if (RTC_HARDSTRAP_PIN == LOW) {
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("    Real Time Clock Configuration Detected\r\n");
+        while(usbUartCheckIfBusy());
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        
+        
+        backupRTCInitialize();
+        printf("    Backup Real-Time Clock Initialized\r\n");
+        backupRTCRestoreTime();
+        printf("    Restored time backup from previous sessions\r\n");
+        error_handler.flags.backup_rtc = 0;
+        
+    }
+    
+    else {
+        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("    Real Time Clock Configuration Not Detected\r\n");
+        while(usbUartCheckIfBusy());
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    }
+    
     // setup random number generator
     RNGInitialize();
     printf("    Hardware Random number Generator Initialized\r\n");

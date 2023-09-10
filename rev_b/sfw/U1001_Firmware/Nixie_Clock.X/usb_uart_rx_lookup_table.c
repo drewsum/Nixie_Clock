@@ -23,7 +23,7 @@
 //#include "telemetry.h"
 //#include "adc.h"
 //#include "adc_channels.h"
-//#include "misc_i2c_devices.h"
+#include "misc_i2c_devices.h"
 //#include "pgood_monitor.h"
 #include "rtcc.h"
 
@@ -254,14 +254,15 @@ usb_uart_command_function_t clearErrorsCommand(char * input_str) {
     
 }
 
-//usb_uart_command_function_t platformStatusCommand(char * input_str) {
-// 
-//    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
-//    printf("Platform Revision: %s\r\n", PLATFORM_REVISION_STR);
-//    
-//    printPGOODStatus();
+usb_uart_command_function_t platformStatusCommand(char * input_str) {
+ 
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    printf("Platform Revision: %s\r\n", PLATFORM_REVISION_STR);
+    
+    #warning "fix this" //printPGOODStatus();
+#warning "ETC is broken"
 //
-//    if (nETC_CONFIG_PIN == LOW) {
+//    if (ETC_HARDSTRAP_PIN == LOW) {
 //        double tof_temp = platformGetETC();
 //        uint32_t tof_temp_int = (uint32_t) floor(tof_temp);
 //        uint32_t power_cycle_temp = platformGetPowerCycles();
@@ -280,18 +281,18 @@ usb_uart_command_function_t clearErrorsCommand(char * input_str) {
 //    }
 //    
 //    terminalTextAttributesReset();
-//    
-//    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, REVERSE_FONT);
-//    printf("\r\nI2C Bus Slave Device Status:\r\n");
-//    terminalTextAttributesReset();
+    
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, REVERSE_FONT);
+    printf("\r\nI2C Bus Slave Device Status:\r\n");
+    terminalTextAttributesReset();
 //    if (nTELEMETRY_CONFIG_PIN == LOW) {
 //        printTemperatureSensorStatus();
 //        printPowerMonitorStatus();
 //    }
-//
-//    miscI2CDevicesPrintStatus();
-//    
-//}
+
+    miscI2CDevicesPrintStatus();
+    
+}
 
 //usb_uart_command_function_t liveTelemetryCommand(char * input_str) {
 // 
@@ -460,7 +461,7 @@ usb_uart_command_function_t setRTCCCommand(char * input_str) {
         }
         
         // Save time from internal RTCC into external backup RTC
-        #warning "add this back with backup rtc" // backupRTCStashTime();
+        backupRTCStashTime();
         
     }
         
@@ -522,9 +523,9 @@ void usbUartHashTableInitialize(void) {
     usbUartAddCommand("Clear Errors",
             "Clears all error handler flags",
             clearErrorsCommand);
-//    usbUartAddCommand("Platform Status?",
-//        "Prints current state of surrounding circuitry, including PGOOD, time of flight, I2C slaves",
-//        platformStatusCommand);
+    usbUartAddCommand("Platform Status?",
+        "Prints current state of surrounding circuitry, including PGOOD, time of flight, I2C slaves",
+        platformStatusCommand);
 //    if (nTELEMETRY_CONFIG_PIN == LOW) {
 //        usbUartAddCommand("Live Telemetry",
 //                "Toggles live updates of system level telemetry",
