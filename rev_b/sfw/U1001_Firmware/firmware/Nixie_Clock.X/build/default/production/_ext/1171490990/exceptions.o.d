@@ -14,6 +14,7 @@ build/default/production/_ext/1171490990/exceptions.o: \
  ../src/config/default/peripheral/cache/plib_cache.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/wdt/plib_wdt.h \
+ ../src/config/default/peripheral/dmac/plib_dmac.h \
  ../src/config/default/peripheral/rtcc/plib_rtcc.h \
  ../src/config/default/system/int/sys_int.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
@@ -61,6 +62,8 @@ build/default/production/_ext/1171490990/exceptions.o: \
 ../src/config/default/peripheral/evic/plib_evic.h:
 
 ../src/config/default/peripheral/wdt/plib_wdt.h:
+
+../src/config/default/peripheral/dmac/plib_dmac.h:
 
 ../src/config/default/peripheral/rtcc/plib_rtcc.h:
 

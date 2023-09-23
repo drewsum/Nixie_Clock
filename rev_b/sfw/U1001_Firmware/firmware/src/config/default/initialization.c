@@ -191,6 +191,8 @@ void SYS_Initialize ( void* data )
 
     I2C5_Initialize();
 
+    DMAC_Initialize();
+
     RTCC_Initialize();
 
 

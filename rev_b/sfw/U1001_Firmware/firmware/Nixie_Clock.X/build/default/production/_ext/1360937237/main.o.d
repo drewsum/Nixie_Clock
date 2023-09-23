@@ -12,6 +12,7 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/cache/plib_cache.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/wdt/plib_wdt.h \
+ ../src/config/default/peripheral/dmac/plib_dmac.h \
  ../src/config/default/peripheral/rtcc/plib_rtcc.h \
  ../src/config/default/system/int/sys_int.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
@@ -29,7 +30,14 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/configuration.h ../src/config/default/user.h \
  ../src/config/default/device.h ../src/../Nixie_Clock.X/heartbeat_timer.h \
  ../src/../Nixie_Clock.X/../src/config/default/peripheral/coretimer/plib_coretimer.h \
- ../src/../Nixie_Clock.X/../src/config/default/peripheral/gpio/plib_gpio.h
+ ../src/../Nixie_Clock.X/../src/config/default/peripheral/gpio/plib_gpio.h \
+ ../src/../Nixie_Clock.X/../src/config/default/peripheral/wdt/plib_wdt.h \
+ ../src/../Nixie_Clock.X/uthash.h ../src/../Nixie_Clock.X/usb_uart.h \
+ ../src/../Nixie_Clock.X/usb_uart_rx_lookup_table.h \
+ ../src/../Nixie_Clock.X/uthash.h \
+ ../src/../Nixie_Clock.X/../src/config/default/peripheral/dmac/plib_dmac.h \
+ ../src/../Nixie_Clock.X/usb_uart_rx_lookup_table.h \
+ ../src/../Nixie_Clock.X/terminal_control.h
 
 ../src/config/default/definitions.h:
 
@@ -56,6 +64,8 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/config/default/peripheral/evic/plib_evic.h:
 
 ../src/config/default/peripheral/wdt/plib_wdt.h:
+
+../src/config/default/peripheral/dmac/plib_dmac.h:
 
 ../src/config/default/peripheral/rtcc/plib_rtcc.h:
 
@@ -96,3 +106,19 @@ build/default/production/_ext/1360937237/main.o: ../src/main.c \
 ../src/../Nixie_Clock.X/../src/config/default/peripheral/coretimer/plib_coretimer.h:
 
 ../src/../Nixie_Clock.X/../src/config/default/peripheral/gpio/plib_gpio.h:
+
+../src/../Nixie_Clock.X/../src/config/default/peripheral/wdt/plib_wdt.h:
+
+../src/../Nixie_Clock.X/uthash.h:
+
+../src/../Nixie_Clock.X/usb_uart.h:
+
+../src/../Nixie_Clock.X/usb_uart_rx_lookup_table.h:
+
+../src/../Nixie_Clock.X/uthash.h:
+
+../src/../Nixie_Clock.X/../src/config/default/peripheral/dmac/plib_dmac.h:
+
+../src/../Nixie_Clock.X/usb_uart_rx_lookup_table.h:
+
+../src/../Nixie_Clock.X/terminal_control.h:

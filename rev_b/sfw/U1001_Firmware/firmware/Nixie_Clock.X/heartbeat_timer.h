@@ -35,8 +35,9 @@
 
 #include "../src/config/default/peripheral/coretimer/plib_coretimer.h"
 #include "../src/config/default/peripheral/gpio/plib_gpio.h"
+#include "../src/config/default/peripheral/wdt/plib_wdt.h"
 
-void HEARTBEAT_TIMER_User_Handler(uint32_t status, uintptr_t context);
+void HEARTBEAT_TIMER_Handler(uint32_t status, uintptr_t context);
 
 #endif /* _HEARTBEAT_TIMER_H */
 

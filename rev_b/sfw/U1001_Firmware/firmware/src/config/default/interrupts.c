@@ -68,6 +68,8 @@
 // *****************************************************************************
 // *****************************************************************************
 void CORE_TIMER_Handler (void);
+void DMA0_Handler (void);
+void DMA1_Handler (void);
 void UART3_FAULT_Handler (void);
 void UART3_RX_Handler (void);
 void UART3_TX_Handler (void);
@@ -81,9 +83,19 @@ void I2C5_MASTER_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
+void __ISR(_CORE_TIMER_VECTOR, ipl7SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
+}
+
+void __ISR(_DMA0_VECTOR, ipl5SRS) DMA0_Handler (void)
+{
+    DMA0_InterruptHandler();
+}
+
+void __ISR(_DMA1_VECTOR, ipl4SRS) DMA1_Handler (void)
+{
+    DMA1_InterruptHandler();
 }
 
 void __ISR(_UART3_FAULT_VECTOR, ipl1SRS) UART3_FAULT_Handler (void)
@@ -111,7 +123,7 @@ void __ISR(_I2C5_BUS_VECTOR, ipl1SRS) I2C5_BUS_Handler (void)
     I2C5_BUS_InterruptHandler();
 }
 
-void __ISR(_I2C5_MASTER_VECTOR, ipl1SRS) I2C5_MASTER_Handler (void)
+void __ISR(_I2C5_MASTER_VECTOR, ipl4SRS) I2C5_MASTER_Handler (void)
 {
     I2C5_MASTER_InterruptHandler();
 }
