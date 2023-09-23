@@ -4,13 +4,12 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>Nixie_Clock</name>
-            <creation-uuid>58acb43c-2c8c-4cf5-96fe-fee3ae53f10c</creation-uuid>
+            <creation-uuid>472aa532-d340-45c0-b012-5708852a29e2</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
-                <sourceRootElem>../../../../../LED_Panel_Controller/sfw/U1101_firmware/LED_Panel_Controller.X</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
