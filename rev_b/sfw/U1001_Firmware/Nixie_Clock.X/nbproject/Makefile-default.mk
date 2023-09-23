@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c usb_uart.c usb_uart_rx_lookup_table.c watchdog_timer.c rtcc.c misc_i2c_devices.c terminal_control.c ds1683_ETC.c ds3231_rtc.c gpio_setup.c heartbeat_services.c power_saving.c plib_i2c.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c usb_uart.c usb_uart_rx_lookup_table.c watchdog_timer.c rtcc.c misc_i2c_devices.c terminal_control.c ds1683_ETC.c ds3231_rtc.c gpio_setup.c heartbeat_services.c power_saving.c plib_i2c.c power_monitors.c temperature_sensors.c ina219_power_monitor.c mcp9804_temp_sensor.c telemetry.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/plib_i2c.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/misc_i2c_devices.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/ds1683_ETC.o.d ${OBJECTDIR}/ds3231_rtc.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/plib_i2c.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/telemetry.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/misc_i2c_devices.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/ds1683_ETC.o.d ${OBJECTDIR}/ds3231_rtc.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/plib_i2c.o.d ${OBJECTDIR}/power_monitors.o.d ${OBJECTDIR}/temperature_sensors.o.d ${OBJECTDIR}/ina219_power_monitor.o.d ${OBJECTDIR}/mcp9804_temp_sensor.o.d ${OBJECTDIR}/telemetry.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/plib_i2c.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/telemetry.o
 
 # Source Files
-SOURCEFILES=main.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c usb_uart.c usb_uart_rx_lookup_table.c watchdog_timer.c rtcc.c misc_i2c_devices.c terminal_control.c ds1683_ETC.c ds3231_rtc.c gpio_setup.c heartbeat_services.c power_saving.c plib_i2c.c
+SOURCEFILES=main.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c usb_uart.c usb_uart_rx_lookup_table.c watchdog_timer.c rtcc.c misc_i2c_devices.c terminal_control.c ds1683_ETC.c ds3231_rtc.c gpio_setup.c heartbeat_services.c power_saving.c plib_i2c.c power_monitors.c temperature_sensors.c ina219_power_monitor.c mcp9804_temp_sensor.c telemetry.c
 
 
 
@@ -215,6 +215,36 @@ ${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/1f9d61fc3101
 	@${RM} ${OBJECTDIR}/plib_i2c.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/power_monitors.o: power_monitors.c  .generated_files/flags/default/c1d4e5482a60ee29597108f93d022608ffd57e35 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/power_monitors.o.d 
+	@${RM} ${OBJECTDIR}/power_monitors.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/power_monitors.o.d" -o ${OBJECTDIR}/power_monitors.o power_monitors.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/temperature_sensors.o: temperature_sensors.c  .generated_files/flags/default/a5b5a9e276aa3383222b4c933ea8ee3f60bba3bd .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/temperature_sensors.o.d 
+	@${RM} ${OBJECTDIR}/temperature_sensors.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/temperature_sensors.o.d" -o ${OBJECTDIR}/temperature_sensors.o temperature_sensors.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/ina219_power_monitor.o: ina219_power_monitor.c  .generated_files/flags/default/d988efba1b63c2872f89a8178510d0022129bcbe .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ina219_power_monitor.o.d 
+	@${RM} ${OBJECTDIR}/ina219_power_monitor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/ina219_power_monitor.o.d" -o ${OBJECTDIR}/ina219_power_monitor.o ina219_power_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/mcp9804_temp_sensor.o: mcp9804_temp_sensor.c  .generated_files/flags/default/d5331791393185c4906bff259ce036e807dc1803 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o.d 
+	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/mcp9804_temp_sensor.o.d" -o ${OBJECTDIR}/mcp9804_temp_sensor.o mcp9804_temp_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/telemetry.o: telemetry.c  .generated_files/flags/default/4ae4a84397ac632cbd11464211b47159b364a4a9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/telemetry.o.d 
+	@${RM} ${OBJECTDIR}/telemetry.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/telemetry.o.d" -o ${OBJECTDIR}/telemetry.o telemetry.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/356d128753d192f976cd74544307eba93ed01287 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -329,6 +359,36 @@ ${OBJECTDIR}/plib_i2c.o: plib_i2c.c  .generated_files/flags/default/e60f895473c7
 	@${RM} ${OBJECTDIR}/plib_i2c.o.d 
 	@${RM} ${OBJECTDIR}/plib_i2c.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/plib_i2c.o.d" -o ${OBJECTDIR}/plib_i2c.o plib_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/power_monitors.o: power_monitors.c  .generated_files/flags/default/5593009f27628e62ef6245e9b9bfd78b33f80906 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/power_monitors.o.d 
+	@${RM} ${OBJECTDIR}/power_monitors.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/power_monitors.o.d" -o ${OBJECTDIR}/power_monitors.o power_monitors.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/temperature_sensors.o: temperature_sensors.c  .generated_files/flags/default/1a49b81e632709c1742ed11a65868bd48d696203 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/temperature_sensors.o.d 
+	@${RM} ${OBJECTDIR}/temperature_sensors.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/temperature_sensors.o.d" -o ${OBJECTDIR}/temperature_sensors.o temperature_sensors.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/ina219_power_monitor.o: ina219_power_monitor.c  .generated_files/flags/default/71fab86d13565e0e7b23fc1bd22adaf77cf99471 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/ina219_power_monitor.o.d 
+	@${RM} ${OBJECTDIR}/ina219_power_monitor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/ina219_power_monitor.o.d" -o ${OBJECTDIR}/ina219_power_monitor.o ina219_power_monitor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/mcp9804_temp_sensor.o: mcp9804_temp_sensor.c  .generated_files/flags/default/4965a7f526b59ede4fda786b6c2b9db469f1d308 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o.d 
+	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/mcp9804_temp_sensor.o.d" -o ${OBJECTDIR}/mcp9804_temp_sensor.o mcp9804_temp_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/telemetry.o: telemetry.c  .generated_files/flags/default/b489cbe5880139d6e6b23312e5ca3ee4a7e4a787 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/telemetry.o.d 
+	@${RM} ${OBJECTDIR}/telemetry.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/telemetry.o.d" -o ${OBJECTDIR}/telemetry.o telemetry.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
 endif
 

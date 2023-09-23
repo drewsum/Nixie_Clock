@@ -20,10 +20,12 @@
 #include "error_handler.h"
 #include "heartbeat_services.h"
 #include "pin_macros.h"
-//#include "telemetry.h"
+#include "telemetry.h"
 //#include "adc.h"
 //#include "adc_channels.h"
 #include "misc_i2c_devices.h"
+#include "power_monitors.h"
+#include "temperature_sensors.h"
 //#include "pgood_monitor.h"
 #include "rtcc.h"
 
@@ -285,38 +287,38 @@ usb_uart_command_function_t platformStatusCommand(char * input_str) {
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, REVERSE_FONT);
     printf("\r\nI2C Bus Slave Device Status:\r\n");
     terminalTextAttributesReset();
-//    if (nTELEMETRY_CONFIG_PIN == LOW) {
-//        printTemperatureSensorStatus();
-//        printPowerMonitorStatus();
-//    }
+    if (TELEMETRY_HARDSTRAP_PIN == LOW) {
+        printTemperatureSensorStatus();
+        printPowerMonitorStatus();
+    }
 
     miscI2CDevicesPrintStatus();
     
 }
 
-//usb_uart_command_function_t liveTelemetryCommand(char * input_str) {
-// 
-//    terminalTextAttributesReset();
-//    
-//    if (live_telemetry_enable == 0) {
-//        terminalClearScreen();
-//        terminalSetCursorHome();
-//        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
-//        printf("Enabling Live Telemetry\n\r");
-//        live_telemetry_enable = 1;
-//        // Disable pushbuttons
-//    }
-//    else {
-//        terminalClearScreen();
-//        terminalSetCursorHome();
-//        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
-//        printf("Disabling Live Telemetry\n\r");
-//        live_telemetry_enable = 0;
-//    }
-//    
-//    terminalTextAttributesReset();
-//    
-//}
+usb_uart_command_function_t liveTelemetryCommand(char * input_str) {
+ 
+    terminalTextAttributesReset();
+    
+    if (live_telemetry_enable == 0) {
+        terminalClearScreen();
+        terminalSetCursorHome();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("Enabling Live Telemetry\n\r");
+        live_telemetry_enable = 1;
+        // Disable pushbuttons
+    }
+    else {
+        terminalClearScreen();
+        terminalSetCursorHome();
+        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("Disabling Live Telemetry\n\r");
+        live_telemetry_enable = 0;
+    }
+    
+    terminalTextAttributesReset();
+    
+}
 
 usb_uart_command_function_t timeAndDateCommand(char * input_str) {
  
@@ -526,11 +528,11 @@ void usbUartHashTableInitialize(void) {
     usbUartAddCommand("Platform Status?",
         "Prints current state of surrounding circuitry, including PGOOD, time of flight, I2C slaves",
         platformStatusCommand);
-//    if (nTELEMETRY_CONFIG_PIN == LOW) {
-//        usbUartAddCommand("Live Telemetry",
-//                "Toggles live updates of system level telemetry",
-//                liveTelemetryCommand);
-//    }
+    if (TELEMETRY_HARDSTRAP_PIN == LOW) {
+        usbUartAddCommand("Live Telemetry",
+                "Toggles live updates of system level telemetry",
+                liveTelemetryCommand);
+    }
     usbUartAddCommand("Time and Date?",
             "Prints the current system time and date",
             timeAndDateCommand);
