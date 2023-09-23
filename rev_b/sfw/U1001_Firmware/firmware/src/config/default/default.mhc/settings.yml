@@ -1,0 +1,14 @@
+format_version: v1.0
+configName: default
+folderName: Nixie_Clock.X
+frameworkPath: C:\Users\drewm\Documents\MPLab_Harmony
+processor: PIC32MZ2048EFM100
+projectName: Nixie_Clock.X
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: dev_packs\Microchip\PIC32MZ-EF_DFP\1.3.58\atdf\PIC32MZ2048EFM100.atdf

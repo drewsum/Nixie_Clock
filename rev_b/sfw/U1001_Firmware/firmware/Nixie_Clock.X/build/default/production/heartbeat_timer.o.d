@@ -1,0 +1,16 @@
+build/default/production/heartbeat_timer.o: heartbeat_timer.c \
+ heartbeat_timer.h \
+ ../src/config/default/peripheral/coretimer/plib_coretimer.h \
+ ../src/config/default/peripheral/gpio/plib_gpio.h \
+ ../src/config/default/device.h \
+ ../src/config/default/toolchain_specifics.h
+
+heartbeat_timer.h:
+
+../src/config/default/peripheral/coretimer/plib_coretimer.h:
+
+../src/config/default/peripheral/gpio/plib_gpio.h:
+
+../src/config/default/device.h:
+
+../src/config/default/toolchain_specifics.h:
