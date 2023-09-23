@@ -68,6 +68,12 @@
 // *****************************************************************************
 // *****************************************************************************
 void CORE_TIMER_Handler (void);
+void UART3_FAULT_Handler (void);
+void UART3_RX_Handler (void);
+void UART3_TX_Handler (void);
+void RTCC_Handler (void);
+void I2C5_BUS_Handler (void);
+void I2C5_MASTER_Handler (void);
 
 
 // *****************************************************************************
@@ -78,6 +84,36 @@ void CORE_TIMER_Handler (void);
 void __ISR(_CORE_TIMER_VECTOR, ipl1SRS) CORE_TIMER_Handler (void)
 {
     CORE_TIMER_InterruptHandler();
+}
+
+void __ISR(_UART3_FAULT_VECTOR, ipl1SRS) UART3_FAULT_Handler (void)
+{
+    UART3_FAULT_InterruptHandler();
+}
+
+void __ISR(_UART3_RX_VECTOR, ipl1SRS) UART3_RX_Handler (void)
+{
+    UART3_RX_InterruptHandler();
+}
+
+void __ISR(_UART3_TX_VECTOR, ipl1SRS) UART3_TX_Handler (void)
+{
+    UART3_TX_InterruptHandler();
+}
+
+void __ISR(_RTCC_VECTOR, ipl1SRS) RTCC_Handler (void)
+{
+    RTCC_InterruptHandler();
+}
+
+void __ISR(_I2C5_BUS_VECTOR, ipl1SRS) I2C5_BUS_Handler (void)
+{
+    I2C5_BUS_InterruptHandler();
+}
+
+void __ISR(_I2C5_MASTER_VECTOR, ipl1SRS) I2C5_MASTER_Handler (void)
+{
+    I2C5_MASTER_InterruptHandler();
 }
 
 

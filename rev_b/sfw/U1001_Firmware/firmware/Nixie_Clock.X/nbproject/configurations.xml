@@ -33,12 +33,21 @@
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="i2c" displayName="i2c" projectFiles="true">
+              <logicalFolder name="master" displayName="master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/i2c/master/plib_i2c_master_common.h</itemPath>
+                <itemPath>../src/config/default/peripheral/i2c/master/plib_i2c5_master.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
             <logicalFolder name="ram" displayName="ram" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ram/plib_ram.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="tmr1" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1_common.h</itemPath>
-              <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1.h</itemPath>
+            <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/rtcc/plib_rtcc.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/uart/plib_uart3.h</itemPath>
+              <itemPath>../src/config/default/peripheral/uart/plib_uart_common.h</itemPath>
             </logicalFolder>
             <logicalFolder name="wdt" displayName="wdt" projectFiles="true">
               <itemPath>../src/config/default/peripheral/wdt/plib_wdt.h</itemPath>
@@ -116,11 +125,19 @@
             <logicalFolder name="gpio" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/default/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="i2c" displayName="i2c" projectFiles="true">
+              <logicalFolder name="master" displayName="master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/i2c/master/plib_i2c5_master.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
             <logicalFolder name="ram" displayName="ram" projectFiles="true">
               <itemPath>../src/config/default/peripheral/ram/plib_ram.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="tmr1" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/tmr1/plib_tmr1.c</itemPath>
+            <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/rtcc/plib_rtcc.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="uart" displayName="uart" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/uart/plib_uart3.c</itemPath>
             </logicalFolder>
             <logicalFolder name="wdt" displayName="wdt" projectFiles="true">
               <itemPath>../src/config/default/peripheral/wdt/plib_wdt.c</itemPath>

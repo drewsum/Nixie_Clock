@@ -187,6 +187,11 @@ void SYS_Initialize ( void* data )
 	GPIO_Initialize();
 
     CORETIMER_Initialize();
+	UART3_Initialize();
+
+    I2C5_Initialize();
+
+    RTCC_Initialize();
 
 
     /* MISRAC 2012 deviation block start */

@@ -58,6 +58,12 @@
 // *****************************************************************************
 
 void CORE_TIMER_InterruptHandler( void );
+void UART3_FAULT_InterruptHandler( void );
+void UART3_RX_InterruptHandler( void );
+void UART3_TX_InterruptHandler( void );
+void RTCC_InterruptHandler( void );
+void I2C5_BUS_InterruptHandler( void );
+void I2C5_MASTER_InterruptHandler( void );
 
 
 

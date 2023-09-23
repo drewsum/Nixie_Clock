@@ -57,6 +57,12 @@ void EVIC_Initialize( void )
 
     /* Set up priority and subpriority of enabled interrupts */
     IPC0SET = 0x4U | 0x0U;  /* CORE_TIMER:  Priority 1 / Subpriority 0 */
+    IPC39SET = 0x400U | 0x0U;  /* UART3_FAULT:  Priority 1 / Subpriority 0 */
+    IPC39SET = 0x40000U | 0x0U;  /* UART3_RX:  Priority 1 / Subpriority 0 */
+    IPC39SET = 0x4000000U | 0x0U;  /* UART3_TX:  Priority 1 / Subpriority 0 */
+    IPC41SET = 0x40000U | 0x0U;  /* RTCC:  Priority 1 / Subpriority 0 */
+    IPC45SET = 0x40000U | 0x0U;  /* I2C5_BUS:  Priority 1 / Subpriority 0 */
+    IPC46SET = 0x4U | 0x0U;  /* I2C5_MASTER:  Priority 1 / Subpriority 0 */
 
 
 

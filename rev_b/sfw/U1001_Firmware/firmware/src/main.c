@@ -42,10 +42,13 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
     
+    // map the core timer ISR to the heartbeat timer handler callback function
     CORETIMER_CallbackSet(HEARTBEAT_TIMER_User_Handler, 0);
     
+    // start the core timer/heartbeat timer
     CORETIMER_Start();
     
+    // disable reset LED
     RESET_LED_Clear();
     
     while ( true )
