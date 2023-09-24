@@ -24,12 +24,18 @@
 
 // These are all the I2C 7 bit addresses of power monitors in this project
 #define POS24_MON_ADDR              0x40
+#define POS3P3_MON_ADDR             0x41
+#define POS180_MON_ADDR             0x42
 
 // These macros set the CLSB (current lsb, resolution) for each power monitor
 #define POS24_MON_CLSB              60e-6
+#define POS3P3_MON_CLSB             60e-6
+#define POS180_MON_CLSB             0.8e-6
 
 // These macros set the RSHUNT value (shunt resistance) for each power monitor
 #define POS24_MON_RSHUNT              0.02
+#define POS3P3_MON_RSHUNT             0.02
+#define POS180_MON_RSHUNT             1.50
 
 // This flag is set when the application wants to poll for new power monitor data
 volatile __attribute__((coherent)) uint8_t power_monitor_data_request = 0;

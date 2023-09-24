@@ -25,7 +25,7 @@
 // set this flag high to update the error LEDs the next loop through main()
 volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
 
-#define ERROR_HANDLER_NUM_FLAGS  17
+#define ERROR_HANDLER_NUM_FLAGS  22
 
 // Error handler structure
 // Follow the convention in XC32 user's guide section 8.6.2
@@ -53,7 +53,12 @@ volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
         uint8_t platform_etc;
         uint8_t backup_rtc;
         uint8_t pos24_mon;
+        uint8_t pos3p3_mon;
+        uint8_t pos180_mon;
         uint8_t pos24_temp;
+        uint8_t pos3p3_temp;
+        uint8_t pos180_temp;
+        uint8_t amb_temp;
         
     } flags;
 
@@ -81,7 +86,12 @@ const char *  error_handler_flag_names[] = {
     "Platform Elapsed Time Counter",
     "Backup Real Time Clock",
     "POS24 Power Supply Monitor",
-    "POS24 Power Supply Temperature Sensor"
+    "POS3P3 Power Supply Monitor",
+    "POS180 Power Supply Monitor",
+    "POS24 Power Supply Temperature Sensor",
+    "POS3P3 Power Supply Temperature Sensor",
+    "POS180 Power Supply Temperature Sensor",
+    "Ambient Temperature Sensor"
 };
 
 

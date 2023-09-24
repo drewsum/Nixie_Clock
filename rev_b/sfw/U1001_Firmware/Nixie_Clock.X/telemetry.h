@@ -35,6 +35,8 @@ typedef struct telemetry_paramaters_ps_u {
 volatile __attribute__((coherent)) struct telemetry_s {
     
     telemetry_parameters_ps_t pos24;
+    telemetry_parameters_ps_t pos3p3;
+    telemetry_parameters_ps_t pos180;
     double ambient_temperature;
     double mcu_die_temp;
     double adc_vref_voltage;
