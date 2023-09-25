@@ -86,7 +86,7 @@ void __ISR(_ADC_DATA19_VECTOR, IPL1SRS) ADCData19ISR(void) {
     // check to see if data is actually ready
     if (ADCDSTAT1bits.ARDY19) {
         // copy ADC conversion result into telemetry
-        telemetry.pos180.voltage = (double) (ADCDATA19 * ADC_VOLTS_PER_LSB * adc_cal_gain) * POS180_ADC_GAIN;
+        telemetry.pos90_midrail_voltage = ((double) ADCDATA19) * ADC_VOLTS_PER_LSB * adc_cal_gain * POS90_ADC_GAIN;
         
     }
     
@@ -100,7 +100,7 @@ void __ISR(_ADC_DATA20_VECTOR, IPL1SRS) ADCData20ISR(void) {
     // check to see if data is actually ready
     if (ADCDSTAT1bits.ARDY20) {
         // copy ADC conversion result into telemetry
-        telemetry.pos90_midrail_voltage = (double) (ADCDATA20 * ADC_VOLTS_PER_LSB * adc_cal_gain) * POS90_ADC_GAIN;
+        telemetry.pos180.voltage =((double) ADCDATA20) * ADC_VOLTS_PER_LSB * adc_cal_gain * POS180_ADC_GAIN;
         
     }
     
@@ -114,7 +114,7 @@ void __ISR(_ADC_DATA21_VECTOR, IPL1SRS) ADCData21ISR(void) {
     // check to see if data is actually ready
     if (ADCDSTAT1bits.ARDY21) {
         // copy ADC conversion result into telemetry
-        telemetry.backup_battery_voltage = (double) (ADCDATA21 * ADC_VOLTS_PER_LSB * adc_cal_gain) * VBAT_ADC_GAIN;
+        telemetry.backup_battery_voltage = ((double) ADCDATA21) * ADC_VOLTS_PER_LSB * adc_cal_gain * VBAT_ADC_GAIN;
         
     }
     

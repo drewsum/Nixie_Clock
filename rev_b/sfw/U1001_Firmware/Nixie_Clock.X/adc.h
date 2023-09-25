@@ -24,7 +24,7 @@
 #include "adc_channels.h"
 
 // ADC constants macros
-#define ADC_VOLTS_PER_LSB           0.000805861
+#define ADC_VOLTS_PER_LSB           805.664e-6
 
 // This is an ADC result scaling factor calculated using the internal reference voltage
 volatile double adc_cal_gain = 1.0;
