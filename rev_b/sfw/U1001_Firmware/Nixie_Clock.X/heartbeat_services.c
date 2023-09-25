@@ -23,16 +23,15 @@ void heartbeatServices(void) {
         // get new telemetry data every 200ms
         if ((heartbeat_systick + 10) % 20 == 0) power_monitor_data_request = 1;
   
-        #warning "add back in ADC"
         /* Trigger an ADC conversion scan */
-//        if ((heartbeat_systick + 15) % 20 == 0) ADCCON3bits.GSWTRG = 1;
+        if ((heartbeat_systick + 15) % 20 == 0) ADCCON3bits.GSWTRG = 1;
         
         // print new telemetry to terminal every second
         if (heartbeat_systick % 100 == 0) live_telemetry_print_request = 1;
         
     }
         
-//    // Update error LEDs based on error handler status
+    // Update error LEDs based on error handler status
     update_error_leds_flag = 1;
     
     // Increment on time counter

@@ -12,7 +12,6 @@
 #include "terminal_control.h"
 #include "device_control.h"
 #include "watchdog_timer.h"
-#warning "add back these includes"
 #include "usb_uart.h"
 #include "cause_of_reset.h"
 #include "prefetch.h"
@@ -21,11 +20,12 @@
 #include "heartbeat_services.h"
 #include "pin_macros.h"
 #include "telemetry.h"
-//#include "adc.h"
-//#include "adc_channels.h"
+#include "adc.h"
+#include "adc_channels.h"
 #include "misc_i2c_devices.h"
 #include "power_monitors.h"
 #include "temperature_sensors.h"
+#warning "add back these includes"
 //#include "pgood_monitor.h"
 #include "rtcc.h"
 
@@ -182,12 +182,12 @@ usb_uart_command_function_t peripheralStatusCommand(char * input_str) {
     else if (strcmp(rx_peripheral_name, "DMA") == 0) {
         printDMAStatus();
     }
-//    else if (strcmp(rx_peripheral_name, "ADC Channels") == 0) {
-//        printADCChannelStatus();
-//    }
-//    else if (strcmp(rx_peripheral_name, "ADC") == 0) {
-//        printADCStatus();
-//    }
+    else if (strcmp(rx_peripheral_name, "ADC Channels") == 0) {
+        printADCChannelStatus();
+    }
+    else if (strcmp(rx_peripheral_name, "ADC") == 0) {
+        printADCStatus();
+    }
     else if (strcmp(rx_peripheral_name, "RTCC") == 0) {
         printRTCCStatus();
     }
@@ -306,7 +306,6 @@ usb_uart_command_function_t liveTelemetryCommand(char * input_str) {
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
         printf("Enabling Live Telemetry\n\r");
         live_telemetry_enable = 1;
-        // Disable pushbuttons
     }
     else {
         terminalClearScreen();

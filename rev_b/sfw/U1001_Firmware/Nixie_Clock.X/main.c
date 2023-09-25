@@ -23,9 +23,6 @@
 #include "cause_of_reset.h"
 #include "rtcc.h"
 
-// GPIO
-#include "pin_macros.h"
-#include "gpio_setup.h"
 
 // Application
 #include "heartbeat_services.h"
@@ -33,6 +30,8 @@
 #include "telemetry.h"
 //#include "capacitive_pushbuttons.h"
 //#include "pgood_monitor.h"
+#include "pin_macros.h"
+#include "gpio_setup.h"
 
 //// I2C
 #include "plib_i2c.h"
@@ -48,8 +47,8 @@
 #include "usb_uart_rx_lookup_table.h"
 
 //// ADC
-//#include "adc.h"
-//#include "adc_channels.h"
+#include "adc.h"
+#include "adc_channels.h"
 
 
 void main(void) {
@@ -186,11 +185,10 @@ void main(void) {
         powerMonitorsInitialize();
         printf("    Power Monitors Initialized\r\n");
         while(usbUartCheckIfBusy());
-        #warning "add back ADC"
         // Enable ADC
-        //ADCInitialize();
-        //printf("    Analog to Digital Converter Initialized\n\r");
-        //while(usbUartCheckIfBusy());
+        ADCInitialize();
+        printf("    Analog to Digital Converter Initialized\n\r");
+        while(usbUartCheckIfBusy());
     }
     
     else {

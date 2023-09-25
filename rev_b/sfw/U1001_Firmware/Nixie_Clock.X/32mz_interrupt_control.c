@@ -374,69 +374,69 @@ void setInterruptEnable(interrupt_source_t input_interrupt, uint8_t input_state)
             IEC2bits.ADCD18IE = input_state;
             break;
             
-//        case ADC_Data_19:
-//            IEC2bits.ADCD19IE = input_state;
-//            break;
-//            
-//        case ADC_Data_20:
-//            IEC2bits.ADCD20IE = input_state;
-//            break;
-//            
-//        case ADC_Data_21:
-//            IEC2bits.ADCD21IE = input_state;
-//            break;
-//            
-//        case ADC_Data_22:
-//            IEC2bits.ADCD22IE = input_state;
-//            break;
-//            
-//        case ADC_Data_23:
-//            IEC2bits.ADCD23IE = input_state;
-//            break;
-//            
-//        case ADC_Data_24:
-//            IEC2bits.ADCD24IE = input_state;
-//            break;
-//            
-//        case ADC_Data_25:
-//            IEC2bits.ADCD25IE = input_state;
-//            break;
-//            
-//        case ADC_Data_26:
-//            IEC2bits.ADCD26IE = input_state;
-//            break;
-//            
-//        case ADC_Data_27:
-//            IEC2bits.ADCD27IE = input_state;
-//            break;
-//            
-//        case ADC_Data_28:
-//            IEC2bits.ADCD28IE = input_state;
-//            break;
-//            
-//        case ADC_Data_29:
-//            IEC2bits.ADCD29IE = input_state;
-//            break;
-//            
-//        case ADC_Data_30:
-//            IEC2bits.ADCD30IE = input_state;
-//            break;
-//            
-//        case ADC_Data_31:
-//            IEC2bits.ADCD31IE = input_state;
-//            break;
-//            
-//        case ADC_Data_32:
-//            IEC2bits.ADCD32IE = input_state;
-//            break;
-//            
-//        case ADC_Data_33:
-//            IEC2bits.ADCD33IE = input_state;
-//            break;
-//            
-//        case ADC_Data_34:
-//            IEC2bits.ADCD34IE = input_state;
-//            break;
+        case ADC_Data_19:
+            IEC2bits.ADCD19IE = input_state;
+            break;
+            
+        case ADC_Data_20:
+            IEC2bits.ADCD20IE = input_state;
+            break;
+            
+        case ADC_Data_21:
+            IEC2bits.ADCD21IE = input_state;
+            break;
+            
+        case ADC_Data_22:
+            IEC2bits.ADCD22IE = input_state;
+            break;
+            
+        case ADC_Data_23:
+            IEC2bits.ADCD23IE = input_state;
+            break;
+            
+        case ADC_Data_24:
+            IEC2bits.ADCD24IE = input_state;
+            break;
+            
+        case ADC_Data_25:
+            IEC2bits.ADCD25IE = input_state;
+            break;
+            
+        case ADC_Data_26:
+            IEC2bits.ADCD26IE = input_state;
+            break;
+            
+        case ADC_Data_27:
+            IEC2bits.ADCD27IE = input_state;
+            break;
+            
+        case ADC_Data_28:
+            IEC2bits.ADCD28IE = input_state;
+            break;
+            
+        case ADC_Data_29:
+            IEC2bits.ADCD29IE = input_state;
+            break;
+            
+        case ADC_Data_30:
+            IEC2bits.ADCD30IE = input_state;
+            break;
+            
+        case ADC_Data_31:
+            IEC2bits.ADCD31IE = input_state;
+            break;
+            
+        case ADC_Data_32:
+            IEC2bits.ADCD32IE = input_state;
+            break;
+            
+        case ADC_Data_33:
+            IEC2bits.ADCD33IE = input_state;
+            break;
+            
+        case ADC_Data_34:
+            IEC2bits.ADCD34IE = input_state;
+            break;
 //            
 //        case ADC_Data_35:
 //            IEC2bits.ADCD35IE = input_state;
@@ -1215,70 +1215,70 @@ uint8_t getInterruptEnable(interrupt_source_t input_interrupt) {
             return IEC2bits.ADCD18IE;
             break;
             
-//        case ADC_Data_19:
-//            return IEC2bits.ADCD19IE;
-//            break;
-//            
-//        case ADC_Data_20:
-//            return IEC2bits.ADCD20IE;
-//            break;
-//            
-//        case ADC_Data_21:
-//            return IEC2bits.ADCD21IE;
-//            break;
-//            
-//        case ADC_Data_22:
-//            return IEC2bits.ADCD22IE;
-//            break;
-//            
-//        case ADC_Data_23:
-//            return IEC2bits.ADCD23IE;
-//            break;
-//            
-//        case ADC_Data_24:
-//            return IEC2bits.ADCD24IE;
-//            break;
-//            
-//        case ADC_Data_25:
-//            return IEC2bits.ADCD25IE;
-//            break;
-//            
-//        case ADC_Data_26:
-//            return IEC2bits.ADCD26IE;
-//            break;
-//            
-//        case ADC_Data_27:
-//            return IEC2bits.ADCD27IE;
-//            break;
-//            
-//        case ADC_Data_28:
-//            return IEC2bits.ADCD28IE;
-//            break;
-//            
-//        case ADC_Data_29:
-//            return IEC2bits.ADCD29IE;
-//            break;
-//            
-//        case ADC_Data_30:
-//            return IEC2bits.ADCD30IE;
-//            break;
-//            
-//        case ADC_Data_31:
-//            return IEC2bits.ADCD31IE;
-//            break;
-//            
-//        case ADC_Data_32:
-//            return IEC2bits.ADCD32IE;
-//            break;
-//            
-//        case ADC_Data_33:
-//            return IEC2bits.ADCD33IE;
-//            break;
-//            
-//        case ADC_Data_34:
-//            return IEC2bits.ADCD34IE;
-//            break;
+        case ADC_Data_19:
+            return IEC2bits.ADCD19IE;
+            break;
             
+        case ADC_Data_20:
+            return IEC2bits.ADCD20IE;
+            break;
+            
+        case ADC_Data_21:
+            return IEC2bits.ADCD21IE;
+            break;
+            
+        case ADC_Data_22:
+            return IEC2bits.ADCD22IE;
+            break;
+            
+        case ADC_Data_23:
+            return IEC2bits.ADCD23IE;
+            break;
+            
+        case ADC_Data_24:
+            return IEC2bits.ADCD24IE;
+            break;
+            
+        case ADC_Data_25:
+            return IEC2bits.ADCD25IE;
+            break;
+            
+        case ADC_Data_26:
+            return IEC2bits.ADCD26IE;
+            break;
+            
+        case ADC_Data_27:
+            return IEC2bits.ADCD27IE;
+            break;
+            
+        case ADC_Data_28:
+            return IEC2bits.ADCD28IE;
+            break;
+            
+        case ADC_Data_29:
+            return IEC2bits.ADCD29IE;
+            break;
+            
+        case ADC_Data_30:
+            return IEC2bits.ADCD30IE;
+            break;
+            
+        case ADC_Data_31:
+            return IEC2bits.ADCD31IE;
+            break;
+            
+        case ADC_Data_32:
+            return IEC2bits.ADCD32IE;
+            break;
+            
+        case ADC_Data_33:
+            return IEC2bits.ADCD33IE;
+            break;
+            
+        case ADC_Data_34:
+            return IEC2bits.ADCD34IE;
+            break;
+//            
 //        case ADC_Data_35:
 //            return IEC2bits.ADCD35IE;
 //            break;
@@ -1311,10 +1311,10 @@ uint8_t getInterruptEnable(interrupt_source_t input_interrupt) {
 //            return IEC3bits.ADCD42IE;
 //            break;
 //            
-//        case ADC_Data_43:
-//            return IEC3bits.ADCD43IE;
-//            break;
-//            
+        case ADC_Data_43:
+            return IEC3bits.ADCD43IE;
+            break;
+            
         case ADC_Data_44:
             return IEC3bits.ADCD44IE;
             break;
@@ -2062,70 +2062,70 @@ void setInterruptFlag(interrupt_source_t input_interrupt, uint8_t input_state) {
             IFS2bits.ADCD18IF = input_state;
             break;
             
-//        case ADC_Data_19:
-//            IFS2bits.ADCD19IF = input_state;
-//            break;
-//            
-//        case ADC_Data_20:
-//            IFS2bits.ADCD20IF = input_state;
-//            break;
-//            
-//        case ADC_Data_21:
-//            IFS2bits.ADCD21IF = input_state;
-//            break;
-//            
-//        case ADC_Data_22:
-//            IFS2bits.ADCD22IF = input_state;
-//            break;
-//            
-//        case ADC_Data_23:
-//            IFS2bits.ADCD23IF = input_state;
-//            break;
-//            
-//        case ADC_Data_24:
-//            IFS2bits.ADCD24IF = input_state;
-//            break;
-//            
-//        case ADC_Data_25:
-//            IFS2bits.ADCD25IF = input_state;
-//            break;
-//            
-//        case ADC_Data_26:
-//            IFS2bits.ADCD26IF = input_state;
-//            break;
-//            
-//        case ADC_Data_27:
-//            IFS2bits.ADCD27IF = input_state;
-//            break;
-//            
-//        case ADC_Data_28:
-//            IFS2bits.ADCD28IF = input_state;
-//            break;
-//            
-//        case ADC_Data_29:
-//            IFS2bits.ADCD29IF = input_state;
-//            break;
-//            
-//        case ADC_Data_30:
-//            IFS2bits.ADCD30IF = input_state;
-//            break;
-//            
-//        case ADC_Data_31:
-//            IFS2bits.ADCD31IF = input_state;
-//            break;
-//            
-//        case ADC_Data_32:
-//            IFS2bits.ADCD32IF = input_state;
-//            break;
-//            
-//        case ADC_Data_33:
-//            IFS2bits.ADCD33IF = input_state;
-//            break;
-//            
-//        case ADC_Data_34:
-//            IFS2bits.ADCD34IF = input_state;
-//            break;
+        case ADC_Data_19:
+            IFS2bits.ADCD19IF = input_state;
+            break;
             
+        case ADC_Data_20:
+            IFS2bits.ADCD20IF = input_state;
+            break;
+            
+        case ADC_Data_21:
+            IFS2bits.ADCD21IF = input_state;
+            break;
+            
+        case ADC_Data_22:
+            IFS2bits.ADCD22IF = input_state;
+            break;
+            
+        case ADC_Data_23:
+            IFS2bits.ADCD23IF = input_state;
+            break;
+            
+        case ADC_Data_24:
+            IFS2bits.ADCD24IF = input_state;
+            break;
+            
+        case ADC_Data_25:
+            IFS2bits.ADCD25IF = input_state;
+            break;
+            
+        case ADC_Data_26:
+            IFS2bits.ADCD26IF = input_state;
+            break;
+            
+        case ADC_Data_27:
+            IFS2bits.ADCD27IF = input_state;
+            break;
+            
+        case ADC_Data_28:
+            IFS2bits.ADCD28IF = input_state;
+            break;
+            
+        case ADC_Data_29:
+            IFS2bits.ADCD29IF = input_state;
+            break;
+            
+        case ADC_Data_30:
+            IFS2bits.ADCD30IF = input_state;
+            break;
+            
+        case ADC_Data_31:
+            IFS2bits.ADCD31IF = input_state;
+            break;
+            
+        case ADC_Data_32:
+            IFS2bits.ADCD32IF = input_state;
+            break;
+            
+        case ADC_Data_33:
+            IFS2bits.ADCD33IF = input_state;
+            break;
+            
+        case ADC_Data_34:
+            IFS2bits.ADCD34IF = input_state;
+            break;
+//            
 //        case ADC_Data_35:
 //            IFS2bits.ADCD35IF = input_state;
 //            break;
@@ -2902,70 +2902,70 @@ uint8_t getInterruptFlag(interrupt_source_t input_interrupt) {
             return IFS2bits.ADCD18IF;
             break;
             
-//        case ADC_Data_19:
-//            return IFS2bits.ADCD19IF;
-//            break;
-//            
-//        case ADC_Data_20:
-//            return IFS2bits.ADCD20IF;
-//            break;
-//            
-//        case ADC_Data_21:
-//            return IFS2bits.ADCD21IF;
-//            break;
-//            
-//        case ADC_Data_22:
-//            return IFS2bits.ADCD22IF;
-//            break;
-//            
-//        case ADC_Data_23:
-//            return IFS2bits.ADCD23IF;
-//            break;
-//            
-//        case ADC_Data_24:
-//            return IFS2bits.ADCD24IF;
-//            break;
-//            
-//        case ADC_Data_25:
-//            return IFS2bits.ADCD25IF;
-//            break;
-//            
-//        case ADC_Data_26:
-//            return IFS2bits.ADCD26IF;
-//            break;
-//            
-//        case ADC_Data_27:
-//            return IFS2bits.ADCD27IF;
-//            break;
-//            
-//        case ADC_Data_28:
-//            return IFS2bits.ADCD28IF;
-//            break;
-//            
-//        case ADC_Data_29:
-//            return IFS2bits.ADCD29IF;
-//            break;
-//            
-//        case ADC_Data_30:
-//            return IFS2bits.ADCD30IF;
-//            break;
-//            
-//        case ADC_Data_31:
-//            return IFS2bits.ADCD31IF;
-//            break;
-//            
-//        case ADC_Data_32:
-//            return IFS2bits.ADCD32IF;
-//            break;
-//            
-//        case ADC_Data_33:
-//            return IFS2bits.ADCD33IF;
-//            break;
-//            
-//        case ADC_Data_34:
-//            return IFS2bits.ADCD34IF;
-//            break;
+        case ADC_Data_19:
+            return IFS2bits.ADCD19IF;
+            break;
             
+        case ADC_Data_20:
+            return IFS2bits.ADCD20IF;
+            break;
+            
+        case ADC_Data_21:
+            return IFS2bits.ADCD21IF;
+            break;
+            
+        case ADC_Data_22:
+            return IFS2bits.ADCD22IF;
+            break;
+            
+        case ADC_Data_23:
+            return IFS2bits.ADCD23IF;
+            break;
+            
+        case ADC_Data_24:
+            return IFS2bits.ADCD24IF;
+            break;
+            
+        case ADC_Data_25:
+            return IFS2bits.ADCD25IF;
+            break;
+            
+        case ADC_Data_26:
+            return IFS2bits.ADCD26IF;
+            break;
+            
+        case ADC_Data_27:
+            return IFS2bits.ADCD27IF;
+            break;
+            
+        case ADC_Data_28:
+            return IFS2bits.ADCD28IF;
+            break;
+            
+        case ADC_Data_29:
+            return IFS2bits.ADCD29IF;
+            break;
+            
+        case ADC_Data_30:
+            return IFS2bits.ADCD30IF;
+            break;
+            
+        case ADC_Data_31:
+            return IFS2bits.ADCD31IF;
+            break;
+            
+        case ADC_Data_32:
+            return IFS2bits.ADCD32IF;
+            break;
+            
+        case ADC_Data_33:
+            return IFS2bits.ADCD33IF;
+            break;
+            
+        case ADC_Data_34:
+            return IFS2bits.ADCD34IF;
+            break;
+//            
 //        case ADC_Data_35:
 //            return IFS2bits.ADCD35IF;
 //            break;
@@ -3748,70 +3748,70 @@ void setInterruptPriority(interrupt_source_t input_interrupt, uint8_t input_prio
             IPC19bits.ADCD18IP = input_priority;
             break;
             
-//        case ADC_Data_19:
-//            IPC19bits.ADCD19IP = input_priority;
-//            break;
+        case ADC_Data_19:
+            IPC19bits.ADCD19IP = input_priority;
+            break;
+            
+        case ADC_Data_20:
+            IPC19bits.ADCD20IP = input_priority;
+            break;
+            
+        case ADC_Data_21:
+            IPC20bits.ADCD21IP = input_priority;
+            break;
+            
+        case ADC_Data_22:
+            IPC20bits.ADCD22IP = input_priority;
+            break;
+            
+        case ADC_Data_23:
+            IPC20bits.ADCD23IP = input_priority;
+            break;
+            
+        case ADC_Data_24:
+            IPC20bits.ADCD24IP = input_priority;
+            break;
+            
+        case ADC_Data_25:
+            IPC21bits.ADCD25IP = input_priority;
+            break;
+            
+        case ADC_Data_26:
+            IPC21bits.ADCD26IP = input_priority;
+            break;
+            
+        case ADC_Data_27:
+            IPC21bits.ADCD27IP = input_priority;
+            break;
+            
+        case ADC_Data_28:
+            IPC21bits.ADCD28IP = input_priority;
+            break;
+            
+        case ADC_Data_29:
+            IPC22bits.ADCD29IP = input_priority;
+            break;
+            
+        case ADC_Data_30:
+            IPC22bits.ADCD30IP = input_priority;
+            break;
+            
+        case ADC_Data_31:
+            IPC22bits.ADCD31IP = input_priority;
+            break;
+            
+        case ADC_Data_32:
+            IPC22bits.ADCD32IP = input_priority;
+            break;
+            
+        case ADC_Data_33:
+            IPC23bits.ADCD33IP = input_priority;
+            break;
+            
+        case ADC_Data_34:
+            IPC23bits.ADCD34IP = input_priority;
+            break;
 //            
-//        case ADC_Data_20:
-//            IPC19bits.ADCD20IP = input_priority;
-//            break;
-//            
-//        case ADC_Data_21:
-//            IPC20bits.ADCD21IP = input_priority;
-//            break;
-            
-//        case ADC_Data_22:
-//            IPC20bits.ADCD22IP = input_priority;
-//            break;
-            
-//        case ADC_Data_23:
-//            IPC20bits.ADCD23IP = input_priority;
-//            break;
-            
-//        case ADC_Data_24:
-//            IPC20bits.ADCD24IP = input_priority;
-//            break;
-            
-//        case ADC_Data_25:
-//            IPC21bits.ADCD25IP = input_priority;
-//            break;
-            
-//        case ADC_Data_26:
-//            IPC21bits.ADCD26IP = input_priority;
-//            break;
-            
-//        case ADC_Data_27:
-//            IPC21bits.ADCD27IP = input_priority;
-//            break;
-            
-//        case ADC_Data_28:
-//            IPC21bits.ADCD28IP = input_priority;
-//            break;
-            
-//        case ADC_Data_29:
-//            IPC22bits.ADCD29IP = input_priority;
-//            break;
-            
-//        case ADC_Data_30:
-//            IPC22bits.ADCD30IP = input_priority;
-//            break;
-            
-//        case ADC_Data_31:
-//            IPC22bits.ADCD31IP = input_priority;
-//            break;
-            
-//        case ADC_Data_32:
-//            IPC22bits.ADCD32IP = input_priority;
-//            break;
-            
-//        case ADC_Data_33:
-//            IPC23bits.ADCD33IP = input_priority;
-//            break;
-            
-//        case ADC_Data_34:
-//            IPC23bits.ADCD34IP = input_priority;
-//            break;
-            
 //        case ADC_Data_35:
 //            IPC23bits.ADCD35IP = input_priority;
 //            break;
@@ -3827,11 +3827,11 @@ void setInterruptPriority(interrupt_source_t input_interrupt, uint8_t input_prio
 //        case ADC_Data_38:
 //            IPC24bits.ADCD38IP = input_priority;
 //            break;
-            
+//            
 //        case ADC_Data_39:
 //            IPC24bits.ADCD39IP = input_priority;
 //            break;
-            
+//            
 //        case ADC_Data_40:
 //            IPC24bits.ADCD40IP = input_priority;
 //            break;
@@ -3843,7 +3843,7 @@ void setInterruptPriority(interrupt_source_t input_interrupt, uint8_t input_prio
 //        case ADC_Data_42:
 //            IPC25bits.ADCD42IP = input_priority;
 //            break;
-            
+//            
         case ADC_Data_43:
             IPC25bits.ADCD43IP = input_priority;
             break;
@@ -4593,70 +4593,70 @@ void setInterruptSubpriority(interrupt_source_t input_interrupt, uint8_t input_s
             IPC19bits.ADCD18IS = input_subpriority;
             break;
             
-//        case ADC_Data_19:
-//            IPC19bits.ADCD19IS = input_subpriority;
-//            break;
+        case ADC_Data_19:
+            IPC19bits.ADCD19IS = input_subpriority;
+            break;
+            
+        case ADC_Data_20:
+            IPC19bits.ADCD20IS = input_subpriority;
+            break;
+            
+        case ADC_Data_21:
+            IPC20bits.ADCD21IS = input_subpriority;
+            break;
+            
+        case ADC_Data_22:
+            IPC20bits.ADCD22IS = input_subpriority;
+            break;
+            
+        case ADC_Data_23:
+            IPC20bits.ADCD23IS = input_subpriority;
+            break;
+            
+        case ADC_Data_24:
+            IPC20bits.ADCD24IS = input_subpriority;
+            break;
+            
+        case ADC_Data_25:
+            IPC21bits.ADCD25IS = input_subpriority;
+            break;
+            
+        case ADC_Data_26:
+            IPC21bits.ADCD26IS = input_subpriority;
+            break;
+            
+        case ADC_Data_27:
+            IPC21bits.ADCD27IS = input_subpriority;
+            break;
+            
+        case ADC_Data_28:
+            IPC21bits.ADCD28IS = input_subpriority;
+            break;
+            
+        case ADC_Data_29:
+            IPC22bits.ADCD29IS = input_subpriority;
+            break;
+            
+        case ADC_Data_30:
+            IPC22bits.ADCD30IS = input_subpriority;
+            break;
+            
+        case ADC_Data_31:
+            IPC22bits.ADCD31IS = input_subpriority;
+            break;
+            
+        case ADC_Data_32:
+            IPC22bits.ADCD32IS = input_subpriority;
+            break;
+            
+        case ADC_Data_33:
+            IPC23bits.ADCD33IS = input_subpriority;
+            break;
+            
+        case ADC_Data_34:
+            IPC23bits.ADCD34IS = input_subpriority;
+            break;
 //            
-//        case ADC_Data_20:
-//            IPC19bits.ADCD20IS = input_subpriority;
-//            break;
-//            
-//        case ADC_Data_21:
-//            IPC20bits.ADCD21IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_22:
-//            IPC20bits.ADCD22IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_23:
-//            IPC20bits.ADCD23IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_24:
-//            IPC20bits.ADCD24IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_25:
-//            IPC21bits.ADCD25IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_26:
-//            IPC21bits.ADCD26IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_27:
-//            IPC21bits.ADCD27IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_28:
-//            IPC21bits.ADCD28IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_29:
-//            IPC22bits.ADCD29IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_30:
-//            IPC22bits.ADCD30IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_31:
-//            IPC22bits.ADCD31IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_32:
-//            IPC22bits.ADCD32IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_33:
-//            IPC23bits.ADCD33IS = input_subpriority;
-//            break;
-            
-//        case ADC_Data_34:
-//            IPC23bits.ADCD34IS = input_subpriority;
-//            break;
-            
 //        case ADC_Data_35:
 //            IPC23bits.ADCD35IS = input_subpriority;
 //            break;
@@ -4668,19 +4668,19 @@ void setInterruptSubpriority(interrupt_source_t input_interrupt, uint8_t input_s
 //        case ADC_Data_37:
 //            IPC24bits.ADCD37IS = input_subpriority;
 //            break;
-            
+//            
 //        case ADC_Data_38:
 //            IPC24bits.ADCD38IS = input_subpriority;
 //            break;
-            
+//            
 //        case ADC_Data_39:
 //            IPC24bits.ADCD39IS = input_subpriority;
 //            break;
-            
+//            
 //        case ADC_Data_40:
 //            IPC24bits.ADCD40IS = input_subpriority;
 //            break;
-            
+//            
 //        case ADC_Data_41:
 //            IPC25bits.ADCD41IS = input_subpriority;
 //            break;
@@ -5433,70 +5433,70 @@ uint8_t getInterruptPriority(interrupt_source_t input_interrupt) {
             return IPC19bits.ADCD18IP;
             break;
             
-//        case ADC_Data_19:
-//            return IPC19bits.ADCD19IP;
-//            break;
+        case ADC_Data_19:
+            return IPC19bits.ADCD19IP;
+            break;
+            
+        case ADC_Data_20:
+            return IPC19bits.ADCD20IP;
+            break;
+            
+        case ADC_Data_21:
+            return IPC20bits.ADCD21IP;
+            break;
+            
+        case ADC_Data_22:
+            return IPC20bits.ADCD22IP;
+            break;
+            
+        case ADC_Data_23:
+            return IPC20bits.ADCD23IP;
+            break;
+            
+        case ADC_Data_24:
+            return IPC20bits.ADCD24IP;
+            break;
+            
+        case ADC_Data_25:
+            return IPC21bits.ADCD25IP;
+            break;
+            
+        case ADC_Data_26:
+            return IPC21bits.ADCD26IP;
+            break;
+            
+        case ADC_Data_27:
+            return IPC21bits.ADCD27IP;
+            break;
+            
+        case ADC_Data_28:
+            return IPC21bits.ADCD28IP;
+            break;
+            
+        case ADC_Data_29:
+            return IPC22bits.ADCD29IP;
+            break;
+            
+        case ADC_Data_30:
+            return IPC22bits.ADCD30IP;
+            break;
+            
+        case ADC_Data_31:
+            return IPC22bits.ADCD31IP;
+            break;
+            
+        case ADC_Data_32:
+            return IPC22bits.ADCD32IP;
+            break;
+            
+        case ADC_Data_33:
+            return IPC23bits.ADCD33IP;
+            break;
+            
+        case ADC_Data_34:
+            return IPC23bits.ADCD34IP;
+            break;
 //            
-//        case ADC_Data_20:
-//            return IPC19bits.ADCD20IP;
-//            break;
-//            
-//        case ADC_Data_21:
-//            return IPC20bits.ADCD21IP;
-//            break;
-            
-//        case ADC_Data_22:
-//            return IPC20bits.ADCD22IP;
-//            break;
-            
-//        case ADC_Data_23:
-//            return IPC20bits.ADCD23IP;
-//            break;
-            
-//        case ADC_Data_24:
-//            return IPC20bits.ADCD24IP;
-//            break;
-            
-//        case ADC_Data_25:
-//            return IPC21bits.ADCD25IP;
-//            break;
-            
-//        case ADC_Data_26:
-//            return IPC21bits.ADCD26IP;
-//            break;
-            
-//        case ADC_Data_27:
-//            return IPC21bits.ADCD27IP;
-//            break;
-            
-//        case ADC_Data_28:
-//            return IPC21bits.ADCD28IP;
-//            break;
-            
-//        case ADC_Data_29:
-//            return IPC22bits.ADCD29IP;
-//            break;
-            
-//        case ADC_Data_30:
-//            return IPC22bits.ADCD30IP;
-//            break;
-            
-//        case ADC_Data_31:
-//            return IPC22bits.ADCD31IP;
-//            break;
-            
-//        case ADC_Data_32:
-//            return IPC22bits.ADCD32IP;
-//            break;
-            
-//        case ADC_Data_33:
-//            return IPC23bits.ADCD33IP;
-//            break;
-            
-//        case ADC_Data_34:
-//            return IPC23bits.ADCD34IP;
-//            break;
-            
 //        case ADC_Data_35:
 //            return IPC23bits.ADCD35IP;
 //            break;
@@ -5508,19 +5508,19 @@ uint8_t getInterruptPriority(interrupt_source_t input_interrupt) {
 //        case ADC_Data_37:
 //            return IPC24bits.ADCD37IP;
 //            break;
-            
+//            
 //        case ADC_Data_38:
 //            return IPC24bits.ADCD38IP;
 //            break;
-            
+//            
 //        case ADC_Data_39:
 //            return IPC24bits.ADCD39IP;
 //            break;
-            
+//            
 //        case ADC_Data_40:
 //            return IPC24bits.ADCD40IP;
 //            break;
-            
+//            
 //        case ADC_Data_41:
 //            return IPC25bits.ADCD41IP;
 //            break;
@@ -5528,7 +5528,7 @@ uint8_t getInterruptPriority(interrupt_source_t input_interrupt) {
 //        case ADC_Data_42:
 //            return IPC25bits.ADCD42IP;
 //            break;
-            
+//            
         case ADC_Data_43:
             return IPC25bits.ADCD43IP;
             break;
@@ -6273,70 +6273,70 @@ uint8_t getInterruptSubriority(interrupt_source_t input_interrupt) {
             return IPC19bits.ADCD18IS;
             break;
             
-//        case ADC_Data_19:
-//            return IPC19bits.ADCD19IS;
-//            break;
+        case ADC_Data_19:
+            return IPC19bits.ADCD19IS;
+            break;
+            
+        case ADC_Data_20:
+            return IPC19bits.ADCD20IS;
+            break;
+            
+        case ADC_Data_21:
+            return IPC20bits.ADCD21IS;
+            break;
+            
+        case ADC_Data_22:
+            return IPC20bits.ADCD22IS;
+            break;
+            
+        case ADC_Data_23:
+            return IPC20bits.ADCD23IS;
+            break;
+            
+        case ADC_Data_24:
+            return IPC20bits.ADCD24IS;
+            break;
+            
+        case ADC_Data_25:
+            return IPC21bits.ADCD25IS;
+            break;
+            
+        case ADC_Data_26:
+            return IPC21bits.ADCD26IS;
+            break;
+            
+        case ADC_Data_27:
+            return IPC21bits.ADCD27IS;
+            break;
+            
+        case ADC_Data_28:
+            return IPC21bits.ADCD28IS;
+            break;
+            
+        case ADC_Data_29:
+            return IPC22bits.ADCD29IS;
+            break;
+            
+        case ADC_Data_30:
+            return IPC22bits.ADCD30IS;
+            break;
+            
+        case ADC_Data_31:
+            return IPC22bits.ADCD31IS;
+            break;
+            
+        case ADC_Data_32:
+            return IPC22bits.ADCD32IS;
+            break;
+            
+        case ADC_Data_33:
+            return IPC23bits.ADCD33IS;
+            break;
+            
+        case ADC_Data_34:
+            return IPC23bits.ADCD34IS;
+            break;
 //            
-//        case ADC_Data_20:
-//            return IPC19bits.ADCD20IS;
-//            break;
-//            
-//        case ADC_Data_21:
-//            return IPC20bits.ADCD21IS;
-//            break;
-            
-//        case ADC_Data_22:
-//            return IPC20bits.ADCD22IS;
-//            break;
-            
-//        case ADC_Data_23:
-//            return IPC20bits.ADCD23IS;
-//            break;
-            
-//        case ADC_Data_24:
-//            return IPC20bits.ADCD24IS;
-//            break;
-            
-//        case ADC_Data_25:
-//            return IPC21bits.ADCD25IS;
-//            break;
-            
-//        case ADC_Data_26:
-//            return IPC21bits.ADCD26IS;
-//            break;
-            
-//        case ADC_Data_27:
-//            return IPC21bits.ADCD27IS;
-//            break;
-            
-//        case ADC_Data_28:
-//            return IPC21bits.ADCD28IS;
-//            break;
-            
-//        case ADC_Data_29:
-//            return IPC22bits.ADCD29IS;
-//            break;
-            
-//        case ADC_Data_30:
-//            return IPC22bits.ADCD30IS;
-//            break;
-            
-//        case ADC_Data_31:
-//            return IPC22bits.ADCD31IS;
-//            break;
-            
-//        case ADC_Data_32:
-//            return IPC22bits.ADCD32IS;
-//            break;
-            
-//        case ADC_Data_33:
-//            return IPC23bits.ADCD33IS;
-//            break;
-            
-//        case ADC_Data_34:
-//            return IPC23bits.ADCD34IS;
-//            break;
-            
 //        case ADC_Data_35:
 //            return IPC23bits.ADCD35IS;
 //            break;
@@ -6348,19 +6348,19 @@ uint8_t getInterruptSubriority(interrupt_source_t input_interrupt) {
 //        case ADC_Data_37:
 //            return IPC24bits.ADCD37IS;
 //            break;
-            
+//            
 //        case ADC_Data_38:
 //            return IPC24bits.ADCD38IS;
 //            break;
-            
+//            
 //        case ADC_Data_39:
 //            return IPC24bits.ADCD39IS;
 //            break;
-            
+//            
 //        case ADC_Data_40:
 //            return IPC24bits.ADCD40IS;
 //            break;
-            
+//            
 //        case ADC_Data_41:
 //            return IPC25bits.ADCD41IS;
 //            break;
@@ -6368,7 +6368,7 @@ uint8_t getInterruptSubriority(interrupt_source_t input_interrupt) {
 //        case ADC_Data_42:
 //            return IPC25bits.ADCD42IS;
 //            break;
-            
+//            
         case ADC_Data_43:
             return IPC25bits.ADCD43IS;
             break;
