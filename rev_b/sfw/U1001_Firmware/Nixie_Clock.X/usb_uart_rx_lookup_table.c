@@ -25,8 +25,7 @@
 #include "misc_i2c_devices.h"
 #include "power_monitors.h"
 #include "temperature_sensors.h"
-#warning "add back these includes"
-//#include "pgood_monitor.h"
+#include "pgood_monitor.h"
 #include "rtcc.h"
 
 usb_uart_command_function_t helpCommandFunction(char * input_str) {
@@ -261,7 +260,7 @@ usb_uart_command_function_t platformStatusCommand(char * input_str) {
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
     printf("Platform Revision: %s\r\n", PLATFORM_REVISION_STR);
     
-    #warning "fix this" //printPGOODStatus();
+    printPGOODStatus();
 
 
     if (ETC_HARDSTRAP_PIN == LOW) {

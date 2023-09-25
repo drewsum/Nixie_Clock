@@ -42,7 +42,7 @@ volatile __attribute__((coherent)) struct telemetry_s {
     double adc_vref_voltage;
     double backup_rtc_temperature;
     double backup_battery_voltage;
-    double pos90_midrail_voltage;
+    double pos90_termination_voltage;
     
 } telemetry;
 

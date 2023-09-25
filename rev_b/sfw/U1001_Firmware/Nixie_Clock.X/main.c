@@ -29,7 +29,7 @@
 #include "power_saving.h"
 #include "telemetry.h"
 //#include "capacitive_pushbuttons.h"
-//#include "pgood_monitor.h"
+#include "pgood_monitor.h"
 #include "pin_macros.h"
 #include "gpio_setup.h"
 

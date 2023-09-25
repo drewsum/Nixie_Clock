@@ -7,6 +7,7 @@
 
 #include "terminal_control.h"
 #include "pin_macros.h"
+#include "pgood_monitor.h"
 
 // This prints all telemetry data in an easily digested format
 void printCurrentTelemetry(void) {
@@ -42,12 +43,12 @@ void printCurrentTelemetry(void) {
     printf("\t+180V Power Supply:\033[K\r\n");
     terminalTextAttributes(CYAN_COLOR, BLACK_COLOR, NORMAL_FONT);
     printf("\t\tVout: %.3fV"
-            "\tMid-Rail Voltage (POS90): %.3fV"
+            "\t+90V Termination Voltage: %.3fV"
            "\tIout: %.3fmA"
            "\tPout: %.3fW\033[K\r\n"
            "\t\tTemp: %.3fC\033[K\r\n\033[K\r\n",
             telemetry.pos180.voltage,
-            telemetry.pos90_midrail_voltage,
+            telemetry.pos90_termination_voltage,
             telemetry.pos180.current * 1000.0,
             (telemetry.pos180.voltage * telemetry.pos180.current),
             telemetry.pos180.temperature); 
@@ -61,8 +62,13 @@ void printCurrentTelemetry(void) {
     printf("\t\tAmbient Temperature: %.3fC\033[K\r\n", telemetry.ambient_temperature);
     if (RTC_HARDSTRAP_PIN == LOW){
         printf("\t\tBackup RTC Die Temperature: %.3fC\033[K\r\n", telemetry.backup_rtc_temperature);
-        printf("\t\tBackup Battery Voltage: %.3fV\033[K\r\n", telemetry.backup_battery_voltage);
+        printf("\t\tBackup Battery Voltage: %.3fV\033[K\r\n\r\n", telemetry.backup_battery_voltage);
     }
+    
+    // print out state of PGOOD pins
+    printPGOODStatus();
+    
+    printf("\r\n");
     
     terminalTextAttributesReset();
 

@@ -86,7 +86,7 @@ void __ISR(_ADC_DATA19_VECTOR, IPL1SRS) ADCData19ISR(void) {
     // check to see if data is actually ready
     if (ADCDSTAT1bits.ARDY19) {
         // copy ADC conversion result into telemetry
-        telemetry.pos90_midrail_voltage = ((double) ADCDATA19) * ADC_VOLTS_PER_LSB * adc_cal_gain * POS90_ADC_GAIN;
+        telemetry.pos90_termination_voltage = ((double) ADCDATA19) * ADC_VOLTS_PER_LSB * adc_cal_gain * POS90_ADC_GAIN;
         
     }
     

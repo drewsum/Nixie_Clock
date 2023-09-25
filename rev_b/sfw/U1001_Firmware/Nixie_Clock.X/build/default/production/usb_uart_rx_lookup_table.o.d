@@ -6,7 +6,7 @@ build/default/production/usb_uart_rx_lookup_table.o: \
  heartbeat_timer.h pin_macros.h telemetry.h adc.h adc_channels.h \
  misc_i2c_devices.h plib_i2c.h plib_i2c_master.h ds1683_ETC.h \
  ds3231_rtc.h power_monitors.h ina219_power_monitor.h \
- temperature_sensors.h mcp9804_temp_sensor.h rtcc.h
+ temperature_sensors.h mcp9804_temp_sensor.h pgood_monitor.h rtcc.h
 
 usb_uart_rx_lookup_table.h:
 
@@ -61,5 +61,7 @@ ina219_power_monitor.h:
 temperature_sensors.h:
 
 mcp9804_temp_sensor.h:
+
+pgood_monitor.h:
 
 rtcc.h:
