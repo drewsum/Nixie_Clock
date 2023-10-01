@@ -248,7 +248,7 @@ void main(void) {
     
     #warning "make this conditional on display detect"
     // enable 
-    IO_LEVEL_SHIFT_ENABLE_PIN = LOW;
+    IO_LEVEL_SHIFT_ENABLE_PIN = HIGH;
     printf("    Display IO Signals Enabled\r\n");
     while(usbUartCheckIfBusy());
     
@@ -258,9 +258,10 @@ void main(void) {
     printf("    IN12 Carrier GPIO Expander Initialized\r\n");
     while(usbUartCheckIfBusy());
     
+    #warning "make this better at startup"
     IN12BacklightInitialize();
-    IN12BacklightSetBrightness(255);
-    IN12BacklightSetUniformColor(255, 255, 255);
+    //IN12BacklightSetBrightness(128);
+    //IN12BacklightSetUniformColor(0, 0, 255);
     printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
     while(usbUartCheckIfBusy());
     

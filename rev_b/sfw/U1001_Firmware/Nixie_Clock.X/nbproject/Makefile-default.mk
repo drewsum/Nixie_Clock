@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=adc.c adc_channels.c heartbeat_services.c power_saving.c telemetry.c pgood_monitor.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c watchdog_timer.c rtcc.c gpio_setup.c ds1683_ETC.c ds3231_rtc.c ina219_power_monitor.c mcp9804_temp_sensor.c misc_i2c_devices.c plib_i2c.c power_monitors.c temperature_sensors.c usb_uart.c terminal_control.c usb_uart_rx_lookup_table.c main.c lp5009_led_driver.c in12_i2c.c tca9555_io_expander.c
+SOURCEFILES_QUOTED_IF_SPACED=adc.c adc_channels.c in12_i2c.c heartbeat_services.c power_saving.c telemetry.c pgood_monitor.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c watchdog_timer.c rtcc.c gpio_setup.c ds1683_ETC.c ds3231_rtc.c ina219_power_monitor.c mcp9804_temp_sensor.c lp5009_led_driver.c tca9555_io_expander.c misc_i2c_devices.c plib_i2c.c power_monitors.c temperature_sensors.c usb_uart.c terminal_control.c usb_uart_rx_lookup_table.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/adc_channels.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/telemetry.o ${OBJECTDIR}/pgood_monitor.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/main.o ${OBJECTDIR}/lp5009_led_driver.o ${OBJECTDIR}/in12_i2c.o ${OBJECTDIR}/tca9555_io_expander.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/adc_channels.o.d ${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/telemetry.o.d ${OBJECTDIR}/pgood_monitor.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/ds1683_ETC.o.d ${OBJECTDIR}/ds3231_rtc.o.d ${OBJECTDIR}/ina219_power_monitor.o.d ${OBJECTDIR}/mcp9804_temp_sensor.o.d ${OBJECTDIR}/misc_i2c_devices.o.d ${OBJECTDIR}/plib_i2c.o.d ${OBJECTDIR}/power_monitors.o.d ${OBJECTDIR}/temperature_sensors.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/lp5009_led_driver.o.d ${OBJECTDIR}/in12_i2c.o.d ${OBJECTDIR}/tca9555_io_expander.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc.o ${OBJECTDIR}/adc_channels.o ${OBJECTDIR}/in12_i2c.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/telemetry.o ${OBJECTDIR}/pgood_monitor.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/lp5009_led_driver.o ${OBJECTDIR}/tca9555_io_expander.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/adc.o.d ${OBJECTDIR}/adc_channels.o.d ${OBJECTDIR}/in12_i2c.o.d ${OBJECTDIR}/heartbeat_services.o.d ${OBJECTDIR}/power_saving.o.d ${OBJECTDIR}/telemetry.o.d ${OBJECTDIR}/pgood_monitor.o.d ${OBJECTDIR}/device_control.o.d ${OBJECTDIR}/cause_of_reset.o.d ${OBJECTDIR}/32mz_interrupt_control.o.d ${OBJECTDIR}/error_handler.o.d ${OBJECTDIR}/heartbeat_timer.o.d ${OBJECTDIR}/prefetch.o.d ${OBJECTDIR}/watchdog_timer.o.d ${OBJECTDIR}/rtcc.o.d ${OBJECTDIR}/gpio_setup.o.d ${OBJECTDIR}/ds1683_ETC.o.d ${OBJECTDIR}/ds3231_rtc.o.d ${OBJECTDIR}/ina219_power_monitor.o.d ${OBJECTDIR}/mcp9804_temp_sensor.o.d ${OBJECTDIR}/lp5009_led_driver.o.d ${OBJECTDIR}/tca9555_io_expander.o.d ${OBJECTDIR}/misc_i2c_devices.o.d ${OBJECTDIR}/plib_i2c.o.d ${OBJECTDIR}/power_monitors.o.d ${OBJECTDIR}/temperature_sensors.o.d ${OBJECTDIR}/usb_uart.o.d ${OBJECTDIR}/terminal_control.o.d ${OBJECTDIR}/usb_uart_rx_lookup_table.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/adc_channels.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/telemetry.o ${OBJECTDIR}/pgood_monitor.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/main.o ${OBJECTDIR}/lp5009_led_driver.o ${OBJECTDIR}/in12_i2c.o ${OBJECTDIR}/tca9555_io_expander.o
+OBJECTFILES=${OBJECTDIR}/adc.o ${OBJECTDIR}/adc_channels.o ${OBJECTDIR}/in12_i2c.o ${OBJECTDIR}/heartbeat_services.o ${OBJECTDIR}/power_saving.o ${OBJECTDIR}/telemetry.o ${OBJECTDIR}/pgood_monitor.o ${OBJECTDIR}/device_control.o ${OBJECTDIR}/cause_of_reset.o ${OBJECTDIR}/32mz_interrupt_control.o ${OBJECTDIR}/error_handler.o ${OBJECTDIR}/heartbeat_timer.o ${OBJECTDIR}/prefetch.o ${OBJECTDIR}/watchdog_timer.o ${OBJECTDIR}/rtcc.o ${OBJECTDIR}/gpio_setup.o ${OBJECTDIR}/ds1683_ETC.o ${OBJECTDIR}/ds3231_rtc.o ${OBJECTDIR}/ina219_power_monitor.o ${OBJECTDIR}/mcp9804_temp_sensor.o ${OBJECTDIR}/lp5009_led_driver.o ${OBJECTDIR}/tca9555_io_expander.o ${OBJECTDIR}/misc_i2c_devices.o ${OBJECTDIR}/plib_i2c.o ${OBJECTDIR}/power_monitors.o ${OBJECTDIR}/temperature_sensors.o ${OBJECTDIR}/usb_uart.o ${OBJECTDIR}/terminal_control.o ${OBJECTDIR}/usb_uart_rx_lookup_table.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=adc.c adc_channels.c heartbeat_services.c power_saving.c telemetry.c pgood_monitor.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c watchdog_timer.c rtcc.c gpio_setup.c ds1683_ETC.c ds3231_rtc.c ina219_power_monitor.c mcp9804_temp_sensor.c misc_i2c_devices.c plib_i2c.c power_monitors.c temperature_sensors.c usb_uart.c terminal_control.c usb_uart_rx_lookup_table.c main.c lp5009_led_driver.c in12_i2c.c tca9555_io_expander.c
+SOURCEFILES=adc.c adc_channels.c in12_i2c.c heartbeat_services.c power_saving.c telemetry.c pgood_monitor.c device_control.c cause_of_reset.c 32mz_interrupt_control.c error_handler.c heartbeat_timer.c prefetch.c watchdog_timer.c rtcc.c gpio_setup.c ds1683_ETC.c ds3231_rtc.c ina219_power_monitor.c mcp9804_temp_sensor.c lp5009_led_driver.c tca9555_io_expander.c misc_i2c_devices.c plib_i2c.c power_monitors.c temperature_sensors.c usb_uart.c terminal_control.c usb_uart_rx_lookup_table.c main.c
 
 
 
@@ -112,6 +112,12 @@ ${OBJECTDIR}/adc_channels.o: adc_channels.c  .generated_files/flags/default/e1a1
 	@${RM} ${OBJECTDIR}/adc_channels.o.d 
 	@${RM} ${OBJECTDIR}/adc_channels.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/adc_channels.o.d" -o ${OBJECTDIR}/adc_channels.o adc_channels.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/in12_i2c.o: in12_i2c.c  .generated_files/flags/default/79a9f3b9a26e32a14fa46450687fc8f81f2ccf7f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/in12_i2c.o.d 
+	@${RM} ${OBJECTDIR}/in12_i2c.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/in12_i2c.o.d" -o ${OBJECTDIR}/in12_i2c.o in12_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/heartbeat_services.o: heartbeat_services.c  .generated_files/flags/default/d6ccf72937f67aace0b30313f036f89cbb73381 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -215,6 +221,18 @@ ${OBJECTDIR}/mcp9804_temp_sensor.o: mcp9804_temp_sensor.c  .generated_files/flag
 	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/mcp9804_temp_sensor.o.d" -o ${OBJECTDIR}/mcp9804_temp_sensor.o mcp9804_temp_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/lp5009_led_driver.o: lp5009_led_driver.c  .generated_files/flags/default/76b61afa33408fddd3ecb8cb26cfbd70eed39559 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lp5009_led_driver.o.d 
+	@${RM} ${OBJECTDIR}/lp5009_led_driver.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/lp5009_led_driver.o.d" -o ${OBJECTDIR}/lp5009_led_driver.o lp5009_led_driver.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/tca9555_io_expander.o: tca9555_io_expander.c  .generated_files/flags/default/2bfba5c85a371fd75998d6f8b14c207e872e0bed .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tca9555_io_expander.o.d 
+	@${RM} ${OBJECTDIR}/tca9555_io_expander.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/tca9555_io_expander.o.d" -o ${OBJECTDIR}/tca9555_io_expander.o tca9555_io_expander.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
 ${OBJECTDIR}/misc_i2c_devices.o: misc_i2c_devices.c  .generated_files/flags/default/eb4f7a93823af42034382f5c07adabb1f1da4cc8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/misc_i2c_devices.o.d 
@@ -263,24 +281,6 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/1f5d64e92bb07ce5fd3b
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
-${OBJECTDIR}/lp5009_led_driver.o: lp5009_led_driver.c  .generated_files/flags/default/76b61afa33408fddd3ecb8cb26cfbd70eed39559 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lp5009_led_driver.o.d 
-	@${RM} ${OBJECTDIR}/lp5009_led_driver.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/lp5009_led_driver.o.d" -o ${OBJECTDIR}/lp5009_led_driver.o lp5009_led_driver.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/in12_i2c.o: in12_i2c.c  .generated_files/flags/default/79a9f3b9a26e32a14fa46450687fc8f81f2ccf7f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/in12_i2c.o.d 
-	@${RM} ${OBJECTDIR}/in12_i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/in12_i2c.o.d" -o ${OBJECTDIR}/in12_i2c.o in12_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/tca9555_io_expander.o: tca9555_io_expander.c  .generated_files/flags/default/2bfba5c85a371fd75998d6f8b14c207e872e0bed .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tca9555_io_expander.o.d 
-	@${RM} ${OBJECTDIR}/tca9555_io_expander.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/tca9555_io_expander.o.d" -o ${OBJECTDIR}/tca9555_io_expander.o tca9555_io_expander.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
 else
 ${OBJECTDIR}/adc.o: adc.c  .generated_files/flags/default/d5e27906c7d41a350ef387dfaa1eb11d94faae73 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -293,6 +293,12 @@ ${OBJECTDIR}/adc_channels.o: adc_channels.c  .generated_files/flags/default/169a
 	@${RM} ${OBJECTDIR}/adc_channels.o.d 
 	@${RM} ${OBJECTDIR}/adc_channels.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/adc_channels.o.d" -o ${OBJECTDIR}/adc_channels.o adc_channels.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/in12_i2c.o: in12_i2c.c  .generated_files/flags/default/8ad429afe902361d204b0facd58648cd9824e508 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/in12_i2c.o.d 
+	@${RM} ${OBJECTDIR}/in12_i2c.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/in12_i2c.o.d" -o ${OBJECTDIR}/in12_i2c.o in12_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
 ${OBJECTDIR}/heartbeat_services.o: heartbeat_services.c  .generated_files/flags/default/49b6ac161922d6ab90ba29bf87a6ef223af1f3d4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -396,6 +402,18 @@ ${OBJECTDIR}/mcp9804_temp_sensor.o: mcp9804_temp_sensor.c  .generated_files/flag
 	@${RM} ${OBJECTDIR}/mcp9804_temp_sensor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/mcp9804_temp_sensor.o.d" -o ${OBJECTDIR}/mcp9804_temp_sensor.o mcp9804_temp_sensor.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
+${OBJECTDIR}/lp5009_led_driver.o: lp5009_led_driver.c  .generated_files/flags/default/6ad3fdac1342d6c2b22db5f1d5a730a98e2e986e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/lp5009_led_driver.o.d 
+	@${RM} ${OBJECTDIR}/lp5009_led_driver.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/lp5009_led_driver.o.d" -o ${OBJECTDIR}/lp5009_led_driver.o lp5009_led_driver.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
+${OBJECTDIR}/tca9555_io_expander.o: tca9555_io_expander.c  .generated_files/flags/default/6fb8d14e4d6a29a27bb767fe4d584587477ba500 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/tca9555_io_expander.o.d 
+	@${RM} ${OBJECTDIR}/tca9555_io_expander.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/tca9555_io_expander.o.d" -o ${OBJECTDIR}/tca9555_io_expander.o tca9555_io_expander.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
+	
 ${OBJECTDIR}/misc_i2c_devices.o: misc_i2c_devices.c  .generated_files/flags/default/be7830671fa0486977fd8c17096c761df9f6cc0c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/misc_i2c_devices.o.d 
@@ -443,24 +461,6 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/292aa2d83e19e5879314
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/lp5009_led_driver.o: lp5009_led_driver.c  .generated_files/flags/default/6ad3fdac1342d6c2b22db5f1d5a730a98e2e986e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/lp5009_led_driver.o.d 
-	@${RM} ${OBJECTDIR}/lp5009_led_driver.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/lp5009_led_driver.o.d" -o ${OBJECTDIR}/lp5009_led_driver.o lp5009_led_driver.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/in12_i2c.o: in12_i2c.c  .generated_files/flags/default/8ad429afe902361d204b0facd58648cd9824e508 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/in12_i2c.o.d 
-	@${RM} ${OBJECTDIR}/in12_i2c.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/in12_i2c.o.d" -o ${OBJECTDIR}/in12_i2c.o in12_i2c.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
-	
-${OBJECTDIR}/tca9555_io_expander.o: tca9555_io_expander.c  .generated_files/flags/default/6fb8d14e4d6a29a27bb767fe4d584587477ba500 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/tca9555_io_expander.o.d 
-	@${RM} ${OBJECTDIR}/tca9555_io_expander.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common -MP -MMD -MF "${OBJECTDIR}/tca9555_io_expander.o.d" -o ${OBJECTDIR}/tca9555_io_expander.o tca9555_io_expander.c    -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -mdfp="${DFP_DIR}"  
 	
 endif
 
