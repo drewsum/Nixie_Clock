@@ -25,7 +25,7 @@
 // set this flag high to update the error LEDs the next loop through main()
 volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
 
-#define ERROR_HANDLER_NUM_FLAGS  25
+#define ERROR_HANDLER_NUM_FLAGS  29
 
 // Error handler structure
 // Follow the convention in XC32 user's guide section 8.6.2
@@ -61,6 +61,10 @@ volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
         uint8_t amb_temp;
         uint8_t ADC_reference_fault;
         uint8_t ADC_configuration_error;
+        uint8_t in12_backlight_led_driver_1;
+        uint8_t in12_backlight_led_driver_2;
+        uint8_t in12_backlight_led_driver_3;
+        uint8_t in12_gpio_expander;
         
     } flags;
 
@@ -95,7 +99,11 @@ const char *  error_handler_flag_names[] = {
     "POS180 Power Supply Temperature Sensor",
     "Ambient Temperature Sensor",
     "ADC Reference Fault",
-    "ADC Configuration Error"
+    "ADC Configuration Error",
+    "IN12 Backlight LED Driver 1",
+    "IN12 Backlight LED Driver 2",
+    "IN12 Backlight LED Driver 3",
+    "IN12 GPIO Expander"
             
 };
 

@@ -33,6 +33,9 @@
 #include "pin_macros.h"
 #include "gpio_setup.h"
 
+// display board specific code
+#include "in12_i2c.h"
+
 //// I2C
 #include "plib_i2c.h"
 #include "plib_i2c_master.h"
@@ -243,6 +246,25 @@ void main(void) {
     printf("    Hardware Random number Generator Initialized\r\n");
     while(usbUartCheckIfBusy());
     
+    #warning "make this conditional on display detect"
+    // enable 
+    IO_LEVEL_SHIFT_ENABLE_PIN = LOW;
+    printf("    Display IO Signals Enabled\r\n");
+    while(usbUartCheckIfBusy());
+    
+    
+    #warning "this is hardcoded now, make this all conditional on display board SPD"
+    IN12GPIOExpanderInitialize();
+    printf("    IN12 Carrier GPIO Expander Initialized\r\n");
+    while(usbUartCheckIfBusy());
+    
+    IN12BacklightInitialize();
+    IN12BacklightSetBrightness(255);
+    IN12BacklightSetUniformColor(255, 255, 255);
+    printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
+    while(usbUartCheckIfBusy());
+    
+    
     // Disable reset LED
     RESET_LED_PIN = LOW;
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
@@ -305,7 +327,7 @@ void main(void) {
         
         // check to see if a clock fail has occurred and latch it
         clockFailCheck();
-//        
+        
         // update error LEDs if needed
         if (update_error_leds_flag) updateErrorLEDs();
 //        

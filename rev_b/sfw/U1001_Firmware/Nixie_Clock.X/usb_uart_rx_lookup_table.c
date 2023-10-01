@@ -27,6 +27,7 @@
 #include "temperature_sensors.h"
 #include "pgood_monitor.h"
 #include "rtcc.h"
+#include "in12_i2c.h"
 
 usb_uart_command_function_t helpCommandFunction(char * input_str) {
 
@@ -292,6 +293,9 @@ usb_uart_command_function_t platformStatusCommand(char * input_str) {
     }
 
     miscI2CDevicesPrintStatus();
+    
+    #warning "eventually make this determined by installed carrier"
+    IN12I2CDevicesPrintStatus();
     
 }
 
