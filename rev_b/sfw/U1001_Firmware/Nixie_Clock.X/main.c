@@ -28,13 +28,13 @@
 #include "heartbeat_services.h"
 #include "power_saving.h"
 #include "telemetry.h"
-//#include "capacitive_pushbuttons.h"
+#include "carrier_spd.h"
 #include "pgood_monitor.h"
 #include "pin_macros.h"
 #include "gpio_setup.h"
 
 // display board specific code
-#include "in12_i2c.h"
+#include "in12_carrier.h"
 
 //// I2C
 #include "plib_i2c.h"
@@ -247,25 +247,45 @@ void main(void) {
     while(usbUartCheckIfBusy());
     
     #warning "make this conditional on display detect"
-    // enable 
-    IO_LEVEL_SHIFT_ENABLE_PIN = HIGH;
-    printf("    Display IO Signals Enabled\r\n");
-    while(usbUartCheckIfBusy());
+    // determine if display carrier is present
+    if (nDISPLAY_DETECT_PIN == LOW) {
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("    Display Carrier Detected\r\n");
+        while(usbUartCheckIfBusy());
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        
+        IO_LEVEL_SHIFT_ENABLE_PIN = HIGH;
+        printf("    Display Carrier I2C Signals Enabled\r\n");
+        while(usbUartCheckIfBusy());
+        
+        #warning "check display carrier SPD here, below lines are temporary"
+        CarrierSPDGetString();
+        carrier_spd.tube_type = "IN-12";
+        carrier_spd.board_rev = 'A';
+        carrier_spd.backlight_support = true;
+        carrier_spd.etc_support = true;
+        carrier_spd.pushbutton_support = true;
+        carrier_spd.menu_led_support = true;
+        carrier_spd.supports_seconds = true;
+        carrier_spd.supports_milliseconds = false;
+        carrier_spd.num_colons = 4;
+        carrier_spd.mfg_month = 10;
+        carrier_spd.mfg_day = 3;
+        carrier_spd.mfg_year = 2023;
+        
+        CarrierSPDPrintString();
+        while(usbUartCheckIfBusy());
+        IN12Initialize();
+        
+    }
     
-    
-    #warning "this is hardcoded now, make this all conditional on display board SPD"
-    IN12GPIOExpanderInitialize();
-    printf("    IN12 Carrier GPIO Expander Initialized\r\n");
-    while(usbUartCheckIfBusy());
-    
-    #warning "make this better at startup"
-    IN12BacklightInitialize();
-    //IN12BacklightSetBrightness(128);
-    //IN12BacklightSetUniformColor(0, 0, 255);
-    printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
-    while(usbUartCheckIfBusy());
-    
-    
+    else {
+        terminalTextAttributes(RED_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("    Display Carrier Not Detected\r\n");
+        while(usbUartCheckIfBusy());
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    }
+
     // Disable reset LED
     RESET_LED_PIN = LOW;
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
@@ -277,7 +297,6 @@ void main(void) {
     terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
     printf("\n\rType 'Help' for list of supported commands\n\r\n\r");
     terminalTextAttributesReset();
-
     
     while(true) {
         

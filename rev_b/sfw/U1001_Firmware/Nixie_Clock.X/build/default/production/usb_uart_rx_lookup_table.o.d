@@ -7,7 +7,7 @@ build/default/production/usb_uart_rx_lookup_table.o: \
  misc_i2c_devices.h plib_i2c.h plib_i2c_master.h ds1683_ETC.h \
  ds3231_rtc.h power_monitors.h ina219_power_monitor.h \
  temperature_sensors.h mcp9804_temp_sensor.h pgood_monitor.h rtcc.h \
- in12_i2c.h lp5009_led_driver.h tca9555_io_expander.h
+ in12_carrier.h lp5009_led_driver.h tca9555_io_expander.h
 
 usb_uart_rx_lookup_table.h:
 
@@ -67,7 +67,7 @@ pgood_monitor.h:
 
 rtcc.h:
 
-in12_i2c.h:
+in12_carrier.h:
 
 lp5009_led_driver.h:
 

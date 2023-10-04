@@ -9,8 +9,9 @@
         <itemPath>adc_channels.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Application" projectFiles="true">
-        <logicalFolder name="f1" displayName="IN12 Carrier" projectFiles="true">
-          <itemPath>in12_i2c.h</itemPath>
+        <logicalFolder name="f1" displayName="Carrier_Boards" projectFiles="true">
+          <itemPath>in12_carrier.h</itemPath>
+          <itemPath>carrier_spd.h</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.h</itemPath>
         <itemPath>power_saving.h</itemPath>
@@ -67,8 +68,9 @@
         <itemPath>adc_channels.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f5" displayName="Application" projectFiles="true">
-        <logicalFolder name="f1" displayName="IN12 Carrier" projectFiles="true">
-          <itemPath>in12_i2c.c</itemPath>
+        <logicalFolder name="f1" displayName="Carrier_Boards" projectFiles="true">
+          <itemPath>in12_carrier.c</itemPath>
+          <itemPath>carrier_spd.c</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.c</itemPath>
         <itemPath>power_saving.c</itemPath>
@@ -128,7 +130,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -426,7 +428,7 @@
         <property key="ptgProgramImage" value="true"/>
         <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
+                  value="toolpack.updateoptions.specifictoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
@@ -531,6 +533,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/drewm/OneDrive/Documents/KiCad Projects/Projects/Nixie_Clock/rev_b/sfw/U1001_Firmware/Nixie_Clock.X/debug/default/Nixie_Clock_ptg"/>
         <property key="programmerToGoImageName" value="Nixie_Clock_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -556,7 +560,7 @@
         <property key="ptgProgramImage" value="true"/>
         <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
+                  value="toolpack.updateoptions.specifictoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
