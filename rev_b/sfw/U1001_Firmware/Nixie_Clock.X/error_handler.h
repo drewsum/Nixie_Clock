@@ -25,7 +25,7 @@
 // set this flag high to update the error LEDs the next loop through main()
 volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
 
-#define ERROR_HANDLER_NUM_FLAGS  29
+#define ERROR_HANDLER_NUM_FLAGS  30
 
 // Error handler structure
 // Follow the convention in XC32 user's guide section 8.6.2
@@ -65,6 +65,7 @@ volatile __attribute__((coherent))  uint8_t update_error_leds_flag;
         uint8_t in12_backlight_led_driver_2;
         uint8_t in12_backlight_led_driver_3;
         uint8_t in12_gpio_expander;
+        uint8_t carrier_board_spd;
         
     } flags;
 
@@ -103,7 +104,8 @@ const char *  error_handler_flag_names[] = {
     "IN12 Backlight LED Driver 1",
     "IN12 Backlight LED Driver 2",
     "IN12 Backlight LED Driver 3",
-    "IN12 GPIO Expander"
+    "IN12 GPIO Expander",
+    "Carrier Board Serial Presence Detect"
             
 };
 

@@ -258,21 +258,8 @@ void main(void) {
         printf("    Display Carrier I2C Signals Enabled\r\n");
         while(usbUartCheckIfBusy());
         
-        #warning "check display carrier SPD here, below lines are temporary"
-        CarrierSPDGetString();
-        carrier_spd.tube_type = "IN-12";
-        carrier_spd.board_rev = 'A';
-        carrier_spd.backlight_support = true;
-        carrier_spd.etc_support = true;
-        carrier_spd.pushbutton_support = true;
-        carrier_spd.menu_led_support = true;
-        carrier_spd.supports_seconds = true;
-        carrier_spd.supports_milliseconds = false;
-        carrier_spd.num_colons = 4;
-        carrier_spd.mfg_month = 10;
-        carrier_spd.mfg_day = 3;
-        carrier_spd.mfg_year = 2023;
-        
+        // read data from carrier board serial presence detect
+        CarrierSPDGetData();
         CarrierSPDPrintString();
         while(usbUartCheckIfBusy());
         IN12Initialize();
