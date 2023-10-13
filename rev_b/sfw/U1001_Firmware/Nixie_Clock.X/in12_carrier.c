@@ -2,21 +2,29 @@
 #include <time.h>
 #include <stdio.h>
 
-#include "in12_carrier.h""
+#include "in12_carrier.h"
 
 #include "pin_macros.h"
 #include "error_handler.h"
 #include "lp5009_led_driver.h"
 #include "usb_uart.h"
 #include "terminal_control.h"
+#include "carrier_spd.h"
 
 // this function prints config status for misc I2C devices
 void IN12I2CDevicesPrintStatus(void) {
 
-    LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_1_ADDR, &error_handler.flags.in12_backlight_led_driver_1);
-    LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_2_ADDR, &error_handler.flags.in12_backlight_led_driver_2);
-    LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_3_ADDR, &error_handler.flags.in12_backlight_led_driver_3);
+    if (carrier_spd.backlight_support == 1) {
+        LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_1_ADDR, &error_handler.flags.in12_backlight_led_driver_1);
+        LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_2_ADDR, &error_handler.flags.in12_backlight_led_driver_2);
+        LP5009PrintStatus(IN12_BACKLIGHT_LED_DRIVER_3_ADDR, &error_handler.flags.in12_backlight_led_driver_3);
+    }
+    
     TCA9555IOExpanderPrintStatus(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander);
+    
+    if (carrier_spd.etc_support == 1) {
+        DS1683PrintStatus(IN12_ETC_ADDR, &error_handler.flags.in12_etc);
+    }
     
 }
 
@@ -154,31 +162,84 @@ usb_uart_command_function_t setBacklightBrightneesCommand(char * input_str) {
     
 }
 
+usb_uart_command_function_t printIN12Status(char * input_str) {
+    
+    CarrierSPDPrintString();
+
+    if (carrier_spd.etc_support == 1) {
+        double tof_temp = IN12GetETC();
+        uint32_t tof_temp_int = (uint32_t) floor(tof_temp);
+        uint32_t power_cycle_temp = IN12GetPowerCycles();
+
+        // first print stuff for logic board
+        terminalTextAttributesReset();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        
+         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+        printf("\r\nIN-12 Carrier Elapsed Time Data:\r\n");
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        
+        printf("    IN-12 Tube Elapsed Time is %s\r\n", getStringSecondsAsTime(tof_temp_int));
+        printf("    IN-12 Tubes have power cycled %u times\r\n", power_cycle_temp);
+
+    }
+    
+    IN12I2CDevicesPrintStatus();
+
+    terminalTextAttributesReset();
+    
+}
+
+// this function initializes the logic board ETC counter
+void IN12ETCInitialize(void) {
+ 
+    DS1683ETCInitialize(IN12_ETC_ADDR, &error_handler.flags.in12_etc);
+    
+}
+
+// this function returns elapsed time in seconds (w/ 0.25 second granularity) for logic board from I2C elapsed time counter
+double IN12GetETC(void) {
+ 
+    volatile double ret_value = DS1683GetETC(IN12_ETC_ADDR, &error_handler.flags.in12_etc);
+    return ret_value;
+    
+}
+
+// this function returns the number of power cycles for the logic board from I2C elapsed time counter
+uint32_t IN12GetPowerCycles(void) {
+ 
+    return (uint32_t) DS1683GetEventCount(IN12_ETC_ADDR, &error_handler.flags.in12_etc);
+    
+}
+
 // this function initializes the devices on the IN12 carrier board and sets up internal peripherals within the PIC to drive the display
 void IN12Initialize(void) {
- 
-    #warning "this is hardcoded now, make this all conditional on display board SPD"
+
     IN12GPIOExpanderInitialize();
     printf("    IN12 Carrier GPIO Expander Initialized\r\n");
     while(usbUartCheckIfBusy());
     
-    #warning "make this conditional on SPD"
-    IN12BacklightInitialize();
-    printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
-    while(usbUartCheckIfBusy());
     
-    
-    
-    
-    
-    
-    // setup display specific serial commands
-    #warning "make this conditional on carrier SPD"
-    usbUartAddCommand("Set Backlight Color:",
+    if (carrier_spd.backlight_support == 1) {
+        IN12BacklightInitialize();
+        printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
+        while(usbUartCheckIfBusy());
+        usbUartAddCommand("Set Backlight Color:",
             "\b\b <color/hex>: Sets the meter backlight color. Colors include Red, Green, Blue, Yellow, Magenta, Cyan, White, and any 24 bit hex color (eg FFFFFF)",
             setBacklightColorCommand);
-    usbUartAddCommand("Set Backlight Brightness:",
+        usbUartAddCommand("Set Backlight Brightness:",
             "\b\b <percentage>: Sets the brightness of the meter backlight",
             setBacklightBrightneesCommand);
+    }
+    
+    if (carrier_spd.etc_support == 1) {
+        IN12ETCInitialize();
+        printf("    IN12 Carrier Elapsed Time Counter Initialized\r\n");
+    }
+    
+    
+    usbUartAddCommand("IN-12 Status?",
+            "Prints status of devices on IN-12 Carrier Board, as well as carrier SPD data",
+            printIN12Status);
     
 }

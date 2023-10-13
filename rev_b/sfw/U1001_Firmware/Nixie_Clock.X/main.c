@@ -262,7 +262,13 @@ void main(void) {
         CarrierSPDGetData();
         CarrierSPDPrintString();
         while(usbUartCheckIfBusy());
-        IN12Initialize();
+        
+        if (strcmp(&carrier_spd.tube_type, "IN-12") == 0) {
+            terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+            printf("Configuring IN-12 Carrier\r\n");
+            terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+            IN12Initialize();
+        }
         
     }
     

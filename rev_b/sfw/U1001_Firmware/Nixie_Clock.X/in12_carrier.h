@@ -24,11 +24,12 @@
 #include "plib_i2c.h"
 #include "lp5009_led_driver.h"
 #include "tca9555_io_expander.h"
+#include "ds1683_ETC.h"
 
 
 
 // misc device I2C addresses
-#define PLATFORM_TOF_ADDR           0x6B
+#define IN12_ETC_ADDR                           0x6F
 #define IN12_BACKLIGHT_LED_DRIVER_1_ADDR        0x14
 #define IN12_BACKLIGHT_LED_DRIVER_2_ADDR        0x15
 #define IN12_BACKLIGHT_LED_DRIVER_3_ADDR        0x16
@@ -60,6 +61,15 @@ void IN12BacklightSetBrightness(uint8_t backlight_brightness);
 // this function sets the color of the backlight LEDs
 // all arguments have range 0 to 255
 void IN12BacklightSetUniformColor(uint8_t red_component, uint8_t green_component, uint8_t blue_component);
+
+// this function initializes the logic board ETC counter
+void IN12ETCInitialize(void);
+
+// this function returns elapsed time in seconds (w/ 0.25 second granularity) for logic board from I2C elapsed time counter
+double IN12GetETC(void);
+
+// this function returns the number of power cycles for the logic board from I2C elapsed time counter
+uint32_t IN12GetPowerCycles(void);
 
 // this function initializes the devices on the IN12 carrier board and sets up internal peripherals within the PIC to drive the display
 void IN12Initialize(void);

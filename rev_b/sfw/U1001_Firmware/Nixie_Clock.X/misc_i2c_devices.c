@@ -9,7 +9,6 @@
 #include "ds1683_ETC.h"
 #include "rtcc.h"
 #include "ds3231_rtc.h"
-//#include "24AA02UID_eeprom.h"
 
 // this function initializes the logic board ETC counter
 void platformETCInitialize(void) {
