@@ -176,7 +176,7 @@ usb_uart_command_function_t printIN12Status(char * input_str) {
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
         
          terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
-        printf("\r\nIN-12 Carrier Elapsed Time Data:\r\n");
+        printf("IN-12 Carrier Elapsed Time Data:\r\n");
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
         
         printf("    IN-12 Tube Elapsed Time is %s\r\n", getStringSecondsAsTime(tof_temp_int));
