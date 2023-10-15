@@ -25,6 +25,7 @@
 #include "lp5009_led_driver.h"
 #include "tca9555_io_expander.h"
 #include "ds1683_ETC.h"
+#include "generic_multiplexing_timers.h"
 
 
 
@@ -44,6 +45,30 @@
 #define YELLOW_BACKLIGHT_COLOR      255, 255, 0
 #define MAGENTA_BACKLIGHT_COLOR     255, 0, 255
 #define CYAN_BACKLIGHT_COLOR        0, 255, 255
+
+// This enum keeps track of which IN12 tube we're currently driving
+// This includes the six numerals as well as the two colons
+enum active_tube_e {
+    
+    in12_tube_0 = 0,
+    in12_tube_1 = 1,
+    in12_right_colon = 2,
+    in12_tube_2 = 3,
+    in12_tube_3 = 4,
+    in12_left_colon = 5,
+    in12_tube_4 = 6,
+    in12_tube_5 = 7
+    
+} in12_active_tube;
+
+// This buffer keeps track of which characters are displayed on which tubes
+// Copy a <= 8 character string into it
+// characters [2] and [5] can only display *, _ and : (these are the colons)
+char in12_display_buffer[9];
+
+// this flag is used to keep track of if the display is enabled or not
+// pressing the power button toggles this
+volatile uint8_t in12_display_power_toggle_flag = 0;
 
 // this function prints config status for misc I2C devices
 void IN12I2CDevicesPrintStatus(void);
@@ -73,6 +98,35 @@ uint32_t IN12GetPowerCycles(void);
 
 // this function initializes the devices on the IN12 carrier board and sets up internal peripherals within the PIC to drive the display
 void IN12Initialize(void);
+
+// this is the callback function for the multiplexing timer, specific to IN12 carrier
+multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void);
+
+// this is the calback function for the brightness timer, specific to IN12 carrier
+brightness_timer_callback_t IN12BrightnessTimerHandler(void);
+
+// This function sets all IN12 tube anodes low
+void blankIN12Anodes(void);
+
+// This function blanks all IN12 cathodes
+void blankIN12Cathodes(void);
+
+// This function sets up the cathodes for driving tubes based on active_tube enum
+void setIN12Anodes(void);
+
+// This function sets the proper anodes to display the character passed 
+// PASS A CHARACTER, NOT A NUMBER!
+void setIN12Cathodes(char input_char);
+
+// This function sets cathodes for the colons
+// pass a colon number (0:1) and a character to display (:, ., and *)
+void setIN12ColonCathodes(uint8_t colon_number, char input_char);
+
+// this function powers on the IN12 carrier
+void IN12PowerOn(void);
+
+// this function powers off the IN12 carrier
+void IN12PowerOff(void);
 
 
 #endif /* _IN12_CARRIER_H */

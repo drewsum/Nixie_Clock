@@ -7,9 +7,11 @@
 #include "pin_macros.h"
 #include "error_handler.h"
 #include "lp5009_led_driver.h"
+#include "ds1683_ETC.h"
 #include "usb_uart.h"
 #include "terminal_control.h"
 #include "carrier_spd.h"
+#include "generic_multiplexing_timers.h"
 
 // this function prints config status for misc I2C devices
 void IN12I2CDevicesPrintStatus(void) {
@@ -41,7 +43,6 @@ void IN12BacklightInitialize(void) {
     softwareDelay(0x1FFF);
     
     // will need to do this over I2C
-    #warning "change this to eventually only set bit 15"
     TCA9555IOExpanderSetOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander, 0x8000);
     
     softwareDelay(0x1FFF);
@@ -125,6 +126,7 @@ usb_uart_command_function_t setBacklightColorCommand(char * input_str) {
             uint32_t parse_green;
             uint32_t parse_blue;
             sscanf(input_str, "Set Backlight Color: %02X%02X%02X", &parse_red, &parse_green, &parse_blue);
+            terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
             printf("Setting backlight color to red = 0x%02X, green = 0x%02X, blue = 0x%02X\r\n", (uint8_t) parse_red, (uint8_t) parse_green, (uint8_t) parse_blue);
             IN12BacklightSetUniformColor((uint8_t) parse_red, (uint8_t) parse_green, (uint8_t) parse_blue);
             
@@ -190,6 +192,36 @@ usb_uart_command_function_t printIN12Status(char * input_str) {
     
 }
 
+usb_uart_command_function_t setIN12PowerCommand(char * input_str) {
+ 
+    // Snipe out received string
+    char read_string[32];
+    sscanf(input_str, "Set Power: %s", read_string);
+    
+    if (strcmp(read_string, "On") == 0) {
+    
+        IN12PowerOn();
+        
+    }
+    
+    else if (strcmp(read_string, "Off") == 0) {
+     
+        IN12PowerOff();
+        
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter a valid power state (On or Off)\r\n");
+        terminalTextAttributesReset();
+        
+    }
+    
+}
+
+#warning "Add function to set display brightness"
+
 // this function initializes the logic board ETC counter
 void IN12ETCInitialize(void) {
  
@@ -232,14 +264,323 @@ void IN12Initialize(void) {
             setBacklightBrightneesCommand);
     }
     
+    usbUartAddCommand("Set Power:",
+            "\b\b <On/Off>: Turns the clock on or off",
+            setIN12PowerCommand);
+    
+    // assign handler functions for multiplexing and brightness timers
+    assignGenericMultiplexingHandler(IN12MultiplexingTimerHandler);
+    assignGenericBrightnessHandler(IN12BrightnessTimerHandler);
+    
+    
+    
+    
+    // add USB UART commands specific for this carrier board
     if (carrier_spd.etc_support == 1) {
         IN12ETCInitialize();
         printf("    IN12 Carrier Elapsed Time Counter Initialized\r\n");
     }
     
-    
     usbUartAddCommand("IN-12 Status?",
             "Prints status of devices on IN-12 Carrier Board, as well as carrier SPD data",
             printIN12Status);
+    
+}
+
+// this is the callback function for the multiplexing timer, specific to IN12 carrier
+multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void) {
+    
+    // set IN12 anodes based on active_tube
+    setIN12Anodes();
+    
+    // Set the anodes for the given VFD tube
+    // only do this for tubes that display numbers, not the colons
+    // inverse which number appears where, since we want data to show up left to right,
+    // to match the order of characters in vfd_display_buffer[]
+    setIN12Cathodes(in12_display_buffer[7 - in12_active_tube]);
+    
+#warning "add stuff here for AMPM indication"
+    
+    // increment active tube and reset if needed
+    in12_active_tube++;
+    if (in12_active_tube > in12_tube_5) in12_active_tube = in12_tube_0;
+    
+    // start brightness timer
+    T5CONbits.ON = 1;
+    
+}
+
+// this is the calback function for the brightness timer, specific to IN12 carrier
+brightness_timer_callback_t IN12BrightnessTimerHandler(void) {
+    
+     // stop brightness timer
+    T5CONbits.ON = 0;
+    
+    // blank all anodes
+    blankIN12Anodes();
+    
+    // Blank all cathodes
+    blankIN12Cathodes();
+    
+}
+
+// This function sets all IN12 tube anodes low
+void blankIN12Anodes(void) {
+ 
+    // Set all grids, along with colon anodes, low
+    ANODE_0_PIN = LOW;
+    ANODE_1_PIN = LOW;
+    ANODE_2_PIN = LOW;
+    ANODE_3_PIN = LOW;
+    ANODE_4_PIN = LOW;
+    ANODE_5_PIN = LOW;
+    COLON_0_PIN = LOW;
+    COLON_1_PIN = LOW;
+    COLON_2_PIN = LOW;
+    COLON_3_PIN = LOW;
+    
+}
+
+// This function blanks all IN12 cathodes
+void blankIN12Cathodes(void) {
+ 
+    // blank all anodes
+    CATHODE_0_PIN = LOW;
+    CATHODE_1_PIN = LOW;
+    CATHODE_2_PIN = LOW;
+    CATHODE_3_PIN = LOW;
+    CATHODE_4_PIN = LOW;
+    CATHODE_5_PIN = LOW;
+    CATHODE_6_PIN = LOW;
+    CATHODE_7_PIN = LOW;
+    CATHODE_8_PIN = LOW;
+    CATHODE_9_PIN = LOW;
+    CATHODE_DP_PIN = LOW;
+    COLON_0_PIN = LOW;
+    COLON_1_PIN = LOW;
+    COLON_2_PIN = LOW;
+    COLON_3_PIN = LOW;
+    
+}
+
+// This function sets up the cathodes for driving tubes based on active_tube enum
+void setIN12Anodes(void) {
+
+    // decide what to do based on which tube we want to drive
+    switch (in12_active_tube) {
+     
+        case in12_tube_0:
+            ANODE_0_PIN = HIGH;
+            break;
+            
+        case in12_tube_1:
+            ANODE_1_PIN = HIGH;
+            break;
+            
+        case in12_tube_2:
+            ANODE_2_PIN = HIGH;
+            break;
+            
+        case in12_tube_3:
+            ANODE_3_PIN = HIGH;
+            break;    
+            
+        case in12_tube_4:
+            ANODE_4_PIN = HIGH;
+            break;
+            
+        case in12_tube_5:
+            ANODE_5_PIN = HIGH;
+            break;
+            
+        case in12_right_colon:
+            setIN12ColonCathodes(0, in12_display_buffer[5]);
+            break;
+            
+        case in12_left_colon:
+            setIN12ColonCathodes(1, in12_display_buffer[2]);
+            break;
+            
+        default:
+            break;
+        
+    }
+    
+}
+
+// PASS A CHARACTER, NOT A NUMBER!
+void setIN12Cathodes(char input_char) {
+ 
+    // Set anodes based on input_char
+    // This is a mapping of all supported characters
+    // This switch statement acts as a seven segment decoder
+    switch (input_char) {
+        
+        case '0':
+            CATHODE_0_PIN = HIGH;
+            break;
+            
+        case '1':
+            CATHODE_1_PIN = HIGH;
+            break;
+            
+        case '2':
+            CATHODE_2_PIN = HIGH;
+            break;
+            
+        case '3':
+            CATHODE_3_PIN = HIGH;
+            break;
+            
+        case '4':
+            CATHODE_4_PIN = HIGH;
+            break;
+            
+        case '5':
+            CATHODE_5_PIN = HIGH;
+            break;
+            
+        case '6':
+            CATHODE_6_PIN = HIGH;
+            break;
+            
+        case '7':
+            CATHODE_7_PIN = HIGH;
+            break;
+            
+        case '8':
+            CATHODE_8_PIN = HIGH;
+            break;
+            
+        case '9':
+            CATHODE_9_PIN = HIGH;
+            break;
+            
+    }
+    
+}
+
+// This function sets cathodes for the colons
+// pass a colon number (0:1) and a character to display (:, ., and *)
+void setIN12ColonCathodes(uint8_t colon_number, char input_char) {
+ 
+    // Kick out if stuff is passed incorrectly
+    if (colon_number >= 2) return;
+    
+    if (colon_number == 0) {
+     
+        switch (input_char) {
+         
+            case '*':
+                COLON_3_PIN = HIGH;
+                break;
+                
+            case '.':
+                COLON_2_PIN = HIGH;
+                break;
+                
+            case ':':
+                COLON_3_PIN = HIGH;
+                COLON_2_PIN = HIGH;
+                break;
+            
+            default:
+                break;
+                
+        }
+        
+    }
+    
+    else if (colon_number == 1) {
+     
+        switch (input_char) {
+         
+            case '*':
+                COLON_0_PIN = HIGH;
+                break;
+                
+            case '.':
+                COLON_1_PIN = HIGH;
+                break;
+                
+            case ':':
+                COLON_0_PIN = HIGH;
+                COLON_1_PIN = HIGH;
+                break;
+            
+            default:
+                break;
+                
+        }
+        
+    }
+    
+}
+
+// this function powers on the IN12 carrier
+void IN12PowerOn(void) {
+    
+    #warning "remove this after testing"
+    strcpy(in12_display_buffer, "12:34:56");
+    
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+    printf("Powering IN12 Carrier Board On\r\n");
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        // First, turn on POS180 power supply
+    POS180_RUN_PIN = HIGH;
+    uint32_t timeout = 0xFFFFFFFF;
+     while (timeout > 0 && POS180_PGOOD_PIN == LOW) timeout--;
+    // This if statement is true if we were bale to turn on the +5V power supply
+    if (POS180_PGOOD_PIN) {
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("    +180V Power Supply Enabled, +180V rail in regulation\r\n");
+    }
+    else {
+        POS180_RUN_PIN = LOW;
+        terminalTextAttributes(RED_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("    +180V Power Supply failed to enable\r\n");
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        return;
+    }
+    
+#warning "add support for ETC counter"
+    
+    // setup muxing timers
+    genericMultiplexingTimerInitialize();
+    genericBrightnessTimerInitialize();
+    printf("    Multiplexing Timers Initialized\r\n");
+    terminalTextAttributesReset();
+    
+}
+
+// this function powers off the IN12 carrier
+void IN12PowerOff(void) {
+    
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
+    printf("Powering down VFD display:\r\n");
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+
+    genericMultiplexingTimersStop();
+    blankIN12Anodes();
+    blankIN12Cathodes();
+    printf("    Multiplexing Timers Suspended\r\n");
+    printf("    IN12 Grids and Anodes cleared\r\n");
+
+    POS180_RUN_PIN = LOW;
+    printf("    Disabled +180V Power Supply\r\n");
+
+#warning "add menu LED support, disable carrier ETC"
+    // clear the menu LEDs
+    //displayBoardSetIOExpanderOutput(0x0000);
+    //printf("    Cleared menu LEDs\r\n");
+
+    terminalTextAttributesReset();
+
+    // save the state that we've enabled the display
+    in12_display_power_toggle_flag = 0;
+
+#warning "add this back in for alarm"
+    // disable alarm
+    // clock_alarm.alarm_arm = 0;
     
 }

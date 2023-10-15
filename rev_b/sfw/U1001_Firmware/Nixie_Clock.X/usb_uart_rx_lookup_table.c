@@ -294,9 +294,6 @@ usb_uart_command_function_t platformStatusCommand(char * input_str) {
 
     miscI2CDevicesPrintStatus();
     
-    #warning "eventually make this determined by installed carrier"
-    IN12I2CDevicesPrintStatus();
-    
 }
 
 usb_uart_command_function_t liveTelemetryCommand(char * input_str) {
@@ -484,43 +481,6 @@ usb_uart_command_function_t setRTCCCommand(char * input_str) {
     
 }
 
-usb_uart_command_function_t setPowerCommand(char * input_str) {
- 
-    // Snipe out received string
-    char read_string[32];
-    sscanf(input_str, "Set Power: %s", read_string);
-    
-    if (strcmp(read_string, "On") == 0) {
-        
-        POS180_RUN_PIN = HIGH;
-        while(!POS180_PGOOD_PIN);
-        
-        #warning "eventually make this more graceful"
-//        display_power_toggle_flag = 0;
-//        powerPushbuttonHandler();
-    
-    }
-    
-    else if (strcmp(read_string, "Off") == 0) {
-     
-        POS180_RUN_PIN = LOW;
-        
-        #warning "eventually make this more graceful"
-//        display_power_toggle_flag = 1;
-//        powerPushbuttonHandler();
-        
-    }
-    
-    else {
-     
-        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
-        printf("Please enter a valid power state (On or Off)\r\n");
-        terminalTextAttributesReset();
-        
-    }
-    
-}
-
 // This function must be called to set up the usb_uart_commands hash table
 // Entries into this hash table are "usb_uart serial commands"
 void usbUartHashTableInitialize(void) {
@@ -582,9 +542,5 @@ void usbUartHashTableInitialize(void) {
             "       Weekday: <weekday>: Sets the RTCC weekday\r\n"
             "       Unix Time: <decimal unix time>, <hour offset from UTC to local time>: sets the RTCC to the supplied UNIX time with hour offset from UTC",
             setRTCCCommand);
-    usbUartAddCommand("Set Power:",
-            "\b\b <On/Off>: Turns the clock on or off",
-            setPowerCommand);
-
 
 }

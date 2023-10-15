@@ -26,7 +26,6 @@
 
 #include "ds1683_ETC.h"
 #include "ds3231_rtc.h"
-#warning "fix this" //#include "24AA02UID_eeprom.h"
 
 // misc device I2C addresses
 #define PLATFORM_ETC_ADDR           0x6B

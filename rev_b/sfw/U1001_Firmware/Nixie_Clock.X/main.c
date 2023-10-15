@@ -35,6 +35,8 @@
 
 // display board specific code
 #include "in12_carrier.h"
+#include "generic_multiplexing_timers.h"
+#include "carrier_spd.h"
 
 //// I2C
 #include "plib_i2c.h"
@@ -246,7 +248,6 @@ void main(void) {
     printf("    Hardware Random number Generator Initialized\r\n");
     while(usbUartCheckIfBusy());
     
-    #warning "make this conditional on display detect"
     // determine if display carrier is present
     if (nDISPLAY_DETECT_PIN == LOW) {
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);

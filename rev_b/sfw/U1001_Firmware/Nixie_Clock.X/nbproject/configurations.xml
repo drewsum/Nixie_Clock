@@ -12,6 +12,7 @@
         <logicalFolder name="f1" displayName="Carrier_Boards" projectFiles="true">
           <itemPath>in12_carrier.h</itemPath>
           <itemPath>carrier_spd.h</itemPath>
+          <itemPath>generic_multiplexing_timers.h</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.h</itemPath>
         <itemPath>power_saving.h</itemPath>
@@ -71,6 +72,7 @@
         <logicalFolder name="f1" displayName="Carrier_Boards" projectFiles="true">
           <itemPath>in12_carrier.c</itemPath>
           <itemPath>carrier_spd.c</itemPath>
+          <itemPath>generic_multiplexing_timers.c</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.c</itemPath>
         <itemPath>power_saving.c</itemPath>
