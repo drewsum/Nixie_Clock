@@ -37,13 +37,76 @@ void IN12GPIOExpanderInitialize(void) {
     
 }
 
+// this function reads the contents of the output registers of the IN12 GPIO expander, and sets or clears only the backlight LED enable signal
+void IN12GPIOSetBacklightEnable(uint8_t led_enable_state) {
+ 
+    // Check to see if we're starting up into a broken I2C state machine
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    
+    // read output registers
+    uint8_t data_reg_pointer[1];
+    uint8_t temp[1];
+    
+    data_reg_pointer[0] = TCA9555_OUTPUT_PORT_1_REG;
+    if(!I2CMaster_WriteRead(IN12_IO_EXPANDER_ADDR, &data_reg_pointer[0], 1, temp, 1)) {
+        error_handler.flags.in12_gpio_expander = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    uint8_t read_output_1 = temp[0];
+    
+    // set or clear only the bit we care about
+    if (led_enable_state == 0) read_output_1 &= 0b01111111;
+    else read_output_1 |= 0b10000000;
+    
+    // write back data with modified LED enable bit
+    uint8_t output_data_array[2];
+    output_data_array[0] = TCA9555_OUTPUT_PORT_1_REG;
+    output_data_array[1] = read_output_1;
+    if(!I2CMaster_Write(IN12_IO_EXPANDER_ADDR, output_data_array, 2)) {
+        error_handler.flags.in12_gpio_expander = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    
+}
+
+// this function reads the contents of the output registers of the IN12 GPIO expander, and sets or clears only the ETC enable signal
+void IN12GPIOSetETCEnable(uint8_t etc_enable_state) {
+    
+    // Check to see if we're starting up into a broken I2C state machine
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    
+    // read output registers
+    uint8_t data_reg_pointer[1];
+    uint8_t temp[1];
+    
+    data_reg_pointer[0] = TCA9555_OUTPUT_PORT_1_REG;
+    if(!I2CMaster_WriteRead(IN12_IO_EXPANDER_ADDR, &data_reg_pointer[0], 1, temp, 1)) {
+        error_handler.flags.in12_gpio_expander = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    uint8_t read_output_1 = temp[0];
+    
+    // set or clear only the bit we care about
+    if (etc_enable_state == 0) read_output_1 &= 0b10111111;
+    else read_output_1 |= 0b01000000;
+    
+    // write back data with modified LED enable bit
+    uint8_t output_data_array[2];
+    output_data_array[0] = TCA9555_OUTPUT_PORT_1_REG;
+    output_data_array[1] = read_output_1;
+    if(!I2CMaster_Write(IN12_IO_EXPANDER_ADDR, output_data_array, 2)) {
+        error_handler.flags.in12_gpio_expander = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    
+}
+
 // sets up meter backlight LED driver
 void IN12BacklightInitialize(void) {
  
     softwareDelay(0x1FFF);
     
-    // will need to do this over I2C
-    TCA9555IOExpanderSetOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander, 0x8000);
+    IN12GPIOSetBacklightEnable(1);
     
     softwareDelay(0x1FFF);
     
@@ -66,16 +129,22 @@ void IN12BacklightInitialize(void) {
 // backlight_brightness range is 0 to 255
 void IN12BacklightSetBrightness(uint8_t backlight_brightness) {
     LP5009SetBankBrightness(IN12_BACKLIGHT_LED_DRIVER_1_ADDR, &error_handler.flags.in12_backlight_led_driver_1, backlight_brightness);
+    softwareDelay(100);
     LP5009SetBankBrightness(IN12_BACKLIGHT_LED_DRIVER_2_ADDR, &error_handler.flags.in12_backlight_led_driver_2, backlight_brightness);
+    softwareDelay(100);
     LP5009SetBankBrightness(IN12_BACKLIGHT_LED_DRIVER_3_ADDR, &error_handler.flags.in12_backlight_led_driver_3, backlight_brightness);
+    softwareDelay(100);
 }
 
 // this function sets the color of the meter backlight LEDs
 // all arguments have range 0 to 255
 void IN12BacklightSetUniformColor(uint8_t red_component, uint8_t green_component, uint8_t blue_component) {
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_1_ADDR, &error_handler.flags.in12_backlight_led_driver_1, red_component, green_component, blue_component);
+    softwareDelay(100);
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_2_ADDR, &error_handler.flags.in12_backlight_led_driver_2, red_component, green_component, blue_component);
+    softwareDelay(100);
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_3_ADDR, &error_handler.flags.in12_backlight_led_driver_3, red_component, green_component, blue_component);
+    softwareDelay(100);
 }
 
 usb_uart_command_function_t setBacklightColorCommand(char * input_str) {
@@ -254,6 +323,8 @@ void IN12Initialize(void) {
     
     if (carrier_spd.backlight_support == 1) {
         IN12BacklightInitialize();
+        IN12BacklightSetBrightness(75);
+        IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
         printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
         while(usbUartCheckIfBusy());
         usbUartAddCommand("Set Backlight Color:",
@@ -472,16 +543,16 @@ void setIN12ColonCathodes(uint8_t colon_number, char input_char) {
         switch (input_char) {
          
             case '*':
-                COLON_3_PIN = HIGH;
+                COLON_2_PIN = HIGH;
                 break;
                 
             case '.':
-                COLON_2_PIN = HIGH;
+                COLON_3_PIN = HIGH;
                 break;
                 
             case ':':
-                COLON_3_PIN = HIGH;
                 COLON_2_PIN = HIGH;
+                COLON_3_PIN = HIGH;
                 break;
             
             default:
@@ -521,7 +592,7 @@ void setIN12ColonCathodes(uint8_t colon_number, char input_char) {
 void IN12PowerOn(void) {
     
     #warning "remove this after testing"
-    strcpy(in12_display_buffer, "12:34:56");
+    strcpy(in12_display_buffer, "66.66.66");
     
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
     printf("Powering IN12 Carrier Board On\r\n");
@@ -534,6 +605,7 @@ void IN12PowerOn(void) {
     if (POS180_PGOOD_PIN) {
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
         printf("    +180V Power Supply Enabled, +180V rail in regulation\r\n");
+        while(usbUartCheckIfBusy());
     }
     else {
         POS180_RUN_PIN = LOW;
@@ -543,12 +615,25 @@ void IN12PowerOn(void) {
         return;
     }
     
-#warning "add support for ETC counter"
+    // enable ETC counter for when tubes are being multiplexed
+    if (carrier_spd.etc_support) {
+        IN12GPIOSetETCEnable(1);
+        printf("    Set ETC Enable bit on IN12 I2C GPIO expander\r\n");
+        while(usbUartCheckIfBusy());
+    }
     
+    if (carrier_spd.backlight_support) {
+        IN12BacklightInitialize();
+        IN12BacklightSetBrightness(75);
+        IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
+        printf("    Re-initialized IN12 LED backlight drivers\r\n");
+        while(usbUartCheckIfBusy());
+    }
     // setup muxing timers
     genericMultiplexingTimerInitialize();
     genericBrightnessTimerInitialize();
     printf("    Multiplexing Timers Initialized\r\n");
+    while(usbUartCheckIfBusy());
     terminalTextAttributesReset();
     
 }
@@ -573,7 +658,19 @@ void IN12PowerOff(void) {
     // clear the menu LEDs
     //displayBoardSetIOExpanderOutput(0x0000);
     //printf("    Cleared menu LEDs\r\n");
-
+    
+    if (carrier_spd.etc_support) {
+        IN12GPIOSetETCEnable(0);
+        printf("    Cleared ETC Enable bit on IN12 I2C GPIO expander\r\n");
+        while(usbUartCheckIfBusy());
+    }
+    
+    if (carrier_spd.backlight_support) {
+        IN12GPIOSetBacklightEnable(0);
+        printf("    Cleared Backlight Enable bit on IN12 I2C GPIO expander\r\n");
+        while(usbUartCheckIfBusy());
+    }
+    
     terminalTextAttributesReset();
 
     // save the state that we've enabled the display

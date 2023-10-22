@@ -96,6 +96,12 @@ double IN12GetETC(void);
 // this function returns the number of power cycles for the logic board from I2C elapsed time counter
 uint32_t IN12GetPowerCycles(void);
 
+// this function reads the contents of the output registers of the IN12 GPIO expander, and sets or clears only the backlight LED enable signal
+void IN12GPIOSetBacklightEnable(uint8_t led_enable_state);
+
+// this function reads the contents of the output registers of the IN12 GPIO expander, and sets or clears only the ETC enable signal
+void IN12GPIOSetETCEnable(uint8_t etc_enable_state);
+
 // this function initializes the devices on the IN12 carrier board and sets up internal peripherals within the PIC to drive the display
 void IN12Initialize(void);
 

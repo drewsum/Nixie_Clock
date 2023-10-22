@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -O1 -fno-common   -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -Wno-implicit-function-declaration -Wno-incompatible-pointer-types   C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Nixie_Clock\rev_b\sfw\U1001_Firmware\Nixie_Clock.X\32mz_interrupt_control.c
