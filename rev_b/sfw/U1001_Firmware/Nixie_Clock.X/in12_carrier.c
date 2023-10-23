@@ -101,6 +101,89 @@ void IN12GPIOSetETCEnable(uint8_t etc_enable_state) {
     
 }
 
+// this function sets the state of the display board LEDs to match what clock_display_state enum is set to
+void IN12SetMenuLEDs(void) {
+    
+    // decide what to shove into the vfd_display_buffer[] based on what we're showing
+    switch (in12_clock_display_state) {
+    
+        case in12_display_time_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_DISPLAY_TIME_STATE);
+            break;
+            
+        case in12_set_time_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_TIME_STATE);
+            break;
+            
+        case in12_display_date_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_DISPLAY_DATE_STATE);
+            break;
+            
+        case in12_set_date_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_DATE_STATE);
+            break;
+            
+        case in12_display_weekday_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_DISPLAY_WEEKDAY_STATE);
+            break;
+            
+        case in12_set_weekday_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_WEEKDAY_STATE);
+            break;
+            
+        case in12_display_alarm_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_DISPLAY_ALARM_STATE);
+            break;
+            
+        case in12_set_alarm_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_ALARM_STATE);
+            break;
+            
+        case in12_alarm_enable_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_ALARM_ENABLE_STATE);
+            break;
+            
+        case in12_set_24hr_mode_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_24HR_MODE_STATE);
+            break;
+            
+        case in12_set_brightness_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_BRIGHTNESS_STATE);
+            break;
+            
+        case in12_set_color_state:
+            IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_COLOR_STATE);
+            break;
+            
+        default:
+            IN12SetMenuLEDsGPIO(0x0000);
+            break;
+        
+    }
+    
+}
+
+// this function checks if the current time matches the alarm time and sets the buzzer
+// if the alarm is armed.
+void IN12AlarmCheckMatch(void) {
+ 
+    #warning "figure this all out"
+    Nop();
+//    // only evaluate this stuff if the alarm is armed and not currently sounding
+//    if (clock_alarm.alarm_arm && BUZZER_ENABLE_PIN == LOW) {
+//     
+//        // If the alarm settings and current time match, trigger the alarm
+//        if (    clock_alarm.alarm_hour == rtcc_shadow.hours &&
+//                clock_alarm.alarm_minute == rtcc_shadow.minutes &&
+//                clock_alarm.alarm_second == rtcc_shadow.seconds) {
+//            BUZZER_ENABLE_PIN = HIGH;
+//            
+//        }
+//        
+//    }
+//    
+}
+
 // sets up meter backlight LED driver
 void IN12BacklightInitialize(void) {
  
@@ -679,5 +762,17 @@ void IN12PowerOff(void) {
 #warning "add this back in for alarm"
     // disable alarm
     // clock_alarm.alarm_arm = 0;
+    
+}
+
+// This function sets the display board IO expander output
+void IN12SetMenuLEDsGPIO(uint16_t output_data) {
+ 
+    uint16_t read_output = TCA9555IOExpanderReadOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander);
+    
+    read_output &= 0b1100000000000000;
+    read_output |= output_data;
+    
+    TCA9555IOExpanderSetOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander, read_output);
     
 }

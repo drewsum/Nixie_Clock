@@ -158,3 +158,26 @@ void TCA9555IOExpanderPrintStatus(uint8_t device_address, volatile uint8_t *devi
     }
     terminalTextAttributesReset();
 }
+
+// This function writes output to both output registers
+uint16_t TCA9555IOExpanderReadOutput(uint8_t device_address, volatile uint8_t *device_error_handler_flag) {
+ 
+    uint8_t data_reg_pointer[1];
+    uint8_t temp[1];   
+    data_reg_pointer[0] = TCA9555_OUTPUT_PORT_0_REG;
+    if(!I2CMaster_WriteRead(device_address, &data_reg_pointer[0], 1, temp, 1)) {
+        *device_error_handler_flag = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    uint8_t read_output_0 = temp[0];
+    
+    data_reg_pointer[0] = TCA9555_OUTPUT_PORT_1_REG;
+    if(!I2CMaster_WriteRead(device_address, &data_reg_pointer[0], 1, temp, 1)) {
+        *device_error_handler_flag = 1;
+    }
+    while(i2cMasterObj.state != I2C_STATE_IDLE);
+    uint8_t read_output_1 = temp[0];
+
+    return (uint16_t) (read_output_1 << 8) | read_output_0;
+    
+}

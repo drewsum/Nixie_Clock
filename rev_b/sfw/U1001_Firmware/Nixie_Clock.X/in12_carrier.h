@@ -27,7 +27,20 @@
 #include "ds1683_ETC.h"
 #include "generic_multiplexing_timers.h"
 
-
+// These macros set the data to be sent to the display board GPIO expander
+// to set display LEDs to show what in12_clock_display_state enum is set to
+#define IN12_MENU_LEDS_DISPLAY_TIME_STATE           0b0000000000000001
+#define IN12_MENU_LEDS_SET_TIME_STATE               0b0000000000000010
+#define IN12_MENU_LEDS_DISPLAY_DATE_STATE           0b0000000000000100
+#define IN12_MENU_LEDS_SET_DATE_STATE               0b0000000000001000
+#define IN12_MENU_LEDS_DISPLAY_WEEKDAY_STATE        0b0000000000010000
+#define IN12_MENU_LEDS_SET_WEEKDAY_STATE            0b0000000000100000
+#define IN12_MENU_LEDS_DISPLAY_ALARM_STATE          0b0000000001000000
+#define IN12_MENU_LEDS_SET_ALARM_STATE              0b0000000010000000
+#define IN12_MENU_LEDS_ALARM_ENABLE_STATE           0b0000000100000000
+#define IN12_MENU_LEDS_SET_24HR_MODE_STATE          0b0000001000000000
+#define IN12_MENU_LEDS_SET_BRIGHTNESS_STATE         0b0000010000000000
+#define IN12_MENU_LEDS_SET_COLOR_STATE              0b0000100000000000
 
 // misc device I2C addresses
 #define IN12_ETC_ADDR                           0x6F
@@ -60,6 +73,121 @@ enum active_tube_e {
     in12_tube_5 = 7
     
 } in12_active_tube;
+
+// this flag is used to keep track of if the display is showing 24hr time or
+// 12 hr time. This is set high if we're showing 12hr time, and set low
+// if we're showing 24hr time
+volatile uint8_t in12_am_pm_enable = 1;
+
+// This flag is what allows values to alternate on and off when setting them
+// with capacitive pushbuttons
+volatile uint8_t in12_clock_set_blank_request = 0;
+
+// This global enum keeps track of what we want to display on the VFD display
+// This needs to be volatile because a bunch of different functions can modify it
+enum in12_clock_display_state_e {
+    
+    in12_display_time_state = 0,
+    in12_set_time_state = 1,
+    in12_display_date_state = 2,
+    in12_set_date_state = 3,
+    in12_display_weekday_state = 4,
+    in12_set_weekday_state = 5,
+    in12_display_alarm_state = 6,
+    in12_set_alarm_state = 7,
+    in12_alarm_enable_state = 8,
+    in12_set_24hr_mode_state = 9,
+    in12_set_brightness_state = 10,
+    in12_set_color_state = 11,
+    in12_display_lamp_test = 12
+    
+} volatile in12_clock_display_state = 0;
+
+// This enum keeps track of which time setting we're changing when the user wants
+// to change the time (hours, minutes, seconds
+enum in12_clock_time_setting_s {
+    
+    in12_set_time_hours_state = 0,
+    in12_set_time_minutes_state = 1,
+    in12_set_time_seconds_state = 2,
+    in12_clock_time_setting_finished_state = 3
+    
+}
+volatile in12_clock_time_setting = 3;
+
+// This enum keeps track of which date setting we're changing when the user wants
+// to change the date (months, days, year
+enum in12_clock_date_setting_s {
+    
+    in12_set_date_month_state = 0,
+    in12_set_date_day_state = 1,
+    in12_set_date_year_state = 2,
+    in12_clock_date_setting_finished_state = 3
+    
+}
+volatile in12_clock_date_setting = 3;
+
+// This enum keeps track of which weekday setting we're changing when the user wants
+// to change the weekday
+// (only lets you set the weekday or nothing, since there is only one parameter to change
+enum in12_clock_weekday_setting_s {
+    
+    in12_set_weekday_day_state = 0,
+    in12_clock_weekday_setting_finished_state = 1
+    
+}
+volatile in12_clock_weekday_setting = 1;
+
+// This enum keeps track of which time setting we're changing when the user wants
+// to change the alarm time (hours, minutes, seconds
+enum in12_clock_alarm_setting_s {
+    
+    in12_set_alarm_hours_state = 0,
+    in12_set_alarm_minutes_state = 1,
+    in12_set_alarm_seconds_state = 2,
+    in12_clock_alarm_setting_finished_state = 3
+    
+}
+volatile in12_clock_alarm_setting = 3;
+
+// This enum keeps track of which brightness setting we're changing when the user wants
+// to change the brightness
+// (only lets you set the brightness or nothing, since there is only one parameter to change
+enum in12_clock_brightness_setting_s {
+    
+    in12_set_brightness_value_state = 0,
+    in12_clock_brightness_setting_finished_state = 1
+    
+}
+volatile in12_clock_brightness_setting = 1;
+
+enum in12_clock_24hr_setting_s {
+    
+    in12_set_24hr_value_state = 0,
+    in12_clock_24hr_setting_finished_state = 1
+    
+}
+volatile in12_clock_24hr_setting = 1;
+
+enum in12_clock_alarm_enable_setting_s {
+    
+    in12_set_alarm_arm = 0,
+    in12_clock_alarm_enable_finished_state = 1
+    
+}
+volatile in12_clock_alarm_enable_setting = 1;
+
+
+// This struct holds alarm settings
+// Lets you set alrm hours and minutes, as well as arm the alarm
+volatile struct in12_clock_alarm_s {
+    
+    uint8_t in12_alarm_hour;
+    uint8_t in12_alarm_minute;
+    uint8_t in12_alarm_second;
+    uint8_t in12_alarm_arm;
+    
+} in12_clock_alarm;
 
 // This buffer keeps track of which characters are displayed on which tubes
 // Copy a <= 8 character string into it
@@ -102,6 +230,13 @@ void IN12GPIOSetBacklightEnable(uint8_t led_enable_state);
 // this function reads the contents of the output registers of the IN12 GPIO expander, and sets or clears only the ETC enable signal
 void IN12GPIOSetETCEnable(uint8_t etc_enable_state);
 
+// this function checks if the current time matches the alarm time and sets the buzzer
+// if the alarm is armed.
+void IN12AlarmCheckMatch(void);
+
+// this function sets the state of the display board LEDs to match what clock_display_state enum is set to
+void IN12SetMenuLEDs(void);
+
 // this function initializes the devices on the IN12 carrier board and sets up internal peripherals within the PIC to drive the display
 void IN12Initialize(void);
 
@@ -134,6 +269,8 @@ void IN12PowerOn(void);
 // this function powers off the IN12 carrier
 void IN12PowerOff(void);
 
+// This function sets the display board IO expander output
+void IN12SetMenuLEDsGPIO(uint16_t output_data);
 
 #endif /* _IN12_CARRIER_H */
 
