@@ -316,7 +316,7 @@ void main(void) {
         }
             
             // check to see if we need to trigger the alarm
-            #warning "add this for alarm" // clockAlarmCheckMatch();
+            IN12AlarmCheckMatch();
             
         }
         

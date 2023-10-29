@@ -168,22 +168,20 @@ void IN12SetMenuLEDs(void) {
 // this function checks if the current time matches the alarm time and sets the buzzer
 // if the alarm is armed.
 void IN12AlarmCheckMatch(void) {
- 
-    #warning "figure this all out"
-    Nop();
-//    // only evaluate this stuff if the alarm is armed and not currently sounding
-//    if (in12_clock_alarm.alarm_arm && BUZZER_ENABLE_PIN == LOW) {
-//     
-//        // If the alarm settings and current time match, trigger the alarm
-//        if (    in12_clock_alarm.alarm_hour == rtcc_shadow.hours &&
-//                in12_clock_alarm.alarm_minute == rtcc_shadow.minutes &&
-//                in12_clock_alarm.alarm_second == rtcc_shadow.seconds) {
-//            BUZZER_ENABLE_PIN = HIGH;
-//            
-//        }
-//        
-//    }
-//    
+
+    // only evaluate this stuff if the alarm is armed and not currently sounding
+    if (in12_clock_alarm.in12_alarm_arm && BUZZER_ENABLE_PIN == LOW) {
+     
+        // If the alarm settings and current time match, trigger the alarm
+        if (    in12_clock_alarm.in12_alarm_hour == rtcc_shadow.hours &&
+                in12_clock_alarm.in12_alarm_minute == rtcc_shadow.minutes &&
+                in12_clock_alarm.in12_alarm_second == rtcc_shadow.seconds) {
+            BUZZER_ENABLE_PIN = HIGH;
+            
+        }
+        
+    }
+    
 }
 
 // sets up meter backlight LED driver
@@ -553,7 +551,8 @@ multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void) {
     // to match the order of characters in in12_display_buffer[]
     setIN12Cathodes(in12_display_buffer[7 - in12_active_tube]);
     
-#warning "add stuff here for AMPM indication"
+    // Set the DP anode high if we want to display PM/AM time
+    if (in12_am_pm_enable == 1 && in12_active_tube == in12_tube_4 && in12_dp_anode_request == 1) CATHODE_DP_PIN = HIGH;
     
     // increment active tube and reset if needed
     in12_active_tube++;
