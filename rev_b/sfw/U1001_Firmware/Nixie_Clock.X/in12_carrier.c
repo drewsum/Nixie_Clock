@@ -411,20 +411,62 @@ usb_uart_command_function_t setIN12DisplayModeCommand(char * input_str) {
     
     }
     
+    else if (strcmp(read_string, "Alarm") == 0) {
+        
+        in12_clock_display_state = in12_display_alarm_state;
+        IN12SetMenuLEDs();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set clock display mode to Alarm\r\n");
+        terminalTextAttributesReset();
+    
+    }
+    
     else {
      
         terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
-        printf("Please enter a valid display mode: (Time, Date, Weekday)\r\n");
+        printf("Please enter a valid display mode: (Time, Date, Weekday, or Alarm)\r\n");
         terminalTextAttributesReset();
         
     }
     
 }
 
+usb_uart_command_function_t displayIN12LampTestCommand(char * input_str) {
+ 
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    printf("Testing all display segments.\r\n");
+    terminalTextAttributesReset();
+    
+    in12_clock_display_state = in12_display_lamp_test;
+    in12_dp_anode_request = 1;
+    
+}
 
-#warning "Add function to set display brightness"
-
-
+usb_uart_command_function_t setIN12DisplayBrightnessCommand(char * input_str) {
+    
+    // Snipe out received arguments
+    uint32_t read_brightness;
+    sscanf(input_str, "Set Display Brightness: %3u", &read_brightness);
+    
+    if (read_brightness <= 100 && read_brightness >= 10) {
+    
+        in12_display_brightness_setting = (uint8_t) read_brightness;
+        IN12SetDisplayBrightness(in12_display_brightness_setting);
+        
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set display brightness as %u%%\r\n", in12_display_brightness_setting);
+        terminalTextAttributesReset();
+    
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter brightness as an integer between 10 and 100. User entered %u%%\r\n", read_brightness);
+        terminalTextAttributesReset();
+        
+    }
+}
 
 // this function initializes the logic board ETC counter
 void IN12ETCInitialize(void) {
@@ -474,8 +516,14 @@ void IN12Initialize(void) {
             "\b\b <On/Off>: Turns the clock on or off",
             setIN12PowerCommand);
     usbUartAddCommand("Set Display Mode:",
-            "\b\b <Time/Date/Weekday>: Sets the display to show different clock functions",
+            "\b\b <Time, Date, Weekday, or Alarm>: Sets the display to show different clock functions",
             setIN12DisplayModeCommand);
+    usbUartAddCommand("Display Lamp Test",
+            "Tests all IN12 display Elements",
+            displayIN12LampTestCommand);
+    usbUartAddCommand("Set Display Brightness:",
+            "\b\b <percent>: Sets the IN12 display to the entered brightness as a percentage",
+            setIN12DisplayBrightnessCommand);
     
     // assign handler functions for multiplexing and brightness timers
     assignGenericMultiplexingHandler(IN12MultiplexingTimerHandler);
@@ -662,6 +710,26 @@ void setIN12Cathodes(char input_char) {
             CATHODE_9_PIN = HIGH;
             break;
             
+    }
+    
+    if (in12_clock_display_state == in12_display_lamp_test) {
+        
+        CATHODE_0_PIN = HIGH;
+        CATHODE_1_PIN = HIGH;
+        CATHODE_2_PIN = HIGH;
+        CATHODE_3_PIN = HIGH;
+        CATHODE_4_PIN = HIGH;
+        CATHODE_5_PIN = HIGH;
+        CATHODE_6_PIN = HIGH;
+        CATHODE_7_PIN = HIGH;
+        CATHODE_8_PIN = HIGH;
+        CATHODE_9_PIN = HIGH;
+        CATHODE_DP_PIN = HIGH;
+        COLON_0_PIN = HIGH;
+        COLON_1_PIN = HIGH;
+        COLON_2_PIN = HIGH;
+        COLON_3_PIN = HIGH;
+        
     }
     
 }
@@ -1164,5 +1232,15 @@ void IN12updateClockDisplay(void) {
             break;
         
     }
+    
+}
+
+// this function sets the brightness of the display based on what you pass it
+// number must be between 10 and 100
+void IN12SetDisplayBrightness(uint8_t input_brightness) {
+ 
+    if (input_brightness > 100 || input_brightness < 10) return;
+    
+    PR5 = 100 * input_brightness;
     
 }

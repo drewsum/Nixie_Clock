@@ -282,6 +282,10 @@ void IN12SetMenuLEDsGPIO(uint16_t output_data);
 // relies on global variables in in12_carrier and rtcc modules
 void IN12updateClockDisplay(void);
 
+// this function sets the brightness of the display based on what you pass it
+// number must be between 10 and 100
+void IN12SetDisplayBrightness(uint8_t input_brightness);
+
 #endif /* _IN12_CARRIER_H */
 
 /* *****************************************************************************
