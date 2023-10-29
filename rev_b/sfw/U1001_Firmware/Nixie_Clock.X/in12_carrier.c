@@ -1,6 +1,7 @@
 
 #include <time.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "in12_carrier.h"
 
@@ -9,6 +10,7 @@
 #include "lp5009_led_driver.h"
 #include "ds1683_ETC.h"
 #include "usb_uart.h"
+#include "rtcc.h"
 #include "terminal_control.h"
 #include "carrier_spd.h"
 #include "generic_multiplexing_timers.h"
@@ -104,7 +106,7 @@ void IN12GPIOSetETCEnable(uint8_t etc_enable_state) {
 // this function sets the state of the display board LEDs to match what clock_display_state enum is set to
 void IN12SetMenuLEDs(void) {
     
-    // decide what to shove into the vfd_display_buffer[] based on what we're showing
+    // decide what to shove into the in12_display_buffer[] based on what we're showing
     switch (in12_clock_display_state) {
     
         case in12_display_time_state:
@@ -170,12 +172,12 @@ void IN12AlarmCheckMatch(void) {
     #warning "figure this all out"
     Nop();
 //    // only evaluate this stuff if the alarm is armed and not currently sounding
-//    if (clock_alarm.alarm_arm && BUZZER_ENABLE_PIN == LOW) {
+//    if (in12_clock_alarm.alarm_arm && BUZZER_ENABLE_PIN == LOW) {
 //     
 //        // If the alarm settings and current time match, trigger the alarm
-//        if (    clock_alarm.alarm_hour == rtcc_shadow.hours &&
-//                clock_alarm.alarm_minute == rtcc_shadow.minutes &&
-//                clock_alarm.alarm_second == rtcc_shadow.seconds) {
+//        if (    in12_clock_alarm.alarm_hour == rtcc_shadow.hours &&
+//                in12_clock_alarm.alarm_minute == rtcc_shadow.minutes &&
+//                in12_clock_alarm.alarm_second == rtcc_shadow.seconds) {
 //            BUZZER_ENABLE_PIN = HIGH;
 //            
 //        }
@@ -372,7 +374,57 @@ usb_uart_command_function_t setIN12PowerCommand(char * input_str) {
     
 }
 
+usb_uart_command_function_t setIN12DisplayModeCommand(char * input_str) {
+ 
+    // Snipe out received string
+    char read_string[32];
+    sscanf(input_str, "Set Display Mode: %s", read_string);
+    
+    
+    if (strcmp(read_string, "Time") == 0) {
+        
+        in12_clock_display_state = in12_display_time_state;
+        IN12SetMenuLEDs();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set clock display mode to Time\r\n");
+        terminalTextAttributesReset();
+    
+    }
+    
+    else if (strcmp(read_string, "Date") == 0) {
+        
+        in12_clock_display_state = in12_display_date_state;
+        IN12SetMenuLEDs();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set clock display mode to Date\r\n");
+        terminalTextAttributesReset();
+    
+    }
+    
+    else if (strcmp(read_string, "Weekday") == 0) {
+        
+        in12_clock_display_state = in12_display_weekday_state;
+        IN12SetMenuLEDs();
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set clock display mode to Weekday\r\n");
+        terminalTextAttributesReset();
+    
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter a valid display mode: (Time, Date, Weekday)\r\n");
+        terminalTextAttributesReset();
+        
+    }
+    
+}
+
+
 #warning "Add function to set display brightness"
+
+
 
 // this function initializes the logic board ETC counter
 void IN12ETCInitialize(void) {
@@ -421,13 +473,13 @@ void IN12Initialize(void) {
     usbUartAddCommand("Set Power:",
             "\b\b <On/Off>: Turns the clock on or off",
             setIN12PowerCommand);
+    usbUartAddCommand("Set Display Mode:",
+            "\b\b <Time/Date/Weekday>: Sets the display to show different clock functions",
+            setIN12DisplayModeCommand);
     
     // assign handler functions for multiplexing and brightness timers
     assignGenericMultiplexingHandler(IN12MultiplexingTimerHandler);
     assignGenericBrightnessHandler(IN12BrightnessTimerHandler);
-    
-    
-    
     
     // add USB UART commands specific for this carrier board
     if (carrier_spd.etc_support == 1) {
@@ -450,7 +502,7 @@ multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void) {
     // Set the anodes for the given VFD tube
     // only do this for tubes that display numbers, not the colons
     // inverse which number appears where, since we want data to show up left to right,
-    // to match the order of characters in vfd_display_buffer[]
+    // to match the order of characters in in12_display_buffer[]
     setIN12Cathodes(in12_display_buffer[7 - in12_active_tube]);
     
 #warning "add stuff here for AMPM indication"
@@ -674,9 +726,6 @@ void setIN12ColonCathodes(uint8_t colon_number, char input_char) {
 // this function powers on the IN12 carrier
 void IN12PowerOn(void) {
     
-    #warning "remove this after testing"
-    strcpy(in12_display_buffer, "66.66.66");
-    
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
     printf("Powering IN12 Carrier Board On\r\n");
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
@@ -712,6 +761,9 @@ void IN12PowerOn(void) {
         printf("    Re-initialized IN12 LED backlight drivers\r\n");
         while(usbUartCheckIfBusy());
     }
+    
+    IN12SetMenuLEDs();
+    
     // setup muxing timers
     genericMultiplexingTimerInitialize();
     genericBrightnessTimerInitialize();
@@ -737,10 +789,9 @@ void IN12PowerOff(void) {
     POS180_RUN_PIN = LOW;
     printf("    Disabled +180V Power Supply\r\n");
 
-#warning "add menu LED support, disable carrier ETC"
     // clear the menu LEDs
-    //displayBoardSetIOExpanderOutput(0x0000);
-    //printf("    Cleared menu LEDs\r\n");
+    IN12SetMenuLEDsGPIO(0x0000);
+    printf("    Cleared menu LEDs\r\n");
     
     if (carrier_spd.etc_support) {
         IN12GPIOSetETCEnable(0);
@@ -759,9 +810,8 @@ void IN12PowerOff(void) {
     // save the state that we've enabled the display
     in12_display_power_toggle_flag = 0;
 
-#warning "add this back in for alarm"
     // disable alarm
-    // clock_alarm.alarm_arm = 0;
+    in12_clock_alarm.in12_alarm_arm = 0;
     
 }
 
@@ -774,5 +824,345 @@ void IN12SetMenuLEDsGPIO(uint16_t output_data) {
     read_output |= output_data;
     
     TCA9555IOExpanderSetOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander, read_output);
+    
+}
+
+// This function updates the IN12 display based on the current state of what we want to display
+// relies on global variables in in12_carrier and rtcc modules
+void IN12updateClockDisplay(void) {
+ 
+    // decide what to shove into the in12_display_buffer[] based on what we're showing
+    switch (in12_clock_display_state) {
+    
+        case in12_display_time_state:
+            if (rtcc_shadow.seconds % 2 == 0) {
+                if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+            }
+            else {
+                if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                    sprintf(in12_display_buffer, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                    sprintf(in12_display_buffer, "%02u %02u %02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                    sprintf(in12_display_buffer, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else {
+                    sprintf(in12_display_buffer, "%02u %02u %02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+            }
+            break;
+            
+        case in12_set_time_state:
+            if (in12_clock_set_blank_request == 0) {
+                if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 1;
+                }
+                else {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    in12_dp_anode_request = 0;
+                }
+            }
+            else {
+                switch (in12_clock_time_setting) {
+                    case in12_set_time_hours_state:
+                        sprintf(in12_display_buffer, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        in12_dp_anode_request = 0;
+                        break;
+                    case in12_set_time_minutes_state:
+                        if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                    case in12_set_time_seconds_state:
+                        if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                    case in12_clock_time_setting_finished_state:
+                        if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                }
+            }
+            break;
+            
+        case in12_display_date_state:
+            sprintf(in12_display_buffer, "%02u_%02u_%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_set_date_state:
+            if (in12_clock_set_blank_request == 0) {
+                sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+            }
+            else {
+                switch (in12_clock_date_setting) {
+                    case in12_set_date_month_state:
+                        sprintf(in12_display_buffer, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
+                        break;
+                    case in12_set_date_day_state:
+                        sprintf(in12_display_buffer, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
+                        break;
+                    case in12_set_date_year_state:
+                        sprintf(in12_display_buffer, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
+                        break;
+                    case in12_clock_date_setting_finished_state:
+                        sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                        break;
+                }
+            }
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_display_weekday_state:
+            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_set_weekday_state:
+            if (in12_clock_set_blank_request == 0) {
+                sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            }
+            else {
+                switch (in12_clock_weekday_setting) {
+                    case in12_set_weekday_day_state:
+                        sprintf(in12_display_buffer, "        ");
+                        break;
+                    case in12_clock_weekday_setting_finished_state:
+                        sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+                        break;
+                }
+            }
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_display_alarm_state:
+            if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
+                sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                in12_dp_anode_request = 0;
+            }
+            else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
+                sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                in12_dp_anode_request = 1;
+            }
+            else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
+                sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                in12_dp_anode_request = 1;
+            }
+            else {
+                sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                in12_dp_anode_request = 0;
+            }
+            break;
+            
+        case in12_set_alarm_state:
+            if (in12_clock_set_blank_request == 0) {
+                if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    in12_dp_anode_request = 0;
+                }
+                else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    in12_dp_anode_request = 1;
+                }
+                else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    in12_dp_anode_request = 1;
+                }
+                else {
+                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    in12_dp_anode_request = 0;
+                }
+            }
+            else {
+                switch (in12_clock_alarm_setting) {
+                    case in12_set_alarm_hours_state:
+                        sprintf(in12_display_buffer, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        in12_dp_anode_request = 0;
+                        break;
+                    case in12_set_alarm_minutes_state:
+                        if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                    case in12_set_alarm_seconds_state:
+                        if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                    case in12_clock_alarm_setting_finished_state:
+                        if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 0;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 1;
+                        }
+                        else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 1;
+                        }
+                        else {
+                            sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            in12_dp_anode_request = 0;
+                        }
+                        break;
+                }
+            }
+            break;
+            
+        case in12_alarm_enable_state:
+            if (in12_clock_set_blank_request == 0) {
+                sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+            }
+            else {
+                switch (in12_clock_alarm_enable_setting) {
+                    case in12_set_alarm_arm:
+                        sprintf(in12_display_buffer, "        ");
+                        break;
+                    case in12_clock_alarm_enable_finished_state:
+                        sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+                        break;
+                }
+            }
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_set_24hr_mode_state:
+            if (in12_clock_set_blank_request == 0) {
+                sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "     0" : "     1");
+            }
+            else {
+                switch (in12_clock_24hr_setting) {
+                    case in12_set_24hr_value_state:
+                        sprintf(in12_display_buffer, "        ");
+                        break;
+                    case in12_clock_24hr_setting_finished_state:
+                        sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "     0" : "     1");
+                        break;
+                }
+            }
+            in12_dp_anode_request = 0;
+            break;
+            
+        case in12_set_brightness_state:
+            if (in12_clock_set_blank_request == 0) {
+                sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+            }
+            else {
+                switch (in12_clock_brightness_setting) {
+                    case in12_set_brightness_value_state:
+                        sprintf(in12_display_buffer, "        ");
+                        break;
+                    case in12_clock_brightness_setting_finished_state:
+                        sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+                        break;
+                }
+            }
+            in12_dp_anode_request = 0;
+            break;
+            
+        default:
+            in12_dp_anode_request = 0;
+            break;
+        
+    }
     
 }

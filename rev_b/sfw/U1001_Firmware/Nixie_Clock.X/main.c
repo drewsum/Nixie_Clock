@@ -306,6 +306,20 @@ void main(void) {
             wdt_clear_request = 0;
         }
         
+                
+        // Only do these actions if a display is detected
+        if (nDISPLAY_DETECT_PIN == LOW) {
+         
+            // update what's in the in12_display_buffer[] based on what we want to display
+            if (strcmp(&carrier_spd.tube_type, "IN-12") == 0) {
+                IN12updateClockDisplay();
+        }
+            
+            // check to see if we need to trigger the alarm
+            #warning "add this for alarm" // clockAlarmCheckMatch();
+            
+        }
+        
         // parse received USB strings if we have a new one received
         if (usb_uart_rx_ready) {
             usbUartRxLUTInterface(usb_uart_rx_buffer);

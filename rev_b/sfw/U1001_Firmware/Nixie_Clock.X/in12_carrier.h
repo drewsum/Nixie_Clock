@@ -83,6 +83,24 @@ volatile uint8_t in12_am_pm_enable = 1;
 // with capacitive pushbuttons
 volatile uint8_t in12_clock_set_blank_request = 0;
 
+// Set this flag to use the DP as an AM/PM indicator on tube 4
+volatile __attribute__((coherent)) uint8_t in12_dp_anode_request = 0;
+
+// This unsigned int is what's used to set brightness of the display
+// brightness timer is set to 10 * this value
+volatile __attribute__((coherent)) uint8_t in12_display_brightness_setting = 100;
+
+// This struct holds alarm settings
+// Lets you set alarm hours and minutes, as well as arm the alarm
+volatile struct in12_clock_alarm_s {
+    
+    uint8_t in12_alarm_hour;
+    uint8_t in12_alarm_minute;
+    uint8_t in12_alarm_second;
+    uint8_t in12_alarm_arm;
+    
+} in12_clock_alarm;
+
 // This global enum keeps track of what we want to display on the VFD display
 // This needs to be volatile because a bunch of different functions can modify it
 enum in12_clock_display_state_e {
@@ -177,18 +195,6 @@ enum in12_clock_alarm_enable_setting_s {
 }
 volatile in12_clock_alarm_enable_setting = 1;
 
-
-// This struct holds alarm settings
-// Lets you set alrm hours and minutes, as well as arm the alarm
-volatile struct in12_clock_alarm_s {
-    
-    uint8_t in12_alarm_hour;
-    uint8_t in12_alarm_minute;
-    uint8_t in12_alarm_second;
-    uint8_t in12_alarm_arm;
-    
-} in12_clock_alarm;
-
 // This buffer keeps track of which characters are displayed on which tubes
 // Copy a <= 8 character string into it
 // characters [2] and [5] can only display *, _ and : (these are the colons)
@@ -271,6 +277,10 @@ void IN12PowerOff(void);
 
 // This function sets the display board IO expander output
 void IN12SetMenuLEDsGPIO(uint16_t output_data);
+
+// This function updates the IN12 display based on the current state of what we want to display
+// relies on global variables in in12_carrier and rtcc modules
+void IN12updateClockDisplay(void);
 
 #endif /* _IN12_CARRIER_H */
 
