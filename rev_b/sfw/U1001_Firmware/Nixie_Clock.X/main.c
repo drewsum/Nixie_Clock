@@ -259,6 +259,12 @@ void main(void) {
         printf("    Display Carrier I2C Signals Enabled\r\n");
         while(usbUartCheckIfBusy());
         
+        
+        carrierPushbuttonInitialize();
+        printf("    Display Carrier Generic Pushbutton Interrupts Initialized\r\n");
+        while(usbUartCheckIfBusy());
+        
+        
         // read data from carrier board serial presence detect
         CarrierSPDGetData();
         CarrierSPDPrintString();
