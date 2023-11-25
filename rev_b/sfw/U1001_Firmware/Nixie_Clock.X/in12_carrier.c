@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 #include "in12_carrier.h"
 
@@ -533,6 +534,21 @@ void IN12Initialize(void) {
         printf("    IN12 Carrier Elapsed Time Counter Initialized\r\n");
     }
     
+    // setup pushbuttons
+    if (carrier_spd.pushbutton_support == 1) {
+     
+        // setup the timer used for blanking values on the display that can be set by pushbuttons
+        genericValueBlankingTimerInitialize();
+        
+        // assign callback functions to ISRs
+        assignPushbutton0Handler(power_pushbutton_callback);
+        assignPushbutton1Handler(left_pushbutton_callback);
+        assignPushbutton2Handler(right_pushbutton_callback);
+        assignPushbutton3Handler(up_pushbutton_callback);
+        assignPushbutton4Handler(down_pushbutton_callback);
+        
+    }
+    
     usbUartAddCommand("IN-12 Status?",
             "Prints status of devices on IN-12 Carrier Board, as well as carrier SPD data",
             printIN12Status);
@@ -587,10 +603,6 @@ void blankIN12Anodes(void) {
     ANODE_3_PIN = LOW;
     ANODE_4_PIN = LOW;
     ANODE_5_PIN = LOW;
-    COLON_0_PIN = LOW;
-    COLON_1_PIN = LOW;
-    COLON_2_PIN = LOW;
-    COLON_3_PIN = LOW;
     
 }
 
@@ -1242,4 +1254,26 @@ void IN12SetDisplayBrightness(uint8_t input_brightness) {
     
     PR5 = 100 * input_brightness;
     
+}
+
+#warning "make these usable eventually"
+// these functions are the handler functions for pressing used pushbuttons
+pushbutton_input_0_callback_t power_pushbutton_callback(void) {
+    printf("power pushbutton handler called\r\n");
+}
+
+pushbutton_input_1_callback_t left_pushbutton_callback(void) {
+    printf("left pushbutton handler called\r\n");
+}
+
+pushbutton_input_2_callback_t right_pushbutton_callback(void) {
+    printf("right pushbutton handler called\r\n");
+}
+
+pushbutton_input_3_callback_t up_pushbutton_callback(void) {
+    printf("up pushbutton handler called\r\n");
+}
+
+pushbutton_input_4_callback_t down_pushbutton_callback(void) {
+    printf("down pushbutton handler called\r\n");
 }

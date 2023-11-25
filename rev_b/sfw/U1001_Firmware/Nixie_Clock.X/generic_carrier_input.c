@@ -31,10 +31,7 @@ void carrierPushbuttonInitialize(void) {
     // Enable interrupts
     clearInterruptFlag(PORTD_Input_Change_Interrupt);
     enableInterrupt(PORTD_Input_Change_Interrupt);
-    
-    #warning "add this back in: clockSetBlankingTimerInitialize();"
-    
-    
+        
 }
 
 // PORTD CNF ISR

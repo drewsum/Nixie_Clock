@@ -146,3 +146,48 @@ void assignGenericMultiplexingHandler(multiplexing_timer_callback_t callback_fun
 void assignGenericBrightnessHandler(brightness_timer_callback_t callback_func) {
     brightness_timer_callback = callback_func;
 }
+
+// This timer is used to blink values that are being changed using the pushbuttons
+// Using timer 6 for this
+void genericValueBlankingTimerInitialize(void) {
+    
+    // Stop timer 6
+    T6CONbits.ON = 0;
+    
+    // Set timer 6 prescalar to 256
+    T6CONbits.TCKPS = 0b111;
+    
+    // Set timer clock input as PBCLK3
+    T6CONbits.TCS = 0;
+    
+    // Clear timer 6
+    TMR6 = 0x0000;
+    
+    // Set timer 6 period match to 25000
+    PR6 = 25000;
+    
+    // Clear Timer1 Interrupt Flag
+    clearInterruptFlag(Timer6);
+    
+    // Set Timer 1 interrupt priority
+    setInterruptPriority(Timer6, 6);
+    setInterruptSubpriority(Timer6, 0);
+    
+    // Enable timer 6 interrupt
+    enableInterrupt(Timer6);
+    
+    // Start timer 6
+    T6CONbits.ON = 1;
+}
+
+// this is the ISR for the clock set blanking timer
+void __ISR(_TIMER_6_VECTOR, IPL6SRS) genericValueBlankingTimerISR(void) {
+ 
+    // toggle blanking the value we're setting
+    if (clock_set_blank_request) clock_set_blank_request = 0;
+    else clock_set_blank_request = 1;
+    
+    // clear IRQ
+    clearInterruptFlag(Timer6);
+    
+}

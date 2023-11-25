@@ -28,6 +28,9 @@ typedef void (*brightness_timer_callback_t)(void);
 multiplexing_timer_callback_t multiplexing_timer_callback;
 brightness_timer_callback_t brightness_timer_callback;
 
+// This flag is what allows values to alternate on and off when setting them
+// with capacitive pushbuttons
+volatile uint8_t clock_set_blank_request = 0;
 
 // This unsigned int is what's used to set brightness of the display
 // brightness timer is set to 10 * this value
@@ -57,6 +60,13 @@ void assignGenericMultiplexingHandler(multiplexing_timer_callback_t callback_fun
 
 // this assigns a callback function for the genericBrightnessTimerISR
 void assignGenericBrightnessHandler(brightness_timer_callback_t callback_func);
+
+// This timer is used to blink values that are being changed using the pushbuttons
+// Using timer 6 for this
+void genericValueBlankingTimerInitialize(void);
+
+// this is the ISR for the clock set blanking timer
+void __ISR(_TIMER_6_VECTOR, IPL6SRS) genericValueBlankingTimerISR(void);
 
 
 #endif /* _GENERIC_MULTIPLEXING_TIMERS_H */

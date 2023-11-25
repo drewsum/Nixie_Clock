@@ -26,6 +26,7 @@
 #include "tca9555_io_expander.h"
 #include "ds1683_ETC.h"
 #include "generic_multiplexing_timers.h"
+#include "generic_carrier_input.h"
 
 // These macros set the data to be sent to the display board GPIO expander
 // to set display LEDs to show what in12_clock_display_state enum is set to
@@ -285,6 +286,13 @@ void IN12updateClockDisplay(void);
 // this function sets the brightness of the display based on what you pass it
 // number must be between 10 and 100
 void IN12SetDisplayBrightness(uint8_t input_brightness);
+
+// these functions are the handler functions for pressing used pushbuttons
+pushbutton_input_0_callback_t power_pushbutton_callback(void);
+pushbutton_input_1_callback_t left_pushbutton_callback(void);
+pushbutton_input_2_callback_t right_pushbutton_callback(void);
+pushbutton_input_3_callback_t up_pushbutton_callback(void);
+pushbutton_input_4_callback_t down_pushbutton_callback(void);
 
 #endif /* _IN12_CARRIER_H */
 

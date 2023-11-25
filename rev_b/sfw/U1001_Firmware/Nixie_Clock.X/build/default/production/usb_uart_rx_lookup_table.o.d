@@ -8,7 +8,7 @@ build/default/production/usb_uart_rx_lookup_table.o: \
  ds3231_rtc.h power_monitors.h ina219_power_monitor.h \
  temperature_sensors.h mcp9804_temp_sensor.h pgood_monitor.h rtcc.h \
  in12_carrier.h lp5009_led_driver.h tca9555_io_expander.h \
- generic_multiplexing_timers.h
+ generic_multiplexing_timers.h generic_carrier_input.h
 
 usb_uart_rx_lookup_table.h:
 
@@ -75,3 +75,5 @@ lp5009_led_driver.h:
 tca9555_io_expander.h:
 
 generic_multiplexing_timers.h:
+
+generic_carrier_input.h:
