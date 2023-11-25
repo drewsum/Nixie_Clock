@@ -174,7 +174,7 @@ void genericValueBlankingTimerInitialize(void) {
     setInterruptSubpriority(Timer6, 0);
     
     // Enable timer 6 interrupt
-    enableInterrupt(Timer6);
+    // enableInterrupt(Timer6);
     
     // Start timer 6
     T6CONbits.ON = 1;

@@ -596,7 +596,7 @@ brightness_timer_callback_t IN12BrightnessTimerHandler(void) {
 // This function sets all IN12 tube anodes low
 void blankIN12Anodes(void) {
  
-    // Set all grids, along with colon anodes, low
+    // Set all anodes low
     ANODE_0_PIN = LOW;
     ANODE_1_PIN = LOW;
     ANODE_2_PIN = LOW;
@@ -863,7 +863,7 @@ void IN12PowerOff(void) {
     blankIN12Anodes();
     blankIN12Cathodes();
     printf("    Multiplexing Timers Suspended\r\n");
-    printf("    IN12 Grids and Anodes cleared\r\n");
+    printf("    IN12 Cathodes and Anodes cleared\r\n");
 
     POS180_RUN_PIN = LOW;
     printf("    Disabled +180V Power Supply\r\n");
@@ -1259,7 +1259,35 @@ void IN12SetDisplayBrightness(uint8_t input_brightness) {
 #warning "make these usable eventually"
 // these functions are the handler functions for pressing used pushbuttons
 pushbutton_input_0_callback_t power_pushbutton_callback(void) {
-    printf("power pushbutton handler called\r\n");
+    // If we're currently sounding the alarm, disable it. If not, do normal functions
+    if (in12_clock_alarm.in12_alarm_arm == 1 && BUZZER_ENABLE_PIN == HIGH) {
+     
+        BUZZER_ENABLE_PIN = LOW;
+        
+    }
+    
+    // If the display is currently on, turn it off
+    else if (in12_display_power_toggle_flag) {
+        
+        IN12PowerOff();
+        
+        // save the state that we've enabled the display
+        in12_display_power_toggle_flag = 0;
+        
+        // disable alarm
+        in12_clock_alarm.in12_alarm_arm = 0;
+        
+    }
+    
+    // else, enable the display since it was shut down
+    else {
+        
+        IN12PowerOn();
+        
+        // save the state that we've enabled the display
+        in12_display_power_toggle_flag = 1;
+        
+    }
 }
 
 pushbutton_input_1_callback_t left_pushbutton_callback(void) {
