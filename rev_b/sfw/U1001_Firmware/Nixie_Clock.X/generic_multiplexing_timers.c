@@ -115,11 +115,11 @@ void __ISR(_TIMER_4_VECTOR, IPL7SRS) genericMultiplexingTimerISR(void) {
     // start brightness timer
     T5CONbits.ON = 1;
     
-    // clear IRQ
-    clearInterruptFlag(Timer4);
-    
     // if a callback function is assigned, call it before clearing the IRQ
     if (multiplexing_timer_callback != NULL) multiplexing_timer_callback();
+    
+    // clear IRQ
+    clearInterruptFlag(Timer4);
     
 }
 
@@ -129,11 +129,11 @@ void __ISR(_TIMER_5_VECTOR, IPL7SRS) genericBrightnessTimerISR(void) {
     // stop brightness timer
     T5CONbits.ON = 0;
     
-    // clear IRQ
-    clearInterruptFlag(Timer5);
-    
     // if a callback function is assigned, call it before clearing the IRQ
     if (brightness_timer_callback != NULL) brightness_timer_callback();
+    
+    // clear IRQ
+    clearInterruptFlag(Timer5);
     
 }
 
