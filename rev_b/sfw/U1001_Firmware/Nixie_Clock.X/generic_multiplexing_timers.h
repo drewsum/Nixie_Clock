@@ -50,10 +50,10 @@ void setGenericDisplayBrightness(uint8_t input_brightness);
 void genericMultiplexingTimersStop(void);
 
 // muxing timer interrupt service routine
-void __ISR(_TIMER_4_VECTOR, IPL5SRS) genericMultiplexingTimerISR(void);
+void __ISR(_TIMER_4_VECTOR, IPL7SRS) genericMultiplexingTimerISR(void);
 
 // brightness timer interrupt service routine
-void __ISR(_TIMER_5_VECTOR, IPL5SRS) genericBrightnessTimerISR(void);
+void __ISR(_TIMER_5_VECTOR, IPL7SRS) genericBrightnessTimerISR(void);
 
 // this assigns a callback function for the genericMultiplexingTimerISR
 void assignGenericMultiplexingHandler(multiplexing_timer_callback_t callback_func);

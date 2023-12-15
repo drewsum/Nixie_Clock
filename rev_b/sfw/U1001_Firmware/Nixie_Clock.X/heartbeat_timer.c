@@ -31,7 +31,7 @@ void heartbeatTimerInitialize(void) {
     clearInterruptFlag(Timer1);
     
     // Set Timer 1 interrupt priority
-    setInterruptPriority(Timer1, 6);
+    setInterruptPriority(Timer1, 3);
     setInterruptSubpriority(Timer1, 3);
     
     // Enable timer 1 interrupt
@@ -86,7 +86,7 @@ void heartbeatTimerStop(void) {
 }
 
 // Heartbeat timer interrupt service routine
-void __ISR(_TIMER_1_VECTOR, IPL6SRS) hearbeatTimerISR(void) {
+void __ISR(_TIMER_1_VECTOR, IPL3SRS) hearbeatTimerISR(void) {
 
     // Clear the watchdog timer
     wdt_clear_request = 1;

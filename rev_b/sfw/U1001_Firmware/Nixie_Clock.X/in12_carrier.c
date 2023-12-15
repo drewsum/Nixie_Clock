@@ -860,7 +860,7 @@ void IN12PowerOn(void) {
 void IN12PowerOff(void) {
     
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, BOLD_FONT);
-    printf("Powering down VFD display:\r\n");
+    printf("Powering down IN12 display:\r\n");
     terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
 
     genericMultiplexingTimersStop();

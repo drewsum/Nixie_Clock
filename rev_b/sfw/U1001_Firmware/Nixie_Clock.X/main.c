@@ -364,10 +364,7 @@ void main(void) {
         
         // update error LEDs if needed
         if (update_error_leds_flag) updateErrorLEDs();
-//        
-//        if (power_pushbutton_flag) powerCapTouchPushbuttonCallback();
-//        if (mode_pushbutton_flag) modeCapTouchPushbuttonCallback();
-//        
+
     }
 
 }

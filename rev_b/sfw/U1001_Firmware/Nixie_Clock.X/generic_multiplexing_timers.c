@@ -40,7 +40,7 @@ void genericMultiplexingTimerInitialize(void) {
     clearInterruptFlag(Timer4);
     
     // Set Timer interrupt priority
-    setInterruptPriority(Timer4, 5);
+    setInterruptPriority(Timer4, 7);
     setInterruptSubpriority(Timer4, 2);
     
     // Enable timer interrupt
@@ -81,7 +81,7 @@ void genericBrightnessTimerInitialize(void) {
     clearInterruptFlag(Timer5);
     
     // Set Timer interrupt priority
-    setInterruptPriority(Timer5, 5);
+    setInterruptPriority(Timer5, 7);
     setInterruptSubpriority(Timer5, 2);
     
     // Enable timer interrupt
@@ -110,30 +110,32 @@ void genericMultiplexingTimersStop(void) {
 }
 
 // muxing timer interrupt service routine
-void __ISR(_TIMER_4_VECTOR, IPL5SRS) genericMultiplexingTimerISR(void) {
-    
-    // if a callback function is assigned, call it before clearing the IRQ
-    if (multiplexing_timer_callback != NULL) multiplexing_timer_callback();
+void __ISR(_TIMER_4_VECTOR, IPL7SRS) genericMultiplexingTimerISR(void) {
     
     // start brightness timer
     T5CONbits.ON = 1;
     
     // clear IRQ
     clearInterruptFlag(Timer4);
+    TMR4 = 0;
+    
+    // if a callback function is assigned, call it before clearing the IRQ
+    if (multiplexing_timer_callback != NULL) multiplexing_timer_callback();
     
 }
 
 // brightness timer interrupt service routine
-void __ISR(_TIMER_5_VECTOR, IPL5SRS) genericBrightnessTimerISR(void) {
+void __ISR(_TIMER_5_VECTOR, IPL7SRS) genericBrightnessTimerISR(void) {
     
     // stop brightness timer
     T5CONbits.ON = 0;
-    
-    // if a callback function is assigned, call it before clearing the IRQ
-    if (brightness_timer_callback != NULL) brightness_timer_callback();
+    TMR5 = 0;
     
     // clear IRQ
     clearInterruptFlag(Timer5);
+    
+    // if a callback function is assigned, call it before clearing the IRQ
+    if (brightness_timer_callback != NULL) brightness_timer_callback();
     
 }
 
@@ -177,7 +179,7 @@ void genericValueBlankingTimerInitialize(void) {
     // enableInterrupt(Timer6);
     
     // Start timer 6
-    T6CONbits.ON = 1;
+    T6CONbits.ON = 0;
 }
 
 // this is the ISR for the clock set blanking timer
