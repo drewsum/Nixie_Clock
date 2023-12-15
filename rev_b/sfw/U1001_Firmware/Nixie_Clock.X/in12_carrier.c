@@ -603,6 +603,10 @@ void blankIN12Anodes(void) {
     ANODE_3_PIN = LOW;
     ANODE_4_PIN = LOW;
     ANODE_5_PIN = LOW;
+    COLON_0_PIN = LOW;
+    COLON_1_PIN = LOW;
+    COLON_2_PIN = LOW;
+    COLON_3_PIN = LOW;
     
 }
 

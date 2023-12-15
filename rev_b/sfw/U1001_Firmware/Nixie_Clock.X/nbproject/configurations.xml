@@ -13,12 +13,12 @@
           <itemPath>in12_carrier.h</itemPath>
           <itemPath>carrier_spd.h</itemPath>
           <itemPath>generic_multiplexing_timers.h</itemPath>
+          <itemPath>generic_carrier_input.h</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.h</itemPath>
         <itemPath>power_saving.h</itemPath>
         <itemPath>telemetry.h</itemPath>
         <itemPath>pgood_monitor.h</itemPath>
-        <itemPath>generic_carrier_input.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Core" projectFiles="true">
         <itemPath>watchdog_timer.h</itemPath>
@@ -74,12 +74,12 @@
           <itemPath>in12_carrier.c</itemPath>
           <itemPath>carrier_spd.c</itemPath>
           <itemPath>generic_multiplexing_timers.c</itemPath>
+          <itemPath>generic_carrier_input.c</itemPath>
         </logicalFolder>
         <itemPath>heartbeat_services.c</itemPath>
         <itemPath>power_saving.c</itemPath>
         <itemPath>telemetry.c</itemPath>
         <itemPath>pgood_monitor.c</itemPath>
-        <itemPath>generic_carrier_input.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Core" projectFiles="true">
         <itemPath>device_control.c</itemPath>
@@ -134,7 +134,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.35</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
