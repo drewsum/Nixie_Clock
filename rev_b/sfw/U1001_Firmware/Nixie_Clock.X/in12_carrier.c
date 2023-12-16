@@ -504,10 +504,10 @@ void IN12Initialize(void) {
         printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
         while(usbUartCheckIfBusy());
         usbUartAddCommand("Set Backlight Color:",
-            "\b\b <color/hex>: Sets the meter backlight color. Colors include Red, Green, Blue, Yellow, Magenta, Cyan, White, and any 24 bit hex color (eg FFFFFF)",
+            "\b\b <color/hex>: Sets the tube backlight color. Colors include Red, Green, Blue, Yellow, Magenta, Cyan, White, and any 24 bit hex color (eg FFFFFF)",
             setBacklightColorCommand);
         usbUartAddCommand("Set Backlight Brightness:",
-            "\b\b <percentage>: Sets the brightness of the meter backlight",
+            "\b\b <percentage>: Sets the brightness of the tube backlight",
             setBacklightBrightneesCommand);
     }
     
@@ -561,7 +561,7 @@ multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void) {
     // set IN12 anodes based on active_tube
     setIN12Anodes();
     
-    // Set the anodes for the given VFD tube
+    // Set the anodes for the given IN12 tube
     // only do this for tubes that display numbers, not the colons
     // inverse which number appears where, since we want data to show up left to right,
     // to match the order of characters in in12_display_buffer[]
