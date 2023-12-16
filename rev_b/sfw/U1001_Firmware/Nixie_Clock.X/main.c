@@ -78,6 +78,27 @@ void main(void) {
     printf("%s\r\n", PROJECT_NAME_STR);
     printf("Host Firmware Version: %s, Platform Hardware Revision: %s\r\n", FIRMWARE_VERSION_STR, PLATFORM_REVISION_STR);
     printf("Created by Drew Maatman, %s\r\n", PROJECT_DATE_STR);
+    
+    printf("\r\n");
+    
+    printf(""
+        "  _   _ _______   _______ ______    _____ _      ____   _____ _  __\r\n"
+        " | \\ | |_   _\\ \\ / /_   _|  ____|  / ____| |    / __ \\ / ____| |/ /\r\n"
+        " |  \\| | | |  \\ V /  | | | |__    | |    | |   | |  | | |    | ' / \r\n"
+        " | . ` | | |   > <   | | |  __|   | |    | |   | |  | | |    |  <  \r\n"
+        " | |\\  |_| |_ / . \\ _| |_| |____  | |____| |___| |__| | |____| . \\ \r\n"
+        " |_| \\_|_____/_/ \\_\\_____|______|  \\_____|______\\____/ \\_____|_|\\_\\ \r\n"
+        "                                                                   \r\n"
+        "                                                                   \r\n");
+    
+    printf(
+        "    ____  __________  __  ___  __  \r\n"
+        "   / __ \\/ ____/ __ \\/ / / / |/ / \r\n"
+        "  / /_/ / __/ / / / / / / /|   /  \r\n"
+        " / _, _/ /___/ /_/ / /_/ //   |   \r\n"
+        "/_/ |_/_____/_____/\\____//_/|_|   \r\n\r\n");
+
+    
     terminalTextAttributesReset();
     
      // Print cause of reset
