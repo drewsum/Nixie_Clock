@@ -154,7 +154,7 @@ void IN12SetMenuLEDs(void) {
             IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_BRIGHTNESS_STATE);
             break;
             
-        case in12_set_color_state:
+        case in12_set_backlight_color_state:
             IN12SetMenuLEDsGPIO(IN12_MENU_LEDS_SET_COLOR_STATE);
             break;
             
@@ -499,7 +499,7 @@ void IN12Initialize(void) {
     
     if (carrier_spd.backlight_support == 1) {
         IN12BacklightInitialize();
-        IN12BacklightSetBrightness(75);
+        IN12BacklightSetBrightness(90);
         IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
         printf("    IN12 Carrier LED Backlight Drivers Initialized\r\n");
         while(usbUartCheckIfBusy());
@@ -1242,6 +1242,11 @@ void IN12updateClockDisplay(void) {
             in12_dp_anode_request = 0;
             break;
             
+        case in12_set_backlight_color_state:
+            sprintf(in12_display_buffer, "        ");
+            in12_dp_anode_request = 0;
+            break;
+            
         default:
             in12_dp_anode_request = 0;
             break;
@@ -1546,6 +1551,16 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         }
         
     }
+    
+    else if (in12_clock_display_state == in12_set_backlight_color_state) {
+
+        in12_backlight_color_setting--;
+        if (in12_backlight_color_setting > in12_backlight_white) in12_backlight_color_setting = in12_backlight_white;
+        
+        // set backlight color based on what we just set with pushbuttons
+        IN12SetBacklightColorState();
+        
+    }
 }
 
 pushbutton_input_2_callback_t right_pushbutton_callback(void) {
@@ -1799,6 +1814,16 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
                 clock_set_blank_request = 0;
                 break;
         }
+        
+    }
+    
+    else if (in12_clock_display_state == in12_set_backlight_color_state) {
+
+        in12_backlight_color_setting++;
+        if (in12_backlight_color_setting > in12_backlight_white) in12_backlight_color_setting = in12_backlight_black;
+        
+        // set backlight color based on what we just set with pushbuttons
+        IN12SetBacklightColorState();
         
     }
 }
@@ -2175,7 +2200,7 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
 
     else {
     
-        if (in12_clock_display_state == in12_display_time_state) in12_clock_display_state = in12_set_brightness_state;
+        if (in12_clock_display_state == in12_display_time_state) in12_clock_display_state = in12_set_backlight_color_state;
         else in12_clock_display_state--;
 
         IN12SetMenuLEDs();
@@ -2563,7 +2588,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
     
     else {
     
-        if (in12_clock_display_state == in12_set_brightness_state) in12_clock_display_state = in12_display_time_state;
+        if (in12_clock_display_state == in12_set_backlight_color_state) in12_clock_display_state = in12_display_time_state;
         else in12_clock_display_state++;
 
         IN12SetMenuLEDs();
@@ -2577,4 +2602,41 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         in12_clock_alarm_enable_setting = in12_clock_alarm_enable_finished_state;
         
     }
+}
+
+// this function sets the backlight color based on pushbutton input (based on in12_backlight_color_setting enum)
+void IN12SetBacklightColorState(void) {
+
+    switch (in12_backlight_color_setting) {
+        
+        case in12_backlight_black:
+            IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_red:
+            IN12BacklightSetUniformColor(RED_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_green:
+            IN12BacklightSetUniformColor(GREEN_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_blue:
+            IN12BacklightSetUniformColor(BLUE_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_yellow:
+            IN12BacklightSetUniformColor(YELLOW_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_cyan:
+            IN12BacklightSetUniformColor(CYAN_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_magenta:
+            IN12BacklightSetUniformColor(MAGENTA_BACKLIGHT_COLOR);
+            break;
+        case in12_backlight_white:
+            IN12BacklightSetUniformColor(WHITE_BACKLIGHT_COLOR);
+            break;
+        default:
+            IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
+            break;
+        
+    }
+
 }

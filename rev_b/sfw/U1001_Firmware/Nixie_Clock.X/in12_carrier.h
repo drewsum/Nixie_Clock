@@ -117,7 +117,7 @@ enum in12_clock_display_state_e {
     in12_alarm_enable_state = 8,
     in12_set_24hr_mode_state = 9,
     in12_set_brightness_state = 10,
-    in12_set_color_state = 11,
+    in12_set_backlight_color_state = 11,
     in12_display_lamp_test = 12
     
 } volatile in12_clock_display_state = 0;
@@ -195,6 +195,20 @@ enum in12_clock_alarm_enable_setting_s {
     
 }
 volatile in12_clock_alarm_enable_setting = 1;
+
+enum in12_backlight_color_setting_s {
+    
+    in12_backlight_black = 0,
+    in12_backlight_red = 1,
+    in12_backlight_green = 2,
+    in12_backlight_blue = 3,
+    in12_backlight_yellow = 4,
+    in12_backlight_cyan = 5,
+    in12_backlight_magenta = 6,
+    in12_backlight_white = 7
+    
+}
+volatile in12_backlight_color_setting = 0;
 
 // This buffer keeps track of which characters are displayed on which tubes
 // Copy a <= 8 character string into it
@@ -286,6 +300,9 @@ void IN12updateClockDisplay(void);
 // this function sets the brightness of the display based on what you pass it
 // number must be between 10 and 100
 void IN12SetDisplayBrightness(uint8_t input_brightness);
+
+// this function sets the backlight color based on pushbutton input (based on in12_backlight_color_setting enum)
+void IN12SetBacklightColorState(void);
 
 // these functions are the handler functions for pressing used pushbuttons
 pushbutton_input_0_callback_t power_pushbutton_callback(void);
