@@ -82,7 +82,7 @@ volatile uint8_t in12_am_pm_enable = 1;
 
 // This flag is what allows values to alternate on and off when setting them
 // with capacitive pushbuttons
-volatile uint8_t in12_clock_set_blank_request = 0;
+extern volatile uint8_t clock_set_blank_request;
 
 // Set this flag to use the DP as an AM/PM indicator on tube 4
 volatile __attribute__((coherent)) uint8_t in12_dp_anode_request = 0;

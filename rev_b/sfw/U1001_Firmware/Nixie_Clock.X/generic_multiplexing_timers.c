@@ -174,10 +174,10 @@ void genericValueBlankingTimerInitialize(void) {
     setInterruptSubpriority(Timer6, 0);
     
     // Enable timer 6 interrupt
-    // enableInterrupt(Timer6);
+    enableInterrupt(Timer6);
     
     // Start timer 6
-    T6CONbits.ON = 0;
+    T6CONbits.ON = 1;
 }
 
 // this is the ISR for the clock set blanking timer

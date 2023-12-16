@@ -319,10 +319,9 @@ void main(void) {
             // update what's in the in12_display_buffer[] based on what we want to display
             if (strcmp(&carrier_spd.tube_type, "IN-12") == 0) {
                 IN12updateClockDisplay();
+                // check to see if we need to trigger the alarm
+                IN12AlarmCheckMatch();
             }
-            
-            // check to see if we need to trigger the alarm
-            IN12AlarmCheckMatch();
             
         }
         
