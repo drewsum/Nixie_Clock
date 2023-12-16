@@ -134,7 +134,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.30</languageToolchainVersion>
+        <languageToolchainVersion>2.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -303,7 +303,6 @@
         <property key="save-temps" value="false"/>
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
-        <appendMe value="-Wno-implicit-function-declaration -Wno-incompatible-pointer-types"/>
       </C32Global>
       <Tool>
         <property key="ADC" value="true"/>
@@ -537,8 +536,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/Users/drewm/OneDrive/Documents/KiCad Projects/Projects/Nixie_Clock/rev_b/sfw/U1001_Firmware/Nixie_Clock.X/debug/default/Nixie_Clock_ptg"/>
         <property key="programmerToGoImageName" value="Nixie_Clock_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

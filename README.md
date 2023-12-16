@@ -2,7 +2,7 @@
 
 Rev B Hardware designed with KiCad 7.0.1
 
-Rev B MCU Firmware written with MPLAB X IDE v6.15, compiled with Microchip XC32 4.30 Compiler
+Rev B MCU Firmware written with MPLAB X IDE v6.15, compiled with Microchip XC32 2.30 Compiler - NOT COMPATIBLE with newer compiler versions (4.30)
 
 
 
