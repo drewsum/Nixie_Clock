@@ -920,37 +920,37 @@ void IN12updateClockDisplay(void) {
         case in12_display_time_state:
             if (rtcc_shadow.seconds % 2 == 0) {
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
             }
             else {
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u %02u %02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u %02u %02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u %02u %02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u %02u %02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u %02u %02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
             }
@@ -959,79 +959,79 @@ void IN12updateClockDisplay(void) {
         case in12_set_time_state:
             if (clock_set_blank_request == 0) {
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
             }
             else {
                 switch (in12_clock_time_setting) {
                     case in12_set_time_hours_state:
-                        sprintf(in12_display_buffer, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                         break;
                     case in12_set_time_minutes_state:
                         if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
                             in12_dp_anode_request = 0;
                         }
                         break;
                     case in12_set_time_seconds_state:
                         if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
                             in12_dp_anode_request = 0;
                         }
                         break;
                     case in12_clock_time_setting_finished_state:
                         if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                             in12_dp_anode_request = 0;
                         }
                         break;
@@ -1040,27 +1040,27 @@ void IN12updateClockDisplay(void) {
             break;
             
         case in12_display_date_state:
-            sprintf(in12_display_buffer, "%02u_%02u_%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+            snprintf(in12_display_buffer, 9, "%02u_%02u_%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
             in12_dp_anode_request = 0;
             break;
             
         case in12_set_date_state:
             if (clock_set_blank_request == 0) {
-                sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
             }
             else {
                 switch (in12_clock_date_setting) {
                     case in12_set_date_month_state:
-                        sprintf(in12_display_buffer, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
+                        snprintf(in12_display_buffer, 9, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
                         break;
                     case in12_set_date_day_state:
-                        sprintf(in12_display_buffer, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
+                        snprintf(in12_display_buffer, 9, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
                         break;
                     case in12_set_date_year_state:
-                        sprintf(in12_display_buffer, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
+                        snprintf(in12_display_buffer, 9, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
                         break;
                     case in12_clock_date_setting_finished_state:
-                        sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                        snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                         break;
                 }
             }
@@ -1068,21 +1068,21 @@ void IN12updateClockDisplay(void) {
             break;
             
         case in12_display_weekday_state:
-            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
             in12_dp_anode_request = 0;
             break;
             
         case in12_set_weekday_state:
             if (clock_set_blank_request == 0) {
-                sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+                snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
             }
             else {
                 switch (in12_clock_weekday_setting) {
                     case in12_set_weekday_day_state:
-                        sprintf(in12_display_buffer, "        ");
+                        snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_weekday_setting_finished_state:
-                        sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+                        snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
                         break;
                 }
             }
@@ -1091,19 +1091,19 @@ void IN12updateClockDisplay(void) {
             
         case in12_display_alarm_state:
             if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 0;
             }
             else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 1;
             }
             else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 1;
             }
             else {
-                sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 0;
             }
             break;
@@ -1111,79 +1111,79 @@ void IN12updateClockDisplay(void) {
         case in12_set_alarm_state:
             if (clock_set_blank_request == 0) {
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
             }
             else {
                 switch (in12_clock_alarm_setting) {
                     case in12_set_alarm_hours_state:
-                        sprintf(in12_display_buffer, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                         break;
                     case in12_set_alarm_minutes_state:
                         if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 0;
                         }
                         break;
                     case in12_set_alarm_seconds_state:
                         if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
                             in12_dp_anode_request = 0;
                         }
                         break;
                     case in12_clock_alarm_setting_finished_state:
                         if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 0;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 1;
                         }
                         else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 1;
                         }
                         else {
-                            sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                            snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                             in12_dp_anode_request = 0;
                         }
                         break;
@@ -1193,15 +1193,15 @@ void IN12updateClockDisplay(void) {
             
         case in12_alarm_enable_state:
             if (clock_set_blank_request == 0) {
-                sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
             }
             else {
                 switch (in12_clock_alarm_enable_setting) {
                     case in12_set_alarm_arm:
-                        sprintf(in12_display_buffer, "        ");
+                        snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_alarm_enable_finished_state:
-                        sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+                        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
                         break;
                 }
             }
@@ -1210,15 +1210,15 @@ void IN12updateClockDisplay(void) {
             
         case in12_set_24hr_mode_state:
             if (clock_set_blank_request == 0) {
-                sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "     0" : "     1");
+                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "     0" : "     1");
             }
             else {
                 switch (in12_clock_24hr_setting) {
                     case in12_set_24hr_value_state:
-                        sprintf(in12_display_buffer, "        ");
+                        snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_24hr_setting_finished_state:
-                        sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "     0" : "     1");
+                        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "     0" : "     1");
                         break;
                 }
             }
@@ -1227,15 +1227,15 @@ void IN12updateClockDisplay(void) {
             
         case in12_set_brightness_state:
             if (clock_set_blank_request == 0) {
-                sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+                snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
             }
             else {
                 switch (in12_clock_brightness_setting) {
                     case in12_set_brightness_value_state:
-                        sprintf(in12_display_buffer, "        ");
+                        snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_brightness_setting_finished_state:
-                        sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+                        snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
                         break;
                 }
             }
@@ -1243,7 +1243,7 @@ void IN12updateClockDisplay(void) {
             break;
             
         case in12_set_backlight_color_state:
-            sprintf(in12_display_buffer, "        ");
+            snprintf(in12_display_buffer, 9, "        ");
             in12_dp_anode_request = 0;
             break;
             
@@ -1316,57 +1316,57 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_time_setting) {
             case in12_set_time_hours_state:
-                sprintf(in12_display_buffer, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
+                snprintf(in12_display_buffer, 9, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
                 in12_dp_anode_request = 0;
                 break;
             case in12_set_time_minutes_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_set_time_seconds_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_clock_time_setting_finished_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 clock_set_blank_request = 0;
@@ -1386,16 +1386,16 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_date_setting) {
             case in12_set_date_month_state:
-                sprintf(in12_display_buffer, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
                 break;
             case in12_set_date_day_state:
-                sprintf(in12_display_buffer, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
                 break;
             case in12_set_date_year_state:
-                sprintf(in12_display_buffer, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
+                snprintf(in12_display_buffer, 9, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
                 break;
             case in12_clock_date_setting_finished_state:
-                sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 clock_set_blank_request = 0;
                 // Save time from internal RTCC into external backup RTC
                 if (RTC_HARDSTRAP_PIN == LOW) backupRTCStashTime();
@@ -1413,10 +1413,10 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_weekday_setting) {
             case in12_set_weekday_day_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_weekday_setting_finished_state:
-                sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+                snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
                 clock_set_blank_request = 0;
                 // Save time from internal RTCC into external backup RTC
                 if (RTC_HARDSTRAP_PIN == LOW) backupRTCStashTime();
@@ -1434,57 +1434,57 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_alarm_setting) {
             case in12_set_alarm_hours_state:
-                sprintf(in12_display_buffer, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 0;
                 break;
             case in12_set_alarm_minutes_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_set_alarm_seconds_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_clock_alarm_setting_finished_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
                 clock_set_blank_request = 0;
@@ -1502,10 +1502,10 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_alarm_enable_setting) {
             case in12_set_alarm_arm:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_alarm_enable_finished_state:
-                sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "       1" : "       0");
+                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "       1" : "       0");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1522,10 +1522,10 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_24hr_setting) {
             case in12_set_24hr_value_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_24hr_setting_finished_state:
-                sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "       0" : "       1");
+                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "       0" : "       1");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1542,10 +1542,10 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         switch (in12_clock_brightness_setting) {
             case in12_set_brightness_value_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_brightness_setting_finished_state:
-                sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+                snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1581,57 +1581,57 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_time_setting) {
             case in12_set_time_hours_state:
-                sprintf(in12_display_buffer, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
+                snprintf(in12_display_buffer, 9, "  :%02u:%02u", rtcc_shadow.minutes, rtcc_shadow.seconds);
                 in12_dp_anode_request = 0;
                 break;
             case in12_set_time_minutes_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours - 12, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", rtcc_shadow.hours, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_set_time_seconds_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours - 12, rtcc_shadow.minutes);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, rtcc_shadow.minutes);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", rtcc_shadow.hours, rtcc_shadow.minutes);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_clock_time_setting_finished_state:
                 if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     in12_dp_anode_request = 0;
                 }
                 clock_set_blank_request = 0;
@@ -1651,16 +1651,16 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_date_setting) {
             case in12_set_date_month_state:
-                sprintf(in12_display_buffer, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "  *%02u*%02u", rtcc_shadow.day, rtcc_shadow.year - 2000);
                 break;
             case in12_set_date_day_state:
-                sprintf(in12_display_buffer, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "%02u*  *%02u", rtcc_shadow.month, rtcc_shadow.year - 2000);
                 break;
             case in12_set_date_year_state:
-                sprintf(in12_display_buffer, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
+                snprintf(in12_display_buffer, 9, "%02u*%02u*  ", rtcc_shadow.month, rtcc_shadow.day);
                 break;
             case in12_clock_date_setting_finished_state:
-                sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 clock_set_blank_request = 0;
                 // Save time from internal RTCC into external backup RTC
                 if (RTC_HARDSTRAP_PIN == LOW) backupRTCStashTime();
@@ -1678,10 +1678,10 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_weekday_setting) {
             case in12_set_weekday_day_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_weekday_setting_finished_state:
-                sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+                snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
                 clock_set_blank_request = 0;
                 // Save time from internal RTCC into external backup RTC
                 if (RTC_HARDSTRAP_PIN == LOW) backupRTCStashTime();
@@ -1699,57 +1699,57 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_alarm_setting) {
             case in12_set_alarm_hours_state:
-                sprintf(in12_display_buffer, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                snprintf(in12_display_buffer, 9, "  :%02u:%02u", in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 in12_dp_anode_request = 0;
                 break;
             case in12_set_alarm_minutes_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", 12, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:  :%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_set_alarm_seconds_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", 12, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:  ", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute);
                     in12_dp_anode_request = 0;
                 }
                 break;
             case in12_clock_alarm_setting_finished_state:
                 if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 1;
                 }
                 else {
-                    sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                    snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                     in12_dp_anode_request = 0;
                 }
                 clock_set_blank_request = 0;
@@ -1767,10 +1767,10 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_alarm_enable_setting) {
             case in12_set_alarm_arm:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_alarm_enable_finished_state:
-                sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1787,10 +1787,10 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_24hr_setting) {
             case in12_set_24hr_value_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_24hr_setting_finished_state:
-                sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1807,10 +1807,10 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         switch (in12_clock_brightness_setting) {
             case in12_set_brightness_value_state:
-                sprintf(in12_display_buffer, "        ");
+                snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_brightness_setting_finished_state:
-                sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+                snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1849,38 +1849,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (rtcc_shadow.hours == 23) {
                     rtccWriteTime(0, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours + 1, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -1890,38 +1890,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (rtcc_shadow.minutes == 59) {
                     rtccWriteTime(rtcc_shadow.hours, 0, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes + 1, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -1931,38 +1931,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (rtcc_shadow.seconds == 59) {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes, 0);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds + 1);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -1981,33 +1981,33 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
             case in12_set_date_month_state:
                 if (rtcc_shadow.month == 12) {
                     rtccWriteDate(1, rtcc_shadow.day, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month + 1, rtcc_shadow.day, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
                 
             case in12_set_date_day_state:
                 if (rtcc_shadow.day == 31) {
                     rtccWriteDate(rtcc_shadow.month, 1, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day + 1, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
                 
             case in12_set_date_year_state:
                 if (rtcc_shadow.year == 99) {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day, 2000);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year + 1);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
         }
@@ -2021,11 +2021,11 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         
         if (rtcc_shadow.weekday == 6) {
             rtccWriteWeekday(0);
-            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
         }
         else {
             rtccWriteWeekday(rtcc_shadow.weekday + 1);
-            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
         }
         
     }
@@ -2041,38 +2041,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_hour == 23) {
                     in12_clock_alarm.in12_alarm_hour = 0;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_hour++;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2082,38 +2082,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_minute == 59) {
                     in12_clock_alarm.in12_alarm_minute = 0;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_minute++;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2123,38 +2123,38 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_second == 59) {
                     in12_clock_alarm.in12_alarm_second = 0;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_second++;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2170,7 +2170,7 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         
         if (in12_clock_alarm.in12_alarm_arm == 1) in12_clock_alarm.in12_alarm_arm = 0;
         else in12_clock_alarm.in12_alarm_arm = 1;
-        sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
         
     }
     
@@ -2181,7 +2181,7 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         
         if (in12_am_pm_enable == 1) in12_am_pm_enable = 0;
         else in12_am_pm_enable = 1;
-        sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
         
     }
     
@@ -2193,7 +2193,7 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         if (in12_display_brightness_setting < 100) {
             in12_display_brightness_setting += 10;
             IN12SetDisplayBrightness(in12_display_brightness_setting);
-            sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+            snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
         }
         
     }
@@ -2238,38 +2238,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (rtcc_shadow.hours == 0) {
                     rtccWriteTime(23, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours - 1, rtcc_shadow.minutes, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2279,38 +2279,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (rtcc_shadow.minutes == 0) {
                     rtccWriteTime(rtcc_shadow.hours, 59, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes - 1, rtcc_shadow.seconds);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2320,38 +2320,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (rtcc_shadow.seconds == 0) {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes, 59);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     rtccWriteTime(rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds - 1);
                     if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours - 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && rtcc_shadow.hours == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2369,33 +2369,33 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
             case in12_set_date_month_state:
                 if (rtcc_shadow.month == 1) {
                     rtccWriteDate(12, rtcc_shadow.day, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month - 1, rtcc_shadow.day, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
                 
             case in12_set_date_day_state:
                 if (rtcc_shadow.day == 1) {
                     rtccWriteDate(rtcc_shadow.month, 31, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day - 1, rtcc_shadow.year);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
                 
             case in12_set_date_year_state:
                 if (rtcc_shadow.year == 0) {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day, 2099);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 else {
                     rtccWriteDate(rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 1);
-                    sprintf(in12_display_buffer, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
+                    snprintf(in12_display_buffer, 9, "%02u*%02u*%02u", rtcc_shadow.month, rtcc_shadow.day, rtcc_shadow.year - 2000);
                 }
                 break;
         }
@@ -2409,11 +2409,11 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         
         if (rtcc_shadow.weekday == 0) {
             rtccWriteWeekday(6);
-            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
         }
         else {
             rtccWriteWeekday(rtcc_shadow.weekday - 1);
-            sprintf(in12_display_buffer, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
+            snprintf(in12_display_buffer, 9, "       %u", (uint8_t) rtcc_shadow.weekday + 1);
         }
         
     }
@@ -2429,38 +2429,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_hour == 0) {
                     in12_clock_alarm.in12_alarm_hour = 23;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_hour--;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2470,38 +2470,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_minute == 0) {
                     in12_clock_alarm.in12_alarm_minute = 59;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_minute--;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2511,38 +2511,38 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
                 if (in12_clock_alarm.in12_alarm_second == 0) {
                     in12_clock_alarm.in12_alarm_second = 59;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
                 else {
                     in12_clock_alarm.in12_alarm_second--;
                     if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 0) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour > 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour - 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else if (in12_am_pm_enable == 1 && in12_clock_alarm.in12_alarm_hour == 12) {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", 12, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 1;
                     }
                     else {
-                        sprintf(in12_display_buffer, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+                        snprintf(in12_display_buffer, 9, "%02u:%02u:%02u", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
                         in12_dp_anode_request = 0;
                     }
                 }
@@ -2558,7 +2558,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         
         if (in12_clock_alarm.in12_alarm_arm == 1) in12_clock_alarm.in12_alarm_arm = 0;
         else in12_clock_alarm.in12_alarm_arm = 1;
-        sprintf(in12_display_buffer, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
         
     }
     
@@ -2569,7 +2569,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         
         if (in12_am_pm_enable == 1) in12_am_pm_enable = 0;
         else in12_am_pm_enable = 1;
-        sprintf(in12_display_buffer, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
         
     }
     
@@ -2581,7 +2581,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         if (in12_display_brightness_setting > 10) {
             in12_display_brightness_setting -= 10;
             IN12SetDisplayBrightness(in12_display_brightness_setting);
-            sprintf(in12_display_buffer, "      %02u", in12_display_brightness_setting / 10);
+            snprintf(in12_display_buffer, 9, "      %02u", in12_display_brightness_setting / 10);
         }
         
     }
