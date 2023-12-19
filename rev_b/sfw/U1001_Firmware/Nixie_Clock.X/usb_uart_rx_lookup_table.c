@@ -383,7 +383,7 @@ usb_uart_command_function_t setRTCCCommand(char * input_str) {
             // print out what we just did
             terminalTextAttributesReset();
             terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
-            printf("Set RTCC time as %02u:%02u:%02u\r\n", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
+            printf("Set RTCC time as %02u:%02u:%02u (24 hr time format)\r\n", rtcc_shadow.hours, rtcc_shadow.minutes, rtcc_shadow.seconds);
             terminalTextAttributesReset();
 
         }
@@ -538,7 +538,7 @@ void usbUartHashTableInitialize(void) {
     usbUartAddCommand("Set RTCC:",
             "\b\b <parameter>: <parameter args>: sets a time parameter within the Real Time Clock and Calendar. Available parameters:\r\n"
             "       Date: <mm>/<dd>/<yyyy>: Sets the RTCC date \r\n"
-            "       Time: <hh>:<mm>:<ss>: Sets the RTCC time. (Must be 24 hr time)\r\n"
+            "       Time: <hh>:<mm>:<ss>: Sets the RTCC time. (Must be 24 hr time format)\r\n"
             "       Weekday: <weekday>: Sets the RTCC weekday\r\n"
             "       Unix Time: <decimal unix time>, <hour offset from UTC to local time>: sets the RTCC to the supplied UNIX time with hour offset from UTC",
             setRTCCCommand);

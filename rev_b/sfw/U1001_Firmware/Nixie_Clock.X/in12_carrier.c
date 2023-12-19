@@ -467,6 +467,120 @@ usb_uart_command_function_t setIN12DisplayBrightnessCommand(char * input_str) {
     }
 }
 
+usb_uart_command_function_t setIN12TimeFormatCommand(char * input_str) {
+ 
+    // Snipe out received arguments
+    char read_mode[32];
+    sscanf(input_str, "Set Time Format: %s", read_mode);
+    
+    if (strcmp(read_mode, "24") == 0 || strcmp(read_mode, "AM_PM") == 0) {
+    
+        // copy logical inverse
+        if (strcmp(read_mode, "24") == 0) in12_am_pm_enable = 0;
+        else in12_am_pm_enable = 1;
+        
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set time display format as %s\r\n", in12_am_pm_enable ? "AM/PM" : "24hr");
+        terminalTextAttributesReset();
+    
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter time format as '24' or 'AM_PM'. User entered %s\r\n", read_mode);
+        terminalTextAttributesReset();
+        
+    }
+    
+}
+
+usb_uart_command_function_t IN12alarmStatusCommand(char * input_str) {
+ 
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    printf("Current clock alarm settings:\r\n");
+    
+    // print if alarm is armed
+    if (in12_clock_alarm.in12_alarm_arm) terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    else terminalTextAttributes(RED_COLOR, BLACK_COLOR, NORMAL_FONT);
+    printf("    Alarm is currently %s\r\n", in12_clock_alarm.in12_alarm_arm ? "armed" : "disarmed");
+    
+    // Print alarm settings
+    terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+    printf("    Alarm Time Setting: %02u:%02u:%02u (24hr time format)\r\n",
+            in12_clock_alarm.in12_alarm_hour,
+            in12_clock_alarm.in12_alarm_minute,
+            in12_clock_alarm.in12_alarm_second);
+    
+    terminalTextAttributesReset();
+    
+}
+
+usb_uart_command_function_t setIN12AlarmCommand(char * input_str) {
+ 
+    // Snipe out received string
+    uint32_t read_hour, read_minute, read_second;
+    sscanf(input_str, "Set Alarm: %02u:%02u:%02u", &read_hour, &read_minute, &read_second);
+
+    if (read_hour < 24 && read_minute < 60 && read_second < 60) {
+
+        in12_clock_alarm.in12_alarm_hour = read_hour;
+        in12_clock_alarm.in12_alarm_minute = read_minute;
+        in12_clock_alarm.in12_alarm_second = read_second;
+        
+        // print out what we just did
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Set Alarm as %02u:%02u:%02u (24 hr time format)\r\n", in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+        terminalTextAttributesReset();
+    
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter a valid alarm time. User entered %02u:%02u:%02u\r\n", read_hour, read_minute, read_second);
+        terminalTextAttributesReset();
+        
+    }
+    
+}
+
+usb_uart_command_function_t setIN12AlarmEnableCommand(char * input_str) {
+ 
+    // Snipe out received string
+    char read_setting[32];
+    sscanf(input_str, "Arm Alarm: %s", read_setting);
+
+    if (strcmp(read_setting, "Arm") == 0) {
+     
+        in12_clock_alarm.in12_alarm_arm = 1;
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Alarm has been armed. Current alarm time is %02u:%02u:%02u (24 hr time format)\r\n", 
+                in12_clock_alarm.in12_alarm_hour, in12_clock_alarm.in12_alarm_minute, in12_clock_alarm.in12_alarm_second);
+        terminalTextAttributesReset();
+        
+        
+    }
+    
+    else if (strcmp(read_setting, "Disarm") == 0) {
+     
+        in12_clock_alarm.in12_alarm_arm = 0;
+        terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Alarm has been disarmed\r\n");
+        terminalTextAttributesReset();
+        
+    }
+    
+    else {
+     
+        terminalTextAttributes(YELLOW_COLOR, BLACK_COLOR, NORMAL_FONT);
+        printf("Please enter a valid alarm enable setting (Arm or Disarm)\r\n");
+        terminalTextAttributesReset();
+        
+    }
+    
+}
+
 // this function initializes the logic board ETC counter
 void IN12ETCInitialize(void) {
  
@@ -518,11 +632,23 @@ void IN12Initialize(void) {
             "\b\b <Time, Date, Weekday, or Alarm>: Sets the display to show different clock functions",
             setIN12DisplayModeCommand);
     usbUartAddCommand("Display Lamp Test",
-            "Tests all IN12 display Elements",
+            "Tests all IN12 display Elements. This should look like a giant blur on each digit",
             displayIN12LampTestCommand);
     usbUartAddCommand("Set Display Brightness:",
             "\b\b <percent>: Sets the IN12 display to the entered brightness as a percentage",
             setIN12DisplayBrightnessCommand);
+        usbUartAddCommand("Set Time Format:",
+            "\b\b <24/AM_PM>: Sets time display format. This only impacts tube display, not USB user interface",
+            setIN12TimeFormatCommand);
+    usbUartAddCommand("Alarm Status?",
+            "Prints clock alarm settings",
+            IN12alarmStatusCommand);
+    usbUartAddCommand("Set Alarm:",
+            "\b\b <hh>:<mm>:<ss>: Sets the alarm time. (Must be 24 hr time)",
+            setIN12AlarmCommand);
+    usbUartAddCommand("Arm Alarm:",
+            "\b\b <Arm/Disarm>: Arms or disarms the clock alarm",
+            setIN12AlarmEnableCommand);
     
     // assign handler functions for multiplexing and brightness timers
     assignGenericMultiplexingHandler(IN12MultiplexingTimerHandler);
