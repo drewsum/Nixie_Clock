@@ -19,7 +19,7 @@
 #ifndef _MAIN_H    /* Guard against multiple inclusion */
 #define _MAIN_H
 
-#define FIRMWARE_VERSION_STR        "0.9"
+#define FIRMWARE_VERSION_STR        "0.95"
 #define PLATFORM_REVISION_STR       "B"
 #define PROJECT_DATE_STR            "February 2024"
 #define PROJECT_NAME_STR            "Nixie Clock"
