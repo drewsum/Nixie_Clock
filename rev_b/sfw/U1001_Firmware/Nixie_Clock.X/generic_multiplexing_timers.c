@@ -171,7 +171,7 @@ void genericValueBlankingTimerInitialize(void) {
     
     // Set Timer 1 interrupt priority
     setInterruptPriority(Timer6, 6);
-    setInterruptSubpriority(Timer6, 0);
+    setInterruptSubpriority(Timer6, 3);
     
     // Enable timer 6 interrupt
     enableInterrupt(Timer6);
@@ -184,7 +184,7 @@ void genericValueBlankingTimerInitialize(void) {
 void __ISR(_TIMER_6_VECTOR, IPL6SRS) genericValueBlankingTimerISR(void) {
  
     // toggle blanking the value we're setting
-    if (clock_set_blank_request) clock_set_blank_request = 0;
+    if (clock_set_blank_request == 1) clock_set_blank_request = 0;
     else clock_set_blank_request = 1;
     
     // clear IRQ

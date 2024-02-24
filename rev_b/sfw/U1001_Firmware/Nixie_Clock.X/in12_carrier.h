@@ -190,7 +190,7 @@ volatile in12_clock_24hr_setting = 1;
 
 enum in12_clock_alarm_enable_setting_s {
     
-    in12_set_alarm_arm = 0,
+    in12_set_alarm_arm_state = 0,
     in12_clock_alarm_enable_finished_state = 1
     
 }

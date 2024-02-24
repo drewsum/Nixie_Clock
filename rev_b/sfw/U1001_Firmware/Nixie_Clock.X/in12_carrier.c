@@ -242,35 +242,43 @@ usb_uart_command_function_t setBacklightColorCommand(char * input_str) {
 
         terminalTextAttributes(GREEN_COLOR, BLACK_COLOR, NORMAL_FONT);
         if(strcmp(backlight_args, "White") == 0) {
-            IN12BacklightSetUniformColor(WHITE_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_white;
+            IN12SetBacklightColorState();
             printf("Set backlight color to white\r\n");
         }
         else if(strcmp(backlight_args, "Black") == 0) {
-            IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_black;
+            IN12SetBacklightColorState();
             printf("Set backlight color to black\r\n");
         }
         else if(strcmp(backlight_args, "Red") == 0) {
-            IN12BacklightSetUniformColor(RED_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_red;
+            IN12SetBacklightColorState();
             printf("Set backlight color to red\r\n");
         }
         else if(strcmp(backlight_args, "Green") == 0) {
-            IN12BacklightSetUniformColor(GREEN_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_green;
+            IN12SetBacklightColorState();
             printf("Set backlight color to green\r\n");
         }
         else if(strcmp(backlight_args, "Blue") == 0) {
-            IN12BacklightSetUniformColor(BLUE_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_blue;
+            IN12SetBacklightColorState();
             printf("Set backlight color to blue\r\n");
         }
         else if(strcmp(backlight_args, "Magenta") == 0) {
-            IN12BacklightSetUniformColor(MAGENTA_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_magenta;
+            IN12SetBacklightColorState();
             printf("Set backlight color to magenta\r\n");
         }
         else if(strcmp(backlight_args, "Yellow") == 0) {
-            IN12BacklightSetUniformColor(YELLOW_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_yellow;
+            IN12SetBacklightColorState();
             printf("Set backlight color to yellow\r\n");
         }
         else if(strcmp(backlight_args, "Cyan") == 0) {
-            IN12BacklightSetUniformColor(CYAN_BACKLIGHT_COLOR);
+            in12_backlight_color_setting = in12_backlight_cyan;
+            IN12SetBacklightColorState();
             printf("Set backlight color to cyan\r\n");
         }
         else {
@@ -694,7 +702,7 @@ multiplexing_timer_callback_t IN12MultiplexingTimerHandler(void) {
     setIN12Cathodes(in12_display_buffer[7 - in12_active_tube]);
     
     // Set the DP anode high if we want to display PM/AM time
-    if (in12_am_pm_enable == 1 && in12_active_tube == in12_tube_4 && in12_dp_anode_request == 1) CATHODE_DP_PIN = HIGH;
+    if (in12_am_pm_enable == 1 && in12_active_tube == in12_tube_5 && in12_dp_anode_request == 1) CATHODE_DP_PIN = HIGH;
     
     // increment active tube and reset if needed
     in12_active_tube++;
@@ -960,18 +968,24 @@ void IN12PowerOn(void) {
     if (carrier_spd.etc_support) {
         IN12GPIOSetETCEnable(1);
         printf("    Set ETC Enable bit on IN12 I2C GPIO expander\r\n");
+        softwareDelay(0x1FFF);
         while(usbUartCheckIfBusy());
     }
     
     if (carrier_spd.backlight_support) {
         IN12BacklightInitialize();
+        softwareDelay(0x1FFF);
         IN12BacklightSetBrightness(75);
+        softwareDelay(0x1FFF);
         IN12BacklightSetUniformColor(BLACK_BACKLIGHT_COLOR);
         printf("    Re-initialized IN12 LED backlight drivers\r\n");
+        softwareDelay(0x1FFF);
         while(usbUartCheckIfBusy());
     }
     
     IN12SetMenuLEDs();
+    
+    softwareDelay(0x1FFF);
     
     // setup muxing timers
     genericMultiplexingTimerInitialize();
@@ -1001,15 +1015,18 @@ void IN12PowerOff(void) {
     // clear the menu LEDs
     IN12SetMenuLEDsGPIO(0x0000);
     printf("    Cleared menu LEDs\r\n");
+    softwareDelay(0x1FFF);
     
     if (carrier_spd.etc_support) {
         IN12GPIOSetETCEnable(0);
+        softwareDelay(0x1FFF);
         printf("    Cleared ETC Enable bit on IN12 I2C GPIO expander\r\n");
         while(usbUartCheckIfBusy());
     }
     
     if (carrier_spd.backlight_support) {
         IN12GPIOSetBacklightEnable(0);
+        softwareDelay(0x1FFF);
         printf("    Cleared Backlight Enable bit on IN12 I2C GPIO expander\r\n");
         while(usbUartCheckIfBusy());
     }
@@ -1033,6 +1050,8 @@ void IN12SetMenuLEDsGPIO(uint16_t output_data) {
     read_output |= output_data;
     
     TCA9555IOExpanderSetOutput(IN12_IO_EXPANDER_ADDR, &error_handler.flags.in12_gpio_expander, read_output);
+    
+    softwareDelay(0x1FFF);
     
 }
 
@@ -1323,7 +1342,7 @@ void IN12updateClockDisplay(void) {
             }
             else {
                 switch (in12_clock_alarm_enable_setting) {
-                    case in12_set_alarm_arm:
+                    case in12_set_alarm_arm_state:
                         snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_alarm_enable_finished_state:
@@ -1623,11 +1642,11 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         clock_set_blank_request = 1;
         TMR6 = 0;
         
-        if (in12_clock_alarm_enable_setting == in12_set_alarm_arm) in12_clock_alarm_enable_setting = in12_clock_alarm_enable_finished_state;
+        if (in12_clock_alarm_enable_setting == in12_set_alarm_arm_state) in12_clock_alarm_enable_setting = in12_clock_alarm_enable_finished_state;
         else in12_clock_alarm_enable_setting--;
         
         switch (in12_clock_alarm_enable_setting) {
-            case in12_set_alarm_arm:
+            case in12_set_alarm_arm_state:
                 snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_alarm_enable_finished_state:
@@ -1685,6 +1704,8 @@ pushbutton_input_1_callback_t left_pushbutton_callback(void) {
         
         // set backlight color based on what we just set with pushbuttons
         IN12SetBacklightColorState();
+        
+        softwareDelay(0x1FFF);
         
     }
 }
@@ -1888,15 +1909,15 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         clock_set_blank_request = 1;
         TMR6 = 0;
         
-        if (in12_clock_alarm_enable_setting == in12_clock_alarm_enable_finished_state) in12_clock_alarm_enable_setting = in12_set_alarm_arm;
+        if (in12_clock_alarm_enable_setting == in12_clock_alarm_enable_finished_state) in12_clock_alarm_enable_setting = in12_set_alarm_arm_state;
         else in12_clock_alarm_enable_setting++;
         
         switch (in12_clock_alarm_enable_setting) {
-            case in12_set_alarm_arm:
+            case in12_set_alarm_arm_state:
                 snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_alarm_enable_finished_state:
-                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "       1" : "       0");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1916,7 +1937,7 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
                 snprintf(in12_display_buffer, 9, "        ");
                 break;
             case in12_clock_24hr_setting_finished_state:
-                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "       0" : "       1");
                 clock_set_blank_request = 0;
                 break;
         }
@@ -1950,6 +1971,8 @@ pushbutton_input_2_callback_t right_pushbutton_callback(void) {
         
         // set backlight color based on what we just set with pushbuttons
         IN12SetBacklightColorState();
+        
+        softwareDelay(0x1FFF);
         
     }
 }
@@ -2289,25 +2312,25 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         
     }
     
-    else if (in12_clock_display_state == in12_alarm_enable_state && in12_clock_alarm_enable_setting != in12_clock_alarm_enable_finished_state) {
+    else if ((in12_clock_display_state == in12_alarm_enable_state) && (in12_clock_alarm_enable_setting != in12_clock_alarm_enable_finished_state)) {
         
         clock_set_blank_request = 0;
         TMR6 = 0;
         
         if (in12_clock_alarm.in12_alarm_arm == 1) in12_clock_alarm.in12_alarm_arm = 0;
         else in12_clock_alarm.in12_alarm_arm = 1;
-        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "       1" : "       0");
         
     }
     
-    else if (in12_clock_display_state == in12_set_24hr_mode_state && in12_clock_24hr_setting != in12_clock_24hr_setting_finished_state) {
+    else if ((in12_clock_display_state == in12_set_24hr_mode_state) && (in12_clock_24hr_setting != in12_clock_24hr_setting_finished_state)) {
         
         clock_set_blank_request = 0;
         TMR6 = 0;
         
         if (in12_am_pm_enable == 1) in12_am_pm_enable = 0;
         else in12_am_pm_enable = 1;
-        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "       0" : "       1");
         
     }
     
@@ -2330,6 +2353,8 @@ pushbutton_input_3_callback_t up_pushbutton_callback(void) {
         else in12_clock_display_state--;
 
         IN12SetMenuLEDs();
+        
+        softwareDelay(0x1FFF);
         
         in12_clock_time_setting = in12_clock_time_setting_finished_state;
         in12_clock_date_setting = in12_clock_date_setting_finished_state;
@@ -2684,7 +2709,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         
         if (in12_clock_alarm.in12_alarm_arm == 1) in12_clock_alarm.in12_alarm_arm = 0;
         else in12_clock_alarm.in12_alarm_arm = 1;
-        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "tr uE   " : "FA LS E ");
+        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "       1" : "       0");
         
     }
     
@@ -2695,7 +2720,7 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         
         if (in12_am_pm_enable == 1) in12_am_pm_enable = 0;
         else in12_am_pm_enable = 1;
-        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "FA LS E " : "tr uE   ");
+        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "       0" : "       1");
         
     }
     
@@ -2718,6 +2743,8 @@ pushbutton_input_4_callback_t down_pushbutton_callback(void) {
         else in12_clock_display_state++;
 
         IN12SetMenuLEDs();
+        
+        softwareDelay(0x1FFF);
         
         in12_clock_time_setting = in12_clock_time_setting_finished_state;
         in12_clock_date_setting = in12_clock_date_setting_finished_state;
