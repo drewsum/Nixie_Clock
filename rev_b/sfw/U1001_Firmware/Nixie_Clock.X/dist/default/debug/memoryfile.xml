@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/Nixie_Clock.X.production.elf">                 
+  <executable name="dist/default/debug/Nixie_Clock.X.debug.elf">                 
     <memory name="program">                 
       <units>bytes</units>                 
       <length>2098304</length>                 
-      <used>366620</used>                     
-      <free>1731684</free>                     
+      <used>366808</used>                     
+      <free>1731496</free>                     
     </memory>                              
     <memory name="data">              
       <units>bytes</units>                 
-      <length>524288</length>                 
-      <used>109685</used>                     
-      <free>414603</free>                     
+      <length>525184</length>                 
+      <used>111477</used>                     
+      <free>413707</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

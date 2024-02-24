@@ -1338,7 +1338,7 @@ void IN12updateClockDisplay(void) {
             
         case in12_alarm_enable_state:
             if (clock_set_blank_request == 0) {
-                snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+                snprintf(in12_display_buffer, 9, "       %u", in12_clock_alarm.in12_alarm_arm);
             }
             else {
                 switch (in12_clock_alarm_enable_setting) {
@@ -1346,7 +1346,7 @@ void IN12updateClockDisplay(void) {
                         snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_alarm_enable_finished_state:
-                        snprintf(in12_display_buffer, 9, "%s", in12_clock_alarm.in12_alarm_arm ? "     1" : "     0");
+                        snprintf(in12_display_buffer, 9, "       %u", in12_clock_alarm.in12_alarm_arm);
                         break;
                 }
             }
@@ -1355,7 +1355,7 @@ void IN12updateClockDisplay(void) {
             
         case in12_set_24hr_mode_state:
             if (clock_set_blank_request == 0) {
-                snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "     0" : "     1");
+                snprintf(in12_display_buffer, 9, "       %u", !(in12_am_pm_enable));
             }
             else {
                 switch (in12_clock_24hr_setting) {
@@ -1363,7 +1363,7 @@ void IN12updateClockDisplay(void) {
                         snprintf(in12_display_buffer, 9, "        ");
                         break;
                     case in12_clock_24hr_setting_finished_state:
-                        snprintf(in12_display_buffer, 9, "%s", in12_am_pm_enable ? "     0" : "     1");
+                        snprintf(in12_display_buffer, 9, "       %u", !(in12_am_pm_enable));
                         break;
                 }
             }
