@@ -224,11 +224,11 @@ void IN12BacklightSetBrightness(uint8_t backlight_brightness) {
 // all arguments have range 0 to 255
 void IN12BacklightSetUniformColor(uint8_t red_component, uint8_t green_component, uint8_t blue_component) {
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_1_ADDR, &error_handler.flags.in12_backlight_led_driver_1, red_component, green_component, blue_component);
-    softwareDelay(100);
+    softwareDelay(0xFFF);
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_2_ADDR, &error_handler.flags.in12_backlight_led_driver_2, red_component, green_component, blue_component);
-    softwareDelay(100);
+    softwareDelay(0xFFF);
     LP5009SetBankColor(IN12_BACKLIGHT_LED_DRIVER_3_ADDR, &error_handler.flags.in12_backlight_led_driver_3, red_component, green_component, blue_component);
-    softwareDelay(100);
+    softwareDelay(0xFFF);
 }
 
 usb_uart_command_function_t setBacklightColorCommand(char * input_str) {
@@ -2791,5 +2791,7 @@ void IN12SetBacklightColorState(void) {
             break;
         
     }
+    
+    softwareDelay(0xFFFF);
 
 }

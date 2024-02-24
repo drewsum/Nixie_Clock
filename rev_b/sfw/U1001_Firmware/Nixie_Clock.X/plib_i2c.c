@@ -75,7 +75,7 @@ void I2CMaster_Initialize(void)
     /* Disable the I2C Bus collision interrupt */
     disableInterrupt(I2C_BUS_COL_INT_SOURCE);
 
-    I2C_MASTER_BRG_REG = 0x050;
+    I2C_MASTER_BRG_REG = 0x055;
 
     I2C_MASTER_CON_BITFIELD.SIDL = 0;
     I2C_MASTER_CON_BITFIELD.DISSLW = 0;
